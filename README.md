@@ -1,4 +1,4 @@
-# Sheepshead
+# Sheepshead Trainer
 
 Sheepshead is a five-minute practice app for the common five-player
 Sheepshead variant. It teaches trump, point values, picking, partner play,
@@ -7,7 +7,8 @@ complete multiplayer game.
 
 ## Product identity
 
-- Display name: Sheepshead Practice Trainer
+- Display name: Sheepshead Trainer
+- App Store name: Sheepshead Trainer: Trump Play
 - Bundle ID: `com.jackwallner.sheepshead`
 - App Store ID: `6796913227`
 - Marketing version: `1.0`
@@ -48,7 +49,7 @@ Before public metadata changes, complete the ASO brief in
 ```sh
 python3 scripts/validate_aso_brief.py \
   --brief docs/research/aso-sheepshead.md \
-  --product-name "Sheepshead Practice Trainer"
+  --product-name "Sheepshead Trainer: Trump Play"
 ```
 
 ## Reusable port workflow

@@ -1,4 +1,4 @@
-# App Store Connect submission checklist, Sheepshead Practice Trainer
+# App Store Connect submission checklist, Sheepshead Trainer: Trump Play
 
 This is the release reference for App Store Connect. Metadata, screenshots,
 products, pricing, categories, age rating, review details, and build attachment
@@ -92,7 +92,8 @@ Expected result: **4+**, no advisory content descriptors.
 
 - F (OT710 trial page pricing/terms near CTA, paywall fallback): app-code
   verification, not an ASC metadata task.
-- G (app icon + launch screen light/dark): app-code/asset verification.
+- G (app icon + launch screen light/dark): verified in the AppIcon asset catalog,
+  simulator home screen, and release archive.
 - H (StoreKit products exist in ASC with correct prices/trial): created and
   configured by `asc-setup-release.py`, `asc-create-lifetime.py`, and
   `asc-finish-products.py`; verify the final states in `asc-readiness.py`.

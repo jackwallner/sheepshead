@@ -27,7 +27,7 @@ DEFAULT_FORBIDDEN = ("mahj", "mahjong", "nmjl", "bridge trainer", "bridge+")
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--expected-product", default="Sheepshead Practice Trainer")
+    parser.add_argument("--expected-product", default="Sheepshead Trainer: Trump Play")
     parser.add_argument("--forbid", action="append", default=list(DEFAULT_FORBIDDEN))
     return parser.parse_args()
 
