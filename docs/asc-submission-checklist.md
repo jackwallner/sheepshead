@@ -1,34 +1,28 @@
-# App Store Connect submission checklist , Sheepshead
+# App Store Connect submission checklist, Sheepshead Practice Trainer
 
-Not a script, a reference for filling the App Store Connect web UI (App Privacy
-questionnaire + Age Rating questionnaire) before submitting for review. Nothing
-in this file is auto-applied; these two questionnaires have no public API and
-must be answered by hand in ASC.
+This is the release reference for App Store Connect. Metadata, screenshots,
+products, pricing, categories, age rating, review details, and build attachment
+are scripted. App Privacy is represented locally by
+`fastlane/app_privacy_details.json`; the fastlane privacy action still requires
+an App Store Connect web session because Apple's public API does not expose this
+questionnaire.
 
 ## App Privacy ("App Privacy" tab -> Get Started / Edit)
 
-Data collected: **Purchases** and **Identifiers** only, via the RevenueCat SDK.
-No other data types are collected (no Contact Info, no Location, no
-Contacts, no User Content, no Browsing/Search History, no Diagnostics beyond
-Apple's own automatic crash logs, no Usage Data, no Health/Fitness data).
+Data collected: **Purchase History** only, via the RevenueCat SDK. No other data
+types are collected (no Contact Info, no Location, no Contacts, no User Content,
+no Browsing/Search History, no Usage Data, no Diagnostics, and no
+Health/Fitness data).
 
 ### Purchases
 - Data type: **Purchase History**
 - Collected: **Yes**
-- Linked to the user's identity: **Yes** (linked to RevenueCat's per-install
-  app user ID so entitlement/subscription status can sync across launches)
+- Linked to the user's identity: **No** (RevenueCat generates an anonymous
+  app-user ID and the app has no account or custom identity system)
 - Used for tracking (across apps/websites owned by other companies): **No**
-- Purpose: **App Functionality** (determines whether the Master Tables room is
-  unlocked)
-
-### Identifiers
-- Data type: **User ID** (RevenueCat's anonymous app-user identifier, not an
-  Apple ID, email, or name)
-- Collected: **Yes**
-- Linked to the user's identity: **Yes** (same reasoning as above , it's the
-  key RevenueCat uses to associate purchase state with this install)
-- Used for tracking: **No**
-- Purpose: **App Functionality**
+- Purpose: **App Functionality** and **Analytics**. App Functionality enables
+  Sheepshead+ entitlements. Analytics covers RevenueCat's subscription and
+  purchase reporting.
 
 ### Everything else: answer "No" / not collected
 - Contact Info: No (no account system, no email/name collected in-app)
@@ -42,14 +36,16 @@ Apple's own automatic crash logs, no Usage Data, no Health/Fitness data).
   which Apple already accounts for separately and does not require declaring)
 
 ### "Data Not Linked to You" vs "Data Used to Track You"
-Do **not** check "Used to Track You" for either data type , RevenueCat's
-identifier is app-scoped, not shared with data brokers or used to correlate
-activity across other companies' apps/sites. This matches
-`docs/privacy-policy.html`, which states RevenueCat receives "an anonymous
-identifier and purchase information, never your name or email."
+Select **Data Not Linked to You** for Purchase History. Do **not** select
+"Used to Track You". RevenueCat's anonymous identifier is app-scoped and is not
+used by this app to correlate activity across other companies' apps or sites.
+This matches `docs/privacy-policy.html`, which states that RevenueCat receives
+an anonymous app identifier and purchase or entitlement information, not a name
+or email.
 
-Source: `Shared/Services/SubscriptionService.swift` (RevenueCat is the only
-SDK that leaves the device; no analytics, no ad SDKs, no tracking pixels).
+Source: `Shared/Services/SubscriptionService.swift` and
+`fastlane/app_privacy_details.json` (RevenueCat is the only SDK that leaves the
+device; there are no ads or tracking pixels).
 
 ## Age Rating questionnaire
 
@@ -99,10 +95,9 @@ Expected result: **4+**, no advisory content descriptors.
 - G (app icon + launch screen light/dark): app-code/asset verification.
 - H (StoreKit products exist in ASC with correct prices/trial): created and
   configured by `asc-setup-release.py`, `asc-create-lifetime.py`, and
-  `asc-finish-products.py`; confirm processing in App Store Connect before
-  submitting.
-- I (TestFlight build): build 15 is `VALID` and attached to the editable 1.0
-  version by `asc-attach-build.py`.
+  `asc-finish-products.py`; verify the final states in `asc-readiness.py`.
+- I (TestFlight build): attach the newest `VALID` build to editable version 1.0
+  with `asc-attach-build.py` after TestFlight processing completes.
 - Submitting for review: **explicitly held for Jack's go**, per task
   instructions. This session pushed metadata only (no submit-for-review
   call was made).

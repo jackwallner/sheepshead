@@ -127,7 +127,7 @@ def main() -> None:
             {
                 "data": {
                     "type": "subscriptionGroupLocalizations",
-                    "attributes": {"locale": "en-US", "name": GROUP_NAME, "customAppName": "Sheepshead"},
+                    "attributes": {"locale": "en-US", "name": GROUP_NAME, "customAppName": "Sheepshead Practice Trainer"},
                     "relationships": {
                         "subscriptionGroup": {"data": {"type": "subscriptionGroups", "id": group_id}}
                     },

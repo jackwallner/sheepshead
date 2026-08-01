@@ -1,1 +1,1 @@
-
+This is an original Sheepshead practice trainer, not a multiplayer game. It teaches the common five-player 32-card variant through flashcards, quizzes, holding recognition, bury scenarios, and trick decisions. The app has no account system, no demo login, no ads, no chat, and no simulated gambling. All teaching holdings are original. House rules vary, so the app calls out variant differences in its copy. Sheepshead+ is tested with the local StoreKit configuration and the app's simulator Pro override; no production RevenueCat configuration is used in simulator builds.

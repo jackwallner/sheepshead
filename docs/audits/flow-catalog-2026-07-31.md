@@ -20,7 +20,7 @@ after the final runtime pass.
 - Device: `agent-sheepshead`, UDID `383900AB-C151-4745-99B7-30962082B835`.
 - Build: `xcodegen generate`, then the `Sheepshead` scheme on the
   dedicated simulator.
-- Tests: 52 tests, 0 failures.
+- Tests: 53 tests, 0 failures.
 - Headless UI checks: Home, Get Started, Trump Room, Bury Room, a live
   eight-card bury screen, Settings, and the Sheepshead+ paywall. The paywall
   showed yearly, lifetime, and monthly pricing, trial and renewal language,
@@ -30,4 +30,5 @@ after the final runtime pass.
   `docs/appstore-screenshot-*.png` assets.
 - Simulator safety: the final runtime log contained no production RevenueCat
   configure call or RevenueCat API endpoint.
-- Structural gate: Cardport parity passed against the reference card app.
+- Structural gate: Cardport parity passed against the original tile-practice
+  reference app.
