@@ -1,10 +1,10 @@
 {
-  "name": "Sheepshead Practice Trainer",
+  "name": "Sheepshead Trainer: Trump Play",
   "slug": "sheepshead",
   "module": "Sheepshead",
   "bundle_id": "com.jackwallner.sheepshead",
   "membership": "Sheepshead+",
-  "name_status": "aso_reviewed",
+  "name_status": "final",
   "revenuecat_public_key": "appl_kVSntIwtmGjSjSwybaZLncvgYUX",
   "app_store_id": "6796913227",
   "aso_brief": "docs/research/aso-sheepshead.md",

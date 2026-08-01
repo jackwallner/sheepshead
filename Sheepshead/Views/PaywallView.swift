@@ -193,7 +193,7 @@ struct PaywallView: View {
                         .foregroundStyle(Theme.inkSecondary)
                 }
             }
-            .alert("Sheepshead", isPresented: .init(
+            .alert("Sheepshead Trainer", isPresented: .init(
                 get: { message != nil },
                 set: { if !$0 { message = nil } }
             )) {

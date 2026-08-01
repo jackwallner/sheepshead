@@ -15,6 +15,7 @@ import asc_lib
 
 BUNDLE = "com.jackwallner.sheepshead"
 GROUP_NAME = "Sheepshead+"
+DISPLAY_NAME = "Sheepshead Trainer"
 SUBS = [
     {
         "productId": "com.jackwallner.sheepshead.monthly",
@@ -121,13 +122,14 @@ def main() -> None:
     group_id = group["id"]
 
     glocs = c.get(f"/subscriptionGroups/{group_id}/subscriptionGroupLocalizations")["data"]
-    if not any(l["attributes"]["locale"] == "en-US" for l in glocs):
+    gloc = next((l for l in glocs if l["attributes"]["locale"] == "en-US"), None)
+    if gloc is None:
         c.post(
             "/subscriptionGroupLocalizations",
             {
                 "data": {
                     "type": "subscriptionGroupLocalizations",
-                    "attributes": {"locale": "en-US", "name": GROUP_NAME, "customAppName": "Sheepshead Practice Trainer"},
+                    "attributes": {"locale": "en-US", "name": GROUP_NAME, "customAppName": DISPLAY_NAME},
                     "relationships": {
                         "subscriptionGroup": {"data": {"type": "subscriptionGroups", "id": group_id}}
                     },
@@ -135,6 +137,18 @@ def main() -> None:
             },
         )
         print("group localization added")
+    else:
+        c.patch(
+            f"/subscriptionGroupLocalizations/{gloc['id']}",
+            {
+                "data": {
+                    "type": "subscriptionGroupLocalizations",
+                    "id": gloc["id"],
+                    "attributes": {"name": GROUP_NAME, "customAppName": DISPLAY_NAME},
+                }
+            },
+        )
+        print("group localization updated")
 
     existing_subs = {
         s["attributes"]["productId"]: s

@@ -51,7 +51,7 @@ struct OnboardingView: View {
                 infoPage(
                     icon: "rectangle.portrait.on.rectangle.portrait.angled",
                     title: "Make it stick between games",
-                    body: "Sheepshead fades fast between games. Sheepshead gives you five-minute drills you can run anywhere, whether you are still learning trump or sharpening instincts you already have.",
+                    body: "Sheepshead fades fast between games. Sheepshead Trainer gives you five-minute drills you can run anywhere, whether you are still learning trump or sharpening instincts you already have.",
                     tiles: [.c(12), .d(9), .h(10), .s(14)]
                 ).tag(0)
                 infoPage(

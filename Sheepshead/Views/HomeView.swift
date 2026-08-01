@@ -126,7 +126,7 @@ struct HomeView: View {
     private var header: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Sheepshead")
+                Text("Sheepshead Trainer")
                     .font(Theme.display(32))
                     .foregroundStyle(Theme.ink)
                 Text("Your seat at the table.")
@@ -497,7 +497,7 @@ struct HomeView: View {
     }
 
     private var disclaimerFooter: some View {
-        Text("Sheepshead is an independent practice app with original teaching hands. House rules vary, so use the rules agreed at your table.")
+        Text("Sheepshead Trainer is an independent practice app with original teaching hands. House rules vary, so use the rules agreed at your table.")
             .font(.caption2)
             .foregroundStyle(Theme.inkTertiary)
             .multilineTextAlignment(.center)

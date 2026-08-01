@@ -71,7 +71,7 @@ struct SettingsView: View {
                 }
                 Button("Not now", role: .cancel) {}
             } message: {
-                Text("Sheepshead can't send your daily reminder until notifications are turned on for it in iOS Settings.")
+                Text("Sheepshead Trainer can't send your daily reminder until notifications are turned on for it in iOS Settings.")
             }
             .alert("Reset all progress?", isPresented: $showResetConfirm) {
                 Button("Reset", role: .destructive) {
@@ -167,7 +167,7 @@ struct SettingsView: View {
             Button {
                 reviewPromptStep = .reviewPitch
             } label: {
-                Label("Rate Sheepshead", systemImage: "star.fill")
+                Label("Rate Sheepshead Trainer", systemImage: "star.fill")
             }
             Button {
                 reviewPromptStep = .feedback
@@ -180,7 +180,7 @@ struct SettingsView: View {
     private var aboutSection: some View {
         Section("About") {
             LabeledContent("Version", value: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0")
-            Text("Sheepshead is an independent practice app with original teaching hands. House rules vary, so use the rules agreed at your table.")
+            Text("Sheepshead Trainer is an independent practice app with original teaching hands. House rules vary, so use the rules agreed at your table.")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
         }

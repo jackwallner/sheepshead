@@ -1,14 +1,15 @@
-# Sheepshead Practice Trainer ASO research brief
+# Sheepshead Trainer: Trump Play ASO research brief
 
 Status: FINAL
 Name review: final
-Final product name: Sheepshead Practice Trainer
+Final product name: Sheepshead Trainer: Trump Play
+Installed display name: Sheepshead Trainer
 Game: Sheepshead
 Slug: sheepshead
 Primary storefront: en-US
 Research date: 2026-08-01
 
-Sheepshead Practice Trainer is a focused learning companion, not a complete
+Sheepshead Trainer is a focused learning companion, not a complete
 multiplayer game. The listing should distinguish short decision practice from
 the established apps that simulate full Sheepshead games.
 
@@ -19,8 +20,9 @@ the established apps that simulate full Sheepshead games.
 - Primary outcome: improve trump recognition, picking, burying, and trick decisions
 - Product promise: short, focused Sheepshead drills that explain the answer
 - Differentiators: room-based practice, generated hands, and mistake review
-- Naming decision: add Practice Trainer to the game name so a player can tell
-  this is a learning product, not another full table simulation
+- Naming decision: use the fleet's Trainer naming pattern and a short skill
+  phrase so a player can tell this is a learning product, not another full
+  table simulation
 
 ## Competitor evidence
 
@@ -34,7 +36,7 @@ Search evidence reviewed 2026-08-01:
 | [Sheepshead Scorer](https://apps.apple.com/us/app/id434548682) | en-US | Scoring, standings, hand history, and player management | Teach decisions rather than track a live table |
 
 The search results were dominated by generic game and scoring products. No
-result reviewed used Sheepshead Practice Trainer as its product name. The name
+result reviewed used Sheepshead Trainer: Trump Play as its product name. The name
 is descriptive, fits the 30-character limit, and makes the product boundary
 clear.
 
@@ -58,7 +60,7 @@ Rejected or prohibited terms:
 
 ## Store metadata
 
-Name: Sheepshead Practice Trainer
+Name: Sheepshead Trainer: Trump Play
 Subtitle: Learn Trump, Bury, and Tricks
 Keywords: sheepshead,practice,trainer,trump,tricks,picker,bury,called ace,partner,blind,learn,quiz,lesson
 Description angle: short practice rooms, concrete explanations, free beginner
