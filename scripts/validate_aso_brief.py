@@ -11,7 +11,7 @@ REQUIRED_HEADINGS = (
     "## Product and search intent",
     "## Competitor evidence",
     "## Keyword map",
-    "## Metadata draft",
+    "## Store metadata",
     "## Localization plan",
     "## Screenshot and experiment plan",
     "## Release gate",
