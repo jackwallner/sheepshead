@@ -9,7 +9,7 @@ complete multiplayer game.
 
 - Display name: Sheepshead
 - Bundle ID: `com.jackwallner.sheepshead`
-- App Store ID: `6796911073`
+- App Store ID: `6796913227`
 - Marketing version: `1.0`
 - Public site: <https://jackwallner.github.io/sheepshead/>
 - Support: <https://jackwallner.github.io/sheepshead/support>

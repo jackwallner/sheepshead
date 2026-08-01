@@ -24,7 +24,7 @@ physical card in a holding, eight-card picker holdings, two-card buries, unique
 IDs, no em dashes, and the free versus Sheepshead+ split.
 
 The review funnel asks after the third positive drill: enjoying it, yes opens
-the App Store review page for `6796911073`, no opens a feedback mail draft to
+the App Store review page for `6796913227`, no opens a feedback mail draft to
 `jackwallner+m@gmail.com`. Unhappy players never see a rating ask.
 
 ## Sheepshead+ products

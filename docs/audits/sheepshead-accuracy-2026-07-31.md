@@ -20,7 +20,7 @@ This audit records the domain conversion from the source training app.
 
 The unit tests cover unique IDs, valid choice indices, free room access, plus
 sets, Master Tables locking, Quick Session filtering, and generated hand
-ambiguity. The public App Store ID is `6796911073`, and the review funnel uses
+ambiguity. The public App Store ID is `6796913227`, and the review funnel uses
 the App Store write-review URL after the enjoyment gate.
 
 ## Remaining release checks

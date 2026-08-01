@@ -3,7 +3,7 @@ import StoreKit
 
 enum AppStoreLinks {
     /// Sheepshead's App Store record.
-    static let appStoreID = "6796911073"
+    static let appStoreID = "6796913227"
 
     /// The write-a-review page. No storefront prefix: the App Store resolves
     /// the bare app id into the viewer's own storefront, and hardcoding one
