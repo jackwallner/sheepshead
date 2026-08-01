@@ -1,7 +1,7 @@
 # Sheepshead Practice Trainer ASO research brief
 
 Status: FINAL
-Working placeholder: none
+Name review: final
 Final product name: Sheepshead Practice Trainer
 Game: Sheepshead
 Slug: sheepshead
@@ -56,7 +56,7 @@ Rejected or prohibited terms:
 - Competitor names, unsupported multiplayer claims, gambling language, and any
   rule or feature that the binary does not teach.
 
-## Metadata draft
+## Store metadata
 
 Name: Sheepshead Practice Trainer
 Subtitle: Learn Trump, Bury, and Tricks
