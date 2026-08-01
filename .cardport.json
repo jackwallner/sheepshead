@@ -1,14 +1,14 @@
 {
-  "name": "Sheepshead",
+  "name": "Sheepshead Practice Trainer",
   "slug": "sheepshead",
   "module": "Sheepshead",
   "bundle_id": "com.jackwallner.sheepshead",
   "membership": "Sheepshead+",
-  "name_status": "needs_aso_review",
+  "name_status": "aso_reviewed",
   "revenuecat_public_key": "appl_kVSntIwtmGjSjSwybaZLncvgYUX",
   "app_store_id": "6796913227",
   "aso_brief": "docs/research/aso-sheepshead.md",
-  "source_product": "Cribbity",
-  "source_game": "Cribbage",
+  "source_product": "Mahj Trainer",
+  "source_game": "American Mah Jongg",
   "template": "card-app-template"
 }

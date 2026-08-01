@@ -8,8 +8,10 @@ Fills gaps the earlier metadata/setup scripts left behind:
   - supportUrl on every version localization (fallback to en-US)
   - review contact email aligned with review_information/
 
-App Privacy nutrition labels still have no public ASC API , see
-docs/asc-submission-checklist.md for the answers to fill in the web UI.
+App Privacy nutrition labels are represented in
+fastlane/app_privacy_details.json. The fastlane privacy action can upload them
+with an App Store Connect web session; the public ASC API does not expose this
+questionnaire.
 """
 from __future__ import annotations
 
@@ -170,7 +172,7 @@ def main() -> int:
     else:
         print("review detail contact email ok")
 
-    print("done , next: fill App Privacy in ASC web UI if not already, then:")
+    print("done , next: upload App Privacy from fastlane/app_privacy_details.json, then:")
     print("  python3 scripts/asc-submit-for-review.py")
     return 0
 

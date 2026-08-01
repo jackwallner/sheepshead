@@ -7,7 +7,7 @@ complete multiplayer game.
 
 ## Product identity
 
-- Display name: Sheepshead
+- Display name: Sheepshead Practice Trainer
 - Bundle ID: `com.jackwallner.sheepshead`
 - App Store ID: `6796913227`
 - Marketing version: `1.0`
@@ -38,17 +38,24 @@ use the scripts in `scripts/` for the App Store Connect metadata, products,
 readiness, screenshots, and TestFlight workflow. Do not submit for App Review
 automatically.
 
+The App Privacy answers are stored in
+`fastlane/app_privacy_details.json`. Upload them with
+`./scripts/upload-app-privacy.sh` when `FASTLANE_SESSION` is available.
+
 Before public metadata changes, complete the ASO brief in
 `docs/research/aso-sheepshead.md` and run:
 
 ```sh
 python3 scripts/validate_aso_brief.py \
   --brief docs/research/aso-sheepshead.md \
-  --product-name "Sheepshead"
+  --product-name "Sheepshead Practice Trainer"
 ```
 
 ## Reusable port workflow
 
 The source template and complete end-to-end porting instructions live in
 `/Users/jackwallner/cardport`. Start with its README and parity contract. The
-`.cardport.json` file records public identity values for this port.
+`.cardport.json` file records public identity values for this port. The parity
+reference is the original tile-practice app, and the port keeps its runtime,
+release, website, legal, and screenshot surfaces while replacing tile content
+with Sheepshead rules and cards.

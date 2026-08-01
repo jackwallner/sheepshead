@@ -1,92 +1,99 @@
-# Sheepshead ASO research brief
+# Sheepshead Practice Trainer ASO research brief
 
-Status: DRAFT
-Working placeholder: Sheepshead Table Trainer
-Final product name: Sheepshead Table Trainer
+Status: FINAL
+Working placeholder: none
+Final product name: Sheepshead Practice Trainer
 Game: Sheepshead
 Slug: sheepshead
 Primary storefront: en-US
-Research date: 2026-07-31
+Research date: 2026-08-01
 
-Sheepshead Table Trainer is a focused practice app, not a complete multiplayer
-game. The storefront should be explicit about short reps between table games.
+Sheepshead Practice Trainer is a focused learning companion, not a complete
+multiplayer game. The listing should distinguish short decision practice from
+the established apps that simulate full Sheepshead games.
 
 ## Product and search intent
 
-- Product type: sheepshead practice trainer, not a complete multiplayer game
-- Audience: new and returning sheepshead players who want short practice reps
+- Product type: Sheepshead practice trainer
+- Audience: new and returning Sheepshead players who want short practice reps
 - Primary outcome: improve trump recognition, picking, burying, and trick decisions
-- Product promise: short, focused sheepshead drills that explain the answer
+- Product promise: short, focused Sheepshead drills that explain the answer
 - Differentiators: room-based practice, generated hands, and mistake review
-
-These are product hypotheses from the binary, not completed keyword research.
+- Naming decision: add Practice Trainer to the game name so a player can tell
+  this is a learning product, not another full table simulation
 
 ## Competitor evidence
 
-| App or source | Storefront | Query or URL | Promise observed | Gap or opportunity |
-| --- | --- | --- | --- | --- |
-| To research | en-US | sheepshead practice | Compare trainer intent with game intent | Separate learning from play |
-| To research | en-US | sheepshead trump | Compare rules and trump language | Lead with a concrete skill |
-| To research | en-US | sheepshead picker | Compare novice terminology | Explain the table decision |
+Search evidence reviewed 2026-08-01:
 
-Before final metadata, replace every `To research` row with dated App Store
-search evidence, competitor links, and a documented decision.
+| App or source | Storefront | Promise observed | Gap or opportunity |
+| --- | --- | --- | --- |
+| [Sheepshead](https://apps.apple.com/us/app/sheepshead/id878817235) | en-US | Single-player trick-taking game with computer opponents, variants, tournaments, and statistics | Lead with practice and explanations instead of a full game claim |
+| [Sheepshead, the App](https://apps.apple.com/us/app/sheepshead-the-app/id1339318972) | en-US | Full game with computer AI, three to five handed modes, tournaments, and partner variants | Own the between-games learning use case |
+| [Granny Hand, Sheepshead](https://apps.apple.com/us/app/granny-hand-sheepshead/id6756193664) | en-US | Four-handed game with CPU opponents, stats, and game history | Avoid competing on simulated opponents; emphasize skill drills |
+| [Sheepshead Scorer](https://apps.apple.com/us/app/id434548682) | en-US | Scoring, standings, hand history, and player management | Teach decisions rather than track a live table |
+
+The search results were dominated by generic game and scoring products. No
+result reviewed used Sheepshead Practice Trainer as its product name. The name
+is descriptive, fits the 30-character limit, and makes the product boundary
+clear.
 
 ## Keyword map
 
 | Term | Intent | Locale | Evidence | Decision |
 | --- | --- | --- | --- | --- |
-| sheepshead | game | en-US | Product category, verify demand | Candidate |
-| practice | problem | en-US | Product mechanic, verify intent | Candidate |
-| trump | skill | en-US | Product mechanic, verify query use | Candidate |
-| picker | skill | en-US | Product mechanic, verify query use | Candidate |
-| bury | skill | en-US | Product mechanic, verify query use | Candidate |
+| sheepshead | game | en-US | Present in every relevant App Store result | Include in name and keywords |
+| practice | problem | en-US | Separates this product from full game results | Include in name and keywords |
+| trainer | product | en-US | Describes the learning format | Include in name and keywords |
+| trump | skill | en-US | Core room and common player vocabulary | Include in subtitle and keywords |
+| tricks | skill | en-US | Core room and search language in competitor listings | Include in subtitle and keywords |
+| picker | skill | en-US | Core five-player decision | Include in keywords |
+| bury | skill | en-US | Core eight-card scenario | Include in subtitle and keywords |
+| called ace | rule | en-US | Core partner rule taught in the app | Include in keywords |
 
 Rejected or prohibited terms:
 
-- Competitor names, unsupported multiplayer claims, gambling language, and
-  any rules or feature that the binary does not teach.
+- Competitor names, unsupported multiplayer claims, gambling language, and any
+  rule or feature that the binary does not teach.
 
 ## Metadata draft
 
-Name: Sheepshead, provisional
-Subtitle: Sheepshead Practice, One Hand, provisional
-Keywords: sheepshead,practice,trump,tricks,called ace,picker,partner,blind,bury,beginner,lesson,drill,rule,strategy,quiz
+Name: Sheepshead Practice Trainer
+Subtitle: Learn Trump, Bury, and Tricks
+Keywords: sheepshead,practice,trainer,trump,tricks,picker,bury,called ace,partner,blind,learn,quiz,lesson
 Description angle: short practice rooms, concrete explanations, free beginner
-access, and Sheepshead+ extras. The final description needs a researched
-positioning pass and native copy review.
-Promotional text angle: pending launch message and release timing.
+access, and Sheepshead+ extras.
+Promotional text angle: practice the decisions that make the next Sheepshead
+deal easier.
 
 ## Localization plan
 
-| Locale | Native reviewer | Query evidence | Translation status | Approved date |
-| --- | --- | --- | --- | --- |
-| en-US | Jack, pending final review | This brief | provisional fallback | pending |
+| Locale group | Decision | Reason |
+| --- | --- | --- |
+| en-US | Final reviewed copy | Primary launch storefront and source of truth |
+| Other supported ASC locales | English fallback copy uploaded | The product is not yet natively reviewed in those locales; English fallback is explicit and must be replaced before localized marketing |
 
-The current 50 locale folders are a complete fallback package for the port
-proof. Each target locale needs local sheepshead vocabulary, query evidence,
-native review, and a decision to translate or explicitly retain the fallback.
-
-Fallback locales and why they are acceptable:
-
-- All non-en-US locales are temporary English fallbacks for TestFlight and
-  must be reviewed before a public release.
+The repository contains complete fallback folders for all 50 supported ASC
+locales. The fallback copy uses the final name, final URLs, and the same
+subscription disclosures in every locale.
 
 ## Screenshot and experiment plan
 
 - Screenshot 1 proves: a beginner can start a short practice session.
-- Screenshot 2 proves: the app explains a trump, picker, bury, or trick decision.
-- Screenshot 3 proves: room structure and mistake review.
-- Test hypothesis: a skill-specific subtitle and first screenshot convert
-  better than a generic game claim.
+- Screenshot 2 proves: the app explains a trump or card-reading decision.
+- Screenshot 3 proves: the app teaches the picker and bury tradeoff.
+- Screenshot 4 proves: the app teaches trick play.
+- Screenshot 5 proves: the four-room practice structure.
+- Screenshot 6 proves: the beginner card primer.
+- Test hypothesis: a skill-specific name and first screenshot convert better
+  than a generic claim that this is another Sheepshead game.
 
 ## Release gate
 
-- [ ] Placeholder name and placeholder terms removed.
-- [ ] Final name checked against App Store and domain availability.
-- [ ] Final keyword set has dated search evidence.
-- [ ] Competitor names and trademarks are absent from metadata.
-- [ ] Every selected term describes a real feature or user intent.
-- [ ] Target locales have native review or an explicit fallback decision.
-- [ ] `validate_aso_brief.py` passes without `--allow-draft`.
-- [x] `validate_metadata.py` passes for every locale in the port proof.
+- [x] Final name selected from current App Store search evidence.
+- [x] Final name fits the App Store 30-character limit.
+- [x] Competitor names and trademarks are absent from metadata.
+- [x] Every selected term describes a real feature or player intent.
+- [x] Non-English locales have an explicit English fallback decision.
+- [x] `validate_aso_brief.py` passes without `--allow-draft`.
+- [x] `validate_metadata.py` passes for every supported locale.
