@@ -1,0 +1,14 @@
+{
+  "name": "Sheepshead",
+  "slug": "sheepshead",
+  "module": "Sheepshead",
+  "bundle_id": "com.jackwallner.sheepshead",
+  "membership": "Sheepshead+",
+  "name_status": "needs_aso_review",
+  "revenuecat_public_key": "appl_kVSntIwtmGjSjSwybaZLncvgYUX",
+  "app_store_id": "6796911073",
+  "aso_brief": "docs/research/aso-sheepshead.md",
+  "source_product": "Cribbity",
+  "source_game": "Cribbage",
+  "template": "card-app-template"
+}
