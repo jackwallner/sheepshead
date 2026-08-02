@@ -1,38 +1,38 @@
-Practice Sheepshead in five-minute drills: read trump, choose a blind, protect a partner plan, and learn the reason behind every answer.
+ฝึกฝน Sheepshead ในการฝึกซ้อมห้านาที: อ่านไพ่ตาย เลือกคนตาบอด ปกป้องแผนพันธมิตร และเรียนรู้เหตุผลเบื้องหลังทุกคำตอบ
 
-Sheepshead is a focused practice companion for players learning the game or sharpening decisions between table sessions. No opponents, no pressure, and no account required. Just quick interactive reps that build confidence before the next deal.
+Sheepshead เป็นเพื่อนร่วมฝึกซ้อมที่มุ่งเน้นสำหรับผู้เล่นที่เรียนรู้เกมหรือตัดสินใจอย่างเฉียบคมระหว่างเซสชั่นบนโต๊ะ ไม่มีคู่ต่อสู้ ไม่มีความกดดัน และไม่ต้องมีบัญชี เพียงตัวแทนโต้ตอบด่วนที่สร้างความมั่นใจก่อนข้อตกลงครั้งต่อไป
 
-FOUR FREE PRACTICE ROOMS
+ห้องฝึกซ้อมฟรีสี่ห้อง
 
-THE CARD ROOM
-Learn the 32-card deck, point values, the blind, picking, and the called-ace partnership.
+ห้องการ์ด
+เรียนรู้สำรับไพ่ 32 ใบ ค่าแต้ม บลายด์ การเลือก และหุ้นส่วนที่เรียกว่าเอซ
 
-THE TRUMP ROOM
-See a holding, identify the trump and fail cards, and read trick strength separately from point value.
+ห้องไพ่ตาย
+ดูการถือครอง ระบุไพ่คนดีและล้มเหลว และอ่านจุดแข็งของเคล็ดลับแยกจากค่าคะแนน
 
-THE BURY ROOM
-Study the picker tradeoff. Choose two cards to bury from an eight-card holding, then compare your decision with the coach's reasoning.
+ห้องฝังศพ
+ศึกษาข้อดีของตัวเลือก เลือกไพ่สองใบเพื่อฝังจากการถือไพ่แปดใบ จากนั้นเปรียบเทียบการตัดสินใจของคุณกับเหตุผลของโค้ช
 
-THE TRICK ROOM
-Practice following suit, ordering trump, finding the partner, and capturing the point cards that decide the hand.
+ห้องเคล็ดลับ
+ฝึกปฏิบัติตามคำสั่ง สั่งไพ่ตาย ค้นหาคู่หู และจับไพ่แต้มที่จะตัดสินมือ
 
-SHEEPSHEAD+ (optional upgrade)
-Everything above stays free, forever. Sheepshead+ adds fresh practice that never runs out:
+SHEEPSHEAD+ (อัปเกรดเพิ่มเติมได้)
+ทุกสิ่งที่กล่าวมาข้างต้นจะคงอยู่ฟรีตลอดไป Sheepshead+ เพิ่มการฝึกฝนใหม่ๆ ที่ไม่มีวันหมด:
 
-ENDLESS PRACTICE generates new legal holdings for focused card and trump practice.
+การปฏิบัติที่ไม่มีที่สิ้นสุดสร้างการถือครองทางกฎหมายใหม่สำหรับไพ่ที่มุ่งเน้นและการปฏิบัติของไพ่ตาย
 
-FIX MY MISTAKES remembers what you missed and brings it back on a spaced schedule.
+แก้ไขข้อผิดพลาดของฉัน จดจำสิ่งที่คุณพลาดและนำกลับมาตามกำหนดเวลาที่เว้นระยะห่าง
 
-TIMED CHALLENGE gives you ninety seconds and a personal best to chase.
+TIMED CHALLENGE ให้เวลาเก้าสิบวินาทีและมีเวลาส่วนตัวในการไล่ล่าให้ดีที่สุด
 
-EXTRA PRACTICE SETS add original questions to every beginner room.
+ชุดฝึกพิเศษเพิ่มคำถามต้นฉบับให้กับห้องเริ่มต้นทุกห้อง
 
-THE MASTER TABLES open advanced picker, partner, defense, and trick strategy.
+MASTER TABLES เปิดตัวเลือกขั้นสูง คู่หู การป้องกัน และกลยุทธ์กลอุบาย
 
-BUILT FOR NEW PLAYERS
-Swipeable cards explain the why on the back. Streaks keep practice moving. Original teaching holdings make the rules easier to remember at a real table.
+สร้างมาเพื่อผู้เล่นใหม่
+การ์ดแบบกวาดนิ้วได้จะอธิบายสาเหตุที่ด้านหลัง ลายเส้นทำให้การฝึกซ้อมเคลื่อนไหว เนื้อหาการสอนดั้งเดิมช่วยให้จดจำกฎเกณฑ์ได้ง่ายขึ้นบนโต๊ะจริง
 
-Sheepshead is an independent practice app. House rules vary, so use the rules agreed at your table.
+Sheepshead เป็นแอปฝึกหัดอิสระ กฎของที่พักแตกต่างกันไป ดังนั้นให้ใช้กฎที่ตกลงกันไว้บนโต๊ะของคุณ
 
-SUBSCRIPTIONS
-Sheepshead+ is available by auto-renewing subscription or a one-time purchase: Monthly $1.99/month, Yearly $9.99/year, both with a 1-week free trial, or Lifetime $29.99 one time. Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Account Settings on your device. Terms of Use (Apple's standard EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/. Privacy Policy: https://jackwallner.github.io/sheepshead/privacy-policy.
+การสมัครสมาชิก
+Sheepshead+ มีให้บริการโดยการสมัครสมาชิกต่ออายุอัตโนมัติหรือการซื้อครั้งเดียว: รายเดือน $1.99/เดือน, $9.99 รายปี/ปี ทั้งคู่พร้อมทดลองใช้ฟรี 1 สัปดาห์ หรือ $29.99 ตลอดชีพหนึ่งครั้ง การชำระเงินจะถูกหักออกจากบัญชี Apple ID ของคุณเมื่อยืนยันการซื้อ การสมัครสมาชิกจะต่ออายุโดยอัตโนมัติเว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดช่วงเวลาปัจจุบัน จัดการหรือยกเลิกได้ตลอดเวลาในการตั้งค่าบัญชีบนอุปกรณ์ของคุณ ข้อกำหนดการใช้งาน (EULA มาตรฐานของ Apple): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ นโยบายความเป็นส่วนตัว: https://jackwallner.github.io/sheepshead/privacy-policy

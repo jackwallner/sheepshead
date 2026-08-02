@@ -73,11 +73,14 @@ deal easier.
 | Locale group | Decision | Reason |
 | --- | --- | --- |
 | en-US | Final reviewed copy | Primary launch storefront and source of truth |
-| Other supported ASC locales | English fallback copy uploaded | The product is not yet natively reviewed in those locales; English fallback is explicit and must be replaced before localized marketing |
+| en-AU, en-CA, en-GB | English storefront variants | Same-language metadata for the other English storefronts |
+| es-ES, es-MX | Native Spanish metadata | Localized copy for the Spanish storefronts |
+| Other supported ASC locales | Native-language metadata | Each supported storefront has localized name, subtitle, keywords, description, promotional text, and release notes |
 
-The repository contains complete fallback folders for all 50 supported ASC
-locales. The fallback copy uses the final name, final URLs, and the same
-subscription disclosures in every locale.
+The repository contains complete metadata folders for all 50 supported ASC
+locales. Each non-English storefront has localized marketing copy, while
+product names, URLs, prices, and subscription disclosures remain consistent
+with the canonical English source.
 
 ## Screenshot and experiment plan
 
@@ -96,6 +99,6 @@ subscription disclosures in every locale.
 - [x] Final name fits the App Store 30-character limit.
 - [x] Competitor names and trademarks are absent from metadata.
 - [x] Every selected term describes a real feature or player intent.
-- [x] Non-English locales have an explicit English fallback decision.
+- [x] Every supported non-English locale has localized metadata.
 - [x] `validate_aso_brief.py` passes without `--allow-draft`.
 - [x] `validate_metadata.py` passes for every supported locale.

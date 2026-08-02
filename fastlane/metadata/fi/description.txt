@@ -1,38 +1,38 @@
-Practice Sheepshead in five-minute drills: read trump, choose a blind, protect a partner plan, and learn the reason behind every answer.
+Harjoittele Sheepshead:ää viiden minuutin harjoituksissa: lue valttii, valitse sokea, suojaa kumppanisuunnitelma ja opi jokaisen vastauksen syy.
 
-Sheepshead is a focused practice companion for players learning the game or sharpening decisions between table sessions. No opponents, no pressure, and no account required. Just quick interactive reps that build confidence before the next deal.
+Sheepshead on keskittynyt harjoituskumppani pelaajille, jotka oppivat peliä tai terävöittävät päätöksiä pöytäistuntojen välillä. Ei vastustajia, ei paineita, eikä tiliä vaadita. Vain nopeat interaktiiviset toistot, jotka lisäävät luottamusta ennen seuraavaa sopimusta.
 
-FOUR FREE PRACTICE ROOMS
+NELJÄ ILMAISTA HARJOITUSHUONEET
 
-THE CARD ROOM
-Learn the 32-card deck, point values, the blind, picking, and the called-ace partnership.
+KORTTIHUONE
+Opi 32 kortin paka, pistearvot, sokea, poiminta ja kutsu-ässä kumppanuus.
 
-THE TRUMP ROOM
-See a holding, identify the trump and fail cards, and read trick strength separately from point value.
+TRUMPIHUONE
+Katso pito, tunnista valtti- ja epäonnistumiskortit ja lue tempun vahvuus erillään pistearvosta.
 
-THE BURY ROOM
-Study the picker tradeoff. Choose two cards to bury from an eight-card holding, then compare your decision with the coach's reasoning.
+HAUTUSHUONE
+Tutki valitsimen kompromissia. Valitse kaksi korttia haudattavaksi kahdeksan kortin joukosta ja vertaa sitten päätöstäsi valmentajan perusteluihin.
 
-THE TRICK ROOM
-Practice following suit, ordering trump, finding the partner, and capturing the point cards that decide the hand.
+TIKKUHUONE
+Harjoittele maan seuraamista, valttien määräämistä, kumppanin löytämistä ja käden ratkaisevien pistekorttien vangitsemista.
 
-SHEEPSHEAD+ (optional upgrade)
-Everything above stays free, forever. Sheepshead+ adds fresh practice that never runs out:
+SHEEPSHEAD+ (valinnainen päivitys)
+Kaikki yllä oleva pysyy ilmaiseksi, ikuisesti. Sheepshead+ lisää tuoretta harjoitusta, joka ei lopu koskaan:
 
-ENDLESS PRACTICE generates new legal holdings for focused card and trump practice.
+LOPPU KÄYTÄNNÖT luo uusia laillisia omistuksia kohdennetulle kortti- ja valttiharjoittelulle.
 
-FIX MY MISTAKES remembers what you missed and brings it back on a spaced schedule.
+KORJAA OMA VIRHEET muistaa, mitä jäit paitsi, ja palauttaa sen tietyin väliajoin.
 
-TIMED CHALLENGE gives you ninety seconds and a personal best to chase.
+TIMED CHALLENGE antaa sinulle 90 sekuntia ja henkilökohtaisen ennätyksen.
 
-EXTRA PRACTICE SETS add original questions to every beginner room.
+LISÄHARJOITUSSARJAT lisäävät alkuperäisiä kysymyksiä jokaiseen aloittelijahuoneeseen.
 
-THE MASTER TABLES open advanced picker, partner, defense, and trick strategy.
+MASTER TABLES avaa edistyneen poimija-, kumppani-, puolustus- ja temppustrategian.
 
-BUILT FOR NEW PLAYERS
-Swipeable cards explain the why on the back. Streaks keep practice moving. Original teaching holdings make the rules easier to remember at a real table.
+RAKENNETTU UUSILLE PELAAJILLE
+Pyyhkäisevät kortit selittävät miksi takana. Viivat pitävät harjoittelun liikkeessä. Alkuperäiset opetuskokoelmat tekevät säännöistä helpompi muistaa oikean pöydän ääressä.
 
-Sheepshead is an independent practice app. House rules vary, so use the rules agreed at your table.
+Sheepshead on itsenäinen harjoitussovellus. Talon säännöt vaihtelevat, joten käytä pöydässäsi sovittuja sääntöjä.
 
-SUBSCRIPTIONS
-Sheepshead+ is available by auto-renewing subscription or a one-time purchase: Monthly $1.99/month, Yearly $9.99/year, both with a 1-week free trial, or Lifetime $29.99 one time. Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Account Settings on your device. Terms of Use (Apple's standard EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/. Privacy Policy: https://jackwallner.github.io/sheepshead/privacy-policy.
+TILAUKSET
+Sheepshead+ on saatavilla automaattisesti uusiutuvalla tilauksella tai kertaostolla: kuukausittain $1.99/kk, vuosittain $9.99/vuosi, molemmilla 1 viikon ilmaisella kokeilujaksolla tai Lifetime $29.99 kerran. Maksu veloitetaan Apple ID -tililtäsi ostovahvistuksen yhteydessä. Tilaukset uusiutuvat automaattisesti, ellei niitä peruuteta vähintään 24 tuntia ennen nykyisen jakson päättymistä. Hallinnoi tai peruuta milloin tahansa laitteesi Tilin asetuksista. Käyttöehdot (Applen standardi EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/. Tietosuojakäytäntö: https://jackwallner.github.io/sheepshead/privacy-policy.

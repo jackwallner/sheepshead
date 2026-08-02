@@ -1,38 +1,38 @@
-Practice Sheepshead in five-minute drills: read trump, choose a blind, protect a partner plan, and learn the reason behind every answer.
+5분 훈련으로 Sheepshead를 연습하세요. 으뜸패를 읽고, 블라인드를 선택하고, 파트너 계획을 보호하고, 모든 답변 뒤에 숨은 이유를 알아보세요.
 
-Sheepshead is a focused practice companion for players learning the game or sharpening decisions between table sessions. No opponents, no pressure, and no account required. Just quick interactive reps that build confidence before the next deal.
+Sheepshead는 플레이어가 게임을 배우거나 테이블 세션 사이에 결정을 내릴 수 있는 집중 연습 동반자입니다. 상대도 없고, 압력도 없고, 계정도 필요하지 않습니다. 다음 거래 전에 자신감을 키우는 빠른 대화형 담당자입니다.
 
-FOUR FREE PRACTICE ROOMS
+4개의 무료 연습실
 
-THE CARD ROOM
-Learn the 32-card deck, point values, the blind, picking, and the called-ace partnership.
+카드룸
+32장 카드 덱, 포인트 가치, 블라인드, 픽, 콜드 에이스 파트너십에 대해 알아보세요.
 
-THE TRUMP ROOM
-See a holding, identify the trump and fail cards, and read trick strength separately from point value.
+으뜸패 룸
+홀딩을 확인하고, 으뜸패 카드와 실패 카드를 식별하고, 포인트 값과 별도로 트릭 강도를 읽어보세요.
 
-THE BURY ROOM
-Study the picker tradeoff. Choose two cards to bury from an eight-card holding, then compare your decision with the coach's reasoning.
+베리 룸
+선택기 트레이드오프를 연구합니다. 8장의 카드 중에서 묻을 두 장의 카드를 선택한 다음, 코치의 추론과 귀하의 결정을 비교하십시오.
 
-THE TRICK ROOM
-Practice following suit, ordering trump, finding the partner, and capturing the point cards that decide the hand.
+트릭룸
+수트 따라하기, 으뜸패 주문하기, 파트너 찾기, 패를 결정하는 포인트 카드 획득하기 등을 연습하세요.
 
-SHEEPSHEAD+ (optional upgrade)
-Everything above stays free, forever. Sheepshead+ adds fresh practice that never runs out:
+SHEEPSHEAD+(선택적 업그레이드)
+위의 모든 항목은 영원히 무료로 유지됩니다. Sheepshead+는 결코 끝나지 않는 새로운 실천을 추가합니다.
 
-ENDLESS PRACTICE generates new legal holdings for focused card and trump practice.
+끝없는 연습은 집중된 카드 및 으뜸패 연습을 위한 새로운 법적 보유를 생성합니다.
 
-FIX MY MISTAKES remembers what you missed and brings it back on a spaced schedule.
+FIX MY MISTAKES는 사용자가 놓친 내용을 기억하고 일정에 따라 다시 가져옵니다.
 
-TIMED CHALLENGE gives you ninety seconds and a personal best to chase.
+시간 제한 챌린지는 90초 동안 개인 최고 기록을 달성할 수 있는 기회를 제공합니다.
 
-EXTRA PRACTICE SETS add original questions to every beginner room.
+추가 연습 세트는 모든 초보자 방에 독창적인 질문을 추가합니다.
 
-THE MASTER TABLES open advanced picker, partner, defense, and trick strategy.
+마스터 테이블은 고급 선택기, 파트너, 방어 및 트릭 전략을 공개합니다.
 
-BUILT FOR NEW PLAYERS
-Swipeable cards explain the why on the back. Streaks keep practice moving. Original teaching holdings make the rules easier to remember at a real table.
+새로운 플레이어를 위해 제작되었습니다
+스와이프할 수 있는 카드 뒷면에 이유가 설명되어 있습니다. 연속 연습은 계속됩니다. 독창적인 교육 자료를 통해 실제 테이블에서 규칙을 더 쉽게 기억할 수 있습니다.
 
-Sheepshead is an independent practice app. House rules vary, so use the rules agreed at your table.
+Sheepshead는 독립적인 연습 앱입니다. 하우스 규칙은 다양하므로 테이블에서 합의한 규칙을 따르십시오.
 
-SUBSCRIPTIONS
-Sheepshead+ is available by auto-renewing subscription or a one-time purchase: Monthly $1.99/month, Yearly $9.99/year, both with a 1-week free trial, or Lifetime $29.99 one time. Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Account Settings on your device. Terms of Use (Apple's standard EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/. Privacy Policy: https://jackwallner.github.io/sheepshead/privacy-policy.
+구독
+Sheepshead+는 자동 갱신 구독 또는 일회성 구매로 이용할 수 있습니다. 월간 $1.99/월, 연간 $9.99/년, 둘 다 1주 무료 평가판 또는 평생 $29.99 1회. 구매 확인 시 Apple ID 계정으로 요금이 청구됩니다. 현재 기간이 종료되기 최소 24시간 전에 취소하지 않으면 구독이 자동으로 갱신됩니다. 기기의 계정 설정에서 언제든지 관리하거나 취소하세요. 이용 약관(Apple의 표준 EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/. 개인 정보 보호 정책: https://jackwallner.github.io/sheepshead/privacy-policy.
