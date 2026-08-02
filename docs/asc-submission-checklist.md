@@ -78,7 +78,7 @@ Expected result: **4+**, no advisory content descriptors.
 
 - B (subscription legal in metadata): done , see
   `fastlane/metadata/en-US/description.txt` SUBSCRIPTIONS section, mirrored
-  (translated) into every other locale.
+  into every supported ASC locale with localized storefront copy.
 - C (privacy policy live + support/terms resolve): confirmed ,
   `https://jackwallner.github.io/sheepshead/privacy-policy`,
   `https://jackwallner.github.io/sheepshead/terms`,

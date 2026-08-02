@@ -1,38 +1,38 @@
-Practice Sheepshead in five-minute drills: read trump, choose a blind, protect a partner plan, and learn the reason behind every answer.
+5 分間のドリルで Sheepshead を練習します。切り札を読み、ブラインドを選択し、パートナーの計画を守り、すべての答えの背後にある理由を学びます。
 
-Sheepshead is a focused practice companion for players learning the game or sharpening decisions between table sessions. No opponents, no pressure, and no account required. Just quick interactive reps that build confidence before the next deal.
+Sheepshead は、プレーヤーがゲームを学習したり、テーブル セッションの合間に判断力を磨いたりするための集中的な練習パートナーです。敵対者もプレッシャーもなく、アカウントも必要ありません。簡単なインタラクティブな担当者だけで、次の取引までに自信を築きます。
 
-FOUR FREE PRACTICE ROOMS
+4つの無料練習室
 
-THE CARD ROOM
-Learn the 32-card deck, point values, the blind, picking, and the called-ace partnership.
+カードルーム
+32 枚のカード デッキ、ポイント値、ブラインド、ピッキング、およびエースと呼ばれるパートナーシップについて学びます。
 
-THE TRUMP ROOM
-See a holding, identify the trump and fail cards, and read trick strength separately from point value.
+切り札ルーム
+ホールドを確認し、切り札と失敗カードを特定し、ポイント値とは別にトリックの強さを読み取ります。
 
-THE BURY ROOM
-Study the picker tradeoff. Choose two cards to bury from an eight-card holding, then compare your decision with the coach's reasoning.
+ベリールーム
+ピッカーのトレードオフを検討します。 8 枚のカードから埋めるカードを 2 枚選び、コーチの推論と自分の決定を比較します。
 
-THE TRICK ROOM
-Practice following suit, ordering trump, finding the partner, and capturing the point cards that decide the hand.
+トリックルーム
+後を追って、切り札を注文し、パートナーを見つけ、ハンドを決定するポイントカードを獲得する練習をしてください。
 
-SHEEPSHEAD+ (optional upgrade)
-Everything above stays free, forever. Sheepshead+ adds fresh practice that never runs out:
+SHEEPSHEAD+ (オプションのアップグレード)
+上記のものはすべて永久に無料です。 Sheepshead+ は、尽きることのない新鮮な練習を追加します。
 
-ENDLESS PRACTICE generates new legal holdings for focused card and trump practice.
+ENDLESS PRACTICE は、カードと切り札の練習に焦点を当てた新しい法的保有を生成します。
 
-FIX MY MISTAKES remembers what you missed and brings it back on a spaced schedule.
+「間違いを修正」は、見逃したことを記憶し、間隔をあけたスケジュールで取り戻します。
 
-TIMED CHALLENGE gives you ninety seconds and a personal best to chase.
+TIMED CHALLENGE では、90 秒で自己ベストを追いかけることができます。
 
-EXTRA PRACTICE SETS add original questions to every beginner room.
+追加練習セットでは、すべての初心者ルームにオリジナルの問題が追加されます。
 
-THE MASTER TABLES open advanced picker, partner, defense, and trick strategy.
+マスター テーブルでは、高度なピッカー、パートナー、ディフェンス、トリック戦略を開きます。
 
-BUILT FOR NEW PLAYERS
-Swipeable cards explain the why on the back. Streaks keep practice moving. Original teaching holdings make the rules easier to remember at a real table.
+新規プレイヤー向けに構築
+スワイプ可能なカードの裏面にはその理由が説明されています。連続して練習を続けます。オリジナルのティーチングホールディングにより、実際のテーブルでルールを覚えやすくなります。
 
-Sheepshead is an independent practice app. House rules vary, so use the rules agreed at your table.
+Sheepshead は独立した練習アプリです。ハウスルールはさまざまなので、テーブルで合意されたルールに従ってください。
 
-SUBSCRIPTIONS
-Sheepshead+ is available by auto-renewing subscription or a one-time purchase: Monthly $1.99/month, Yearly $9.99/year, both with a 1-week free trial, or Lifetime $29.99 one time. Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Account Settings on your device. Terms of Use (Apple's standard EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/. Privacy Policy: https://jackwallner.github.io/sheepshead/privacy-policy.
+定期購入
+Sheepshead+ は、自動更新サブスクリプションまたは 1 回限りの購入でご利用いただけます: 月額 $1.99/月、年間 $9.99/年、どちらも 1 週間の無料トライアル付き、または生涯 $29.99 1 回。お支払いは、購入の確認時に Apple ID アカウントに請求されます。現在の期間が終了する少なくとも 24 時間前にキャンセルしない限り、サブスクリプションは自動的に更新されます。デバイスのアカウント設定でいつでも管理またはキャンセルできます。利用規約 (Apple の標準 EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/。プライバシーポリシー：https://jackwallner.github.io/sheepshead/privacy-policy。
