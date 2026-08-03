@@ -29,21 +29,21 @@ enum DiscardContent {
         ),
         Flashcard(
             id: "bury-no-trump",
-            frontTitle: "Trump is control",
+            frontTitle: "Which two go?",
             frontTiles: [.d(8), .d(7), .s(9), .h(8)],
-            frontSubtitle: "Even the smallest diamond",
+            frontSubtitle: "Two low diamonds, a spade, and a heart",
             backTitle: "Bury fail cards, not trump",
-            backBody: "A diamond 7 still beats every fail card in the deck. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
-            choice: CardChoice("Bury the fail cards", "Bury the two low diamonds", answerIndex: 0)
+            backBody: "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
+            choice: CardChoice("The spade and the heart", "The two low diamonds", answerIndex: 0)
         ),
         Flashcard(
             id: "bury-empty-a-suit",
-            frontTitle: "Empty a short suit",
+            frontTitle: "Two hearts and two clubs",
             frontTiles: [.h(13), .h(7), .c(9), .c(8)],
-            frontSubtitle: "Two cards, one whole suit",
+            frontSubtitle: "All four are safe to bury. Which pair?",
             backTitle: "A suit you no longer hold is a suit you can trump",
-            backBody: "Burying both cards of a two-card fail suit banks their points and leaves you free to play trump the next time that suit is led. It is often the strongest bury available.",
-            choice: CardChoice("Empty the short suit", "Split the bury across suits", answerIndex: 0)
+            backBody: "Burying both hearts banks the king's 4 points and leaves you free to play trump the next time hearts are led. Splitting the bury across two suits banks less and empties neither.",
+            choice: CardChoice("Both hearts", "One heart and one club", answerIndex: 0)
         ),
         Flashcard(
             id: "bury-points",
