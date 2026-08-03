@@ -6,9 +6,9 @@ enum DiscardContent {
         Flashcard(
             id: "bury-what",
             frontTitle: "Bury two cards",
-            frontSubtitle: "The picker has six cards after taking the blind",
-            backTitle: "Keep four, bury two",
-            backBody: "The picker adds the two blind cards to the original six, chooses a four-card playing hand, and places the other two cards face down. Those buried cards count for the picking side."
+            frontSubtitle: "The picker holds eight cards after taking the blind",
+            backTitle: "Keep six, bury two",
+            backBody: "The picker adds the two blind cards to the original six, keeps a six-card playing hand, and places the other two cards face down. Those buried cards count for the picking side."
         ),
         Flashcard(
             id: "bury-trump-first",
@@ -21,10 +21,29 @@ enum DiscardContent {
         Flashcard(
             id: "bury-called-suit",
             frontTitle: "Hold the called suit",
-            frontTiles: [.c(14), .c(7), .d(12), .h(9)],
+            frontTiles: [.c(9), .c(7), .d(12), .h(9)],
             frontSubtitle: "A called-ace partnership rule",
             backTitle: "The picker keeps a fail card from that suit",
-            backBody: "In the common call-an-ace game, the picker names a fail ace and must retain at least one card from that fail suit. Burying the only hold card creates an illegal call."
+            backBody: "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit. Burying the only hold card creates an illegal call.",
+            choice: CardChoice("Name an ace you were not dealt", "Name your own strongest ace", answerIndex: 0)
+        ),
+        Flashcard(
+            id: "bury-no-trump",
+            frontTitle: "Trump is control",
+            frontTiles: [.d(8), .d(7), .s(9), .h(8)],
+            frontSubtitle: "Even the smallest diamond",
+            backTitle: "Bury fail cards, not trump",
+            backBody: "A diamond 7 still beats every fail card in the deck. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
+            choice: CardChoice("Bury the fail cards", "Bury the two low diamonds", answerIndex: 0)
+        ),
+        Flashcard(
+            id: "bury-empty-a-suit",
+            frontTitle: "Empty a short suit",
+            frontTiles: [.h(13), .h(7), .c(9), .c(8)],
+            frontSubtitle: "Two cards, one whole suit",
+            backTitle: "A suit you no longer hold is a suit you can trump",
+            backBody: "Burying both cards of a two-card fail suit banks their points and leaves you free to play trump the next time that suit is led. It is often the strongest bury available.",
+            choice: CardChoice("Empty the short suit", "Split the bury across suits", answerIndex: 0)
         ),
         Flashcard(
             id: "bury-points",
@@ -63,51 +82,53 @@ enum DiscardContent {
     static let scenarios: [DiscardScenario] = [
         DiscardScenario(
             id: "bury-scenario-1",
-            situation: "You picked the blind and want a stable team hand. Choose two cards to bury.",
-            deal: [.c(12), .s(11), .d(14), .d(9), .c(14), .h(7), .h(10), .s(8)],
-            recommendedDiscard: [.d(9), .h(7)],
-            reasoning: "Keep the queen of clubs, jack of spades, ace of diamonds, and club ace. The two lower cards add less control, while the kept hand has three strong trumps and a fail winner.",
-            tip: "Start with sure winners, then decide which low cards are safe to bury."
+            situation: "You picked with four trumps and two singleton fail cards. Choose two cards to bury.",
+            deal: [.c(12), .s(11), .d(14), .d(9), .c(13), .h(7), .h(9), .s(8)],
+            recommendedDiscard: [.c(13), .s(8)],
+            reasoning: "Burying the lone club and the lone spade banks the club king's 4 points and empties two fail suits at once, so a club or spade lead can be trumped. Every trump stays, and the two hearts leave you a legal hold card for calling the heart ace.",
+            tip: "A singleton fail card is the cheapest way to empty a suit."
         ),
         DiscardScenario(
             id: "bury-scenario-2",
-            situation: "You call the ace of hearts and must keep a heart fail card. Choose two cards to bury.",
-            deal: [.c(12), .d(10), .h(14), .h(8), .s(7), .d(9), .c(8), .s(13)],
-            recommendedDiscard: [.s(7), .d(9)],
-            reasoning: "Keep the queen of clubs and diamond 10 for trump control, the heart ace for the call, and the heart 8 as the required hold card. The spade 7 and diamond 9 are the least useful pair of cards here.",
-            tip: "Check the called-suit hold before you finalize the bury."
+            situation: "You plan to call the ace of hearts, so a heart has to stay. Choose two cards to bury.",
+            deal: [.c(12), .d(10), .d(9), .h(13), .h(8), .s(7), .c(8), .c(7)],
+            recommendedDiscard: [.h(13), .s(7)],
+            reasoning: "Bury the heart king and the lone spade. That banks 4 points, empties spades, and keeps the heart 8 as the required hold card for the call. A hold card only has to belong to the called suit, so the low heart does the job and the king is safer face down.",
+            tip: "Keep the cheapest legal hold card and bank the expensive one.",
+            calledSuit: .hearts
         ),
         DiscardScenario(
             id: "bury-scenario-3",
-            situation: "The blind gives you three fail aces. Keep the point cards you can actually support.",
+            situation: "You were dealt all three fail aces, so no ace is left to call. Choose two cards to bury.",
             deal: [.c(14), .h(14), .s(14), .d(13), .c(7), .s(9), .h(10), .d(8)],
-            recommendedDiscard: [.c(7), .s(9)],
-            reasoning: "The three fail aces and diamond king are all point cards with a chance to win their suits. The two zero-point cards do not add a winner or a called-suit requirement in this example.",
-            tip: "A high point total is useful only when the cards can take tricks."
+            recommendedDiscard: [.h(14), .h(10)],
+            reasoning: "Burying both hearts banks 21 points where nobody can capture them and leaves hearts empty for a trump. A picker who holds every fail ace has no ace to name, so this hand is played alone under the table's rules.",
+            tip: "You can only call an ace you were not dealt.",
+            isAlone: true
         ),
         DiscardScenario(
             id: "bury-scenario-4",
-            situation: "You have two top queens and two low diamonds. Choose the cards that reduce your fragile side.",
-            deal: [.c(12), .c(11), .d(7), .d(8), .h(10), .s(9), .h(14), .c(13)],
-            recommendedDiscard: [.d(7), .d(8)],
-            reasoning: "The queen and jack of clubs are top trumps, while the heart 10 is a point card that can be protected by trump control. The low diamonds are trump, but they are the least likely to win when stronger trump remains out.",
-            tip: "Low trump is still trump, but not every trump deserves a place in the final four."
+            situation: "You hold the queen and jack of clubs plus two low diamonds. Choose two cards to bury.",
+            deal: [.c(12), .c(11), .d(7), .d(8), .h(10), .h(13), .s(9), .s(8)],
+            recommendedDiscard: [.h(10), .h(13)],
+            reasoning: "The diamond 7 and 8 look like the weakest cards, but they are trump and beat every fail card in the deck. Burying both hearts banks 14 points and empties the suit, while the two spades stay as a hold card for a called ace.",
+            tip: "Low trump is still trump. The bury comes out of the fail suits."
         ),
         DiscardScenario(
             id: "bury-scenario-5",
-            situation: "You have no queen or jack. Keep the fail aces and avoid burying a useful hold card.",
-            deal: [.c(14), .c(10), .c(9), .h(14), .s(8), .h(7), .d(12), .h(13)],
-            recommendedDiscard: [.s(8), .h(7)],
-            reasoning: "The club ace, club 10, and heart ace are the hand's point winners. The spade 8 and heart 7 are zero-point cards, and the heart ace remains a possible called ace or hold card.",
-            tip: "When trump is thin, preserve fail winners and keep your partnership options open."
+            situation: "Your only trump is the queen and 8 of diamonds. Choose two cards to bury.",
+            deal: [.d(12), .d(8), .h(14), .h(13), .c(9), .c(8), .c(7), .s(9)],
+            recommendedDiscard: [.h(14), .h(13)],
+            reasoning: "With two trumps you cannot protect a fail ace once the opponents start drawing suits. Burying the heart ace and king banks 15 points safely and empties hearts, so the queen of diamonds can trump the first heart lead.",
+            tip: "Points you cannot defend are worth more face down than in your hand."
         ),
         DiscardScenario(
             id: "bury-scenario-6",
-            situation: "You are considering going alone with four queens. Choose a bury that keeps the strongest support.",
-            deal: [.c(12), .s(12), .h(12), .d(12), .d(14), .c(14), .d(10), .s(13)],
-            recommendedDiscard: [.d(14), .c(14)],
-            reasoning: "The four queens are the top trumps and make the alone plan possible. The diamond ace and club ace add points, but keeping every high card is less important than retaining the trump structure that wins the hand.",
-            tip: "Going alone is about guaranteed tricks, not only the number of points in hand."
+            situation: "You picked with the four queens and the diamond ace. Choose two cards to bury.",
+            deal: [.c(12), .s(12), .h(12), .d(12), .d(14), .c(14), .s(13), .s(9)],
+            recommendedDiscard: [.c(14), .s(13)],
+            reasoning: "The four queens and the diamond ace already control the hand, so the bury banks points instead of adding trump. The club ace and spade king are 15 points face down, clubs are empty, and the spade 9 remains as a legal hold card for a called ace.",
+            tip: "With trump control secured, bury for points."
         ),
     ]
 }

@@ -55,6 +55,140 @@ final class ContentValidityTests: XCTestCase {
         }
     }
 
+    /// `trumpStack`, `failSuit`, `pointCards`, and `lowCards` are decidable from
+    /// the cards alone, so no holding may offer one of them as a distractor while
+    /// actually satisfying it.
+    func testHandMatchDistractorsDoNotAlsoFitTheHolding() {
+        for question in allHandMatch {
+            for choice in question.choices where choice != question.answer {
+                XCTAssertFalse(
+                    HandGenerator.fits(question.tiles, choice),
+                    "\(question.id) marks \(question.answer.displayName) but the holding also fits \(choice.displayName)"
+                )
+            }
+            if HandGenerator.generatableCategories.contains(question.answer) {
+                XCTAssertTrue(
+                    HandGenerator.fits(question.tiles, question.answer),
+                    "\(question.id) is marked \(question.answer.displayName) but the holding does not fit it"
+                )
+            }
+        }
+    }
+
+    // MARK: - Bury rules
+
+    private static let failSuits: [Suit] = [.clubs, .hearts, .spades]
+
+    /// Ranks a candidate bury the way the Bury Room teaches it: empty a fail
+    /// suit if you can, then bank as many points as possible.
+    private func buryScore(deal: [PlayingCard], bury: [PlayingCard]) -> (emptied: Int, banked: Int) {
+        let keptFail = deal.filter { $0.isFail && !bury.contains($0) }
+        let emptied = Self.failSuits.filter { suit in
+            bury.contains { $0.isFail && $0.suit == suit } && !keptFail.contains { $0.suit == suit }
+        }.count
+        return (emptied, bury.reduce(0) { $0 + $1.pointValue })
+    }
+
+    /// The fail suits whose ace this picker could legally name after the bury:
+    /// an ace that was never dealt to them, in a suit they still hold.
+    private func callableSuits(deal: [PlayingCard], bury: [PlayingCard]) -> Set<Suit> {
+        let dealtAceSuits = Set(deal.filter(\.isFailAce).compactMap(\.suit))
+        let kept = deal.filter { !bury.contains($0) }
+        return Set(kept.filter { $0.isFail }.compactMap(\.suit)).subtracting(dealtAceSuits)
+    }
+
+    private func candidateBuries(for scenario: DiscardScenario) -> [[PlayingCard]] {
+        let fails = scenario.deal.filter(\.isFail)
+        var pairs: [[PlayingCard]] = []
+        for first in fails.indices {
+            for second in fails.indices where second > first {
+                let pair = [fails[first], fails[second]]
+                if let called = scenario.calledSuit {
+                    let kept = scenario.deal.filter { !pair.contains($0) }
+                    guard kept.contains(where: { $0.isFail && $0.suit == called }) else { continue }
+                }
+                pairs.append(pair)
+            }
+        }
+        return pairs
+    }
+
+    func testBuryRecommendationsNeverContainTrump() {
+        for scenario in allDiscard {
+            XCTAssertTrue(
+                scenario.recommendedDiscard.allSatisfy(\.isFail),
+                "\(scenario.id) buries trump; queens, jacks, and diamonds are control and stay in the hand"
+            )
+        }
+    }
+
+    func testBuryRecommendationIsTheUniqueBestBury() {
+        for scenario in allDiscard {
+            let candidates = candidateBuries(for: scenario)
+            XCTAssertFalse(candidates.isEmpty, "\(scenario.id) has no legal bury")
+            let scores = candidates.map { buryScore(deal: scenario.deal, bury: $0) }
+            guard let best = scores.max(by: { ($0.emptied, $0.banked) < ($1.emptied, $1.banked) }) else { continue }
+            let winners = zip(candidates, scores).filter { $0.1 == best }.map(\.0)
+            XCTAssertEqual(
+                winners.count, 1,
+                "\(scenario.id) has \(winners.count) equally good buries, so the graded answer is ambiguous"
+            )
+            XCTAssertEqual(
+                Set(scenario.recommendedDiscard), Set(winners.first ?? []),
+                "\(scenario.id) recommends \(scenario.recommendedDiscard.map(\.shortLabel)) but \(( winners.first ?? []).map(\.shortLabel)) empties more suits or banks more points"
+            )
+        }
+    }
+
+    func testCalledSuitScenariosObeyTheCallAnAceRules() {
+        for scenario in allDiscard {
+            guard let called = scenario.calledSuit else { continue }
+            XCTAssertNotEqual(called, .diamonds, "\(scenario.id) calls diamonds, which is trump, not a fail suit")
+            XCTAssertFalse(
+                scenario.deal.contains(.standard(rank: 14, suit: called)),
+                "\(scenario.id) names an ace the picker was dealt"
+            )
+            let kept = scenario.deal.filter { !scenario.recommendedDiscard.contains($0) }
+            XCTAssertTrue(
+                kept.contains { $0.isFail && $0.suit == called },
+                "\(scenario.id) buries its only hold card in the called suit"
+            )
+            XCTAssertTrue(
+                callableSuits(deal: scenario.deal, bury: scenario.recommendedDiscard).contains(called),
+                "\(scenario.id) leaves the called suit unplayable"
+            )
+        }
+    }
+
+    func testBuryScenariosAreEitherPartnershipHandsOrMarkedAlone() {
+        for scenario in allDiscard {
+            let callable = callableSuits(deal: scenario.deal, bury: scenario.recommendedDiscard)
+            if scenario.isAlone {
+                XCTAssertTrue(
+                    callable.isEmpty,
+                    "\(scenario.id) is marked alone but could still call \(callable.map(\.displayName))"
+                )
+            } else {
+                XCTAssertFalse(
+                    callable.isEmpty,
+                    "\(scenario.id) leaves no ace to call, so it must be marked as an alone hand"
+                )
+            }
+        }
+    }
+
+    func testGeneratedFailSuitExplanationNamesTheSuit() {
+        for suit in Self.failSuits {
+            let cards: [PlayingCard] = [14, 10, 13, 9, 8].map { .standard(rank: $0, suit: suit) }
+            let text = HandGenerator.explain(cards, answer: .failSuit)
+            XCTAssertTrue(
+                text.localizedCaseInsensitiveContains(suit.displayName),
+                "The generated fail-suit explanation must name the suit, got: \(text)"
+            )
+            XCTAssertFalse(text.contains("(suit)"), "Unsubstituted placeholder in: \(text)")
+        }
+    }
+
     func testBuryHoldingsUseTheSheepsheadDeck() {
         for scenario in allDiscard {
             for card in scenario.deal {

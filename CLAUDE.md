@@ -23,6 +23,14 @@ covers every drill in `DrillLibrary`: valid 7 through ace cards, no repeated
 physical card in a holding, eight-card picker holdings, two-card buries, unique
 IDs, no em dashes, and the free versus Sheepshead+ split.
 
+Bury scenarios are also checked against the rules, not just the shape. A
+recommended bury never contains trump, and it must be the unique best pair
+under: empty a short fail suit first, then bank the most points. A scenario
+that plans a call sets `calledSuit`, which requires that the ace was not dealt
+to the picker and that a hold card survives the bury; a scenario with no legal
+call sets `isAlone`. Hand-match holdings may not fit any offered distractor.
+See `docs/audits/sheepshead-accuracy-2026-08-03.md`.
+
 The review funnel asks after the third positive drill: enjoying it, yes opens
 the App Store review page for `6796913227`, no opens a feedback mail draft to
 `jackwallner+m@gmail.com`. Unhappy players never see a rating ask.

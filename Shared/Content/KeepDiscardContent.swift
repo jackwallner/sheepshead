@@ -45,7 +45,7 @@ enum KeepDiscardContent {
             frontTiles: [.h(10), .h(13), .h(7)],
             frontSubtitle: "No trump appears",
             backTitle: "The heart 10 wins",
-            backBody: "Within a fail suit, the order is ace, 10, king, 9, 8, 7. The 10 beats the king even though the king's point value is lower than the 10's rank value is not the rule here.",
+            backBody: "Within a fail suit, the order is ace, 10, king, 9, 8, 7. The 10 beats the king, which surprises players who expect a king to outrank a number card.",
             choice: CardChoice("Heart 10", "Heart king", answerIndex: 0)
         ),
         Flashcard(

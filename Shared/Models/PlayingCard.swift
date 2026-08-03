@@ -56,6 +56,20 @@ enum PlayingCard: Hashable, Codable, Sendable {
         }
     }
 
+    var suit: Suit? {
+        if case .standard(_, let suit) = self { return suit }
+        return nil
+    }
+
+    var isStandard: Bool {
+        if case .standard = self { return true }
+        return false
+    }
+
+    /// A fail ace is the only card the picker can name for a partner, so the
+    /// called-ace rules are expressed against this.
+    var isFailAce: Bool { isFail && rankValue == 14 }
+
     var isTrump: Bool {
         switch self {
         case .standard(let rank, let suit):
