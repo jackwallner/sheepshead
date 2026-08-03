@@ -99,6 +99,29 @@ Expected result: **4+**, no advisory content descriptors.
   `asc-finish-products.py`; verify the final states in `asc-readiness.py`.
 - I (TestFlight build): attach the newest `VALID` build to editable version 1.0
   with `asc-attach-build.py` after TestFlight processing completes.
-- Submitting for review: **explicitly held for Jack's go**, per task
-  instructions. This session pushed metadata only (no submit-for-review
-  call was made).
+- Submitting for review: **done 2026-08-03**. Version 1.0 with build 22 is
+  `WAITING_FOR_REVIEW`, together with the Sheepshead+ subscription group, both
+  auto-renewable subscriptions, and the lifetime in-app purchase.
+
+## First-submission gotcha: subscriptions cannot be submitted via the API
+
+`scripts/asc-submit-for-review.py` cannot complete a first submission for an
+app whose subscription group has never been reviewed. Apple requires the first
+auto-renewable subscription to be submitted **on the app version**, but
+`reviewSubmissionItems` has no `subscription` relationship, and
+`POST /subscriptionSubmissions` refuses with
+`STATE_ERROR.FIRST_SUBSCRIPTION_MUST_BE_SUBMITTED_ON_VERSION`. The app-version
+PATCH then fails with `SUBSCRIPTION_GROUP_SUBMISSION_NOT_ALLOWED`.
+
+Do the last step in the App Store Connect web UI:
+
+1. Run the scripts as usual through `asc-attach-build.py`. Adding the version
+   as a review submission item moves it to `READY_FOR_REVIEW`, which is why
+   `asc-readiness.py` then reports "NO editable version found". That is
+   expected, not a failure.
+2. Open each subscription under Monetization, click **Add for Review**, and
+   pick the existing **Draft iOS Submission** rather than Create New
+   Submission. Add every subscription the paywall sells, not just one.
+3. Open **Draft Submissions** and click **Submit for Review**.
+
+Subsequent versions do not need this once one subscription has been approved.
