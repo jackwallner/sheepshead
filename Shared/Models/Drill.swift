@@ -67,6 +67,25 @@ struct DiscardScenario: Identifiable, Sendable {
     let recommendedDiscard: [PlayingCard]
     let reasoning: String
     let tip: String
+    /// The fail suit whose ace this scenario plans to call. A picker can only
+    /// name an ace they were not dealt, and must keep one card of that suit,
+    /// so `ContentValidityTests` enforces both rules against the deal.
+    let calledSuit: Suit?
+    /// True when the kept hand leaves no legal ace to call, which makes the
+    /// scenario an alone decision rather than a partnership hand.
+    let isAlone: Bool
+
+    init(id: String, situation: String, deal: [PlayingCard], recommendedDiscard: [PlayingCard],
+         reasoning: String, tip: String, calledSuit: Suit? = nil, isAlone: Bool = false) {
+        self.id = id
+        self.situation = situation
+        self.deal = deal
+        self.recommendedDiscard = recommendedDiscard
+        self.reasoning = reasoning
+        self.tip = tip
+        self.calledSuit = calledSuit
+        self.isAlone = isAlone
+    }
 }
 
 enum DrillKind: Sendable {

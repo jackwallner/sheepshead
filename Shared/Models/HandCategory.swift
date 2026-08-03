@@ -56,7 +56,7 @@ enum HandCategory: String, Codable, CaseIterable, Identifiable, Sendable {
         case .picking:
             return "The picker takes the blind, buries two cards, and chooses whether the hand is strong enough to name a partner or go alone."
         case .partnership:
-            return "In the common call-an-ace game, the player holding the named fail ace is the picker's silent partner."
+            return "In the common call-an-ace game, the picker names a fail ace they were not dealt, and whoever holds it is the silent partner."
         case .trickTaking:
             return "Follow the led fail suit when possible. A trump beats every fail card, and the strongest card in the winning suit takes the trick."
         case .scoring:

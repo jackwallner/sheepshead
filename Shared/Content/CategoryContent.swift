@@ -49,7 +49,7 @@ enum CategoryContent {
             frontTiles: [.c(14), .h(10), .s(13), .d(12), .c(11)],
             frontSubtitle: "Trick strength and point value differ",
             backTitle: "High point cards matter twice",
-            backBody: "A card can be weak in trick strength but valuable to capture. A king is only fourth in its fail suit, yet it is worth 4 points."
+            backBody: "A card can be weak in trick strength but valuable to capture. A king is only third in its fail suit, behind the ace and the 10, yet it is worth 4 points."
         ),
         Flashcard(
             id: "read-low-cards",
@@ -111,7 +111,7 @@ enum CategoryContent {
             tiles: [.c(14), .c(7), .d(12), .h(8), .s(13)],
             choices: [.partnership, .trumpStack, .failSuit],
             answer: .partnership,
-            explanation: "The fail ace and a card from its suit illustrate a called-ace partnership. The picker must hold a card from the called suit."
+            explanation: "Read this as a partnership question. If the picker names the club ace, whoever was dealt it becomes the silent partner, so this holding is the partner's side of the deal."
         ),
         HandMatchQuestion(
             id: "read-match-6",

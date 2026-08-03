@@ -121,8 +121,8 @@ enum HandGenerator {
         case .trumpStack:
             return "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead."
         case .failSuit:
-            let suit = suits(cards).first?.displayName.lowercased() ?? "one fail suit"
-            return "All five cards are (suit) fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7."
+            let suit = suits(cards).first?.displayName.lowercased() ?? "single-suit"
+            return "All five cards are \(suit) fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7."
         case .pointCards:
             return "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick."
         case .lowCards:
@@ -130,17 +130,5 @@ enum HandGenerator {
         default:
             return answer.howToSpot
         }
-    }
-}
-
-private extension PlayingCard {
-    var isStandard: Bool {
-        if case .standard = self { return true }
-        return false
-    }
-
-    var suit: Suit? {
-        if case .standard(_, let suit) = self { return suit }
-        return nil
     }
 }

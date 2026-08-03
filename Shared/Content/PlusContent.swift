@@ -53,17 +53,17 @@ enum PlusContent {
     static let extraHandReading: [HandMatchQuestion] = [
         HandMatchQuestion(
             id: "plus-hand-1",
-            tiles: [.c(12), .s(11), .d(8), .d(7), .h(9)],
+            tiles: [.c(12), .s(11), .d(8), .d(7), .h(12)],
             choices: [.trumpStack, .lowCards, .pointCards],
             answer: .trumpStack,
-            explanation: "The queen, jack, and both diamonds are trump. The heart 9 is the only fail card shown."
+            explanation: "Every card here is trump. Two queens and a jack are permanent trump, and the 8 and 7 of diamonds are trump because every diamond is."
         ),
         HandMatchQuestion(
             id: "plus-hand-2",
             tiles: [.c(7), .c(8), .c(9), .c(10), .c(13)],
             choices: [.failSuit, .pointCards, .trickTaking],
             answer: .failSuit,
-            explanation: "This is a complete club fail holding from 7 through king. The club queen and jack are trump and are not in the fail suit."
+            explanation: "Every card is a club fail card, running 7 up to the king. Only the club ace is missing, and the club queen and jack are trump rather than clubs."
         ),
         HandMatchQuestion(
             id: "plus-hand-3",
@@ -84,7 +84,7 @@ enum PlusContent {
             tiles: [.h(14), .h(7), .d(10), .c(9), .s(8)],
             choices: [.partnership, .trumpStack, .pointCards],
             answer: .partnership,
-            explanation: "The heart ace and heart 7 show the required hold-card pattern if the picker calls the heart ace."
+            explanation: "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker, and the heart 7 is the card that follows the reveal."
         ),
         HandMatchQuestion(
             id: "plus-hand-6",
@@ -98,35 +98,36 @@ enum PlusContent {
     static let extraDiscards: [DiscardScenario] = [
         DiscardScenario(
             id: "plus-bury-1",
-            situation: "Keep three trumps and a fail ace. Choose the two cards to bury.",
-            deal: [.c(12), .s(11), .d(10), .c(14), .h(8), .s(7), .c(13), .d(8)],
-            recommendedDiscard: [.h(8), .s(7)],
-            reasoning: "The three trump cards give control, and the club ace can win a fail trick and bring points. The low cards carry no points and do not improve the plan.",
-            tip: "Preserve a fail winner when your trump is not yet a full lock."
+            situation: "You picked with four trumps, two clubs, and two hearts. Choose two cards to bury.",
+            deal: [.c(12), .s(11), .d(10), .d(8), .c(14), .c(13), .h(8), .h(7)],
+            recommendedDiscard: [.c(14), .c(13)],
+            reasoning: "The club ace and king are 15 points that no opponent can ever capture once they are face down, and burying both empties clubs for a later trump. Every trump stays, and the two hearts leave a hold card for calling the heart ace.",
+            tip: "The best bury usually banks points and empties a suit in the same move."
         ),
         DiscardScenario(
             id: "plus-bury-2",
-            situation: "You call the spade ace. Leave a spade hold card in the final hand.",
-            deal: [.d(12), .d(9), .s(14), .s(7), .h(10), .c(8), .h(7), .c(9)],
-            recommendedDiscard: [.h(10), .c(8)],
-            reasoning: "The spade ace and spade 7 satisfy the called-suit hold, while the two diamonds are trump. Burying the heart 10 and club 8 keeps the partnership line legal and the trump count healthy.",
-            tip: "The hold card can be low. It only needs to belong to the called fail suit."
+            situation: "You plan to call the spade ace, so a spade has to stay. Choose two cards to bury.",
+            deal: [.d(12), .d(9), .s(13), .s(7), .h(10), .c(8), .h(7), .c(9)],
+            recommendedDiscard: [.h(10), .h(7)],
+            reasoning: "Burying both hearts banks the heart 10 and empties the suit. Both spades stay, so the called-ace hold is never in doubt, and the queen and 9 of diamonds keep your trump intact.",
+            tip: "The hold card can be low. It only needs to belong to the called fail suit.",
+            calledSuit: .spades
         ),
         DiscardScenario(
             id: "plus-bury-3",
-            situation: "Your best cards are three fail aces. Choose two zero cards to bury.",
-            deal: [.c(14), .h(14), .s(14), .d(8), .c(7), .h(9), .s(8), .d(7)],
-            recommendedDiscard: [.c(7), .h(9)],
-            reasoning: "The three fail aces hold the hand's point value. The diamond 8 is still trump and may win a late trick, so the two zero-point fail cards are the cleanest bury.",
-            tip: "A zero-point diamond can still be a trump winner."
+            situation: "You picked with two queens, two diamonds, three spades, and a lone heart. Choose two cards to bury.",
+            deal: [.c(12), .h(12), .d(11), .d(10), .s(13), .s(9), .s(8), .h(7)],
+            recommendedDiscard: [.h(7), .s(13)],
+            reasoning: "The lone heart goes so hearts are empty, and the spade king rides along to bank 4 points. Two spades still remain, so you keep a legal hold card if you name the spade ace.",
+            tip: "Empty the suit you hold once, not the suit you hold three times."
         ),
         DiscardScenario(
             id: "plus-bury-4",
-            situation: "You have the queen of clubs and several weak cards. Choose two to bury.",
-            deal: [.c(12), .d(14), .d(7), .h(13), .s(9), .c(8), .h(14), .s(7)],
-            recommendedDiscard: [.s(9), .c(8)],
-            reasoning: "The queen of clubs is the top trump and both diamonds are trump. The heart king is a point card and the low fail cards are the least useful cards to keep.",
-            tip: "Keep the card that can win the point trick, not only the card with the best label."
+            situation: "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury.",
+            deal: [.c(12), .s(12), .d(11), .d(9), .h(10), .s(13), .c(9), .c(8)],
+            recommendedDiscard: [.h(10), .s(13)],
+            reasoning: "Both singletons go. That banks 14 points and empties hearts and spades, so only clubs can still be led at you, and the two clubs keep a legal hold card for calling the club ace.",
+            tip: "Two singletons can empty two suits with one bury."
         ),
     ]
 

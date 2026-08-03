@@ -78,7 +78,7 @@ enum CardBasicsContent {
             frontTitle: "The picker",
             frontSubtitle: "One player takes responsibility",
             backTitle: "Pick, bury, and name a partner",
-            backBody: "The picker chooses the blind, buries two cards, and usually calls a fail ace as a silent partner. Strong hands can choose to go alone under the table's agreed rules.",
+            backBody: "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. Strong hands can choose to go alone under the table's agreed rules.",
             choice: CardChoice("Calls the hand", "Sits out the hand", answerIndex: 0)
         ),
         Flashcard(

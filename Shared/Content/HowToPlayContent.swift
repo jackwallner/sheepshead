@@ -41,7 +41,7 @@ enum HowToPlayContent {
             id: "sheep-deal",
             icon: "person.3.fill",
             title: "Deal and pick",
-            body: "Five players receive six cards and two cards form the blind. The picker takes the blind, buries two cards, and usually calls a fail ace as a silent partner.",
+            body: "Five players receive six cards and two cards form the blind. The picker takes the blind, buries two cards, and usually names a fail ace they were not dealt. Whoever holds that ace becomes the silent partner.",
             tiles: [.c(14), .d(10), .h(9), .s(7), .c(8), .d(13)],
             tip: "House rules differ on what happens when everyone passes, so agree before the deal."
         ),

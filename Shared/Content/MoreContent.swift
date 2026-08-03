@@ -63,22 +63,37 @@ enum MoreContent {
             answerIndex: 2,
             explanation: "The picking team needs a majority of the 120 points, so 61 is the basic winning total."
         ),
+        QuizQuestion(
+            id: "more-card-9",
+            prompt: "Can the picker name a fail ace that was dealt to them?",
+            tiles: [.c(14), .h(14)],
+            choices: ["No, only an ace they were not dealt", "Yes, any fail ace", "Only if it is the club ace"],
+            answerIndex: 0,
+            explanation: "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name and plays alone."
+        ),
+        QuizQuestion(
+            id: "more-card-10",
+            prompt: "How many cards does the picker hold after taking the blind, before burying?",
+            choices: ["6", "7", "8"],
+            answerIndex: 2,
+            explanation: "Six dealt cards plus the two blind cards make eight. The picker then buries two and plays a six-card hand."
+        ),
     ]
 
     static let handReading: [HandMatchQuestion] = [
         HandMatchQuestion(
             id: "more-hand-1",
-            tiles: [.c(12), .d(10), .d(8), .h(14), .s(7)],
+            tiles: [.d(12), .c(11), .s(11), .d(14), .d(9)],
             choices: [.trumpStack, .pointCards, .lowCards],
             answer: .trumpStack,
-            explanation: "The queen and both diamonds are trump. The heart ace is a point card and the spade 7 is a low fail card."
+            explanation: "Every card here is trump. The queen of diamonds and the two jacks are permanent trump, and the diamond ace and 9 are trump because every diamond is."
         ),
         HandMatchQuestion(
             id: "more-hand-2",
             tiles: [.c(7), .c(8), .c(9), .c(10), .c(14)],
             choices: [.failSuit, .pointCards, .trickTaking],
             answer: .failSuit,
-            explanation: "This is the full club fail suit from 7 through ace, without the club queen or jack because those are trump."
+            explanation: "Every card is a club fail card. A fail suit holds six cards, so the club king is the only one missing here, and the club queen and jack are trump rather than clubs."
         ),
         HandMatchQuestion(
             id: "more-hand-3",
@@ -99,49 +114,50 @@ enum MoreContent {
             tiles: [.c(14), .c(7), .d(9), .h(10), .s(8)],
             choices: [.partnership, .scoring, .trumpStack],
             answer: .partnership,
-            explanation: "The club ace and club 7 show how the picker can name the club ace while retaining a club hold card."
+            explanation: "Holding the named fail ace is what makes you the picker's silent partner, so read this holding as a partnership question. The picker can never name an ace they were dealt."
         ),
         HandMatchQuestion(
             id: "more-hand-6",
-            tiles: [.c(12), .s(12), .h(11), .d(14), .d(10)],
+            tiles: [.c(12), .s(12), .h(11), .d(14), .h(14)],
             choices: [.trumpStack, .picking, .lowCards],
             answer: .picking,
-            explanation: "Four strong trumps and a point diamond make taking the blind an attractive picking shape."
+            explanation: "Two queens, a jack, and the diamond ace give real trump control, and the heart ace adds points. It is not a pure trump stack, but it is exactly the shape that makes taking the blind attractive."
         ),
     ]
 
     static let discardExtras: [DiscardScenario] = [
         DiscardScenario(
             id: "more-bury-1",
-            situation: "The blind leaves you with four trumps and two small fail cards. Choose two to bury.",
-            deal: [.c(12), .s(11), .d(10), .d(8), .c(7), .h(9), .h(14), .s(13)],
-            recommendedDiscard: [.c(7), .h(9)],
-            reasoning: "Keep the queen, jack, and two diamonds as a strong trump core. The club 7 and heart 9 carry no points and are the least likely to take a trick.",
-            tip: "A compact trump core can be more useful than a scattered point card."
+            situation: "Four trumps, two hearts, and two clubs. Choose two cards to bury.",
+            deal: [.c(12), .s(11), .d(10), .d(8), .h(14), .h(7), .c(9), .c(8)],
+            recommendedDiscard: [.h(14), .h(7)],
+            reasoning: "Burying both hearts banks the ace's 11 points and empties the suit, so the next heart lead can be trumped. The two clubs stay behind as a legal hold card for calling the club ace.",
+            tip: "A fail ace is worth 11 points whether you win it or bury it."
         ),
         DiscardScenario(
             id: "more-bury-2",
-            situation: "You need a fail card to hold the called suit. Choose two cards without breaking that requirement.",
-            deal: [.c(14), .c(8), .d(12), .h(13), .s(7), .h(14), .d(9), .h(8)],
-            recommendedDiscard: [.h(13), .s(7)],
-            reasoning: "The club ace and club 8 preserve a legal club hold for a called-ace hand. The queen of clubs is trump, while the king of hearts and spade 7 add less to this plan.",
-            tip: "A legal partnership plan comes before a theoretical extra point."
+            situation: "You plan to call the club ace, so a club has to stay. Choose two cards to bury.",
+            deal: [.d(12), .c(11), .d(10), .d(9), .c(9), .c(8), .h(14), .h(13)],
+            recommendedDiscard: [.h(14), .h(13)],
+            reasoning: "The heart ace and king are 15 banked points and burying both empties hearts. The club 9 and 8 stay so the called-ace hold is legal, and the jack of clubs counts as trump rather than as a club.",
+            tip: "A jack of clubs is trump, so it cannot serve as your club hold card.",
+            calledSuit: .clubs
         ),
         DiscardScenario(
             id: "more-bury-3",
-            situation: "You have two fail aces and two low cards. Keep the point winners and bury the zeros.",
-            deal: [.h(14), .s(14), .c(10), .d(7), .h(8), .s(9), .c(13), .d(8)],
-            recommendedDiscard: [.h(8), .s(9)],
-            reasoning: "The two aces and club 10 carry points and can win when their suits are led. The low heart and spade are zero-point cards with no special hold requirement here.",
-            tip: "Point cards need support, but zero cards still have to earn their place."
+            situation: "Your trump is the diamond 7 and 8. Choose two cards to bury.",
+            deal: [.h(14), .s(13), .c(10), .c(13), .h(8), .s(9), .d(7), .d(8)],
+            recommendedDiscard: [.c(10), .c(13)],
+            reasoning: "The club 10 and king are 14 points that two low trumps cannot protect once clubs are led. Burying both banks the points and empties clubs, and the spade king and 9 keep a legal hold card for calling the spade ace.",
+            tip: "Thin trump means the safest place for your points is face down."
         ),
         DiscardScenario(
             id: "more-bury-4",
-            situation: "The blind gives you the four queens. Choose the two cards that leave the cleanest trump hand.",
-            deal: [.c(12), .s(12), .h(12), .d(12), .c(9), .h(7), .c(8), .s(8)],
-            recommendedDiscard: [.c(9), .h(7)],
-            reasoning: "The four queens are the top trumps and already form the core of an alone decision. The two low fail cards carry no points and do not improve the trump plan.",
-            tip: "When the trump plan is clear, do not bury a top trump to keep a zero."
+            situation: "The blind gives you the four queens plus two clubs and two hearts. Choose two cards to bury.",
+            deal: [.c(12), .s(12), .h(12), .d(12), .c(9), .c(8), .h(13), .h(7)],
+            recommendedDiscard: [.h(13), .h(7)],
+            reasoning: "The four queens already control every trick they enter, so the bury banks points and empties a suit. Both hearts go for 4 points, and the two clubs stay so you can still name the club ace and play with a partner.",
+            tip: "Total trump control is a reason to keep a hold card, not to abandon the partnership."
         ),
     ]
 
