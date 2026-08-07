@@ -43,16 +43,17 @@ The local StoreKit configuration contains:
 - `com.jackwallner.sheepshead.yearly`, $9.99 per year, one-week trial
 - `com.jackwallner.sheepshead.lifetime`, $29.99 one time
 
-The RevenueCat entitlement in this project is keyed `Sheepshead+`, not the
-fleet's usual `pro`: RevenueCat will not let a lookup_key be edited and refuses
-to create `pro` here. `SubscriptionService.apply(_:)` therefore treats any
-active entitlement as membership instead of matching one key. Products live on
-the App Store app record and are attached to the entitlement and to the
-`$rc_monthly` / `$rc_annual` / `$rc_lifetime` packages of the current offering;
-`scripts/rc-wire-appstore-products.py` is the idempotent script that does it.
-The project shipped with Test Store products only, which serves an offering
-with zero packages and a dead purchase button, so verify the SDK-facing
-offering after any store change. The player
+This project has two entitlements, `pro` and `Sheepshead+`, and every product
+is attached to both. The scaffold keyed the entitlement to the player-facing
+name and RevenueCat will not let a lookup_key be edited, so `pro` was added
+alongside it: shipped binaries that check `entitlements["pro"]` and current
+ones that accept any active entitlement both unlock on a purchase. Keep both
+fed, which `scripts/rc-wire-appstore-products.py` does idempotently along with
+creating the App Store products and attaching them to the `$rc_monthly` /
+`$rc_annual` / `$rc_lifetime` packages of the current offering. The project
+shipped with Test Store products only, which serves an offering with zero
+packages and a dead purchase button, so run
+`scripts/verify-store-config.py` before any submission. The player
 facing membership name is `Sheepshead+`. The public RevenueCat key lives in
 `Shared/Services/SubscriptionService.swift`. Simulator builds return before
 `Purchases.configure`, so the production key is never used by simulator runs.
