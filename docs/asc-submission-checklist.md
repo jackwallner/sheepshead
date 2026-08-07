@@ -125,3 +125,33 @@ Do the last step in the App Store Connect web UI:
 3. Open **Draft Submissions** and click **Submit for Review**.
 
 Subsequent versions do not need this once one subscription has been approved.
+
+## Resubmitting after a rejection (2026-08-07)
+
+Apple rejected 1.0 (build 22) on the grounds that they could not locate the
+in-app purchases. Cause: RevenueCat was serving an offering built from Test
+Store products, so an App Store build got zero packages and the purchase
+button threw `productsUnavailable`. Fixed by
+`scripts/rc-wire-appstore-products.py`; `scripts/verify-store-config.py` is the
+guard. Build 24 adds a re-fetch of offerings every time a purchase screen
+opens, so a single failed load no longer strands the session.
+
+The resubmit itself has its own trap. A rejected version stays an item of the
+submission it was rejected in, so adding it to a new one fails with
+`STATE_ERROR.ITEM_PART_OF_ANOTHER_SUBMISSION`, and resubmitting the old
+submission fails because the version item itself is `REJECTED`. Cancel the old
+submission first:
+
+    PATCH /reviewSubmissions/{id}  {"attributes": {"canceled": true}}
+
+It passes through `CANCELING` for about a minute, then reports `COMPLETE` with
+every item `REMOVED`. The version drops back to `PREPARE_FOR_SUBMISSION` and
+the products drop back to `READY_TO_SUBMIT`, and a fresh submission can be
+built.
+
+Cancelling also releases the products, so the subscription UI step above is
+required again on every resubmit until one subscription has been approved. A
+version-only submission does go through the API, but it leaves the three
+products unattached: they are still testable in the reviewer's sandbox at
+`READY_TO_SUBMIT`, but they would not be approved with the app, and the
+shipped paywall would have nothing to sell. Attach them.
