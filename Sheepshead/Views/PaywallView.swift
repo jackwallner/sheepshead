@@ -204,6 +204,13 @@ struct PaywallView: View {
             .onChange(of: subscriptions.isPro) { _, isPro in
                 if isPro { dismiss() }
             }
+            // Offerings are loaded once at launch. If that call lost a race
+            // with the network (or with a store config that was broken at the
+            // time), the screen would sit on fallback prices and the CTA would
+            // throw productsUnavailable, which reads to anyone looking at it,
+            // App Review included, as an app with no purchases in it. Asking
+            // again every time the paywall opens is what makes that recover.
+            .task { await subscriptions.ensureOfferings() }
         }
     }
 

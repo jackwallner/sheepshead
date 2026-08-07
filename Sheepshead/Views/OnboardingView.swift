@@ -74,6 +74,11 @@ struct OnboardingView: View {
             footer
         }
         .background(Theme.background)
+        // The trial CTA is the first purchase surface anyone sees, and the
+        // price under it is read before it is tapped. Pull the real products
+        // in while the value pages are still being swiped so both are live by
+        // the time the last page arrives.
+        .task { await subscriptions.ensureOfferings() }
         .sheet(isPresented: $showPaywallFallback, onDismiss: paywallDismissed) {
             PaywallView()
         }
