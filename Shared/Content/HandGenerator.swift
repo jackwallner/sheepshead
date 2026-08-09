@@ -56,13 +56,19 @@ enum HandGenerator {
         let explanation: String
     }
 
-    private static func randomHand(from pool: [PlayingCard]) -> [PlayingCard]? {
-        let cards = Array(pool.shuffled().prefix(5))
+    private static func randomHand<R: RandomNumberGenerator>(
+        from pool: [PlayingCard],
+        using generator: inout R
+    ) -> [PlayingCard]? {
+        let cards = Array(pool.shuffled(using: &generator).prefix(5))
         guard cards.count == 5, Set(cards).count == 5 else { return nil }
         return cards
     }
 
-    private static func deal(_ targetCategory: HandCategory) -> [PlayingCard]? {
+    private static func deal<R: RandomNumberGenerator>(
+        _ targetCategory: HandCategory,
+        using generator: inout R
+    ) -> [PlayingCard]? {
         let deck = PlayingCard.sheepsheadDeck
         let pool: [PlayingCard]
         switch targetCategory {
@@ -71,7 +77,7 @@ enum HandGenerator {
         case .failSuit:
             let suit = Suit.allCases.filter { suit in
                 deck.filter { $0.isFail && $0.suit == suit }.count >= 5
-            }.randomElement() ?? .clubs
+            }.randomElement(using: &generator) ?? .clubs
             pool = deck.filter { $0.isFail && $0.suit == suit }
         case .pointCards:
             pool = deck.filter { $0.isFail && $0.pointValue > 0 }
@@ -80,21 +86,33 @@ enum HandGenerator {
         default:
             return nil
         }
-        return randomHand(from: pool)
+        return randomHand(from: pool, using: &generator)
     }
 
     static func hand(for target: HandCategory, attempts: Int = 120) -> GeneratedHand? {
+        var generator = SystemRandomNumberGenerator()
+        return hand(for: target, attempts: attempts, using: &generator)
+    }
+
+    /// The seeded variant. A dated challenge has to deal the SAME original hand
+    /// on every device, so every source of randomness inside has to come from
+    /// the caller's generator, not from the system one.
+    static func hand<R: RandomNumberGenerator>(
+        for target: HandCategory,
+        attempts: Int = 120,
+        using generator: inout R
+    ) -> GeneratedHand? {
         for _ in 0..<attempts {
-            guard let cards = deal(target), category(for: cards) == target else { continue }
+            guard let cards = deal(target, using: &generator), category(for: cards) == target else { continue }
             let distractors = generatableCategories
                 .filter { $0 != target && !fits(cards, $0) }
-                .shuffled()
+                .shuffled(using: &generator)
                 .prefix(3)
             guard distractors.count >= 2 else { continue }
             return GeneratedHand(
                 tiles: cards.racked,
                 answer: target,
-                choices: ([target] + distractors).shuffled(),
+                choices: ([target] + distractors).shuffled(using: &generator),
                 explanation: explain(cards, answer: target)
             )
         }
@@ -102,18 +120,34 @@ enum HandGenerator {
     }
 
     static func batch(count: Int) -> [GeneratedHand] {
+        var generator = SystemRandomNumberGenerator()
+        return batch(count: count, using: &generator)
+    }
+
+    /// A reproducible batch for a dated shared challenge. The same app build
+    /// and seed produce the same original hands on every device, which is what
+    /// lets every member answer the same daily challenge without a server.
+    static func batch(count: Int, seed: String) -> [GeneratedHand] {
+        var generator = StableSeededGenerator(seed: seed)
+        return batch(count: count, using: &generator)
+    }
+
+    private static func batch<R: RandomNumberGenerator>(
+        count: Int,
+        using generator: inout R
+    ) -> [GeneratedHand] {
         guard count > 0 else { return [] }
         var hands: [GeneratedHand] = []
         var targetIndex = 0
         let maxAttempts = max(count * 20, 40)
         while hands.count < count, targetIndex < maxAttempts {
             let target = generatableCategories[targetIndex % generatableCategories.count]
-            if let hand = hand(for: target) {
+            if let hand = hand(for: target, using: &generator) {
                 hands.append(hand)
             }
             targetIndex += 1
         }
-        return hands.shuffled()
+        return hands.shuffled(using: &generator)
     }
 
     static func explain(_ cards: [PlayingCard], answer: HandCategory) -> String {
