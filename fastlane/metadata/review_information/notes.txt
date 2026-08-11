@@ -1,1 +1,22 @@
-This is an original Sheepshead practice trainer, not a multiplayer game. It teaches the common five-player 32-card variant through flashcards, quizzes, holding recognition, bury scenarios, and trick decisions. The app has no account system, no demo login, no ads, no chat, and no simulated gambling. All teaching holdings are original. House rules vary, so the app calls out variant differences in its copy. Sheepshead+ is tested with the local StoreKit configuration and the app's simulator Pro override; no production RevenueCat configuration is used in simulator builds.
+This is an original Sheepshead practice trainer, not a multiplayer game. It teaches the common five-player 32-card variant through flashcards, quizzes, holding recognition, bury scenarios, and trick decisions. The app has no account system, no demo login, no ads, no chat, and no simulated gambling. All teaching holdings are original. House rules vary, so the app calls out variant differences in its copy.
+
+WHERE TO FIND THE IN-APP PURCHASES
+
+No account, login, or device configuration is needed. The purchases are not restricted by storefront, region, or device. Any of these four paths reaches them:
+
+1. First launch. Tap Continue through the intro pages, answer "Where are you starting from?", and on the last page tap "Start 7-day free trial". This opens the App Store purchase sheet for Sheepshead+ Monthly directly. The disclosure directly under that button names the monthly plan and its localized billed amount.
+
+2. Home screen, upgrade card. Scroll to the bottom of Home and tap the gold "Get Sheepshead+" card. The purchase screen lists all three products, each with its localized StoreKit price: Yearly (7 days free, then billed yearly), Monthly (7 days free, then billed monthly), and Lifetime (one time). Yearly is selected by default and shows its per-month equivalent against the monthly price. Tap a plan, then the button at the bottom.
+
+3. Home screen, locked content. Tap the "Master Tables" room (lock icon), or the "Endless Practice" or "Timed Challenge" tile in the training row. Each opens the same purchase screen.
+
+4. Settings. Tap the gear icon at the top right of Home, then under "Membership" tap "Get Sheepshead+".
+
+The same screen carries Restore, Terms of Use, and Privacy Policy links.
+
+PRODUCTS SUBMITTED WITH THIS VERSION
+- com.jackwallner.sheepshead.yearly (Sheepshead+ Yearly)
+- com.jackwallner.sheepshead.monthly (Sheepshead+ Monthly)
+- com.jackwallner.sheepshead.lifetime (Sheepshead+ Lifetime)
+
+Everything the app ships today stays free. Sheepshead+ adds the endless practice modes, the extra practice sets in each room, and the Master Tables.
