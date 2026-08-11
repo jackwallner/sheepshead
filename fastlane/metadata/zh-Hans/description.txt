@@ -35,4 +35,5 @@ SHEEPSHEAD+（可选升级）
 Sheepshead是一款独立的练习应用程序。入住规则各不相同，因此请遵循您餐桌上商定的规则。
 
 订阅
-Sheepshead+可通过自动续订或一次性购买获得：每月$1.99/月，每年$9.99/年，均提供1周免费试用，或终身$29.99一次。确认购买后，付款将从您的 Apple ID 帐户中扣除。订阅会自动续订，除非在当前订阅期结束前至少 24 小时取消。您可以随时在设备上的帐户设置中管理或取消。使用条款（Apple 的标准 EULA）：https://www.apple.com/legal/internet-services/itunes/dev/stdeula/。隐私政策：https://jackwallner.github.io/sheepshead/privacy-policy。
+Sheepshead+ 提供自动续期订阅（每月或每年，两者均含 7 天免费试用）或一次性买断 Lifetime。价格会在购买前显示于 App 内，并因地区而异。确认购买时将从你的 Apple ID 扣款。除非在当前周期结束前至少 24 小时取消，否则订阅会自动续期。你可随时在“设置 → Apple ID → 订阅”中管理或取消。 使用条款（Apple 标准 EULA）：https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ 隐私政策：https://jackwallner.github.io/sheepshead/privacy-policy
+隐私政策：https://jackwallner.github.io/sheepshead/privacy-policy

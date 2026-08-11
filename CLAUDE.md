@@ -39,9 +39,9 @@ the App Store review page for `6796913227`, no opens a feedback mail draft to
 
 The local StoreKit configuration contains:
 
-- `com.jackwallner.sheepshead.monthly`, $1.99 per month, one-week trial
-- `com.jackwallner.sheepshead.yearly`, $9.99 per year, one-week trial
-- `com.jackwallner.sheepshead.lifetime`, $29.99 one time
+- `com.jackwallner.sheepshead.monthly`, $6.99 per month, one-week trial
+- `com.jackwallner.sheepshead.yearly`, $29.99 per year, one-week trial
+- `com.jackwallner.sheepshead.lifetime`, $69.99 one time
 
 This project has two entitlements, `pro` and `Sheepshead+`, and every product
 is attached to both. The scaffold keyed the entitlement to the player-facing

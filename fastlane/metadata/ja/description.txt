@@ -35,4 +35,5 @@ TIMED CHALLENGE では、90 秒で自己ベストを追いかけることがで�
 Sheepshead は独立した練習アプリです。ハウスルールはさまざまなので、テーブルで合意されたルールに従ってください。
 
 定期購入
-Sheepshead+ は、自動更新サブスクリプションまたは 1 回限りの購入でご利用いただけます: 月額 $1.99/月、年間 $9.99/年、どちらも 1 週間の無料トライアル付き、または生涯 $29.99 1 回。お支払いは、購入の確認時に Apple ID アカウントに請求されます。現在の期間が終了する少なくとも 24 時間前にキャンセルしない限り、サブスクリプションは自動的に更新されます。デバイスのアカウント設定でいつでも管理またはキャンセルできます。利用規約 (Apple の標準 EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/。プライバシーポリシー：https://jackwallner.github.io/sheepshead/privacy-policy。
+Sheepshead+ は自動更新サブスクリプション（月額または年額、どちらも7日間の無料トライアル付き）、または買い切りの Lifetime としてご利用いただけます。価格は購入前にアプリ内に表示され、地域によって異なります。購入確定時に Apple ID に請求されます。現在の期間が終了する24時間以上前に解約しない限り、サブスクリプションは自動更新されます。設定 → Apple ID → サブスクリプションでいつでも管理・解約できます。 利用規約（Apple標準のEULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ プライバシーポリシー: https://jackwallner.github.io/sheepshead/privacy-policy
+プライバシーポリシー：https://jackwallner.github.io/sheepshead/privacy-policy
