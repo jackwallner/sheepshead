@@ -214,6 +214,8 @@ enum PaywallPricing {
 
 /// Standalone paywall sheet (locked drills, locked rooms, Settings upgrade).
 struct PaywallView: View {
+    /// Which surface opened the sheet; reported to RevenueCat.
+    var source: String = "sheepshead_paywall_sheet"
     @EnvironmentObject private var subscriptions: SubscriptionService
     @Environment(\.dismiss) private var dismiss
     @State private var selectedPlan: PaywallPlan = .yearly
@@ -276,7 +278,10 @@ struct PaywallView: View {
             // throw productsUnavailable, which reads to anyone looking at it,
             // App Review included, as an app with no purchases in it. Asking
             // again every time the paywall opens is what makes that recover.
-            .task { await subscriptions.ensureOfferings() }
+            .task {
+                subscriptions.trackPaywallImpression(id: source)
+                await subscriptions.ensureOfferings()
+            }
         }
     }
 
