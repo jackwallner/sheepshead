@@ -79,8 +79,12 @@ struct OnboardingView: View {
         // in while the value pages are still being swiped so both are live by
         // the time the last page arrives.
         .task { await subscriptions.ensureOfferings() }
+        .onChange(of: page) { _, newPage in
+            guard newPage == lastPage else { return }
+            subscriptions.trackPaywallImpression(id: "sheepshead_onboarding_trial", oncePerSession: true)
+        }
         .sheet(isPresented: $showPaywallFallback, onDismiss: paywallDismissed) {
-            PaywallView()
+            PaywallView(source: "sheepshead_onboarding_fallback")
         }
         .alert("Purchase Issue", isPresented: .init(
             get: { purchaseError != nil },
