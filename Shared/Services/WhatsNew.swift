@@ -40,8 +40,12 @@ enum WhatsNew {
     private static let lastSeenKey = "whatsnew.lastSeenVersion"
 
     static let releases: [WhatsNewRelease] = [
+        // The version here is the marketing version that actually reaches
+        // players, not the one the work landed under. 1.2.0 and 1.2.1 never
+        // went public, so `currentRelease` was nil for every build after the
+        // feature shipped and nobody was ever shown these notes.
         WhatsNewRelease(
-            version: "1.2.0",
+            version: "1.2.2",
             headline: "A smarter rhythm for card night",
             items: [
                 WhatsNewItem(
