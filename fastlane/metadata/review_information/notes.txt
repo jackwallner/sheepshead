@@ -4,7 +4,7 @@ WHERE TO FIND THE IN-APP PURCHASES
 
 No account, login, or device configuration is needed. The purchases are not restricted by storefront, region, or device. Any of these four paths reaches them:
 
-1. First launch. Tap Continue through the intro pages, answer "Where are you starting from?", and on the last page tap "Start 7-day free trial". This opens the App Store purchase sheet for Sheepshead+ Monthly directly. The disclosure directly under that button names the monthly plan and its localized billed amount.
+1. First launch. Tap Continue through the intro pages, answer "Where are you starting from?", and on the last page tap "Start 7-day free trial". This opens the App Store purchase sheet for Sheepshead+ Monthly directly. The localized billed amount for the monthly plan is displayed prominently directly above that button, with the trial and auto-renewal terms below it in smaller, lighter type.
 
 2. Home screen, upgrade card. Scroll to the bottom of Home and tap the gold "Get Sheepshead+" card. The purchase screen lists all three products, each with its localized StoreKit price: Yearly (7 days free, then billed yearly), Monthly (7 days free, then billed monthly), and Lifetime (one time). Yearly is selected by default and shows its per-month equivalent against the monthly price. Tap a plan, then the button at the bottom.
 
@@ -13,6 +13,10 @@ No account, login, or device configuration is needed. The purchases are not rest
 4. Settings. Tap the gear icon at the top right of Home, then under "Membership" tap "Get Sheepshead+".
 
 The same screen carries Restore, Terms of Use, and Privacy Policy links.
+
+GUIDELINE 3.1.2(c) IN THIS BUILD
+
+Build 28 was rejected because the free trial was promoted more clearly and conspicuously than the billed amount. Build 30 adds the localized billed amount as a large, high-contrast line directly above the purchase button on both purchase surfaces: the onboarding screen in your review screenshot (path 1 above) and the plan-picker screen (paths 2 to 4). On the onboarding screen it reads as the monthly price, for example "$6.99/month" in the US storefront, set in the app's display typeface at 22pt in the darkest ink color on the screen. The free trial and auto-renewal terms sit underneath it in 11pt tertiary grey, and on the plan-picker screen the same line tracks whichever plan is selected. The billed amount is now the largest and highest-contrast pricing element in both layouts.
 
 PRODUCTS SUBMITTED WITH THIS VERSION
 - com.jackwallner.sheepshead.yearly (Sheepshead+ Yearly)
