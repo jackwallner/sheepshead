@@ -194,6 +194,10 @@ enum PaywallPricing {
 
     /// One concise point-of-purchase line: price, trial, auto-renew, cancel.
     /// The full legalese lives in the EULA behind the Terms link.
+    ///
+    /// Subordinate to the billed amount above it by design (3.1.2(c)): the
+    /// trial is mentioned once, in caption type, under a price line set in
+    /// display type.
     static func terms(_ subscriptions: SubscriptionService, _ plan: PaywallPlan) -> String {
         guard let amount = price(subscriptions, plan) else {
             switch plan {
@@ -232,6 +236,13 @@ struct PaywallView: View {
             .background(Theme.background)
             .safeAreaInset(edge: .bottom) {
                 VStack(spacing: 8) {
+                    // Billed amount, shown prominently at the point of purchase
+                    // (App Review 3.1.2(c)): the reviewer flagged that it wasn't
+                    // clearly and conspicuously displayed. It has to stay the
+                    // largest pricing element here, above the trial fine print.
+                    Text(PaywallPricing.priceText(subscriptions, selectedPlan))
+                        .font(Theme.display(22))
+                        .foregroundStyle(Theme.ink)
                     Text(PaywallPricing.terms(subscriptions, selectedPlan))
                         .font(.caption)
                         .foregroundStyle(Theme.inkSecondary)
