@@ -29,6 +29,7 @@ final class ScreenshotTests: XCTestCase {
             "-progress.hasOnboarded", "YES",
             "-sheepshead.hasReadPrimer", "YES",
             "-sheepshead.skillLevel", "some",
+            "-subscription.localProOverride", "YES",
         ]
         // The What's New sheet fires on the first launch after a version bump
         // and covers Home. Marking the CURRENT version as already seen is what
@@ -49,21 +50,33 @@ final class ScreenshotTests: XCTestCase {
 
         if open("Get Started") {
             capture("01_quick_session")
+            if answerAnyVisibleChoice() {
+                capture("01_quick_session_answered")
+            }
         }
         home()
 
         if open("The Trump Room"), open("Read the Holding") {
             capture("02_hand_match")
+            if answerVisibleChoice("Trump Stack") {
+                capture("02_hand_match_answered")
+            }
         }
         home()
 
         if open("The Trick Room"), open("Trick Judgment") {
             capture("03_trick")
+            if answerTrick() {
+                capture("08_trick_answered")
+            }
         }
         home()
 
         if open("The Bury Room"), open("Choose Your Bury") {
             capture("04_bury")
+            if answerBury() {
+                capture("07_bury_answered")
+            }
         }
         home()
 
@@ -136,6 +149,98 @@ final class ScreenshotTests: XCTestCase {
             back.tap()
             settle(0.6)
         }
+    }
+
+    @discardableResult
+    private func answerTrick() -> Bool {
+        let choice = app.buttons.matching(
+            NSPredicate(format: "label CONTAINS %@", "Follow clubs")
+        ).firstMatch
+        guard choice.waitForExistence(timeout: 3) else {
+            problems.append("could not answer trick choice")
+            return false
+        }
+        choice.tap()
+        settle()
+        return true
+    }
+
+    @discardableResult
+    private func answerBury() -> Bool {
+        // CardHandView lays out seven cards on the first row for this phone
+        // capture. The fifth and seventh cards are the authored recommendation.
+        let labels = ["K of Clubs", "8 of Spades"]
+        for (index, label) in labels.enumerated() {
+            let card = app.descendants(matching: .any).matching(
+                NSPredicate(format: "label == %@", label)
+            ).firstMatch
+            if card.waitForExistence(timeout: 1) {
+                card.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+            } else {
+                let cardX = index == 0 ? 0.50 : 0.72
+                app.coordinate(withNormalizedOffset: CGVector(dx: cardX, dy: 0.43)).tap()
+            }
+        }
+        settle(0.4)
+        guard app.staticTexts["Selected 2 of 2"].waitForExistence(timeout: 3) else {
+            problems.append("bury cards did not select")
+            return false
+        }
+        let submit = app.buttons["Bury These 2"].firstMatch
+        guard submit.waitForExistence(timeout: 3) else {
+            problems.append("could not submit bury")
+            return false
+        }
+        submit.tap()
+        settle()
+        return true
+    }
+
+    @discardableResult
+    private func answerVisibleChoice(_ label: String) -> Bool {
+        let predicate = NSPredicate(format: "label CONTAINS %@", label)
+        let choice = app.buttons.matching(predicate).firstMatch
+        guard choice.waitForExistence(timeout: 3) else {
+            problems.append("could not answer choice: \(label)")
+            return false
+        }
+        choice.tap()
+        settle()
+        return true
+    }
+
+    @discardableResult
+    private func answerAnyVisibleChoice() -> Bool {
+        let correctChoices = [
+            "32 cards",
+            "Play a club",
+            "Queens, jacks, and diamonds",
+            "Always trump",
+            "Ace",
+            "Three suits",
+            "Follow clubs",
+            "Trump wins",
+            "Trump Stack",
+            "Fail Suit",
+            "Point Cards",
+            "Low Cards",
+            "Picking",
+            "Partnership",
+            "Trick Taking",
+            "Scoring",
+            "Strategy"
+        ]
+        for label in correctChoices {
+            let predicate = NSPredicate(format: "label CONTAINS %@", label)
+            let choice = app.buttons.matching(predicate).firstMatch
+            if choice.exists {
+                choice.tap()
+                settle()
+                return true
+            }
+        }
+        problems.append("could not find a correct quick-session choice")
+        return false
     }
 
     private var atHome: Bool {
