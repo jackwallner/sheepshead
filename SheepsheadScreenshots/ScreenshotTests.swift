@@ -56,10 +56,13 @@ final class ScreenshotTests: XCTestCase {
         }
         home()
 
-        if open("The Trump Room"), open("Read the Holding") {
-            capture("02_hand_match")
-            if answerVisibleChoice("Trump Stack") {
-                capture("02_hand_match_answered")
+        if open("The Trump Room") {
+            capture("07_trump_room")
+            if open("Read the Holding") {
+                capture("02_hand_match")
+                if answerVisibleChoice("Trump Stack") {
+                    capture("02_hand_match_answered")
+                }
             }
         }
         home()
@@ -72,10 +75,13 @@ final class ScreenshotTests: XCTestCase {
         }
         home()
 
-        if open("The Bury Room"), open("Choose Your Bury") {
-            capture("04_bury")
-            if answerBury() {
-                capture("07_bury_answered")
+        if open("The Bury Room") {
+            capture("08_bury_room")
+            if open("Choose Your Bury") {
+                capture("04_bury")
+                if answerBury() {
+                    capture("07_bury_answered")
+                }
             }
         }
         home()
