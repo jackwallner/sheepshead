@@ -8,6 +8,11 @@ struct SheepsheadApp: App {
     @StateObject private var settings = AppSettings.shared
     @StateObject private var router = AppRouter.shared
 
+    init() {
+        // Once per cold launch; the rating prompt waits for the second.
+        ReviewPromptTracker.recordAppLaunch()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
@@ -46,7 +51,6 @@ struct SheepsheadApp: App {
                         }
                     }
                     #endif
-                    ReviewPromptTracker.recordAppLaunch()
                 }
         }
     }

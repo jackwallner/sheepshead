@@ -31,9 +31,13 @@ to the picker and that a hold card survives the bury; a scenario with no legal
 call sets `isAlone`. Hand-match holdings may not fit any offered distractor.
 See `archive/sheepshead-accuracy-2026-08-03.md`.
 
-The review funnel asks after the third positive drill: enjoying it, yes opens
-the App Store review page for `6796913227`, no opens a feedback mail draft to
-`jackwallner+m@gmail.com`. Unhappy players never see a rating ask.
+Ratings: no custom rating question (App Review 5.6.1). A finished drill or
+Sheepshead Minute records a positive moment, and `requestsReview(after:)` calls
+Apple's prompt about 3s later if the screen is still clear. Gates: second cold
+launch, onboarding done, 30-day cooldown. Only the Settings "Rate Sheepshead
+Trainer" row (write-review page for `6796913227`) ends the asks; "Send
+Feedback" opens `FeedbackSheet` (mail to `jackwallner+m@gmail.com`) and never
+stops them.
 
 ## Sheepshead+ products
 
@@ -66,7 +70,7 @@ facing membership name is `Sheepshead+`. The public RevenueCat key lives in
   primer, plus, and Master Tables content. `DrillLibrary.rooms` is the source
   of truth for the five rooms.
 - `Shared/Services` contains progress, settings, spaced review, subscriptions,
-  notifications, and the review funnel.
+  notifications, and the rating-ask tracker.
 - `Sheepshead/Views` contains onboarding, the home lobby, room screens, the
   swipe deck, quick sessions, generated practice, settings, and the paywall.
 - `Sheepshead/Utilities/Theme.swift` contains the warm card-table visual
