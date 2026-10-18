@@ -1,0 +1,9809 @@
+{
+  "cards" : [
+    {
+      "code" : "C7",
+      "failStrength" : 1,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "7♣",
+      "sortKey" : 7,
+      "spokenName" : "7 of Clubs",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "C8",
+      "failStrength" : 2,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "8♣",
+      "sortKey" : 8,
+      "spokenName" : "8 of Clubs",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "C9",
+      "failStrength" : 3,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "9♣",
+      "sortKey" : 9,
+      "spokenName" : "9 of Clubs",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "C10",
+      "failStrength" : 5,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 10,
+      "shortLabel" : "10♣",
+      "sortKey" : 10,
+      "spokenName" : "10 of Clubs",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "C11",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 2,
+      "shortLabel" : "J♣",
+      "sortKey" : 11,
+      "spokenName" : "J of Clubs",
+      "trumpStrength" : 204
+    },
+    {
+      "code" : "C12",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 3,
+      "shortLabel" : "Q♣",
+      "sortKey" : 12,
+      "spokenName" : "Q of Clubs",
+      "trumpStrength" : 304
+    },
+    {
+      "code" : "C13",
+      "failStrength" : 4,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 4,
+      "shortLabel" : "K♣",
+      "sortKey" : 13,
+      "spokenName" : "K of Clubs",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "C14",
+      "failStrength" : 6,
+      "isFail" : true,
+      "isFailAce" : true,
+      "isTrump" : false,
+      "pointValue" : 11,
+      "shortLabel" : "A♣",
+      "sortKey" : 14,
+      "spokenName" : "A of Clubs",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "D7",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 0,
+      "shortLabel" : "7♦",
+      "sortKey" : 27,
+      "spokenName" : "7 of Diamonds",
+      "trumpStrength" : 101
+    },
+    {
+      "code" : "D8",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 0,
+      "shortLabel" : "8♦",
+      "sortKey" : 28,
+      "spokenName" : "8 of Diamonds",
+      "trumpStrength" : 102
+    },
+    {
+      "code" : "D9",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 0,
+      "shortLabel" : "9♦",
+      "sortKey" : 29,
+      "spokenName" : "9 of Diamonds",
+      "trumpStrength" : 103
+    },
+    {
+      "code" : "D10",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 10,
+      "shortLabel" : "10♦",
+      "sortKey" : 30,
+      "spokenName" : "10 of Diamonds",
+      "trumpStrength" : 105
+    },
+    {
+      "code" : "D11",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 2,
+      "shortLabel" : "J♦",
+      "sortKey" : 31,
+      "spokenName" : "J of Diamonds",
+      "trumpStrength" : 201
+    },
+    {
+      "code" : "D12",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 3,
+      "shortLabel" : "Q♦",
+      "sortKey" : 32,
+      "spokenName" : "Q of Diamonds",
+      "trumpStrength" : 301
+    },
+    {
+      "code" : "D13",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 4,
+      "shortLabel" : "K♦",
+      "sortKey" : 33,
+      "spokenName" : "K of Diamonds",
+      "trumpStrength" : 104
+    },
+    {
+      "code" : "D14",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 11,
+      "shortLabel" : "A♦",
+      "sortKey" : 34,
+      "spokenName" : "A of Diamonds",
+      "trumpStrength" : 106
+    },
+    {
+      "code" : "H7",
+      "failStrength" : 1,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "7♥",
+      "sortKey" : 47,
+      "spokenName" : "7 of Hearts",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "H8",
+      "failStrength" : 2,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "8♥",
+      "sortKey" : 48,
+      "spokenName" : "8 of Hearts",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "H9",
+      "failStrength" : 3,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "9♥",
+      "sortKey" : 49,
+      "spokenName" : "9 of Hearts",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "H10",
+      "failStrength" : 5,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 10,
+      "shortLabel" : "10♥",
+      "sortKey" : 50,
+      "spokenName" : "10 of Hearts",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "H11",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 2,
+      "shortLabel" : "J♥",
+      "sortKey" : 51,
+      "spokenName" : "J of Hearts",
+      "trumpStrength" : 202
+    },
+    {
+      "code" : "H12",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 3,
+      "shortLabel" : "Q♥",
+      "sortKey" : 52,
+      "spokenName" : "Q of Hearts",
+      "trumpStrength" : 302
+    },
+    {
+      "code" : "H13",
+      "failStrength" : 4,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 4,
+      "shortLabel" : "K♥",
+      "sortKey" : 53,
+      "spokenName" : "K of Hearts",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "H14",
+      "failStrength" : 6,
+      "isFail" : true,
+      "isFailAce" : true,
+      "isTrump" : false,
+      "pointValue" : 11,
+      "shortLabel" : "A♥",
+      "sortKey" : 54,
+      "spokenName" : "A of Hearts",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "S7",
+      "failStrength" : 1,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "7♠",
+      "sortKey" : 67,
+      "spokenName" : "7 of Spades",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "S8",
+      "failStrength" : 2,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "8♠",
+      "sortKey" : 68,
+      "spokenName" : "8 of Spades",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "S9",
+      "failStrength" : 3,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 0,
+      "shortLabel" : "9♠",
+      "sortKey" : 69,
+      "spokenName" : "9 of Spades",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "S10",
+      "failStrength" : 5,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 10,
+      "shortLabel" : "10♠",
+      "sortKey" : 70,
+      "spokenName" : "10 of Spades",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "S11",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 2,
+      "shortLabel" : "J♠",
+      "sortKey" : 71,
+      "spokenName" : "J of Spades",
+      "trumpStrength" : 203
+    },
+    {
+      "code" : "S12",
+      "failStrength" : 0,
+      "isFail" : false,
+      "isFailAce" : false,
+      "isTrump" : true,
+      "pointValue" : 3,
+      "shortLabel" : "Q♠",
+      "sortKey" : 72,
+      "spokenName" : "Q of Spades",
+      "trumpStrength" : 303
+    },
+    {
+      "code" : "S13",
+      "failStrength" : 4,
+      "isFail" : true,
+      "isFailAce" : false,
+      "isTrump" : false,
+      "pointValue" : 4,
+      "shortLabel" : "K♠",
+      "sortKey" : 73,
+      "spokenName" : "K of Spades",
+      "trumpStrength" : 0
+    },
+    {
+      "code" : "S14",
+      "failStrength" : 6,
+      "isFail" : true,
+      "isFailAce" : true,
+      "isTrump" : false,
+      "pointValue" : 11,
+      "shortLabel" : "A♠",
+      "sortKey" : 74,
+      "spokenName" : "A of Spades",
+      "trumpStrength" : 0
+    }
+  ],
+  "drillCounts" : {
+    "bury-rules" : 9,
+    "bury-two" : 6,
+    "card-quiz" : 10,
+    "hand-match" : 8,
+    "master-bury" : 4,
+    "master-defense" : 6,
+    "master-reading" : 8,
+    "master-rules" : 6,
+    "meet-cards" : 10,
+    "plus-bury-extras" : 8,
+    "plus-card-extras" : 16,
+    "plus-hand-extras" : 12,
+    "plus-trick-extras" : 10,
+    "trick-judgment" : 8,
+    "trick-quiz" : 8,
+    "trump-cards" : 9
+  },
+  "freePoolIDs" : [
+    "cards-deck",
+    "cards-trump",
+    "cards-queens-jacks",
+    "cards-points",
+    "cards-fail",
+    "cards-trump-order",
+    "cards-deal",
+    "cards-blind",
+    "cards-picker",
+    "cards-goal",
+    "card-quiz-1",
+    "card-quiz-2",
+    "card-quiz-3",
+    "card-quiz-4",
+    "card-quiz-5",
+    "card-quiz-6",
+    "card-quiz-7",
+    "card-quiz-8",
+    "card-quiz-9",
+    "card-quiz-10",
+    "read-match-1",
+    "read-match-2",
+    "read-match-3",
+    "read-match-4",
+    "read-match-5",
+    "read-match-6",
+    "read-match-7",
+    "read-match-8",
+    "bury-called-suit",
+    "bury-no-trump",
+    "bury-empty-a-suit",
+    "trick-follow",
+    "trick-no-follow",
+    "trick-queen-suit",
+    "trick-queen-high",
+    "trick-fail-winner",
+    "trick-partner",
+    "trick-lead",
+    "trick-points",
+    "more-trick-1",
+    "more-trick-2",
+    "more-trick-3",
+    "more-trick-4",
+    "more-trick-5",
+    "more-trick-6",
+    "more-trick-7",
+    "more-trick-8"
+  ],
+  "hands" : {
+    "daily-2026-10-01" : [
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "trumpStack",
+          "pointCards",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "D8",
+          "D9",
+          "D11",
+          "H12",
+          "S12"
+        ]
+      },
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "lowCards",
+          "pointCards",
+          "trumpStack",
+          "failSuit"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "C10",
+          "H10",
+          "S10",
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "pointCards",
+          "trumpStack",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "C14",
+          "H10",
+          "H14",
+          "S10",
+          "S14"
+        ]
+      },
+      {
+        "answer" : "lowCards",
+        "choices" : [
+          "trumpStack",
+          "failSuit",
+          "pointCards",
+          "lowCards"
+        ],
+        "explanation" : "All five cards are zero-point fail cards from more than one suit. They are useful for following cheaply and preserving point cards.",
+        "tiles" : [
+          "C9",
+          "H8",
+          "S7",
+          "S8",
+          "S9"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "pointCards",
+          "lowCards",
+          "trumpStack",
+          "failSuit"
+        ],
+        "explanation" : "All five cards are spades fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "S8",
+          "S9",
+          "S10",
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "lowCards",
+          "failSuit",
+          "pointCards",
+          "trumpStack"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "D7",
+          "D9",
+          "D10",
+          "D13",
+          "S11"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "trumpStack",
+          "pointCards",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "All five cards are hearts fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "H7",
+          "H8",
+          "H9",
+          "H10",
+          "H14"
+        ]
+      }
+    ],
+    "h1" : [
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "pointCards",
+          "lowCards",
+          "failSuit",
+          "trumpStack"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "D11",
+          "D12",
+          "D13",
+          "H12",
+          "S11"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "failSuit",
+          "pointCards",
+          "trumpStack",
+          "lowCards"
+        ],
+        "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "C7",
+          "C8",
+          "C9",
+          "C10",
+          "C14"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "trumpStack",
+          "pointCards",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "C8",
+          "C9",
+          "C10",
+          "C13",
+          "C14"
+        ]
+      },
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "trumpStack",
+          "failSuit",
+          "lowCards",
+          "pointCards"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "C13",
+          "C14",
+          "H13",
+          "S10",
+          "S13"
+        ]
+      },
+      {
+        "answer" : "lowCards",
+        "choices" : [
+          "pointCards",
+          "trumpStack",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "All five cards are zero-point fail cards from more than one suit. They are useful for following cheaply and preserving point cards.",
+        "tiles" : [
+          "C7",
+          "H7",
+          "H8",
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "pointCards",
+          "failSuit",
+          "trumpStack",
+          "lowCards"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "C13",
+          "C14",
+          "H10",
+          "S10",
+          "S13"
+        ]
+      },
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "failSuit",
+          "lowCards",
+          "pointCards",
+          "trumpStack"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "D9",
+          "D11",
+          "D13",
+          "D14",
+          "H11"
+        ]
+      }
+    ],
+    "h2" : [
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "lowCards",
+          "failSuit",
+          "trumpStack",
+          "pointCards"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "C13",
+          "C14",
+          "H14",
+          "S10",
+          "S14"
+        ]
+      },
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "lowCards",
+          "trumpStack",
+          "pointCards",
+          "failSuit"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "C11",
+          "D8",
+          "D13",
+          "H11",
+          "S12"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "trumpStack",
+          "failSuit",
+          "pointCards",
+          "lowCards"
+        ],
+        "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "C7",
+          "C8",
+          "C9",
+          "C10",
+          "C13"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "pointCards",
+          "lowCards",
+          "trumpStack",
+          "failSuit"
+        ],
+        "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "C7",
+          "C8",
+          "C9",
+          "C13",
+          "C14"
+        ]
+      },
+      {
+        "answer" : "lowCards",
+        "choices" : [
+          "failSuit",
+          "pointCards",
+          "lowCards",
+          "trumpStack"
+        ],
+        "explanation" : "All five cards are zero-point fail cards from more than one suit. They are useful for following cheaply and preserving point cards.",
+        "tiles" : [
+          "C7",
+          "C9",
+          "H7",
+          "H8",
+          "S7"
+        ]
+      },
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "pointCards",
+          "trumpStack",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "C10",
+          "C14",
+          "H10",
+          "H13",
+          "S13"
+        ]
+      },
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "pointCards",
+          "trumpStack",
+          "failSuit",
+          "lowCards"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "C11",
+          "C12",
+          "D8",
+          "D10",
+          "S11"
+        ]
+      }
+    ],
+    "sheepshead-minute-2026-10-16-hands" : [
+      {
+        "answer" : "lowCards",
+        "choices" : [
+          "trumpStack",
+          "lowCards",
+          "pointCards",
+          "failSuit"
+        ],
+        "explanation" : "All five cards are zero-point fail cards from more than one suit. They are useful for following cheaply and preserving point cards.",
+        "tiles" : [
+          "C9",
+          "H7",
+          "S7",
+          "S8",
+          "S9"
+        ]
+      },
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "trumpStack",
+          "lowCards",
+          "failSuit",
+          "pointCards"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "H10",
+          "H13",
+          "S10",
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "trumpStack",
+          "pointCards",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "C7",
+          "C8",
+          "C9",
+          "C10",
+          "C13"
+        ]
+      },
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "pointCards",
+          "failSuit",
+          "lowCards",
+          "trumpStack"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "C12",
+          "D7",
+          "D8",
+          "D12",
+          "H11"
+        ]
+      },
+      {
+        "answer" : "trumpStack",
+        "choices" : [
+          "trumpStack",
+          "pointCards",
+          "lowCards",
+          "failSuit"
+        ],
+        "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+        "tiles" : [
+          "C12",
+          "D10",
+          "D13",
+          "S11",
+          "S12"
+        ]
+      },
+      {
+        "answer" : "failSuit",
+        "choices" : [
+          "failSuit",
+          "lowCards",
+          "pointCards",
+          "trumpStack"
+        ],
+        "explanation" : "All five cards are spades fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+        "tiles" : [
+          "S8",
+          "S9",
+          "S10",
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "answer" : "pointCards",
+        "choices" : [
+          "lowCards",
+          "failSuit",
+          "trumpStack",
+          "pointCards"
+        ],
+        "explanation" : "Every card carries points, but the holding is not a single fail suit or a pure trump stack. Ask which of those point cards can actually win a trick.",
+        "tiles" : [
+          "C13",
+          "H13",
+          "H14",
+          "S10",
+          "S14"
+        ]
+      }
+    ]
+  },
+  "lockedDrillCount" : 8,
+  "memberPool" : [
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "32 cards",
+        "52 cards"
+      ],
+      "explanation" : "Sheepshead uses the 7 through ace of each suit. That makes 32 cards. In the common five-player game, each player receives six cards and two cards form the blind.",
+      "id" : "cards-deck",
+      "isReviewable" : true,
+      "prompt" : "The Sheepshead deck\nStart with the shape of the game",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "cards-deck"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Diamonds only",
+        "Queens, jacks, and diamonds"
+      ],
+      "explanation" : "The four queens, four jacks, and six diamonds are permanent trump. Their printed suits do not behave like fail suits once they are trump.",
+      "id" : "cards-trump",
+      "isReviewable" : true,
+      "prompt" : "What is trump?\nThe first rule to make automatic",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C12",
+        "S11",
+        "D14"
+      ],
+      "trackingID" : "cards-trump"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Trump only if diamonds are called",
+        "Always trump"
+      ],
+      "explanation" : "The queen and jack of clubs, spades, hearts, and diamonds are trump. A queen of hearts is not a heart fail card, and a jack of clubs is not a club fail card.",
+      "id" : "cards-queens-jacks",
+      "isReviewable" : true,
+      "prompt" : "Permanent trump\nQueens and jacks change the deck",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C12",
+        "S12",
+        "H11",
+        "D11"
+      ],
+      "trackingID" : "cards-queens-jacks"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Ace",
+        "Seven"
+      ],
+      "explanation" : "Aces carry 11 points, 10s carry 10, kings 4, queens 3, and jacks 2. Sevens, eights, and nines carry zero points. Every card still has trick strength.",
+      "id" : "cards-points",
+      "isReviewable" : true,
+      "prompt" : "Point cards\nThe whole deck is worth 120",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C14",
+        "H10",
+        "S13",
+        "D12",
+        "C11"
+      ],
+      "trackingID" : "cards-points"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Only clubs",
+        "Three suits"
+      ],
+      "explanation" : "A fail card keeps its printed suit. Within a fail suit, the order is ace, 10, king, 9, 8, 7. Queens and jacks leave their printed suits and join trump instead.",
+      "id" : "cards-fail",
+      "isReviewable" : true,
+      "prompt" : "Fail suits\nThe suits that are not trump",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C14",
+        "C10",
+        "C13",
+        "C9"
+      ],
+      "trackingID" : "cards-fail"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Queen of clubs",
+        "Ace of diamonds"
+      ],
+      "explanation" : "The queen of clubs is the highest trump, followed by queen of spades, queen of hearts, queen of diamonds, then the jacks in the same suit order. Diamonds then run ace, 10, king, 9, 8, 7.",
+      "id" : "cards-trump-order",
+      "isReviewable" : true,
+      "prompt" : "Trump order\nNot every trump is equal",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C12",
+        "S12",
+        "H11",
+        "D14"
+      ],
+      "trackingID" : "cards-trump-order"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "8 cards each",
+        "6 cards each"
+      ],
+      "explanation" : "The common five-player deal gives each player six cards and leaves two face down in the blind. The picker later takes the blind and buries two cards.",
+      "id" : "cards-deal",
+      "isReviewable" : true,
+      "prompt" : "The five-player deal\nSix cards and a blind",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C14",
+        "D10",
+        "H9",
+        "S7",
+        "C8"
+      ],
+      "trackingID" : "cards-deal"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Picker takes it",
+        "Dealer keeps it"
+      ],
+      "explanation" : "After picking, the picker adds both blind cards to their hand, then buries two cards face down. Those buried cards count for the picking side at the end of the hand.",
+      "id" : "cards-blind",
+      "isReviewable" : true,
+      "prompt" : "The blind\nThe hidden swing",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "cards-blind"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Calls the hand",
+        "Sits out the hand"
+      ],
+      "explanation" : "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. Strong hands can choose to go alone under the table's agreed rules.",
+      "id" : "cards-picker",
+      "isReviewable" : true,
+      "prompt" : "The picker\nOne player takes responsibility",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "cards-picker"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "31 points",
+        "61 points"
+      ],
+      "explanation" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points in captured tricks. The other players win with 60 or fewer for the picker.",
+      "id" : "cards-goal",
+      "isReviewable" : true,
+      "prompt" : "The target\nWin the point race",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "cards-goal"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "24",
+        "52",
+        "32"
+      ],
+      "explanation" : "The deck keeps the 7 through ace in all four suits, for 32 cards.",
+      "id" : "card-quiz-1",
+      "isReviewable" : true,
+      "prompt" : "How many cards are in a standard Sheepshead deck?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "card-quiz-1"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Aces and 10s",
+        "Queens, jacks, and diamonds",
+        "Diamonds only"
+      ],
+      "explanation" : "All four queens, all four jacks, and every diamond are trump.",
+      "id" : "card-quiz-2",
+      "isReviewable" : true,
+      "prompt" : "Which cards are permanent trump?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C12",
+        "H11",
+        "D9"
+      ],
+      "trackingID" : "card-quiz-2"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "4",
+        "0",
+        "11"
+      ],
+      "explanation" : "An ace is worth 11 of the deck's 120 points.",
+      "id" : "card-quiz-3",
+      "isReviewable" : true,
+      "prompt" : "How many points does an ace carry?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C14"
+      ],
+      "trackingID" : "card-quiz-3"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "5",
+        "6",
+        "7"
+      ],
+      "explanation" : "Five players receive six cards each, leaving two cards in the blind.",
+      "id" : "card-quiz-4",
+      "isReviewable" : true,
+      "prompt" : "How many cards does each player receive in the common five-player deal?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "card-quiz-4"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "The picker",
+        "Nobody",
+        "The player to the dealer's left"
+      ],
+      "explanation" : "The picker takes both blind cards and then buries two cards.",
+      "id" : "card-quiz-5",
+      "isReviewable" : true,
+      "prompt" : "Who takes the blind?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "card-quiz-5"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Ace of diamonds",
+        "Queen of clubs",
+        "Queen of diamonds"
+      ],
+      "explanation" : "The queen of clubs is the highest trump in the common ordering.",
+      "id" : "card-quiz-6",
+      "isReviewable" : true,
+      "prompt" : "Which card is the highest trump?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C12",
+        "D12",
+        "D14"
+      ],
+      "trackingID" : "card-quiz-6"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "10",
+        "9",
+        "0"
+      ],
+      "explanation" : "Sevens, eights, and nines carry no points, though they can still win a trick.",
+      "id" : "card-quiz-7",
+      "isReviewable" : true,
+      "prompt" : "What is the point value of a 9?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "H9"
+      ],
+      "trackingID" : "card-quiz-7"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "120",
+        "100",
+        "60"
+      ],
+      "explanation" : "The card values add to 120, so 61 is the basic majority needed by the picking team.",
+      "id" : "card-quiz-8",
+      "isReviewable" : true,
+      "prompt" : "How many points are in the full deck?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "card-quiz-8"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "A fail ace",
+        "Any queen",
+        "The highest diamond"
+      ],
+      "explanation" : "The picker names a fail ace they do not hold, and its owner becomes the silent partner.",
+      "id" : "card-quiz-9",
+      "isReviewable" : true,
+      "prompt" : "In the common call-an-ace game, what kind of card is named?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "card-quiz-9"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "90 points",
+        "61 points",
+        "31 points"
+      ],
+      "explanation" : "The picking team needs at least 61 of the 120 points to win the basic game.",
+      "id" : "card-quiz-10",
+      "isReviewable" : true,
+      "prompt" : "What is the basic picking-team target?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "card-quiz-10"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Queen of clubs",
+        "Ace of diamonds",
+        "Queen of spades"
+      ],
+      "explanation" : "The queen of clubs tops the queen order, then queen of spades, queen of hearts, and queen of diamonds.",
+      "id" : "plus-card-1",
+      "isReviewable" : true,
+      "prompt" : "Which card is the highest trump?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C12",
+        "S12",
+        "D14"
+      ],
+      "trackingID" : "plus-card-1"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "12",
+        "2",
+        "3"
+      ],
+      "explanation" : "Queens carry 3 points, even though their printed ranks are not used as fail-suit strength.",
+      "id" : "plus-card-2",
+      "isReviewable" : true,
+      "prompt" : "How many points does the queen of diamonds carry?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "D12"
+      ],
+      "trackingID" : "plus-card-2"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Jack of hearts",
+        "9 of diamonds",
+        "8 of spades"
+      ],
+      "explanation" : "The jack is permanent trump and the diamond is trump. The 8 of spades is a zero-point fail card.",
+      "id" : "plus-card-3",
+      "isReviewable" : true,
+      "prompt" : "Which of these is a low fail card?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "plus-card-3"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "1",
+        "3",
+        "2"
+      ],
+      "explanation" : "The picker starts with eight cards after taking the blind, then buries two and plays six.",
+      "id" : "plus-card-4",
+      "isReviewable" : true,
+      "prompt" : "How many cards does the picker bury after taking the blind?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "plus-card-4"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "King",
+        "Queen",
+        "Ace"
+      ],
+      "explanation" : "An ace carries 11 points. Kings carry 4 and queens carry 3.",
+      "id" : "plus-card-5",
+      "isReviewable" : true,
+      "prompt" : "Which card carries 11 points?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C14",
+        "D13",
+        "H12"
+      ],
+      "trackingID" : "plus-card-5"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "6 cards",
+        "8 cards",
+        "5 cards"
+      ],
+      "explanation" : "Each of the five players receives six cards, with two cards left in the blind.",
+      "id" : "plus-card-6",
+      "isReviewable" : true,
+      "prompt" : "What is the common five-player hand size?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "plus-card-6"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "9 of diamonds",
+        "Queen of clubs",
+        "Ace of hearts"
+      ],
+      "explanation" : "The queen is permanent trump and the diamond is trump. The ace of hearts remains a fail card.",
+      "id" : "more-card-1",
+      "isReviewable" : true,
+      "prompt" : "Which of these is a fail card?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C12",
+        "D9",
+        "H14"
+      ],
+      "trackingID" : "more-card-1"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "4",
+        "2",
+        "10"
+      ],
+      "explanation" : "A king carries 4 points. Its trick strength is separate from its point value.",
+      "id" : "more-card-2",
+      "isReviewable" : true,
+      "prompt" : "How many points does a king carry?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C13"
+      ],
+      "trackingID" : "more-card-2"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Ace of hearts",
+        "10 of hearts",
+        "King of hearts"
+      ],
+      "explanation" : "Within a fail suit, ace is high, then 10, king, 9, 8, and 7.",
+      "id" : "more-card-3",
+      "isReviewable" : true,
+      "prompt" : "Which card is the highest fail card in hearts?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "H14",
+        "H10",
+        "H13"
+      ],
+      "trackingID" : "more-card-3"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "They count as low cards",
+        "They become permanent trump",
+        "They are removed from the deck"
+      ],
+      "explanation" : "All four queens and all four jacks are permanent trump, regardless of their printed suit.",
+      "id" : "more-card-4",
+      "isReviewable" : true,
+      "prompt" : "What happens to the queens and jacks of the fail suits?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-card-4"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "2",
+        "1",
+        "4"
+      ],
+      "explanation" : "Five players receive six cards each from a 32-card deck, leaving two in the blind.",
+      "id" : "more-card-5",
+      "isReviewable" : true,
+      "prompt" : "How many cards remain in the blind in a five-player hand?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-card-5"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "0",
+        "8",
+        "10"
+      ],
+      "explanation" : "Sevens, eights, and nines carry zero points. They still have trick strength in their fail suit.",
+      "id" : "more-card-6",
+      "isReviewable" : true,
+      "prompt" : "What is the point value of the 8 of spades?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "S8"
+      ],
+      "trackingID" : "more-card-6"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Give it to the dealer",
+        "Take it, then bury two",
+        "Leave it face up"
+      ],
+      "explanation" : "The picker takes both blind cards and buries two cards before the first trick.",
+      "id" : "more-card-7",
+      "isReviewable" : true,
+      "prompt" : "What must the picker do with the blind before play?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-card-7"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "61",
+        "59",
+        "60"
+      ],
+      "explanation" : "The picking team needs a majority of the 120 points, so 61 is the basic winning total.",
+      "id" : "more-card-8",
+      "isReviewable" : true,
+      "prompt" : "Which score is a basic win for the picking team?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-card-8"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Only if it is the club ace",
+        "Yes, any fail ace",
+        "No, only an ace they were not dealt"
+      ],
+      "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name and plays alone.",
+      "id" : "more-card-9",
+      "isReviewable" : true,
+      "prompt" : "Can the picker name a fail ace that was dealt to them?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+        "C14",
+        "H14"
+      ],
+      "trackingID" : "more-card-9"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "8",
+        "7",
+        "6"
+      ],
+      "explanation" : "Six dealt cards plus the two blind cards make eight. The picker then buries two and plays a six-card hand.",
+      "id" : "more-card-10",
+      "isReviewable" : true,
+      "prompt" : "How many cards does the picker hold after taking the blind, before burying?",
+      "roomID" : "card-room",
+      "sourceLabel" : "The Card Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-card-10"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Low Cards",
+        "Trump Stack",
+        "Fail Suit"
+      ],
+      "explanation" : "Every card shown is trump: the queens and jack are permanent trump, and both diamonds are trump.",
+      "id" : "read-match-1",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C12",
+        "D9",
+        "D14",
+        "H12",
+        "S11"
+      ],
+      "trackingID" : "read-match-1"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Point Cards",
+        "Fail Suit",
+        "Trump Stack"
+      ],
+      "explanation" : "These are all clubs from a fail suit. The six-card club suit loses its queen and jack to the trump group.",
+      "id" : "read-match-2",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C9",
+        "C10",
+        "C13",
+        "C14"
+      ],
+      "trackingID" : "read-match-2"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Fail Suit",
+        "Point Cards",
+        "Low Cards"
+      ],
+      "explanation" : "Every card carries points, and the cards are spread across fail suits. The shape is useful when judging which tricks are worth fighting for.",
+      "id" : "read-match-3",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C10",
+        "C14",
+        "H10",
+        "H14",
+        "S13"
+      ],
+      "trackingID" : "read-match-3"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Trump Stack",
+        "Point Cards",
+        "Low Cards"
+      ],
+      "explanation" : "All five cards are low fail cards worth zero points. Their value is in following cheaply and preserving information.",
+      "id" : "read-match-4",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C8",
+        "H7",
+        "H8",
+        "S9"
+      ],
+      "trackingID" : "read-match-4"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Partnership",
+        "Trump Stack",
+        "Fail Suit"
+      ],
+      "explanation" : "Read this as a partnership question. If the picker names the club ace, whoever was dealt it becomes the silent partner, so this holding is the partner's side of the deal.",
+      "id" : "read-match-5",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C14",
+        "D12",
+        "H8",
+        "S13"
+      ],
+      "trackingID" : "read-match-5"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Low Cards",
+        "Picking",
+        "Fail Suit"
+      ],
+      "explanation" : "This is a picker-shaped holding: several high trumps plus a useful fail card can make taking the blind attractive.",
+      "id" : "read-match-6",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C12",
+        "D10",
+        "D14",
+        "H7",
+        "S12"
+      ],
+      "trackingID" : "read-match-6"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Trick Taking",
+        "Low Cards",
+        "Scoring"
+      ],
+      "explanation" : "The three fail aces and diamond carry a large share of the deck's points. Read the point cards before chasing empty tricks.",
+      "id" : "read-match-7",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C10",
+        "C14",
+        "D7",
+        "H14",
+        "S14"
+      ],
+      "trackingID" : "read-match-7"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Point Cards",
+        "Fail Suit",
+        "Trick Taking"
+      ],
+      "explanation" : "This mix asks a play question: the queen of clubs is a high trump, while the fail cards must be read by their led suit.",
+      "id" : "read-match-8",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C12",
+        "D7",
+        "H9",
+        "S10"
+      ],
+      "trackingID" : "read-match-8"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Trump Stack",
+        "Point Cards",
+        "Low Cards"
+      ],
+      "explanation" : "Every card here is trump. Two queens and a jack are permanent trump, and the 8 and 7 of diamonds are trump because every diamond is.",
+      "id" : "plus-hand-1",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C12",
+        "D7",
+        "D8",
+        "H12",
+        "S11"
+      ],
+      "trackingID" : "plus-hand-1"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Fail Suit",
+        "Point Cards",
+        "Trick Taking"
+      ],
+      "explanation" : "Every card is a club fail card, running 7 up to the king. Only the club ace is missing, and the club queen and jack are trump rather than clubs.",
+      "id" : "plus-hand-2",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C13"
+      ],
+      "trackingID" : "plus-hand-2"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Point Cards",
+        "Low Cards",
+        "Trump Stack"
+      ],
+      "explanation" : "Every card in the holding carries points, but none is permanent trump. Winning those fail suits is the challenge.",
+      "id" : "plus-hand-3",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C10",
+        "C14",
+        "H10",
+        "S13",
+        "S14"
+      ],
+      "trackingID" : "plus-hand-3"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Fail Suit",
+        "Scoring",
+        "Low Cards"
+      ],
+      "explanation" : "All five cards are zero-point fail cards. The hand is about following cheaply, not immediate scoring.",
+      "id" : "plus-hand-4",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C8",
+        "H8",
+        "S7",
+        "S9"
+      ],
+      "trackingID" : "plus-hand-4"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Partnership",
+        "Trump Stack",
+        "Point Cards"
+      ],
+      "explanation" : "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker, and the heart 7 is the card that follows the reveal.",
+      "id" : "plus-hand-5",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C9",
+        "D10",
+        "H7",
+        "H14",
+        "S8"
+      ],
+      "trackingID" : "plus-hand-5"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Low Cards",
+        "Fail Suit",
+        "Picking"
+      ],
+      "explanation" : "Four queens are the strongest possible trump core and make a serious alone discussion.",
+      "id" : "plus-hand-6",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C12",
+        "D9",
+        "D12",
+        "H12",
+        "S12"
+      ],
+      "trackingID" : "plus-hand-6"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Low Cards",
+        "Point Cards",
+        "Trump Stack"
+      ],
+      "explanation" : "Every card here is trump. The queen of diamonds and the two jacks are permanent trump, and the diamond ace and 9 are trump because every diamond is.",
+      "id" : "more-hand-1",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C11",
+        "D9",
+        "D12",
+        "D14",
+        "S11"
+      ],
+      "trackingID" : "more-hand-1"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Fail Suit",
+        "Trick Taking",
+        "Point Cards"
+      ],
+      "explanation" : "Every card is a club fail card. A fail suit holds six cards, so the club king is the only one missing here, and the club queen and jack are trump rather than clubs.",
+      "id" : "more-hand-2",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C14"
+      ],
+      "trackingID" : "more-hand-2"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Trump Stack",
+        "Point Cards",
+        "Low Cards"
+      ],
+      "explanation" : "Every card carries points, but the holding has no permanent trump. It is valuable only if those fail suits can be won.",
+      "id" : "more-hand-3",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C10",
+        "C14",
+        "H10",
+        "H14",
+        "S14"
+      ],
+      "trackingID" : "more-hand-3"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Point Cards",
+        "Fail Suit",
+        "Low Cards"
+      ],
+      "explanation" : "All five cards are zero-point fail cards. They are useful for following suit without spending point cards.",
+      "id" : "more-hand-4",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C9",
+        "H7",
+        "H8",
+        "S8"
+      ],
+      "trackingID" : "more-hand-4"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Trump Stack",
+        "Partnership",
+        "Scoring"
+      ],
+      "explanation" : "Holding the named fail ace is what makes you the picker's silent partner, so read this holding as a partnership question. The picker can never name an ace they were dealt.",
+      "id" : "more-hand-5",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C7",
+        "C14",
+        "D9",
+        "H10",
+        "S8"
+      ],
+      "trackingID" : "more-hand-5"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Trump Stack",
+        "Picking",
+        "Low Cards"
+      ],
+      "explanation" : "Two queens, a jack, and the diamond ace give real trump control, and the heart ace adds points. It is not a pure trump stack, but it is exactly the shape that makes taking the blind attractive.",
+      "id" : "more-hand-6",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "trump-room",
+      "sourceLabel" : "The Trump Room",
+      "tiles" : [
+        "C12",
+        "D14",
+        "H11",
+        "H14",
+        "S12"
+      ],
+      "trackingID" : "more-hand-6"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Name your own strongest ace",
+        "Name an ace you were not dealt"
+      ],
+      "explanation" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit. Burying the only hold card creates an illegal call.",
+      "id" : "bury-called-suit",
+      "isReviewable" : true,
+      "prompt" : "Hold the called suit\nA called-ace partnership rule",
+      "roomID" : "bury-room",
+      "sourceLabel" : "The Bury Room",
+      "tiles" : [
+        "C9",
+        "C7",
+        "D12",
+        "H9"
+      ],
+      "trackingID" : "bury-called-suit"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "The spade and the heart",
+        "The two low diamonds"
+      ],
+      "explanation" : "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
+      "id" : "bury-no-trump",
+      "isReviewable" : true,
+      "prompt" : "Which two go?\nTwo low diamonds, a spade, and a heart",
+      "roomID" : "bury-room",
+      "sourceLabel" : "The Bury Room",
+      "tiles" : [
+        "D8",
+        "D7",
+        "S9",
+        "H8"
+      ],
+      "trackingID" : "bury-no-trump"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Both hearts",
+        "One heart and one club"
+      ],
+      "explanation" : "Burying both hearts banks the king's 4 points and leaves you free to play trump the next time hearts are led. Splitting the bury across two suits banks less and empties neither.",
+      "id" : "bury-empty-a-suit",
+      "isReviewable" : true,
+      "prompt" : "Two hearts and two clubs\nAll four are safe to bury. Which pair?",
+      "roomID" : "bury-room",
+      "sourceLabel" : "The Bury Room",
+      "tiles" : [
+        "H13",
+        "H7",
+        "C9",
+        "C8"
+      ],
+      "trackingID" : "bury-empty-a-suit"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Trump with diamond 9",
+        "Follow clubs"
+      ],
+      "explanation" : "A fail card was led and you have a card of that suit. You must follow clubs. The diamond 9 is trump, but it cannot be used while a club is available.",
+      "id" : "trick-follow",
+      "isReviewable" : true,
+      "prompt" : "Clubs are led\nYou hold the club ace",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "C14",
+        "D9",
+        "H10"
+      ],
+      "trackingID" : "trick-follow"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Must play hearts",
+        "Any card"
+      ],
+      "explanation" : "Because you have no clubs, you may play any card. A diamond is trump and can win the trick, while the heart 10 and spade 7 are fail cards that cannot beat a club winner.",
+      "id" : "trick-no-follow",
+      "isReviewable" : true,
+      "prompt" : "Clubs are led\nYou hold no clubs",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "H10",
+        "D9",
+        "S7"
+      ],
+      "trackingID" : "trick-no-follow"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Play diamond 10",
+        "Play heart ace"
+      ],
+      "explanation" : "A queen is trump even when it is printed with a heart. You must follow trump if you have another trump, so the heart ace is not a legal response while the diamond 10 is available.",
+      "id" : "trick-queen-suit",
+      "isReviewable" : true,
+      "prompt" : "A queen is led\nPrinted suit is a trap",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "H12",
+        "H14",
+        "D10"
+      ],
+      "trackingID" : "trick-queen-suit"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Queen of spades",
+        "Queen of diamonds"
+      ],
+      "explanation" : "The queen of spades is higher than the queen of diamonds. The jack of clubs is also trump, but every queen beats every jack.",
+      "id" : "trick-queen-high",
+      "isReviewable" : true,
+      "prompt" : "Two queens meet\nThe permanent trump order",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "S12",
+        "D12",
+        "C11"
+      ],
+      "trackingID" : "trick-queen-high"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Heart 10",
+        "Heart king"
+      ],
+      "explanation" : "Within a fail suit, the order is ace, 10, king, 9, 8, 7. The 10 beats the king, which surprises players who expect a king to outrank a number card.",
+      "id" : "trick-fail-winner",
+      "isReviewable" : true,
+      "prompt" : "Hearts are led\nNo trump appears",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "H10",
+        "H13",
+        "H7"
+      ],
+      "trackingID" : "trick-fail-winner"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "The ace holder",
+        "The dealer"
+      ],
+      "explanation" : "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it before the ace is played.",
+      "id" : "trick-partner",
+      "isReviewable" : true,
+      "prompt" : "The called ace appears\nThe silent reveal",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "C14",
+        "D12",
+        "S9"
+      ],
+      "trackingID" : "trick-partner"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Always lead the lowest card",
+        "Use the hand plan"
+      ],
+      "explanation" : "A fail lead can ask for a suit, while a trump lead can draw opposing trump. The right lead depends on your side, the called suit, and what the table has shown.",
+      "id" : "trick-lead",
+      "isReviewable" : true,
+      "prompt" : "Choose a lead\nThe lead tells a story",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "C14",
+        "C7",
+        "D9"
+      ],
+      "trackingID" : "trick-lead"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Count captured cards",
+        "Count only tricks"
+      ],
+      "explanation" : "The winner takes every card in the trick, so the point value of the cards captured matters. A zero-point trick can still be useful if it protects a future lead.",
+      "id" : "trick-points",
+      "isReviewable" : true,
+      "prompt" : "Capture points\nA trick is more than a winner",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "C14",
+        "H10",
+        "S9"
+      ],
+      "trackingID" : "trick-points"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Play a club",
+        "Play the diamond 9",
+        "Play any card"
+      ],
+      "explanation" : "You must follow the led fail suit when possible. Trump is not a free choice while you hold a club.",
+      "id" : "more-trick-1",
+      "isReviewable" : true,
+      "prompt" : "A club is led and you hold a club. What must you do?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "C7",
+        "D9",
+        "H10"
+      ],
+      "trackingID" : "more-trick-1"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "You must play a heart",
+        "You may play any card",
+        "You must play a 7"
+      ],
+      "explanation" : "If you cannot follow the led fail suit, you may play any card, including trump.",
+      "id" : "more-trick-2",
+      "isReviewable" : true,
+      "prompt" : "A club is led and you have no clubs. What is true?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-trick-2"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Trump",
+        "Heart fail",
+        "A special no-suit lead"
+      ],
+      "explanation" : "Every queen is trump. Its printed heart suit no longer matters for following.",
+      "id" : "more-trick-3",
+      "isReviewable" : true,
+      "prompt" : "A queen of hearts is led. What kind of lead is it?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "H12"
+      ],
+      "trackingID" : "more-trick-3"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Jack of clubs",
+        "Queen of diamonds",
+        "They tie"
+      ],
+      "explanation" : "Every queen beats every jack, even though both cards are permanent trump.",
+      "id" : "more-trick-4",
+      "isReviewable" : true,
+      "prompt" : "Which card wins between the queen of diamonds and the jack of clubs?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "D12",
+        "C11"
+      ],
+      "trackingID" : "more-trick-4"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "King of hearts",
+        "10 of hearts",
+        "Ace of hearts"
+      ],
+      "explanation" : "Fail-suit strength is ace, 10, king, 9, 8, 7.",
+      "id" : "more-trick-5",
+      "isReviewable" : true,
+      "prompt" : "Which fail card wins a trick led in hearts?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "H14",
+        "H10",
+        "H13"
+      ],
+      "trackingID" : "more-trick-5"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Stay silent until the called ace appears",
+        "Take the blind",
+        "Announce the partnership immediately"
+      ],
+      "explanation" : "The ace holder is a silent partner. The table learns the partnership from the play of the called ace.",
+      "id" : "more-trick-6",
+      "isReviewable" : true,
+      "prompt" : "What does the partner do in a call-an-ace hand?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-trick-6"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "The point value of every captured card",
+        "Only the highest card",
+        "Only the number of cards"
+      ],
+      "explanation" : "The trick winner takes all cards in the trick, and the captured point cards determine the score.",
+      "id" : "more-trick-7",
+      "isReviewable" : true,
+      "prompt" : "What should you count when judging a captured trick?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-trick-7"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "To make every fail card follow",
+        "To draw opposing trump",
+        "To change the called ace"
+      ],
+      "explanation" : "A trump lead can draw out opposing trump and clarify which side controls the remaining tricks.",
+      "id" : "more-trick-8",
+      "isReviewable" : true,
+      "prompt" : "What is a common reason to lead trump?",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-trick-8"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Play a trump",
+        "Play a heart"
+      ],
+      "explanation" : "A diamond lead is a trump lead. Any queen, jack, or diamond follows trump, and the strongest trump wins the trick.",
+      "id" : "plus-trick-1",
+      "isReviewable" : true,
+      "prompt" : "A diamond is led\nTrump is led",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "D10",
+        "D7",
+        "C12"
+      ],
+      "trackingID" : "plus-trick-1"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Any card",
+        "Only another ace"
+      ],
+      "explanation" : "Without a club, you may play a diamond, a queen, a jack, or another fail card. A diamond can take the trick, but spending it may not be right.",
+      "id" : "plus-trick-2",
+      "isReviewable" : true,
+      "prompt" : "The club ace is led\nYou have no clubs",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "C14",
+        "D7",
+        "H10"
+      ],
+      "trackingID" : "plus-trick-2"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Adjust the plan",
+        "Ignore the reveal"
+      ],
+      "explanation" : "Once the called ace is played, you know one teammate. Leads can now protect that player or send points toward the picking side.",
+      "id" : "plus-trick-3",
+      "isReviewable" : true,
+      "prompt" : "The partner is exposed\nInformation changes the lead",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "S14",
+        "C12",
+        "D9"
+      ],
+      "trackingID" : "plus-trick-3"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Chase only empty tricks",
+        "Protect the point"
+      ],
+      "explanation" : "The next captured point makes 61. A zero-point trick can still change the lead, but do not lose sight of the immediate score line.",
+      "id" : "plus-trick-4",
+      "isReviewable" : true,
+      "prompt" : "The picking team has 60\nOne point from a basic win",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+
+      ],
+      "trackingID" : "plus-trick-4"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Track unseen trump",
+        "Assume low trump wins"
+      ],
+      "explanation" : "If a higher queen or jack is still unseen, a low diamond is not automatically safe. Card memory keeps a winning line honest.",
+      "id" : "plus-trick-5",
+      "isReviewable" : true,
+      "prompt" : "A queen is still hidden\nCount live trump",
+      "roomID" : "trick-room",
+      "sourceLabel" : "The Trick Room",
+      "tiles" : [
+        "C12",
+        "D8",
+        "H14"
+      ],
+      "trackingID" : "plus-trick-5"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "The ace of hearts",
+        "A heart fail card",
+        "Any queen"
+      ],
+      "explanation" : "The common call-an-ace rule requires the picker to hold a card from the called fail suit. The picker never holds the called ace itself, because you can only name an ace you were not dealt.",
+      "id" : "master-defense-1",
+      "isReviewable" : true,
+      "prompt" : "The picker names the ace of hearts. Which card must the picker retain?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "H8",
+        "D12"
+      ],
+      "trackingID" : "master-defense-1"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "The diamond 7 is trump",
+        "The club ace must win",
+        "The cards have equal strength"
+      ],
+      "explanation" : "Every diamond is trump, so even the diamond 7 beats a fail ace when it is legal to play.",
+      "id" : "master-defense-2",
+      "isReviewable" : true,
+      "prompt" : "A diamond 7 is played against a club ace. Which statement is true?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "D7",
+        "C14"
+      ],
+      "trackingID" : "master-defense-2"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "To estimate the trump still live",
+        "To change their point value",
+        "To identify the dealer"
+      ],
+      "explanation" : "Permanent trump is finite. Knowing what has appeared tells you whether a low diamond can realistically win.",
+      "id" : "master-defense-3",
+      "isReviewable" : true,
+      "prompt" : "Why track the queens and jacks already played?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "master-defense-3"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "A zero-point 7",
+        "A second trick with no points",
+        "A 2-point jack"
+      ],
+      "explanation" : "The picking team needs 61. Any captured point card worth at least 2 crosses the basic majority line.",
+      "id" : "master-defense-4",
+      "isReviewable" : true,
+      "prompt" : "Your side has 59 points. Which capture changes the basic result?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "master-defense-4"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "The dealer must hold it",
+        "The picker holds it",
+        "The partner may be hidden anywhere at the table"
+      ],
+      "explanation" : "The partner is silent until the called ace is played. Do not reveal or assume the partnership early.",
+      "id" : "master-defense-5",
+      "isReviewable" : true,
+      "prompt" : "The called ace has not appeared. What should you assume about its holder?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "master-defense-5"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Always throw a point card",
+        "Ignore the trick winner",
+        "Follow trump when required and track what is spent"
+      ],
+      "explanation" : "Trump management is an information problem. Follow legally, preserve useful winners, and update the live-trump count.",
+      "id" : "master-defense-6",
+      "isReviewable" : true,
+      "prompt" : "What is the strongest general defense against a trump lead?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "master-defense-6"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Fail Suit",
+        "Low Cards",
+        "Picking"
+      ],
+      "explanation" : "Three high trumps plus a diamond ace and club ace create a strong blind-taking shape with both control and points.",
+      "id" : "master-hand-1",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "C12",
+        "C14",
+        "D10",
+        "D14",
+        "S12"
+      ],
+      "trackingID" : "master-hand-1"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Trump Stack",
+        "Scoring",
+        "Fail Suit"
+      ],
+      "explanation" : "The three fail aces and two additional point cards make this a scoring read. The hard part is turning fail points into captured tricks.",
+      "id" : "master-hand-2",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "C10",
+        "C14",
+        "H13",
+        "H14",
+        "S14"
+      ],
+      "trackingID" : "master-hand-2"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Strategy",
+        "Low Cards",
+        "Trump Stack"
+      ],
+      "explanation" : "Two strong trumps, a low diamond, and two low fail cards create a strategy question. The hand is about which suit to control and which card to keep as a hold.",
+      "id" : "master-hand-3",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "C7",
+        "C12",
+        "D9",
+        "H8",
+        "S11"
+      ],
+      "trackingID" : "master-hand-3"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Fail Suit",
+        "Trump Stack",
+        "Point Cards"
+      ],
+      "explanation" : "Every card is a heart fail card, missing only the heart 8. The heart queen and jack are absent because both are permanent trump.",
+      "id" : "master-hand-4",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "H7",
+        "H9",
+        "H10",
+        "H13",
+        "H14"
+      ],
+      "trackingID" : "master-hand-4"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Picking",
+        "Trump Stack",
+        "Low Cards"
+      ],
+      "explanation" : "All five cards are trump and four of them are the highest trumps in the deck. This is the purest possible control shape.",
+      "id" : "master-hand-5",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "C12",
+        "D7",
+        "D12",
+        "H12",
+        "S12"
+      ],
+      "trackingID" : "master-hand-5"
+    },
+    {
+      "answerIndex" : 0,
+      "choices" : [
+        "Strategy",
+        "Low Cards",
+        "Point Cards"
+      ],
+      "explanation" : "The holding has low fail cards, a low trump, and one club 10. It needs a plan for following, not a simple point count.",
+      "id" : "master-hand-6",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "C7",
+        "C10",
+        "D8",
+        "H8",
+        "S9"
+      ],
+      "trackingID" : "master-hand-6"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Picking",
+        "Scoring",
+        "Partnership"
+      ],
+      "explanation" : "You were dealt the club ace, so a club call makes you the silent partner rather than the picker. The queen of diamonds is the trump support you bring to that side.",
+      "id" : "master-hand-7",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "C7",
+        "C14",
+        "D12",
+        "H10",
+        "S9"
+      ],
+      "trackingID" : "master-hand-7"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Point Cards",
+        "Trick Taking",
+        "Fail Suit"
+      ],
+      "explanation" : "The holding contains five trump cards with a mix of strength and point value. The advanced question is how to spend them across tricks.",
+      "id" : "master-hand-8",
+      "isReviewable" : true,
+      "prompt" : "Which Sheepshead rule should you spot first?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "C12",
+        "D8",
+        "D9",
+        "D13",
+        "D14"
+      ],
+      "trackingID" : "master-hand-8"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Both cards are fail",
+        "Ace of hearts",
+        "Queen of hearts"
+      ],
+      "explanation" : "The queen of hearts is permanent trump. The ace of hearts is the highest heart fail card.",
+      "id" : "more-rule-1",
+      "isReviewable" : true,
+      "prompt" : "Which card is not a fail card in a heart hand?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "H12",
+        "H14"
+      ],
+      "trackingID" : "more-rule-1"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "It makes the card trump",
+        "The common call-an-ace rule requires a hold card",
+        "It adds a bonus point"
+      ],
+      "explanation" : "In the common call-an-ace game, the picker must retain at least one card from the called fail suit.",
+      "id" : "more-rule-2",
+      "isReviewable" : true,
+      "prompt" : "Why does a picker keep a card from the called suit?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-rule-2"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Do I have a queen?",
+        "Who dealt the cards?",
+        "Can I follow that fail suit?"
+      ],
+      "explanation" : "Following suit is the first legality check. Only if you cannot follow may you choose another suit or trump.",
+      "id" : "more-rule-3",
+      "isReviewable" : true,
+      "prompt" : "What is the first question after a fail card is led?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-rule-3"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "The most cards in hand",
+        "At least four tricks",
+        "At least 61 of 120 points"
+      ],
+      "explanation" : "The picking team wins the basic game by taking 61 or more of the deck's 120 points.",
+      "id" : "more-rule-4",
+      "isReviewable" : true,
+      "prompt" : "What does the word majority mean in the basic score?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-rule-4"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "It is removed from the deck",
+        "It is a fail card worth 7",
+        "It is trump but carries zero points"
+      ],
+      "explanation" : "Every diamond is trump. The 7 still carries zero points.",
+      "id" : "more-rule-5",
+      "isReviewable" : true,
+      "prompt" : "Which statement about a diamond 7 is true?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "D7",
+        "C14"
+      ],
+      "trackingID" : "more-rule-5"
+    },
+    {
+      "answerIndex" : 2,
+      "choices" : [
+        "Assume the app decides",
+        "Mix both versions during play",
+        "State the table's version before the hand"
+      ],
+      "explanation" : "Sheepshead has regional variations. Agree on partner selection and scoring before the first deal.",
+      "id" : "more-rule-6",
+      "isReviewable" : true,
+      "prompt" : "What should a beginner do when house rules differ?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+
+      ],
+      "trackingID" : "more-rule-6"
+    }
+  ],
+  "minutes" : {
+    "2026-02-28" : {
+      "questions" : [
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "Trump Stack",
+              "Point Cards",
+              "Fail Suit",
+              "Low Cards"
+            ],
+            "explanation" : "All five cards are hearts fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+            "id" : "gen-handReading-minute-2026-02-28-0",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "H8",
+              "H9",
+              "H10",
+              "H13",
+              "H14"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "burying",
+          "item" : {
+            "answerIndex" : 1,
+            "choices" : [
+              "Q of Hearts, K of Clubs",
+              "10 of Clubs, K of Clubs",
+              "A of Diamonds, K of Clubs",
+              "A of Diamonds, 7 of Spades"
+            ],
+            "explanation" : "Burying the club 10 and king banks 14 points and empties clubs, which beats burying the lone spade for 10. The spade 7 is worth more as the hand's only hold card, since without it there is no ace left to call.",
+            "id" : "sheepshead-minute-bury-2026-02-28",
+            "isReviewable" : false,
+            "prompt" : "Three queens and the diamond ace give you real control. Choose two cards to bury. Which two cards do you bury?",
+            "roomID" : "bury-room",
+            "sourceLabel" : "Sheepshead Minute: The Bury",
+            "tiles" : [
+              "C12",
+              "S12",
+              "H12",
+              "D14",
+              "D8",
+              "C10",
+              "C13",
+              "S7"
+            ],
+            "trackingID" : "sheepshead-minute-bury"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Play diamond 10",
+              "Play heart ace"
+            ],
+            "explanation" : "A queen is trump even when it is printed with a heart. You must follow trump if you have another trump, so the heart ace is not a legal response while the diamond 10 is available.",
+            "id" : "trick-queen-suit",
+            "isReviewable" : true,
+            "prompt" : "A queen is led\nPrinted suit is a trap",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "H12",
+              "H14",
+              "D10"
+            ],
+            "trackingID" : "trick-queen-suit"
+          }
+        },
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Trump Stack",
+              "Fail Suit",
+              "Point Cards",
+              "Low Cards"
+            ],
+            "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+            "id" : "gen-handReading-minute-2026-02-28-1",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "C11",
+              "D7",
+              "D9",
+              "D11",
+              "H12"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Heart 10",
+              "Heart king"
+            ],
+            "explanation" : "Within a fail suit, the order is ace, 10, king, 9, 8, 7. The 10 beats the king, which surprises players who expect a king to outrank a number card.",
+            "id" : "trick-fail-winner",
+            "isReviewable" : true,
+            "prompt" : "Hearts are led\nNo trump appears",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "H10",
+              "H13",
+              "H7"
+            ],
+            "trackingID" : "trick-fail-winner"
+          }
+        }
+      ],
+      "shortDate" : "02/28"
+    },
+    "2026-09-30" : {
+      "questions" : [
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "Low Cards",
+              "Point Cards",
+              "Trump Stack",
+              "Fail Suit"
+            ],
+            "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+            "id" : "gen-handReading-minute-2026-09-30-0",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "C11",
+              "C12",
+              "D12",
+              "D14",
+              "H12"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "burying",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "9 of Diamonds, 9 of Clubs",
+              "9 of Diamonds, K of Spades",
+              "10 of Hearts, 7 of Hearts",
+              "9 of Diamonds, 7 of Spades"
+            ],
+            "explanation" : "Burying both hearts banks the heart 10 and empties the suit. Both spades stay, so the called-ace hold is never in doubt, and the queen and 9 of diamonds keep your trump intact.",
+            "id" : "sheepshead-minute-bury-2026-09-30",
+            "isReviewable" : false,
+            "prompt" : "You plan to call the spade ace, so a spade has to stay. Choose two cards to bury. Which two cards do you bury?",
+            "roomID" : "bury-room",
+            "sourceLabel" : "Sheepshead Minute: The Bury",
+            "tiles" : [
+              "D12",
+              "D9",
+              "S13",
+              "S7",
+              "H10",
+              "C8",
+              "H7",
+              "C9"
+            ],
+            "trackingID" : "sheepshead-minute-bury"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 1,
+            "choices" : [
+              "Always lead the lowest card",
+              "Use the hand plan"
+            ],
+            "explanation" : "A fail lead can ask for a suit, while a trump lead can draw opposing trump. The right lead depends on your side, the called suit, and what the table has shown.",
+            "id" : "trick-lead",
+            "isReviewable" : true,
+            "prompt" : "Choose a lead\nThe lead tells a story",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "C14",
+              "C7",
+              "D9"
+            ],
+            "trackingID" : "trick-lead"
+          }
+        },
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Fail Suit",
+              "Point Cards",
+              "Low Cards",
+              "Trump Stack"
+            ],
+            "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+            "id" : "gen-handReading-minute-2026-09-30-1",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "C7",
+              "C8",
+              "C10",
+              "C13",
+              "C14"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "King of hearts",
+              "10 of hearts",
+              "Ace of hearts"
+            ],
+            "explanation" : "Fail-suit strength is ace, 10, king, 9, 8, 7.",
+            "id" : "more-trick-5",
+            "isReviewable" : true,
+            "prompt" : "Which fail card wins a trick led in hearts?",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "H14",
+              "H10",
+              "H13"
+            ],
+            "trackingID" : "more-trick-5"
+          }
+        }
+      ],
+      "shortDate" : "09/30"
+    },
+    "2026-10-01" : {
+      "questions" : [
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "Fail Suit",
+              "Low Cards",
+              "Trump Stack",
+              "Point Cards"
+            ],
+            "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+            "id" : "gen-handReading-minute-2026-10-01-0",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "C12",
+              "D7",
+              "D11",
+              "D14",
+              "S11"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "burying",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "A of Clubs, K of Clubs",
+              "Q of Clubs, A of Clubs",
+              "10 of Diamonds, 7 of Hearts",
+              "A of Clubs, 7 of Hearts"
+            ],
+            "explanation" : "The club ace and king are 15 points that no opponent can ever capture once they are face down, and burying both empties clubs for a later trump. Every trump stays, and the two hearts leave a hold card for calling the heart ace.",
+            "id" : "sheepshead-minute-bury-2026-10-01",
+            "isReviewable" : false,
+            "prompt" : "You picked with four trumps, two clubs, and two hearts. Choose two cards to bury. Which two cards do you bury?",
+            "roomID" : "bury-room",
+            "sourceLabel" : "Sheepshead Minute: The Bury",
+            "tiles" : [
+              "C12",
+              "S11",
+              "D10",
+              "D8",
+              "C14",
+              "C13",
+              "H8",
+              "H7"
+            ],
+            "trackingID" : "sheepshead-minute-bury"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Queen of spades",
+              "Queen of diamonds"
+            ],
+            "explanation" : "The queen of spades is higher than the queen of diamonds. The jack of clubs is also trump, but every queen beats every jack.",
+            "id" : "trick-queen-high",
+            "isReviewable" : true,
+            "prompt" : "Two queens meet\nThe permanent trump order",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "S12",
+              "D12",
+              "C11"
+            ],
+            "trackingID" : "trick-queen-high"
+          }
+        },
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 3,
+            "choices" : [
+              "Low Cards",
+              "Point Cards",
+              "Trump Stack",
+              "Fail Suit"
+            ],
+            "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+            "id" : "gen-handReading-minute-2026-10-01-1",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "C7",
+              "C8",
+              "C9",
+              "C13",
+              "C14"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Any card",
+              "Only another ace"
+            ],
+            "explanation" : "Without a club, you may play a diamond, a queen, a jack, or another fail card. A diamond can take the trick, but spending it may not be right.",
+            "id" : "plus-trick-2",
+            "isReviewable" : true,
+            "prompt" : "The club ace is led\nYou have no clubs",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "C14",
+              "D7",
+              "H10"
+            ],
+            "trackingID" : "plus-trick-2"
+          }
+        }
+      ],
+      "shortDate" : "10/01"
+    },
+    "2026-10-16" : {
+      "questions" : [
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "Trump Stack",
+              "Low Cards",
+              "Fail Suit",
+              "Point Cards"
+            ],
+            "explanation" : "All five cards are spades fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+            "id" : "gen-handReading-minute-2026-10-16-0",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "S8",
+              "S9",
+              "S10",
+              "S13",
+              "S14"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "burying",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "10 of Hearts, K of Spades",
+              "9 of Diamonds, 10 of Hearts",
+              "10 of Hearts, 9 of Clubs",
+              "Q of Spades, 9 of Clubs"
+            ],
+            "explanation" : "Both singletons go. That banks 14 points and empties hearts and spades, so only clubs can still be led at you, and the two clubs keep a legal hold card for calling the club ace.",
+            "id" : "sheepshead-minute-bury-2026-10-16",
+            "isReviewable" : false,
+            "prompt" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury. Which two cards do you bury?",
+            "roomID" : "bury-room",
+            "sourceLabel" : "Sheepshead Minute: The Bury",
+            "tiles" : [
+              "C12",
+              "S12",
+              "D11",
+              "D9",
+              "H10",
+              "S13",
+              "C9",
+              "C8"
+            ],
+            "trackingID" : "sheepshead-minute-bury"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 1,
+            "choices" : [
+              "Must play hearts",
+              "Any card"
+            ],
+            "explanation" : "Because you have no clubs, you may play any card. A diamond is trump and can win the trick, while the heart 10 and spade 7 are fail cards that cannot beat a club winner.",
+            "id" : "trick-no-follow",
+            "isReviewable" : true,
+            "prompt" : "Clubs are led\nYou hold no clubs",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "H10",
+              "D9",
+              "S7"
+            ],
+            "trackingID" : "trick-no-follow"
+          }
+        },
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "Low Cards",
+              "Fail Suit",
+              "Trump Stack",
+              "Point Cards"
+            ],
+            "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+            "id" : "gen-handReading-minute-2026-10-16-1",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "C12",
+              "D10",
+              "D13",
+              "S11",
+              "S12"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Heart 10",
+              "Heart king"
+            ],
+            "explanation" : "Within a fail suit, the order is ace, 10, king, 9, 8, 7. The 10 beats the king, which surprises players who expect a king to outrank a number card.",
+            "id" : "trick-fail-winner",
+            "isReviewable" : true,
+            "prompt" : "Hearts are led\nNo trump appears",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "H10",
+              "H13",
+              "H7"
+            ],
+            "trackingID" : "trick-fail-winner"
+          }
+        }
+      ],
+      "shortDate" : "10/16"
+    },
+    "2027-01-15" : {
+      "questions" : [
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 1,
+            "choices" : [
+              "Point Cards",
+              "Fail Suit",
+              "Trump Stack",
+              "Low Cards"
+            ],
+            "explanation" : "All five cards are clubs fail cards. Within that suit, ace is high, then 10, king, 9, 8, and 7.",
+            "id" : "gen-handReading-minute-2027-01-15-0",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "C7",
+              "C9",
+              "C10",
+              "C13",
+              "C14"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "burying",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "10 of Hearts, K of Spades",
+              "Q of Spades, K of Spades",
+              "9 of Diamonds, K of Spades",
+              "J of Diamonds, 9 of Clubs"
+            ],
+            "explanation" : "Both singletons go. That banks 14 points and empties hearts and spades, so only clubs can still be led at you, and the two clubs keep a legal hold card for calling the club ace.",
+            "id" : "sheepshead-minute-bury-2027-01-15",
+            "isReviewable" : false,
+            "prompt" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury. Which two cards do you bury?",
+            "roomID" : "bury-room",
+            "sourceLabel" : "Sheepshead Minute: The Bury",
+            "tiles" : [
+              "C12",
+              "S12",
+              "D11",
+              "D9",
+              "H10",
+              "S13",
+              "C9",
+              "C8"
+            ],
+            "trackingID" : "sheepshead-minute-bury"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 1,
+            "choices" : [
+              "Must play hearts",
+              "Any card"
+            ],
+            "explanation" : "Because you have no clubs, you may play any card. A diamond is trump and can win the trick, while the heart 10 and spade 7 are fail cards that cannot beat a club winner.",
+            "id" : "trick-no-follow",
+            "isReviewable" : true,
+            "prompt" : "Clubs are led\nYou hold no clubs",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "H10",
+              "D9",
+              "S7"
+            ],
+            "trackingID" : "trick-no-follow"
+          }
+        },
+        {
+          "category" : "handReading",
+          "item" : {
+            "answerIndex" : 2,
+            "choices" : [
+              "Fail Suit",
+              "Low Cards",
+              "Trump Stack",
+              "Point Cards"
+            ],
+            "explanation" : "Every card shown is trump. Start by ordering the queens, jacks, and diamonds before thinking about a lead.",
+            "id" : "gen-handReading-minute-2027-01-15-1",
+            "isReviewable" : false,
+            "prompt" : "What is this hand worth?",
+            "roomID" : "trump-room",
+            "sourceLabel" : "Sheepshead Minute: Hand Read",
+            "tiles" : [
+              "D8",
+              "D13",
+              "H12",
+              "S11",
+              "S12"
+            ],
+            "trackingID" : "handReading"
+          }
+        },
+        {
+          "category" : "trickPlay",
+          "item" : {
+            "answerIndex" : 0,
+            "choices" : [
+              "Play a club",
+              "Play the diamond 9",
+              "Play any card"
+            ],
+            "explanation" : "You must follow the led fail suit when possible. Trump is not a free choice while you hold a club.",
+            "id" : "more-trick-1",
+            "isReviewable" : true,
+            "prompt" : "A club is led and you hold a club. What must you do?",
+            "roomID" : "trick-room",
+            "sourceLabel" : "The Trick Room",
+            "tiles" : [
+              "C7",
+              "D9",
+              "H10"
+            ],
+            "trackingID" : "more-trick-1"
+          }
+        }
+      ],
+      "shortDate" : "01/15"
+    }
+  },
+  "permutations" : {
+    "|2" : [
+      1,
+      0
+    ],
+    "|3" : [
+      2,
+      0,
+      1
+    ],
+    "|4" : [
+      3,
+      2,
+      1,
+      0
+    ],
+    "|7" : [
+      5,
+      4,
+      2,
+      1,
+      3,
+      0,
+      6
+    ],
+    "|13" : [
+      10,
+      8,
+      3,
+      7,
+      5,
+      1,
+      9,
+      6,
+      11,
+      0,
+      4,
+      12,
+      2
+    ],
+    "alpha|2" : [
+      0,
+      1
+    ],
+    "alpha|3" : [
+      0,
+      2,
+      1
+    ],
+    "alpha|4" : [
+      0,
+      3,
+      1,
+      2
+    ],
+    "alpha|7" : [
+      0,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "alpha|13" : [
+      0,
+      12,
+      8,
+      5,
+      4,
+      7,
+      11,
+      9,
+      1,
+      3,
+      6,
+      2,
+      10
+    ],
+    "card-quiz-3|2" : [
+      1,
+      0
+    ],
+    "card-quiz-3|3" : [
+      1,
+      0,
+      2
+    ],
+    "card-quiz-3|4" : [
+      2,
+      1,
+      0,
+      3
+    ],
+    "card-quiz-3|7" : [
+      4,
+      1,
+      0,
+      5,
+      2,
+      3,
+      6
+    ],
+    "card-quiz-3|13" : [
+      7,
+      1,
+      0,
+      10,
+      5,
+      8,
+      6,
+      12,
+      11,
+      2,
+      3,
+      4,
+      9
+    ],
+    "Picker|2" : [
+      1,
+      0
+    ],
+    "Picker|3" : [
+      1,
+      2,
+      0
+    ],
+    "Picker|4" : [
+      2,
+      3,
+      0,
+      1
+    ],
+    "Picker|7" : [
+      4,
+      6,
+      2,
+      5,
+      1,
+      3,
+      0
+    ],
+    "Picker|13" : [
+      7,
+      12,
+      2,
+      8,
+      10,
+      3,
+      1,
+      4,
+      5,
+      9,
+      0,
+      6,
+      11
+    ],
+    "sheepshead-minute-2026-09-30-hands|2" : [
+      1,
+      0
+    ],
+    "sheepshead-minute-2026-09-30-hands|3" : [
+      1,
+      0,
+      2
+    ],
+    "sheepshead-minute-2026-09-30-hands|4" : [
+      2,
+      1,
+      3,
+      0
+    ],
+    "sheepshead-minute-2026-09-30-hands|7" : [
+      4,
+      1,
+      5,
+      0,
+      2,
+      3,
+      6
+    ],
+    "sheepshead-minute-2026-09-30-hands|13" : [
+      8,
+      1,
+      10,
+      6,
+      0,
+      4,
+      11,
+      3,
+      12,
+      7,
+      5,
+      2,
+      9
+    ]
+  },
+  "reads" : [
+    {
+      "cards" : [
+        "C11",
+        "C8",
+        "H10",
+        "S8",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C11",
+        "H9",
+        "H10",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "C9",
+        "S9",
+        "C7",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C9",
+        "S9",
+        "S10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "H8",
+        "S10",
+        "S8",
+        "D11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D11",
+        "H8",
+        "H13",
+        "S8",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "C7",
+        "H12",
+        "D10",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C8",
+        "D10",
+        "H9",
+        "H12"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "S8",
+        "S11",
+        "H12",
+        "D11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D11",
+        "H12",
+        "S8",
+        "S11",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "C7",
+        "H13",
+        "D8",
+        "D7",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D7",
+        "D8",
+        "H11",
+        "H13"
+      ]
+    },
+    {
+      "cards" : [
+        "H9",
+        "D13",
+        "S8",
+        "H7",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D13",
+        "H7",
+        "H9",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "C9",
+        "S13",
+        "C7",
+        "C11",
+        "D10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C9",
+        "C11",
+        "D10",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "C9",
+        "D8",
+        "D14",
+        "C8",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "D8",
+        "D14",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "H12",
+        "D11",
+        "D12",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D11",
+        "D12",
+        "H12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "C13",
+        "H8",
+        "H13",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D9",
+        "D12",
+        "H8",
+        "H13"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "H9",
+        "D12",
+        "C12",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C12",
+        "D12",
+        "H9",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "H8",
+        "C11",
+        "H11",
+        "D14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "D14",
+        "H7",
+        "H8",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "H8",
+        "H14",
+        "S7",
+        "D11",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D11",
+        "H7",
+        "H8",
+        "H14",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "D11",
+        "D13",
+        "S12",
+        "C12"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C12",
+        "D11",
+        "D13",
+        "H14",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D14",
+        "D13",
+        "H11",
+        "H14",
+        "S11"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "D13",
+        "D14",
+        "H11",
+        "H14",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "C8",
+        "D8",
+        "S11",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "D7",
+        "D8",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "H12",
+        "C11",
+        "H9",
+        "S14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "D7",
+        "H9",
+        "H12",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H11",
+        "C7",
+        "D10",
+        "S7",
+        "D9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D9",
+        "D10",
+        "H11",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "C10",
+        "H7",
+        "D7",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D7",
+        "H7",
+        "H8",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S8",
+        "H12",
+        "D10",
+        "H10",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D10",
+        "H10",
+        "H12",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "H9",
+        "C10",
+        "S10",
+        "C8",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C10",
+        "C13",
+        "H9",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "S8",
+        "D11",
+        "H7",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D11",
+        "D13",
+        "H7",
+        "H8",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "S10",
+        "H10",
+        "H11",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "H10",
+        "H11",
+        "S8",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C11",
+        "S14",
+        "D9",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "D9",
+        "H9",
+        "S10",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "S12",
+        "C12",
+        "H9",
+        "D14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D12",
+        "D14",
+        "H9",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "H10",
+        "C14",
+        "C11",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C14",
+        "D7",
+        "H10",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "C11",
+        "S12",
+        "H10",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C11",
+        "D12",
+        "H10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "S13",
+        "S11",
+        "D10",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D10",
+        "S11",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "D10",
+        "S13",
+        "S14",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D10",
+        "H7",
+        "S13",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H11",
+        "D9",
+        "D14",
+        "S9",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D9",
+        "D14",
+        "H11",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "H10",
+        "C8",
+        "H11",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C8",
+        "D13",
+        "H10",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "H8",
+        "C8",
+        "C11",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C11",
+        "H8",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "D12",
+        "S12",
+        "C9",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D8",
+        "D12",
+        "H9",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "S11",
+        "H7",
+        "D7",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "H7",
+        "H8",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S11",
+        "C8",
+        "H11",
+        "D11",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "D11",
+        "H11",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "S9",
+        "S12",
+        "C9",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D11",
+        "S8",
+        "S9",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "D9",
+        "S8",
+        "D8",
+        "H13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D9",
+        "H13",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "H8",
+        "C13",
+        "S13",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "H8",
+        "H9",
+        "S10",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "C10",
+        "H11",
+        "C12",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C10",
+        "C12",
+        "H11",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "D14",
+        "S12",
+        "H9",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D14",
+        "H9",
+        "H10",
+        "S8",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "D9",
+        "D8",
+        "S11",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D8",
+        "D9",
+        "H10",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "D10",
+        "D8",
+        "H11",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D8",
+        "D10",
+        "H11",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "C13",
+        "D10",
+        "H13",
+        "D7",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C13",
+        "D7",
+        "D10",
+        "H13"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "C9",
+        "S7",
+        "H13",
+        "D8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D7",
+        "D8",
+        "H13",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "D13",
+        "H12",
+        "C11",
+        "C14"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C10",
+        "C11",
+        "C14",
+        "D13",
+        "H12"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "S8",
+        "C10",
+        "D14",
+        "H10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D8",
+        "D14",
+        "H10",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "C13",
+        "C8",
+        "S8",
+        "H13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C13",
+        "H13",
+        "S8",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S11",
+        "D10",
+        "S8",
+        "C10",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C10",
+        "D10",
+        "S8",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "C11",
+        "C8",
+        "S10",
+        "D12",
+        "H13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C11",
+        "D12",
+        "H13",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "H14",
+        "S8",
+        "C9",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C10",
+        "H14",
+        "S8",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S11",
+        "H8",
+        "H9",
+        "H10",
+        "D13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D13",
+        "H8",
+        "H9",
+        "H10",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "C7",
+        "H8",
+        "H13",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C10",
+        "H7",
+        "H8",
+        "H13"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "S11",
+        "C9",
+        "C7",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C9",
+        "D9",
+        "H14",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "C13",
+        "H12",
+        "H7",
+        "D9",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D9",
+        "H7",
+        "H12",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "H10",
+        "C14",
+        "S9",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C14",
+        "D13",
+        "H10",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "H14",
+        "D12",
+        "S7",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "D12",
+        "H14",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "C13",
+        "C11",
+        "D14",
+        "D11",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C13",
+        "D11",
+        "D14",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "S12",
+        "C10",
+        "S13",
+        "S11"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C10",
+        "D11",
+        "S11",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "S12",
+        "S10",
+        "H7",
+        "D13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D13",
+        "H7",
+        "H14",
+        "S10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D14",
+        "S12",
+        "D8",
+        "S13",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D14",
+        "S9",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "D8",
+        "S7",
+        "S8",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "H11",
+        "S7",
+        "S8",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "D12",
+        "D8",
+        "H13",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D8",
+        "D12",
+        "H13",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "D14",
+        "S12",
+        "C12",
+        "S14"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C12",
+        "D14",
+        "H14",
+        "S12",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "C9",
+        "S7",
+        "D9",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C14",
+        "D9",
+        "D13",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "C12",
+        "C14",
+        "D11",
+        "S12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C14",
+        "D11",
+        "S9",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "D9",
+        "D13",
+        "H10",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D9",
+        "D13",
+        "H10",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "S7",
+        "C12",
+        "C13",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C13",
+        "D11",
+        "S7",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "D8",
+        "H11",
+        "C13",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D8",
+        "D12",
+        "H11",
+        "H13"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "S14",
+        "C14",
+        "C12",
+        "D13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C14",
+        "D13",
+        "S9",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "C11",
+        "D12",
+        "S14",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "D9",
+        "D12",
+        "H11",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "D14",
+        "C14",
+        "C8",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C14",
+        "D14",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "C10",
+        "D9",
+        "C14",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C10",
+        "C14",
+        "D8",
+        "D9"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "S8",
+        "H13",
+        "D9",
+        "D8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D9",
+        "H10",
+        "H13",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "S8",
+        "S11",
+        "S13",
+        "D14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D12",
+        "D14",
+        "S8",
+        "S11",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "C10",
+        "H14",
+        "C13",
+        "D10"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C10",
+        "C13",
+        "D10",
+        "H14",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "C13",
+        "S13",
+        "S7",
+        "H9",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C13",
+        "H9",
+        "S7",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "D9",
+        "C12",
+        "C8",
+        "D14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C12",
+        "D9",
+        "D14",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "H12",
+        "D9",
+        "S11",
+        "H13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "D11",
+        "H12",
+        "H13",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "D10",
+        "C14",
+        "H14",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D10",
+        "H7",
+        "H12",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "S8",
+        "H10",
+        "S14",
+        "S12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "H10",
+        "S8",
+        "S10",
+        "S12",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D14",
+        "S14",
+        "H8",
+        "H13",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D14",
+        "H8",
+        "H13",
+        "S8",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "C10",
+        "C14",
+        "D7",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C14",
+        "D7",
+        "H7",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C11",
+        "H11",
+        "S7",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C12",
+        "H11",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "S9",
+        "H8",
+        "D8",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D8",
+        "H8",
+        "H13",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "H9",
+        "D10",
+        "C7",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D10",
+        "H9",
+        "H13",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "C13",
+        "C8",
+        "D9",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C13",
+        "D9",
+        "S10",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "H14",
+        "C7",
+        "D8",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C14",
+        "D8",
+        "H9",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "H11",
+        "D10",
+        "S7",
+        "C9",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D7",
+        "D10",
+        "H11",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "D13",
+        "C13",
+        "S13",
+        "C12"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C10",
+        "C12",
+        "C13",
+        "D13",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H9",
+        "D9",
+        "S13",
+        "S11",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D9",
+        "H9",
+        "S11",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "H13",
+        "S10",
+        "H11",
+        "S11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "H7",
+        "H11",
+        "H13",
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "H13",
+        "S8",
+        "H8",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "H8",
+        "H13",
+        "H14",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D14",
+        "C14",
+        "D9",
+        "H13",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D9",
+        "D14",
+        "H13",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "S9",
+        "H12",
+        "S7",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D10",
+        "H12",
+        "H14",
+        "S7",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "D10",
+        "S9",
+        "D12",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D10",
+        "D12",
+        "H7",
+        "H11",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "C11",
+        "C10",
+        "S13",
+        "S10",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C11",
+        "D7",
+        "S10",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "D13",
+        "S12",
+        "C12",
+        "C13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C12",
+        "C13",
+        "D13",
+        "H12",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "C10",
+        "H13",
+        "D14",
+        "C13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C10",
+        "C13",
+        "D14",
+        "H13",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "C13",
+        "H14",
+        "H10",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D9",
+        "H10",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "C7",
+        "H8",
+        "H13",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "H7",
+        "H8",
+        "H13",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "C8",
+        "C13",
+        "C12",
+        "C11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C11",
+        "C12",
+        "C13",
+        "D8"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "H9",
+        "S12",
+        "C14",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "H9",
+        "S9",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "C13",
+        "S11",
+        "C9",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C13",
+        "D10",
+        "H12",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "C10",
+        "D14",
+        "C8",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C10",
+        "D7",
+        "D14",
+        "H10"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "H13",
+        "D14",
+        "S10",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D14",
+        "H13",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "S7",
+        "C9",
+        "H10",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D8",
+        "H8",
+        "H10",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "S7",
+        "S8",
+        "D14",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D11",
+        "D14",
+        "H14",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "S11",
+        "S14",
+        "H11",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D12",
+        "H7",
+        "H11",
+        "S11",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "S8",
+        "C13",
+        "S13",
+        "D8",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C13",
+        "D8",
+        "S8",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "C8",
+        "H11",
+        "D8",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C14",
+        "D8",
+        "D11",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "H13",
+        "S13",
+        "H8",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "H8",
+        "H13",
+        "H14",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "C14",
+        "D7",
+        "S10",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D7",
+        "H10",
+        "H11",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "D9",
+        "S10",
+        "H9",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C12",
+        "D9",
+        "H9",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "C9",
+        "H9",
+        "H13",
+        "C12",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C12",
+        "H9",
+        "H13",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "H11",
+        "C12",
+        "C9",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C12",
+        "H11",
+        "S7",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "S9",
+        "H7",
+        "C13",
+        "C11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C11",
+        "C13",
+        "H7",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "S14",
+        "S12",
+        "C12",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D7",
+        "D11",
+        "S12",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "S8",
+        "C13",
+        "S11",
+        "D10",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C13",
+        "D10",
+        "S8",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "S14",
+        "D11",
+        "D8",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D11",
+        "H7",
+        "S10",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "C14",
+        "H13",
+        "S10",
+        "D11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D9",
+        "D11",
+        "H13",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C12",
+        "H7",
+        "D12",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C12",
+        "D12",
+        "H7",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C13",
+        "D8",
+        "D14",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D8",
+        "D14",
+        "H9",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "C7",
+        "S9",
+        "D10",
+        "D12",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C13",
+        "D10",
+        "D12",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "S7",
+        "H12",
+        "D13",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D13",
+        "H12",
+        "S7",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "H9",
+        "S13",
+        "H7",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "H7",
+        "H9",
+        "H10",
+        "S8",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "D9",
+        "S11",
+        "S8",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D9",
+        "D10",
+        "S8",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "S12",
+        "S13",
+        "H8",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D13",
+        "H8",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "S11",
+        "H10",
+        "D11",
+        "D13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D11",
+        "D13",
+        "H7",
+        "H10",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "H9",
+        "C14",
+        "C8",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C14",
+        "H9",
+        "H14",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "S12",
+        "D14",
+        "D13",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D13",
+        "D14",
+        "H9",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H11",
+        "H13",
+        "S12",
+        "C12",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "H9",
+        "H11",
+        "H13",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "D7",
+        "C9",
+        "S13",
+        "H10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D7",
+        "D9",
+        "H10",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "C11",
+        "D14",
+        "S12",
+        "C10",
+        "S11"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C10",
+        "C11",
+        "D14",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "H9",
+        "C8",
+        "C9",
+        "D14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "D14",
+        "H9",
+        "H10"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "H14",
+        "S10",
+        "C14",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C14",
+        "H7",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "H8",
+        "S11",
+        "S10",
+        "D7",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D7",
+        "H8",
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "C10",
+        "S7",
+        "H12",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "H10",
+        "H12",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "S13",
+        "C13",
+        "S7",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "C14",
+        "S7",
+        "S10",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "D9",
+        "C12",
+        "S14",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D9",
+        "D12",
+        "H7",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "D11",
+        "D7",
+        "H7",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D9",
+        "D11",
+        "H7",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "S7",
+        "C13",
+        "C7",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C13",
+        "H7",
+        "H12",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "C8",
+        "H13",
+        "C12",
+        "S13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C12",
+        "H13",
+        "S13",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H11",
+        "C14",
+        "H8",
+        "D7",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D7",
+        "H8",
+        "H11",
+        "H12"
+      ]
+    },
+    {
+      "cards" : [
+        "S8",
+        "H11",
+        "H9",
+        "S9",
+        "H10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "H9",
+        "H10",
+        "H11",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "C10",
+        "D7",
+        "D14",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C10",
+        "D7",
+        "D14",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "C8",
+        "C11",
+        "H10",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "C11",
+        "C14",
+        "H10"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "S7",
+        "H10",
+        "C12",
+        "D10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D10",
+        "H10",
+        "S7",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "S11",
+        "H8",
+        "S8",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "H8",
+        "H10",
+        "S8",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "C8",
+        "C11",
+        "S9",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C11",
+        "C13",
+        "D11",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C13",
+        "S9",
+        "C8",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C13",
+        "H12",
+        "S9",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "H10",
+        "D14",
+        "H9",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D14",
+        "H9",
+        "H10",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "C9",
+        "S11",
+        "D9",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C9",
+        "D9",
+        "D13",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "S8",
+        "H14",
+        "H12",
+        "D8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "H12",
+        "H14",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "S8",
+        "D12",
+        "C11",
+        "D9",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C14",
+        "D9",
+        "D12",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "H7",
+        "D11",
+        "H10",
+        "D8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D11",
+        "H7",
+        "H10",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "H11",
+        "D12",
+        "C13",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D12",
+        "H11",
+        "H13",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "H9",
+        "H7",
+        "D12",
+        "H11",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D12",
+        "H7",
+        "H9",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "D7",
+        "H7",
+        "S12",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D7",
+        "D10",
+        "H7",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "C11",
+        "S11",
+        "D7",
+        "C12",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C12",
+        "D7",
+        "H7",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "H11",
+        "C9",
+        "S12",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "D11",
+        "H11",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S8",
+        "H7",
+        "C13",
+        "H14",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D7",
+        "H7",
+        "H14",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "H11",
+        "S12",
+        "H13",
+        "S10"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "D10",
+        "H11",
+        "H13",
+        "S10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "H11",
+        "C8",
+        "S14",
+        "S12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "H11",
+        "H13",
+        "S12",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "C10",
+        "H12",
+        "S10",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D7",
+        "D9",
+        "H12",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "C7",
+        "H8",
+        "D14",
+        "S13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D13",
+        "D14",
+        "H8",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "D13",
+        "S13",
+        "S9",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D8",
+        "D13",
+        "S9",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H9",
+        "S13",
+        "D9",
+        "C13",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D9",
+        "H9",
+        "H12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "C12",
+        "D8",
+        "H7",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D7",
+        "D8",
+        "D12",
+        "H7"
+      ]
+    },
+    {
+      "cards" : [
+        "S11",
+        "D7",
+        "D9",
+        "H13",
+        "S13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D9",
+        "H13",
+        "S11",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "D13",
+        "S9",
+        "D12",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D12",
+        "D13",
+        "H14",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "H8",
+        "D14",
+        "C8",
+        "S11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D14",
+        "H8",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "S12",
+        "H8",
+        "C10",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C10",
+        "D11",
+        "H8",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "S7",
+        "C12",
+        "S10",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "H8",
+        "H10",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "H12",
+        "C10",
+        "S7",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C10",
+        "D11",
+        "H12",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S11",
+        "S9",
+        "D8",
+        "H10",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D8",
+        "H10",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "C14",
+        "C12",
+        "S8",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C13",
+        "C14",
+        "D10",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "D10",
+        "S7",
+        "C10",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C12",
+        "D7",
+        "D10",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "C10",
+        "S8",
+        "D8",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D8",
+        "H10",
+        "H12",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "C7",
+        "C12",
+        "S12",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C9",
+        "C12",
+        "H10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "H10",
+        "D10",
+        "C11",
+        "S13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C11",
+        "D10",
+        "H10",
+        "H12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "C8",
+        "S10",
+        "D12",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D7",
+        "D10",
+        "D12",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "C10",
+        "H8",
+        "D14",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C10",
+        "D8",
+        "D14",
+        "H8"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "C13",
+        "S8",
+        "H7",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D8",
+        "H7",
+        "H14",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "C11",
+        "C7",
+        "H10",
+        "D13",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C11",
+        "D13",
+        "H10",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "C11",
+        "S10",
+        "H8",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C11",
+        "H8",
+        "H12",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "C12",
+        "S10",
+        "H11",
+        "D8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D8",
+        "H11",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "H11",
+        "S11",
+        "S12",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "H11",
+        "S9",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "C14",
+        "H13",
+        "D14",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D14",
+        "H9",
+        "H13",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "C10",
+        "D12",
+        "D13",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D12",
+        "D13",
+        "S9",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "D7",
+        "C9",
+        "C13",
+        "D13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C13",
+        "C14",
+        "D7",
+        "D13"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "S7",
+        "H9",
+        "S10",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D9",
+        "H9",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "D9",
+        "H11",
+        "H10",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D9",
+        "D12",
+        "H10",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "H9",
+        "S7",
+        "D7",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D8",
+        "H9",
+        "H11",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "D12",
+        "C9",
+        "S12",
+        "C11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C11",
+        "D12",
+        "S12",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "D9",
+        "S13",
+        "S8",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "H14",
+        "S8",
+        "S10",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "H11",
+        "C12",
+        "S12",
+        "D13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C12",
+        "D13",
+        "H11",
+        "H13",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "C12",
+        "H12",
+        "C11",
+        "S10",
+        "D13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C11",
+        "C12",
+        "D13",
+        "H12",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "C13",
+        "C11",
+        "C14",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C13",
+        "C14",
+        "D7",
+        "H12"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "S10",
+        "D9",
+        "S14",
+        "C11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C11",
+        "D9",
+        "S10",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "S11",
+        "S7",
+        "C10",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D7",
+        "H12",
+        "S7",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "H11",
+        "S10",
+        "H7",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D13",
+        "H7",
+        "H11",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "C8",
+        "H7",
+        "H8",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D8",
+        "H7",
+        "H8",
+        "H12"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "S9",
+        "H8",
+        "C8",
+        "S11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D10",
+        "H8",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D14",
+        "D10",
+        "H9",
+        "H8",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D10",
+        "D14",
+        "H8",
+        "H9",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "D14",
+        "C12",
+        "D8",
+        "S11"
+      ],
+      "category" : "trumpStack",
+      "fits" : [
+        "trumpStack"
+      ],
+      "racked" : [
+        "C12",
+        "D8",
+        "D12",
+        "D14",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D14",
+        "H12",
+        "H9",
+        "H7",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D14",
+        "H7",
+        "H9",
+        "H12",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "H8",
+        "S14",
+        "S7",
+        "D9",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "D12",
+        "H8",
+        "S7",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "C12",
+        "S9",
+        "D14",
+        "S8",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C12",
+        "D14",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "H9",
+        "C14",
+        "H11",
+        "H10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "H9",
+        "H10",
+        "H11",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "S7",
+        "C13",
+        "S14",
+        "D13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D13",
+        "H7",
+        "S7",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "D7",
+        "S7",
+        "D10",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D7",
+        "D10",
+        "D12",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "C12",
+        "S9",
+        "D9",
+        "C13",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "C13",
+        "D9",
+        "S7",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "C11",
+        "D8",
+        "C7",
+        "H10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C11",
+        "D8",
+        "H7",
+        "H10"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "C11",
+        "H12",
+        "H14",
+        "D13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "D13",
+        "H7",
+        "H12",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "C7",
+        "S8",
+        "D7",
+        "D8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D7",
+        "D8",
+        "D12",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "H8",
+        "H10",
+        "C7",
+        "D14",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D14",
+        "H8",
+        "H9",
+        "H10"
+      ]
+    },
+    {
+      "cards" : [
+        "C7",
+        "S11",
+        "D13",
+        "D7",
+        "H13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D7",
+        "D13",
+        "H13",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C14",
+        "D7",
+        "H14",
+        "C10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C14",
+        "D7",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "S9",
+        "S7",
+        "S8",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "H12",
+        "S7",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S8",
+        "S7",
+        "H13",
+        "C12",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "H7",
+        "H13",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "H11",
+        "D9",
+        "H8",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D9",
+        "H8",
+        "H11",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "C10",
+        "S8",
+        "D9",
+        "C8",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C10",
+        "D9",
+        "H11",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "H13",
+        "D12",
+        "S10",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D12",
+        "H8",
+        "H12",
+        "H13",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "C9",
+        "C12",
+        "S8",
+        "H11",
+        "D11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C12",
+        "D11",
+        "H11",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "H8",
+        "S13",
+        "S10",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "H8",
+        "S7",
+        "S10",
+        "S13",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "S9",
+        "C14",
+        "H7",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "H7",
+        "H9",
+        "H14",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "D9",
+        "H9",
+        "H14",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "D11",
+        "H9",
+        "H14",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "C11",
+        "H14",
+        "D7",
+        "C13",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C13",
+        "D7",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D10",
+        "S11",
+        "C14",
+        "D11",
+        "D13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C14",
+        "D10",
+        "D11",
+        "D13",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "H8",
+        "C12",
+        "S14",
+        "S11",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C12",
+        "H8",
+        "S11",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "D8",
+        "D13",
+        "H8",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D13",
+        "H8",
+        "S9",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "S9",
+        "H12",
+        "H8",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "H7",
+        "H8",
+        "H12",
+        "H14",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "D9",
+        "H8",
+        "H12",
+        "S13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "D12",
+        "H8",
+        "H12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "S12",
+        "D11",
+        "H11",
+        "H12"
+      ],
+      "category" : "trumpStack",
+      "fits" : [
+        "trumpStack"
+      ],
+      "racked" : [
+        "D7",
+        "D11",
+        "H11",
+        "H12",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D8",
+        "H13",
+        "S11",
+        "H14",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "D8",
+        "H13",
+        "H14",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "D13",
+        "D8",
+        "H11",
+        "D14"
+      ],
+      "category" : "trumpStack",
+      "fits" : [
+        "trumpStack"
+      ],
+      "racked" : [
+        "D8",
+        "D12",
+        "D13",
+        "D14",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "C7",
+        "H12",
+        "H10",
+        "D13",
+        "H14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D13",
+        "H10",
+        "H12",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "S12",
+        "S7",
+        "C13",
+        "H7",
+        "S11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "H7",
+        "S7",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "D14",
+        "C9",
+        "H12",
+        "S14",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D14",
+        "H7",
+        "H12",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "S9",
+        "C8",
+        "H11",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "H11",
+        "H13",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "D8",
+        "C9",
+        "S8",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C14",
+        "D8",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "S11",
+        "C13",
+        "H11",
+        "H12"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C13",
+        "D11",
+        "H11",
+        "H12",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "C13",
+        "D9",
+        "D12",
+        "H7",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D9",
+        "D12",
+        "H7",
+        "H8"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "S12",
+        "D14",
+        "C7",
+        "H10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D14",
+        "H7",
+        "H10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "H10",
+        "C11",
+        "D13",
+        "S10"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C11",
+        "C14",
+        "D13",
+        "H10",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "S12",
+        "S10",
+        "D13",
+        "D12"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "D12",
+        "D13",
+        "H10",
+        "S10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "C9",
+        "S10",
+        "C8",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "C14",
+        "H12",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S14",
+        "D11",
+        "C14",
+        "S8",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D11",
+        "S8",
+        "S10",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "H9",
+        "D8",
+        "C13",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C13",
+        "D8",
+        "H9",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "S11",
+        "D7",
+        "H14",
+        "C9",
+        "D9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D7",
+        "D9",
+        "H14",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "H14",
+        "D9",
+        "C9",
+        "H10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D9",
+        "H10",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "D8",
+        "D14",
+        "D9",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D8",
+        "D9",
+        "D12",
+        "D14"
+      ]
+    },
+    {
+      "cards" : [
+        "C11",
+        "C8",
+        "D11",
+        "H13",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C8",
+        "C11",
+        "D11",
+        "H13"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "H11",
+        "C8",
+        "C7",
+        "H9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C8",
+        "H9",
+        "H11",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "H7",
+        "C11",
+        "H13",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "C13",
+        "D11",
+        "H7",
+        "H13"
+      ]
+    },
+    {
+      "cards" : [
+        "H11",
+        "C11",
+        "C14",
+        "D14",
+        "C13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C11",
+        "C13",
+        "C14",
+        "D14",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "C13",
+        "C10",
+        "H7",
+        "D10",
+        "D14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C13",
+        "D10",
+        "D14",
+        "H7"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "C11",
+        "D12",
+        "C7",
+        "S11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C11",
+        "D11",
+        "D12",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "D12",
+        "C13",
+        "H11",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "C14",
+        "D12",
+        "H7",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "C8",
+        "D12",
+        "H10",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C9",
+        "D9",
+        "D12",
+        "H10"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "C14",
+        "D10",
+        "H7",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C13",
+        "C14",
+        "D10",
+        "H7"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "C12",
+        "D12",
+        "S12",
+        "D11"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C12",
+        "C14",
+        "D11",
+        "D12",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H11",
+        "D11",
+        "D13",
+        "C12",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "D11",
+        "D13",
+        "H7",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "H10",
+        "H11",
+        "H13",
+        "S13",
+        "C11"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C11",
+        "H10",
+        "H11",
+        "H13",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "C14",
+        "C12",
+        "C7",
+        "D9",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C9",
+        "C12",
+        "C14",
+        "D9"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C9",
+        "C13",
+        "S8",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C13",
+        "H12",
+        "S8",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "D12",
+        "H11",
+        "C8",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C8",
+        "D12",
+        "H11",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "S9",
+        "H14",
+        "H9",
+        "C14"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "C14",
+        "H9",
+        "H14",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "S13",
+        "D12",
+        "S8",
+        "D8",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D12",
+        "H11",
+        "S8",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "D9",
+        "D14",
+        "C10",
+        "H8",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D9",
+        "D14",
+        "H8",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "D8",
+        "S10",
+        "D13",
+        "D12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D8",
+        "D12",
+        "D13",
+        "S9",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "D8",
+        "C14",
+        "H14",
+        "S10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D8",
+        "H13",
+        "H14",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "S11",
+        "S10",
+        "H9",
+        "C7",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "D7",
+        "H9",
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "C7",
+        "S11",
+        "S13",
+        "D13",
+        "C11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C11",
+        "D13",
+        "S11",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "H13",
+        "D8",
+        "C13",
+        "C10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "C13",
+        "D8",
+        "H13",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "D13",
+        "D9",
+        "H9",
+        "C8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D7",
+        "D9",
+        "D13",
+        "H9"
+      ]
+    },
+    {
+      "cards" : [
+        "H9",
+        "D7",
+        "H13",
+        "H12",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D7",
+        "H9",
+        "H12",
+        "H13",
+        "S7"
+      ]
+    },
+    {
+      "cards" : [
+        "C13",
+        "H10",
+        "D7",
+        "S10",
+        "S12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D7",
+        "H10",
+        "S10",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "C13",
+        "D9",
+        "H9",
+        "S7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D9",
+        "H9",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "D10",
+        "H7",
+        "C10",
+        "C7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C7",
+        "C10",
+        "D10",
+        "D11",
+        "H7"
+      ]
+    },
+    {
+      "cards" : [
+        "H9",
+        "S11",
+        "C13",
+        "D14",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "D14",
+        "H9",
+        "H12",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "S13",
+        "D9",
+        "S12",
+        "H8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "H8",
+        "S10",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H13",
+        "H14",
+        "D11",
+        "H12",
+        "H7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D11",
+        "H7",
+        "H12",
+        "H13",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "H7",
+        "S10",
+        "H8",
+        "D12",
+        "S8"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D12",
+        "H7",
+        "H8",
+        "S8",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D11",
+        "D12",
+        "C8",
+        "S13",
+        "H12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D11",
+        "D12",
+        "H12",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "H7",
+        "C11",
+        "H13",
+        "S13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C11",
+        "H7",
+        "H12",
+        "H13",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "S10",
+        "D13",
+        "D9",
+        "D8",
+        "C10"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D8",
+        "D9",
+        "D13",
+        "S10"
+      ]
+    },
+    {
+      "cards" : [
+        "D12",
+        "C10",
+        "C9",
+        "D14",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "C10",
+        "D12",
+        "D14",
+        "H11"
+      ]
+    },
+    {
+      "cards" : [
+        "D13",
+        "C9",
+        "H14",
+        "H12",
+        "H11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D13",
+        "H11",
+        "H12",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "D7",
+        "H12",
+        "S14",
+        "S11",
+        "C9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C9",
+        "D7",
+        "H12",
+        "S11",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "H9",
+        "H12",
+        "S12",
+        "C13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "H9",
+        "H12",
+        "S7",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "S7",
+        "D9",
+        "D11",
+        "S9",
+        "S11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "D11",
+        "S7",
+        "S9",
+        "S11"
+      ]
+    },
+    {
+      "cards" : [
+        "H12",
+        "H11",
+        "S13",
+        "S11",
+        "C13"
+      ],
+      "category" : "pointCards",
+      "fits" : [
+        "pointCards"
+      ],
+      "racked" : [
+        "C13",
+        "H11",
+        "H12",
+        "S11",
+        "S13"
+      ]
+    },
+    {
+      "cards" : [
+        "S9",
+        "H12",
+        "S8",
+        "D9",
+        "D11"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "D9",
+        "D11",
+        "H12",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "cards" : [
+        "C8",
+        "D13",
+        "D8",
+        "S14",
+        "S9"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C8",
+        "D8",
+        "D13",
+        "S9",
+        "S14"
+      ]
+    },
+    {
+      "cards" : [
+        "H8",
+        "C10",
+        "S8",
+        "H13",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C10",
+        "D7",
+        "H8",
+        "H13",
+        "S8"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "C14",
+        "D8",
+        "H13",
+        "D7"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C14",
+        "D7",
+        "D8",
+        "H13",
+        "H14"
+      ]
+    },
+    {
+      "cards" : [
+        "H14",
+        "H9",
+        "S12",
+        "S7",
+        "C12"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C12",
+        "H9",
+        "H14",
+        "S7",
+        "S12"
+      ]
+    },
+    {
+      "cards" : [
+        "H8",
+        "C13",
+        "S7",
+        "S10",
+        "H13"
+      ],
+      "category" : null,
+      "fits" : [
+
+      ],
+      "racked" : [
+        "C13",
+        "H8",
+        "H13",
+        "S7",
+        "S10"
+      ]
+    }
+  ],
+  "streams" : {
+    "" : [
+      "15514641595134234871",
+      "11591100552470220259",
+      "2360295179859087722",
+      "8556697169443187519",
+      "2781222157729857041",
+      "9075254519207505416",
+      "8490179758023949435",
+      "7247227870534945443"
+    ],
+    "alpha" : [
+      "1203932385238909535",
+      "17434013556626794338",
+      "11730701990388958312",
+      "5095718163328705695",
+      "2043295037226641620",
+      "5697383076987913279",
+      "14552573405147940535",
+      "8259264457864883014"
+    ],
+    "card-quiz-3" : [
+      "10958742302405693514",
+      "33016976849977424",
+      "8748533395813057069",
+      "13599156673176463333",
+      "3363017927146009363",
+      "9018833199604042188",
+      "2202255771340352082",
+      "15555942394831545975"
+    ],
+    "Picker" : [
+      "11116182637288463931",
+      "17630387353352776385",
+      "595688688419163032",
+      "10912529833582820404",
+      "13502471804469143245",
+      "8629237886391853543",
+      "17941964482186534844",
+      "10726915257241838299"
+    ],
+    "sheepshead-minute-2026-09-30-hands" : [
+      "12290232005436354847",
+      "735705317025898203",
+      "13900862118053806503",
+      "6909815400133986142",
+      "10100544229557260150",
+      "8321423228257688924",
+      "15531651854400932188",
+      "12674615147152729956"
+    ]
+  }
+}

@@ -1,0 +1,2697 @@
+{
+  "categories" : [
+    {
+      "displayName" : "Trump Stack",
+      "howToSpot" : "Queens, jacks, and every diamond are trump. The queen of clubs is highest, followed by the other permanent trumps.",
+      "id" : "trumpStack",
+      "shortName" : "Trump Stack"
+    },
+    {
+      "displayName" : "Fail Suit",
+      "howToSpot" : "Clubs, hearts, and spades keep their suits. Within a fail suit, ace is high, then 10, king, 9, 8, and 7.",
+      "id" : "failSuit",
+      "shortName" : "Fail Suit"
+    },
+    {
+      "displayName" : "Point Cards",
+      "howToSpot" : "Aces, 10s, kings, queens, and jacks carry the 120 points. Sevens, eights, and nines carry no points.",
+      "id" : "pointCards",
+      "shortName" : "Point Cards"
+    },
+    {
+      "displayName" : "Low Cards",
+      "howToSpot" : "Low fail cards do not carry points, but they can protect a lead, follow cheaply, or keep a trump hidden.",
+      "id" : "lowCards",
+      "shortName" : "Low Cards"
+    },
+    {
+      "displayName" : "Picking",
+      "howToSpot" : "The picker takes the blind, buries two cards, and chooses whether the hand is strong enough to name a partner or go alone.",
+      "id" : "picking",
+      "shortName" : "Picking"
+    },
+    {
+      "displayName" : "Partnership",
+      "howToSpot" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and whoever holds it is the silent partner.",
+      "id" : "partnership",
+      "shortName" : "Partnership"
+    },
+    {
+      "displayName" : "Trick Taking",
+      "howToSpot" : "Follow the led fail suit when possible. A trump beats every fail card, and the strongest card in the winning suit takes the trick.",
+      "id" : "trickTaking",
+      "shortName" : "Trick Taking"
+    },
+    {
+      "displayName" : "Scoring",
+      "howToSpot" : "The picking team needs at least 61 of the 120 points. Count the points in captured tricks, not the number of tricks alone.",
+      "id" : "scoring",
+      "shortName" : "Scoring"
+    },
+    {
+      "displayName" : "Strategy",
+      "howToSpot" : "Good play weighs trump control, the called suit, point cards, position, and what the other players have shown.",
+      "id" : "strategy",
+      "shortName" : "Strategy"
+    }
+  ],
+  "primer" : [
+    {
+      "body" : "Sheepshead is a trick-taking game. In the common five-player hand, one picker and a silent partner try to capture at least 61 of the deck's 120 points.",
+      "icon" : "flag.checkered",
+      "id" : "sheep-goal",
+      "tiles" : [
+        "C14",
+        "D12"
+      ],
+      "tip" : "The number of tricks matters less than the point cards inside them.",
+      "title" : "The goal"
+    },
+    {
+      "body" : "Use the 7 through ace of all four suits, for 32 cards. Every queen, every jack, and every diamond is trump. The remaining clubs, hearts, and spades are fail suits.",
+      "icon" : "rectangle.stack.fill",
+      "id" : "sheep-deck",
+      "tiles" : [
+        "C12",
+        "S11",
+        "D9",
+        "H14"
+      ],
+      "title" : "Meet the deck"
+    },
+    {
+      "body" : "Five players receive six cards and two cards form the blind. The picker takes the blind, buries two cards, and usually names a fail ace they were not dealt. Whoever holds that ace becomes the silent partner.",
+      "icon" : "person.3.fill",
+      "id" : "sheep-deal",
+      "tiles" : [
+        "C14",
+        "D10",
+        "H9",
+        "S7",
+        "C8",
+        "D13"
+      ],
+      "tip" : "House rules differ on what happens when everyone passes, so agree before the deal.",
+      "title" : "Deal and pick"
+    },
+    {
+      "body" : "Aces carry 11, 10s carry 10, kings 4, queens 3, and jacks 2. Sevens, eights, and nines carry zero. The whole deck is worth 120.",
+      "icon" : "number.circle.fill",
+      "id" : "sheep-points",
+      "tiles" : [
+        "C14",
+        "H10",
+        "S13",
+        "D12",
+        "C11"
+      ],
+      "tip" : "A card's point value and its trick strength are separate questions.",
+      "title" : "Learn the points"
+    },
+    {
+      "body" : "Follow the led fail suit when you can. If you cannot, you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
+      "icon" : "arrow.up.right.circle.fill",
+      "id" : "sheep-tricks",
+      "tiles" : [
+        "C14",
+        "C7",
+        "D8"
+      ],
+      "tip" : "Queens and jacks are trump even when their printed suit looks like a fail suit.",
+      "title" : "Take the trick"
+    },
+    {
+      "body" : "That is the loop: read the trump, choose the blind, protect your partnership, follow legally, and count the points you capture. The rooms turn each skill into a short practice rep.",
+      "icon" : "checkmark.seal.fill",
+      "id" : "sheep-ready",
+      "tiles" : [
+        "C12",
+        "D14",
+        "H14"
+      ],
+      "title" : "You are ready"
+    }
+  ],
+  "rooms" : [
+    {
+      "drills" : [
+        {
+          "id" : "meet-cards",
+          "isPlus" : false,
+          "items" : [
+            {
+              "backBody" : "Sheepshead uses the 7 through ace of each suit. That makes 32 cards. In the common five-player game, each player receives six cards and two cards form the blind.",
+              "backTitle" : "32 cards, not 52",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "32 cards",
+                  "52 cards"
+                ]
+              },
+              "frontSubtitle" : "Start with the shape of the game",
+              "frontTiles" : [
+
+              ],
+              "frontTitle" : "The Sheepshead deck",
+              "id" : "cards-deck"
+            },
+            {
+              "backBody" : "The four queens, four jacks, and six diamonds are permanent trump. Their printed suits do not behave like fail suits once they are trump.",
+              "backTitle" : "Every queen, every jack, and every diamond",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Queens, jacks, and diamonds",
+                  "Diamonds only"
+                ]
+              },
+              "frontSubtitle" : "The first rule to make automatic",
+              "frontTiles" : [
+                "C12",
+                "S11",
+                "D14"
+              ],
+              "frontTitle" : "What is trump?",
+              "id" : "cards-trump"
+            },
+            {
+              "backBody" : "The queen and jack of clubs, spades, hearts, and diamonds are trump. A queen of hearts is not a heart fail card, and a jack of clubs is not a club fail card.",
+              "backTitle" : "A queen or jack is always trump",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Always trump",
+                  "Trump only if diamonds are called"
+                ]
+              },
+              "frontSubtitle" : "Queens and jacks change the deck",
+              "frontTiles" : [
+                "C12",
+                "S12",
+                "H11",
+                "D11"
+              ],
+              "frontTitle" : "Permanent trump",
+              "id" : "cards-queens-jacks"
+            },
+            {
+              "backBody" : "Aces carry 11 points, 10s carry 10, kings 4, queens 3, and jacks 2. Sevens, eights, and nines carry zero points. Every card still has trick strength.",
+              "backTitle" : "Ace 11, 10 10, king 4, queen 3, jack 2",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Ace",
+                  "Seven"
+                ]
+              },
+              "frontSubtitle" : "The whole deck is worth 120",
+              "frontTiles" : [
+                "C14",
+                "H10",
+                "S13",
+                "D12",
+                "C11"
+              ],
+              "frontTitle" : "Point cards",
+              "id" : "cards-points"
+            },
+            {
+              "backBody" : "A fail card keeps its printed suit. Within a fail suit, the order is ace, 10, king, 9, 8, 7. Queens and jacks leave their printed suits and join trump instead.",
+              "backTitle" : "Clubs, hearts, and spades",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Three suits",
+                  "Only clubs"
+                ]
+              },
+              "frontSubtitle" : "The suits that are not trump",
+              "frontTiles" : [
+                "C14",
+                "C10",
+                "C13",
+                "C9"
+              ],
+              "frontTitle" : "Fail suits",
+              "id" : "cards-fail"
+            },
+            {
+              "backBody" : "The queen of clubs is the highest trump, followed by queen of spades, queen of hearts, queen of diamonds, then the jacks in the same suit order. Diamonds then run ace, 10, king, 9, 8, 7.",
+              "backTitle" : "Queens, jacks, then diamonds",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Queen of clubs",
+                  "Ace of diamonds"
+                ]
+              },
+              "frontSubtitle" : "Not every trump is equal",
+              "frontTiles" : [
+                "C12",
+                "S12",
+                "H11",
+                "D14"
+              ],
+              "frontTitle" : "Trump order",
+              "id" : "cards-trump-order"
+            },
+            {
+              "backBody" : "The common five-player deal gives each player six cards and leaves two face down in the blind. The picker later takes the blind and buries two cards.",
+              "backTitle" : "Six to each player, two in the blind",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "6 cards each",
+                  "8 cards each"
+                ]
+              },
+              "frontSubtitle" : "Six cards and a blind",
+              "frontTiles" : [
+                "C14",
+                "D10",
+                "H9",
+                "S7",
+                "C8"
+              ],
+              "frontTitle" : "The five-player deal",
+              "id" : "cards-deal"
+            },
+            {
+              "backBody" : "After picking, the picker adds both blind cards to their hand, then buries two cards face down. Those buried cards count for the picking side at the end of the hand.",
+              "backTitle" : "The picker takes it",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Picker takes it",
+                  "Dealer keeps it"
+                ]
+              },
+              "frontSubtitle" : "The hidden swing",
+              "frontTiles" : [
+
+              ],
+              "frontTitle" : "The blind",
+              "id" : "cards-blind"
+            },
+            {
+              "backBody" : "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. Strong hands can choose to go alone under the table's agreed rules.",
+              "backTitle" : "Pick, bury, and name a partner",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Calls the hand",
+                  "Sits out the hand"
+                ]
+              },
+              "frontSubtitle" : "One player takes responsibility",
+              "frontTiles" : [
+
+              ],
+              "frontTitle" : "The picker",
+              "id" : "cards-picker"
+            },
+            {
+              "backBody" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points in captured tricks. The other players win with 60 or fewer for the picker.",
+              "backTitle" : "The picking team needs 61",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "61 points",
+                  "31 points"
+                ]
+              },
+              "frontSubtitle" : "Win the point race",
+              "frontTiles" : [
+
+              ],
+              "frontTitle" : "The target",
+              "id" : "cards-goal"
+            }
+          ],
+          "kind" : "flashcards",
+          "subtitle" : "Flashcards: the deck, trump, points, and the blind",
+          "title" : "Meet the Cards"
+        },
+        {
+          "id" : "card-quiz",
+          "isPlus" : false,
+          "items" : [
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "24",
+                "32",
+                "52"
+              ],
+              "explanation" : "The deck keeps the 7 through ace in all four suits, for 32 cards.",
+              "id" : "card-quiz-1",
+              "prompt" : "How many cards are in a standard Sheepshead deck?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Queens, jacks, and diamonds",
+                "Diamonds only",
+                "Aces and 10s"
+              ],
+              "explanation" : "All four queens, all four jacks, and every diamond are trump.",
+              "id" : "card-quiz-2",
+              "prompt" : "Which cards are permanent trump?",
+              "tiles" : [
+                "C12",
+                "H11",
+                "D9"
+              ]
+            },
+            {
+              "answerIndex" : 2,
+              "choices" : [
+                "0",
+                "4",
+                "11"
+              ],
+              "explanation" : "An ace is worth 11 of the deck's 120 points.",
+              "id" : "card-quiz-3",
+              "prompt" : "How many points does an ace carry?",
+              "tiles" : [
+                "C14"
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "5",
+                "6",
+                "7"
+              ],
+              "explanation" : "Five players receive six cards each, leaving two cards in the blind.",
+              "id" : "card-quiz-4",
+              "prompt" : "How many cards does each player receive in the common five-player deal?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "The picker",
+                "The player to the dealer's left",
+                "Nobody"
+              ],
+              "explanation" : "The picker takes both blind cards and then buries two cards.",
+              "id" : "card-quiz-5",
+              "prompt" : "Who takes the blind?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Queen of clubs",
+                "Queen of diamonds",
+                "Ace of diamonds"
+              ],
+              "explanation" : "The queen of clubs is the highest trump in the common ordering.",
+              "id" : "card-quiz-6",
+              "prompt" : "Which card is the highest trump?",
+              "tiles" : [
+                "C12",
+                "D12",
+                "D14"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "0",
+                "9",
+                "10"
+              ],
+              "explanation" : "Sevens, eights, and nines carry no points, though they can still win a trick.",
+              "id" : "card-quiz-7",
+              "prompt" : "What is the point value of a 9?",
+              "tiles" : [
+                "H9"
+              ]
+            },
+            {
+              "answerIndex" : 2,
+              "choices" : [
+                "60",
+                "100",
+                "120"
+              ],
+              "explanation" : "The card values add to 120, so 61 is the basic majority needed by the picking team.",
+              "id" : "card-quiz-8",
+              "prompt" : "How many points are in the full deck?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "A fail ace",
+                "Any queen",
+                "The highest diamond"
+              ],
+              "explanation" : "The picker names a fail ace they do not hold, and its owner becomes the silent partner.",
+              "id" : "card-quiz-9",
+              "prompt" : "In the common call-an-ace game, what kind of card is named?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "31 points",
+                "61 points",
+                "90 points"
+              ],
+              "explanation" : "The picking team needs at least 61 of the 120 points to win the basic game.",
+              "id" : "card-quiz-10",
+              "prompt" : "What is the basic picking-team target?",
+              "tiles" : [
+
+              ]
+            }
+          ],
+          "kind" : "quiz",
+          "subtitle" : "Quick quiz: the rules new players miss first",
+          "title" : "Card Check"
+        },
+        {
+          "id" : "plus-card-extras",
+          "isPlus" : true,
+          "items" : [
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Queen of clubs",
+                "Queen of spades",
+                "Ace of diamonds"
+              ],
+              "explanation" : "The queen of clubs tops the queen order, then queen of spades, queen of hearts, and queen of diamonds.",
+              "id" : "plus-card-1",
+              "prompt" : "Which card is the highest trump?",
+              "tiles" : [
+                "C12",
+                "S12",
+                "D14"
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "2",
+                "3",
+                "12"
+              ],
+              "explanation" : "Queens carry 3 points, even though their printed ranks are not used as fail-suit strength.",
+              "id" : "plus-card-2",
+              "prompt" : "How many points does the queen of diamonds carry?",
+              "tiles" : [
+                "D12"
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "Jack of hearts",
+                "8 of spades",
+                "9 of diamonds"
+              ],
+              "explanation" : "The jack is permanent trump and the diamond is trump. The 8 of spades is a zero-point fail card.",
+              "id" : "plus-card-3",
+              "prompt" : "Which of these is a low fail card?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "1",
+                "2",
+                "3"
+              ],
+              "explanation" : "The picker starts with eight cards after taking the blind, then buries two and plays six.",
+              "id" : "plus-card-4",
+              "prompt" : "How many cards does the picker bury after taking the blind?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Ace",
+                "King",
+                "Queen"
+              ],
+              "explanation" : "An ace carries 11 points. Kings carry 4 and queens carry 3.",
+              "id" : "plus-card-5",
+              "prompt" : "Which card carries 11 points?",
+              "tiles" : [
+                "C14",
+                "D13",
+                "H12"
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "5 cards",
+                "6 cards",
+                "8 cards"
+              ],
+              "explanation" : "Each of the five players receives six cards, with two cards left in the blind.",
+              "id" : "plus-card-6",
+              "prompt" : "What is the common five-player hand size?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 2,
+              "choices" : [
+                "Queen of clubs",
+                "9 of diamonds",
+                "Ace of hearts"
+              ],
+              "explanation" : "The queen is permanent trump and the diamond is trump. The ace of hearts remains a fail card.",
+              "id" : "more-card-1",
+              "prompt" : "Which of these is a fail card?",
+              "tiles" : [
+                "C12",
+                "D9",
+                "H14"
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "2",
+                "4",
+                "10"
+              ],
+              "explanation" : "A king carries 4 points. Its trick strength is separate from its point value.",
+              "id" : "more-card-2",
+              "prompt" : "How many points does a king carry?",
+              "tiles" : [
+                "C13"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Ace of hearts",
+                "10 of hearts",
+                "King of hearts"
+              ],
+              "explanation" : "Within a fail suit, ace is high, then 10, king, 9, 8, and 7.",
+              "id" : "more-card-3",
+              "prompt" : "Which card is the highest fail card in hearts?",
+              "tiles" : [
+                "H14",
+                "H10",
+                "H13"
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "They are removed from the deck",
+                "They become permanent trump",
+                "They count as low cards"
+              ],
+              "explanation" : "All four queens and all four jacks are permanent trump, regardless of their printed suit.",
+              "id" : "more-card-4",
+              "prompt" : "What happens to the queens and jacks of the fail suits?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "1",
+                "2",
+                "4"
+              ],
+              "explanation" : "Five players receive six cards each from a 32-card deck, leaving two in the blind.",
+              "id" : "more-card-5",
+              "prompt" : "How many cards remain in the blind in a five-player hand?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "0",
+                "8",
+                "10"
+              ],
+              "explanation" : "Sevens, eights, and nines carry zero points. They still have trick strength in their fail suit.",
+              "id" : "more-card-6",
+              "prompt" : "What is the point value of the 8 of spades?",
+              "tiles" : [
+                "S8"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Take it, then bury two",
+                "Give it to the dealer",
+                "Leave it face up"
+              ],
+              "explanation" : "The picker takes both blind cards and buries two cards before the first trick.",
+              "id" : "more-card-7",
+              "prompt" : "What must the picker do with the blind before play?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 2,
+              "choices" : [
+                "59",
+                "60",
+                "61"
+              ],
+              "explanation" : "The picking team needs a majority of the 120 points, so 61 is the basic winning total.",
+              "id" : "more-card-8",
+              "prompt" : "Which score is a basic win for the picking team?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "No, only an ace they were not dealt",
+                "Yes, any fail ace",
+                "Only if it is the club ace"
+              ],
+              "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name and plays alone.",
+              "id" : "more-card-9",
+              "prompt" : "Can the picker name a fail ace that was dealt to them?",
+              "tiles" : [
+                "C14",
+                "H14"
+              ]
+            },
+            {
+              "answerIndex" : 2,
+              "choices" : [
+                "6",
+                "7",
+                "8"
+              ],
+              "explanation" : "Six dealt cards plus the two blind cards make eight. The picker then buries two and plays a six-card hand.",
+              "id" : "more-card-10",
+              "prompt" : "How many cards does the picker hold after taking the blind, before burying?",
+              "tiles" : [
+
+              ]
+            }
+          ],
+          "kind" : "quiz",
+          "subtitle" : "More deck, point, partner, and picker questions",
+          "title" : "Card Check: Extra Reps"
+        }
+      ],
+      "icon" : "rectangle.portrait.on.rectangle.portrait.angled",
+      "id" : "card-room",
+      "isFree" : true,
+      "name" : "The Card Room",
+      "tagline" : "Meet the 32-card deck and its vocabulary"
+    },
+    {
+      "drills" : [
+        {
+          "id" : "trump-cards",
+          "isPlus" : false,
+          "items" : [
+            {
+              "backBody" : "The queen of clubs, the jack of spades, and the 9 of diamonds are all trump. The ace of hearts is a fail card because hearts is not trump.",
+              "backTitle" : "Queens, jacks, and diamonds",
+              "frontSubtitle" : "Start here on every deal",
+              "frontTiles" : [
+                "C12",
+                "S11",
+                "D9",
+                "H14"
+              ],
+              "frontTitle" : "Find the trump",
+              "id" : "read-trump"
+            },
+            {
+              "backBody" : "The four queens are the top four trumps in that suit order. Remembering the order prevents a queen of diamonds from being mistaken for the highest queen.",
+              "backTitle" : "Clubs, spades, hearts, diamonds",
+              "frontSubtitle" : "The four highest cards",
+              "frontTiles" : [
+                "C12",
+                "S12",
+                "H12",
+                "D12"
+              ],
+              "frontTitle" : "Queens lead trump",
+              "id" : "read-queen-order"
+            },
+            {
+              "backBody" : "The jacks use the same suit order as the queens. The jack of clubs beats every other jack, but every jack loses to every queen.",
+              "backTitle" : "Jacks follow the queens",
+              "frontSubtitle" : "The next four trumps",
+              "frontTiles" : [
+                "C11",
+                "S11",
+                "H11",
+                "D11"
+              ],
+              "frontTitle" : "Then the jacks",
+              "id" : "read-jack-order"
+            },
+            {
+              "backBody" : "After the eight queens and jacks, diamond trump runs ace, 10, king, 9, 8, 7. A diamond beats any fail card.",
+              "backTitle" : "Ace through 7 of diamonds",
+              "frontSubtitle" : "Printed suit does not change the rule",
+              "frontTiles" : [
+                "D14",
+                "D10",
+                "D13",
+                "D9"
+              ],
+              "frontTitle" : "Diamonds finish trump",
+              "id" : "read-diamond-trump"
+            },
+            {
+              "backBody" : "A fail suit keeps six cards. The ace is high, followed by 10, king, 9, 8, and 7. The queen and jack are missing because they are already trump.",
+              "backTitle" : "Ace, 10, king, 9, 8, 7",
+              "frontSubtitle" : "A suit without queens or jacks",
+              "frontTiles" : [
+                "C14",
+                "C10",
+                "C13",
+                "C9",
+                "C7"
+              ],
+              "frontTitle" : "Read a fail suit",
+              "id" : "read-fail-order"
+            },
+            {
+              "backBody" : "A card can be weak in trick strength but valuable to capture. A king is only third in its fail suit, behind the ace and the 10, yet it is worth 4 points.",
+              "backTitle" : "High point cards matter twice",
+              "frontSubtitle" : "Trick strength and point value differ",
+              "frontTiles" : [
+                "C14",
+                "H10",
+                "S13",
+                "D12",
+                "C11"
+              ],
+              "frontTitle" : "Count the points",
+              "id" : "read-point-cards"
+            },
+            {
+              "backBody" : "Sevens, eights, and nines carry zero points. They can still win when they are the highest card in the led fail suit, or help you avoid giving away a point card.",
+              "backTitle" : "Use low cards to follow cheaply",
+              "frontSubtitle" : "No points does not mean no purpose",
+              "frontTiles" : [
+                "C7",
+                "H8",
+                "S9"
+              ],
+              "frontTitle" : "Zeros still matter",
+              "id" : "read-low-cards"
+            },
+            {
+              "backBody" : "The diamond 7 is trump, so it beats the ace and 10 of clubs. The heart ace is not part of the contest because it does not follow clubs and is not trump.",
+              "backTitle" : "Highest trump, otherwise highest led suit",
+              "frontSubtitle" : "Trump beats the led suit",
+              "frontTiles" : [
+                "C14",
+                "C10",
+                "D7",
+                "H14"
+              ],
+              "frontTitle" : "Who wins the trick?",
+              "id" : "read-trick-winner"
+            },
+            {
+              "backBody" : "If clubs are led and you hold a club, you must play a club. A diamond or a queen cannot be used as a free trump while you still hold the led fail suit.",
+              "backTitle" : "Play the led fail suit if you have it",
+              "frontSubtitle" : "The obligation before the opportunity",
+              "frontTiles" : [
+                "C14",
+                "C7",
+                "D9"
+              ],
+              "frontTitle" : "Follow when you can",
+              "id" : "read-follow-suit"
+            }
+          ],
+          "kind" : "flashcards",
+          "subtitle" : "Flashcards: permanent trump and fail-suit order",
+          "title" : "Read the Cards"
+        },
+        {
+          "id" : "hand-match",
+          "isPlus" : false,
+          "items" : [
+            {
+              "answer" : "trumpStack",
+              "choices" : [
+                "trumpStack",
+                "failSuit",
+                "lowCards"
+              ],
+              "explanation" : "Every card shown is trump: the queens and jack are permanent trump, and both diamonds are trump.",
+              "id" : "read-match-1",
+              "tiles" : [
+                "C12",
+                "S11",
+                "D9",
+                "H12",
+                "D14"
+              ]
+            },
+            {
+              "answer" : "failSuit",
+              "choices" : [
+                "failSuit",
+                "pointCards",
+                "trumpStack"
+              ],
+              "explanation" : "These are all clubs from a fail suit. The six-card club suit loses its queen and jack to the trump group.",
+              "id" : "read-match-2",
+              "tiles" : [
+                "C14",
+                "C10",
+                "C13",
+                "C9",
+                "C7"
+              ]
+            },
+            {
+              "answer" : "pointCards",
+              "choices" : [
+                "pointCards",
+                "lowCards",
+                "failSuit"
+              ],
+              "explanation" : "Every card carries points, and the cards are spread across fail suits. The shape is useful when judging which tricks are worth fighting for.",
+              "id" : "read-match-3",
+              "tiles" : [
+                "C14",
+                "H10",
+                "S13",
+                "C10",
+                "H14"
+              ]
+            },
+            {
+              "answer" : "lowCards",
+              "choices" : [
+                "lowCards",
+                "pointCards",
+                "trumpStack"
+              ],
+              "explanation" : "All five cards are low fail cards worth zero points. Their value is in following cheaply and preserving information.",
+              "id" : "read-match-4",
+              "tiles" : [
+                "C7",
+                "H8",
+                "S9",
+                "C8",
+                "H7"
+              ]
+            },
+            {
+              "answer" : "partnership",
+              "choices" : [
+                "partnership",
+                "trumpStack",
+                "failSuit"
+              ],
+              "explanation" : "Read this as a partnership question. If the picker names the club ace, whoever was dealt it becomes the silent partner, so this holding is the partner's side of the deal.",
+              "id" : "read-match-5",
+              "tiles" : [
+                "C14",
+                "C7",
+                "D12",
+                "H8",
+                "S13"
+              ]
+            },
+            {
+              "answer" : "picking",
+              "choices" : [
+                "picking",
+                "lowCards",
+                "failSuit"
+              ],
+              "explanation" : "This is a picker-shaped holding: several high trumps plus a useful fail card can make taking the blind attractive.",
+              "id" : "read-match-6",
+              "tiles" : [
+                "D14",
+                "D10",
+                "C12",
+                "S12",
+                "H7"
+              ]
+            },
+            {
+              "answer" : "scoring",
+              "choices" : [
+                "scoring",
+                "trickTaking",
+                "lowCards"
+              ],
+              "explanation" : "The three fail aces and diamond carry a large share of the deck's points. Read the point cards before chasing empty tricks.",
+              "id" : "read-match-7",
+              "tiles" : [
+                "C14",
+                "C10",
+                "H14",
+                "S14",
+                "D7"
+              ]
+            },
+            {
+              "answer" : "trickTaking",
+              "choices" : [
+                "trickTaking",
+                "pointCards",
+                "failSuit"
+              ],
+              "explanation" : "This mix asks a play question: the queen of clubs is a high trump, while the fail cards must be read by their led suit.",
+              "id" : "read-match-8",
+              "tiles" : [
+                "C12",
+                "D7",
+                "H9",
+                "S10",
+                "C7"
+              ]
+            }
+          ],
+          "kind" : "handMatch",
+          "subtitle" : "See five cards, name the rule to spot first",
+          "title" : "Read the Holding"
+        },
+        {
+          "id" : "plus-hand-extras",
+          "isPlus" : true,
+          "items" : [
+            {
+              "answer" : "trumpStack",
+              "choices" : [
+                "trumpStack",
+                "lowCards",
+                "pointCards"
+              ],
+              "explanation" : "Every card here is trump. Two queens and a jack are permanent trump, and the 8 and 7 of diamonds are trump because every diamond is.",
+              "id" : "plus-hand-1",
+              "tiles" : [
+                "C12",
+                "S11",
+                "D8",
+                "D7",
+                "H12"
+              ]
+            },
+            {
+              "answer" : "failSuit",
+              "choices" : [
+                "failSuit",
+                "pointCards",
+                "trickTaking"
+              ],
+              "explanation" : "Every card is a club fail card, running 7 up to the king. Only the club ace is missing, and the club queen and jack are trump rather than clubs.",
+              "id" : "plus-hand-2",
+              "tiles" : [
+                "C7",
+                "C8",
+                "C9",
+                "C10",
+                "C13"
+              ]
+            },
+            {
+              "answer" : "pointCards",
+              "choices" : [
+                "pointCards",
+                "lowCards",
+                "trumpStack"
+              ],
+              "explanation" : "Every card in the holding carries points, but none is permanent trump. Winning those fail suits is the challenge.",
+              "id" : "plus-hand-3",
+              "tiles" : [
+                "C14",
+                "H10",
+                "S13",
+                "C10",
+                "S14"
+              ]
+            },
+            {
+              "answer" : "lowCards",
+              "choices" : [
+                "lowCards",
+                "failSuit",
+                "scoring"
+              ],
+              "explanation" : "All five cards are zero-point fail cards. The hand is about following cheaply, not immediate scoring.",
+              "id" : "plus-hand-4",
+              "tiles" : [
+                "C7",
+                "H8",
+                "S9",
+                "C8",
+                "S7"
+              ]
+            },
+            {
+              "answer" : "partnership",
+              "choices" : [
+                "partnership",
+                "trumpStack",
+                "pointCards"
+              ],
+              "explanation" : "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker, and the heart 7 is the card that follows the reveal.",
+              "id" : "plus-hand-5",
+              "tiles" : [
+                "H14",
+                "H7",
+                "D10",
+                "C9",
+                "S8"
+              ]
+            },
+            {
+              "answer" : "picking",
+              "choices" : [
+                "picking",
+                "lowCards",
+                "failSuit"
+              ],
+              "explanation" : "Four queens are the strongest possible trump core and make a serious alone discussion.",
+              "id" : "plus-hand-6",
+              "tiles" : [
+                "C12",
+                "S12",
+                "H12",
+                "D12",
+                "D9"
+              ]
+            },
+            {
+              "answer" : "trumpStack",
+              "choices" : [
+                "trumpStack",
+                "pointCards",
+                "lowCards"
+              ],
+              "explanation" : "Every card here is trump. The queen of diamonds and the two jacks are permanent trump, and the diamond ace and 9 are trump because every diamond is.",
+              "id" : "more-hand-1",
+              "tiles" : [
+                "D12",
+                "C11",
+                "S11",
+                "D14",
+                "D9"
+              ]
+            },
+            {
+              "answer" : "failSuit",
+              "choices" : [
+                "failSuit",
+                "pointCards",
+                "trickTaking"
+              ],
+              "explanation" : "Every card is a club fail card. A fail suit holds six cards, so the club king is the only one missing here, and the club queen and jack are trump rather than clubs.",
+              "id" : "more-hand-2",
+              "tiles" : [
+                "C7",
+                "C8",
+                "C9",
+                "C10",
+                "C14"
+              ]
+            },
+            {
+              "answer" : "pointCards",
+              "choices" : [
+                "pointCards",
+                "lowCards",
+                "trumpStack"
+              ],
+              "explanation" : "Every card carries points, but the holding has no permanent trump. It is valuable only if those fail suits can be won.",
+              "id" : "more-hand-3",
+              "tiles" : [
+                "C14",
+                "H14",
+                "S14",
+                "C10",
+                "H10"
+              ]
+            },
+            {
+              "answer" : "lowCards",
+              "choices" : [
+                "lowCards",
+                "failSuit",
+                "pointCards"
+              ],
+              "explanation" : "All five cards are zero-point fail cards. They are useful for following suit without spending point cards.",
+              "id" : "more-hand-4",
+              "tiles" : [
+                "C7",
+                "H7",
+                "S8",
+                "C9",
+                "H8"
+              ]
+            },
+            {
+              "answer" : "partnership",
+              "choices" : [
+                "partnership",
+                "scoring",
+                "trumpStack"
+              ],
+              "explanation" : "Holding the named fail ace is what makes you the picker's silent partner, so read this holding as a partnership question. The picker can never name an ace they were dealt.",
+              "id" : "more-hand-5",
+              "tiles" : [
+                "C14",
+                "C7",
+                "D9",
+                "H10",
+                "S8"
+              ]
+            },
+            {
+              "answer" : "picking",
+              "choices" : [
+                "trumpStack",
+                "picking",
+                "lowCards"
+              ],
+              "explanation" : "Two queens, a jack, and the diamond ace give real trump control, and the heart ace adds points. It is not a pure trump stack, but it is exactly the shape that makes taking the blind attractive.",
+              "id" : "more-hand-6",
+              "tiles" : [
+                "C12",
+                "S12",
+                "H11",
+                "D14",
+                "H14"
+              ]
+            }
+          ],
+          "kind" : "handMatch",
+          "subtitle" : "More hands with trump, points, and partnership clues",
+          "title" : "Read the Holding: Extra Reps"
+        }
+      ],
+      "icon" : "crown.fill",
+      "id" : "trump-room",
+      "isFree" : true,
+      "name" : "The Trump Room",
+      "tagline" : "Read strength, suits, and point value"
+    },
+    {
+      "drills" : [
+        {
+          "id" : "bury-rules",
+          "isPlus" : false,
+          "items" : [
+            {
+              "backBody" : "The picker adds the two blind cards to the original six, keeps a six-card playing hand, and places the other two cards face down. Those buried cards count for the picking side.",
+              "backTitle" : "Keep six, bury two",
+              "frontSubtitle" : "The picker holds eight cards after taking the blind",
+              "frontTiles" : [
+
+              ],
+              "frontTitle" : "Bury two cards",
+              "id" : "bury-what"
+            },
+            {
+              "backBody" : "Queens, jacks, and high diamonds can control several tricks. A low fail card is often easier to bury, unless it is the only card that lets you hold the called suit.",
+              "backTitle" : "Do not bury a key winner casually",
+              "frontSubtitle" : "The first bury question",
+              "frontTiles" : [
+                "C12",
+                "S11",
+                "D14",
+                "D9"
+              ],
+              "frontTitle" : "Protect trump control",
+              "id" : "bury-trump-first"
+            },
+            {
+              "backBody" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit. Burying the only hold card creates an illegal call.",
+              "backTitle" : "The picker keeps a fail card from that suit",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Name an ace you were not dealt",
+                  "Name your own strongest ace"
+                ]
+              },
+              "frontSubtitle" : "A called-ace partnership rule",
+              "frontTiles" : [
+                "C9",
+                "C7",
+                "D12",
+                "H9"
+              ],
+              "frontTitle" : "Hold the called suit",
+              "id" : "bury-called-suit"
+            },
+            {
+              "backBody" : "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
+              "backTitle" : "Bury fail cards, not trump",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "The spade and the heart",
+                  "The two low diamonds"
+                ]
+              },
+              "frontSubtitle" : "Two low diamonds, a spade, and a heart",
+              "frontTiles" : [
+                "D8",
+                "D7",
+                "S9",
+                "H8"
+              ],
+              "frontTitle" : "Which two go?",
+              "id" : "bury-no-trump"
+            },
+            {
+              "backBody" : "Burying both hearts banks the king's 4 points and leaves you free to play trump the next time hearts are led. Splitting the bury across two suits banks less and empties neither.",
+              "backTitle" : "A suit you no longer hold is a suit you can trump",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Both hearts",
+                  "One heart and one club"
+                ]
+              },
+              "frontSubtitle" : "All four are safe to bury. Which pair?",
+              "frontTiles" : [
+                "H13",
+                "H7",
+                "C9",
+                "C8"
+              ],
+              "frontTitle" : "Two hearts and two clubs",
+              "id" : "bury-empty-a-suit"
+            },
+            {
+              "backBody" : "An ace or 10 is valuable when captured, but a fail point card can be stranded if you cannot win its suit. Weigh likely tricks, not point value alone.",
+              "backTitle" : "Keep a plan for capturing them",
+              "frontSubtitle" : "Strength and value are different",
+              "frontTiles" : [
+                "C14",
+                "H10",
+                "S13",
+                "C7"
+              ],
+              "frontTitle" : "Point cards are not all winners",
+              "id" : "bury-points"
+            },
+            {
+              "backBody" : "Low fail cards can follow a suit without spending a point card. Keeping one can also preserve a legal lead after the other players run out of that suit.",
+              "backTitle" : "A low card can save a winner",
+              "frontSubtitle" : "Zero points, real choices",
+              "frontTiles" : [
+                "C7",
+                "H8",
+                "S9"
+              ],
+              "frontTitle" : "Low cards can be useful",
+              "id" : "bury-low-cards"
+            },
+            {
+              "backBody" : "A hand with many top trumps may support going alone, but the decision depends on the blind, the buried cards, and the table's agreed scoring rules.",
+              "backTitle" : "Count winners before choosing alone",
+              "frontSubtitle" : "Do not bury with the team plan",
+              "frontTiles" : [
+                "C12",
+                "S12",
+                "H12",
+                "D12"
+              ],
+              "frontTitle" : "Going alone is a separate call",
+              "id" : "bury-alone"
+            },
+            {
+              "backBody" : "The two buried cards are part of the picker's captured total at the end. Burying a point card may be right, but remember that it is helping your side rather than vanishing.",
+              "backTitle" : "The picking side keeps the point value",
+              "frontSubtitle" : "The blind is not thrown away",
+              "frontTiles" : [
+                "D14",
+                "C14",
+                "H13",
+                "S9"
+              ],
+              "frontTitle" : "Buried points still count",
+              "id" : "bury-blind-points"
+            }
+          ],
+          "kind" : "flashcards",
+          "subtitle" : "Flashcards: blind, hold cards, and picker plans",
+          "title" : "Bury Playbook"
+        },
+        {
+          "id" : "bury-two",
+          "isPlus" : false,
+          "items" : [
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S11",
+                "D14",
+                "D9",
+                "C13",
+                "H7",
+                "H9",
+                "S8"
+              ],
+              "id" : "bury-scenario-1",
+              "isAlone" : false,
+              "reasoning" : "Burying the lone club and the lone spade banks the club king's 4 points and empties two fail suits at once, so a club or spade lead can be trumped. Every trump stays, and the two hearts leave you a legal hold card for calling the heart ace.",
+              "recommendedDiscard" : [
+                "C13",
+                "S8"
+              ],
+              "situation" : "You picked with four trumps and two singleton fail cards. Choose two cards to bury.",
+              "tip" : "A singleton fail card is the cheapest way to empty a suit."
+            },
+            {
+              "calledSuit" : "hearts",
+              "deal" : [
+                "C12",
+                "D10",
+                "D9",
+                "H13",
+                "H8",
+                "S7",
+                "C8",
+                "C7"
+              ],
+              "id" : "bury-scenario-2",
+              "isAlone" : false,
+              "reasoning" : "Bury the heart king and the lone spade. That banks 4 points, empties spades, and keeps the heart 8 as the required hold card for the call. A hold card only has to belong to the called suit, so the low heart does the job and the king is safer face down.",
+              "recommendedDiscard" : [
+                "H13",
+                "S7"
+              ],
+              "situation" : "You plan to call the ace of hearts, so a heart has to stay. Choose two cards to bury.",
+              "tip" : "Keep the cheapest legal hold card and bank the expensive one."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C14",
+                "H14",
+                "S14",
+                "D13",
+                "C7",
+                "S9",
+                "H10",
+                "D8"
+              ],
+              "id" : "bury-scenario-3",
+              "isAlone" : true,
+              "reasoning" : "Burying both hearts banks 21 points where nobody can capture them and leaves hearts empty for a trump. A picker who holds every fail ace has no ace to name, so this hand is played alone under the table's rules.",
+              "recommendedDiscard" : [
+                "H14",
+                "H10"
+              ],
+              "situation" : "You were dealt all three fail aces, so no ace is left to call. Choose two cards to bury.",
+              "tip" : "You can only call an ace you were not dealt."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "C11",
+                "D7",
+                "D8",
+                "H10",
+                "H13",
+                "S9",
+                "S8"
+              ],
+              "id" : "bury-scenario-4",
+              "isAlone" : false,
+              "reasoning" : "The diamond 7 and 8 look like the weakest cards, but they are trump and beat every fail card in the deck. Burying both hearts banks 14 points and empties the suit, while the two spades stay as a hold card for a called ace.",
+              "recommendedDiscard" : [
+                "H10",
+                "H13"
+              ],
+              "situation" : "You hold the queen and jack of clubs plus two low diamonds. Choose two cards to bury.",
+              "tip" : "Low trump is still trump. The bury comes out of the fail suits."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "D12",
+                "D8",
+                "H14",
+                "H13",
+                "C9",
+                "C8",
+                "C7",
+                "S9"
+              ],
+              "id" : "bury-scenario-5",
+              "isAlone" : false,
+              "reasoning" : "With two trumps you cannot protect a fail ace once the opponents start drawing suits. Burying the heart ace and king banks 15 points safely and empties hearts, so the queen of diamonds can trump the first heart lead.",
+              "recommendedDiscard" : [
+                "H14",
+                "H13"
+              ],
+              "situation" : "Your only trump is the queen and 8 of diamonds. Choose two cards to bury.",
+              "tip" : "Points you cannot defend are worth more face down than in your hand."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S12",
+                "H12",
+                "D12",
+                "D14",
+                "C14",
+                "S13",
+                "S9"
+              ],
+              "id" : "bury-scenario-6",
+              "isAlone" : false,
+              "reasoning" : "The four queens and the diamond ace already control the hand, so the bury banks points instead of adding trump. The club ace and spade king are 15 points face down, clubs are empty, and the spade 9 remains as a legal hold card for a called ace.",
+              "recommendedDiscard" : [
+                "C14",
+                "S13"
+              ],
+              "situation" : "You picked with the four queens and the diamond ace. Choose two cards to bury.",
+              "tip" : "With trump control secured, bury for points."
+            }
+          ],
+          "kind" : "discard",
+          "subtitle" : "Eight-card holdings: choose two, then compare with the coach",
+          "title" : "Choose Your Bury"
+        },
+        {
+          "id" : "plus-bury-extras",
+          "isPlus" : true,
+          "items" : [
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S11",
+                "D10",
+                "D8",
+                "C14",
+                "C13",
+                "H8",
+                "H7"
+              ],
+              "id" : "plus-bury-1",
+              "isAlone" : false,
+              "reasoning" : "The club ace and king are 15 points that no opponent can ever capture once they are face down, and burying both empties clubs for a later trump. Every trump stays, and the two hearts leave a hold card for calling the heart ace.",
+              "recommendedDiscard" : [
+                "C14",
+                "C13"
+              ],
+              "situation" : "You picked with four trumps, two clubs, and two hearts. Choose two cards to bury.",
+              "tip" : "The best bury usually banks points and empties a suit in the same move."
+            },
+            {
+              "calledSuit" : "spades",
+              "deal" : [
+                "D12",
+                "D9",
+                "S13",
+                "S7",
+                "H10",
+                "C8",
+                "H7",
+                "C9"
+              ],
+              "id" : "plus-bury-2",
+              "isAlone" : false,
+              "reasoning" : "Burying both hearts banks the heart 10 and empties the suit. Both spades stay, so the called-ace hold is never in doubt, and the queen and 9 of diamonds keep your trump intact.",
+              "recommendedDiscard" : [
+                "H10",
+                "H7"
+              ],
+              "situation" : "You plan to call the spade ace, so a spade has to stay. Choose two cards to bury.",
+              "tip" : "The hold card can be low. It only needs to belong to the called fail suit."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "H12",
+                "D11",
+                "D10",
+                "S13",
+                "S9",
+                "S8",
+                "H7"
+              ],
+              "id" : "plus-bury-3",
+              "isAlone" : false,
+              "reasoning" : "The lone heart goes so hearts are empty, and the spade king rides along to bank 4 points. Two spades still remain, so you keep a legal hold card if you name the spade ace.",
+              "recommendedDiscard" : [
+                "H7",
+                "S13"
+              ],
+              "situation" : "You picked with two queens, two diamonds, three spades, and a lone heart. Choose two cards to bury.",
+              "tip" : "Empty the suit you hold once, not the suit you hold three times."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S12",
+                "D11",
+                "D9",
+                "H10",
+                "S13",
+                "C9",
+                "C8"
+              ],
+              "id" : "plus-bury-4",
+              "isAlone" : false,
+              "reasoning" : "Both singletons go. That banks 14 points and empties hearts and spades, so only clubs can still be led at you, and the two clubs keep a legal hold card for calling the club ace.",
+              "recommendedDiscard" : [
+                "H10",
+                "S13"
+              ],
+              "situation" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury.",
+              "tip" : "Two singletons can empty two suits with one bury."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S11",
+                "D10",
+                "D8",
+                "H14",
+                "H7",
+                "C9",
+                "C8"
+              ],
+              "id" : "more-bury-1",
+              "isAlone" : false,
+              "reasoning" : "Burying both hearts banks the ace's 11 points and empties the suit, so the next heart lead can be trumped. The two clubs stay behind as a legal hold card for calling the club ace.",
+              "recommendedDiscard" : [
+                "H14",
+                "H7"
+              ],
+              "situation" : "Four trumps, two hearts, and two clubs. Choose two cards to bury.",
+              "tip" : "A fail ace is worth 11 points whether you win it or bury it."
+            },
+            {
+              "calledSuit" : "clubs",
+              "deal" : [
+                "D12",
+                "C11",
+                "D10",
+                "D9",
+                "C9",
+                "C8",
+                "H14",
+                "H13"
+              ],
+              "id" : "more-bury-2",
+              "isAlone" : false,
+              "reasoning" : "The heart ace and king are 15 banked points and burying both empties hearts. The club 9 and 8 stay so the called-ace hold is legal, and the jack of clubs counts as trump rather than as a club.",
+              "recommendedDiscard" : [
+                "H14",
+                "H13"
+              ],
+              "situation" : "You plan to call the club ace, so a club has to stay. Choose two cards to bury.",
+              "tip" : "A jack of clubs is trump, so it cannot serve as your club hold card."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "H14",
+                "S13",
+                "C10",
+                "C13",
+                "H8",
+                "S9",
+                "D7",
+                "D8"
+              ],
+              "id" : "more-bury-3",
+              "isAlone" : false,
+              "reasoning" : "The club 10 and king are 14 points that two low trumps cannot protect once clubs are led. Burying both banks the points and empties clubs, and the spade king and 9 keep a legal hold card for calling the spade ace.",
+              "recommendedDiscard" : [
+                "C10",
+                "C13"
+              ],
+              "situation" : "Your trump is the diamond 7 and 8. Choose two cards to bury.",
+              "tip" : "Thin trump means the safest place for your points is face down."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S12",
+                "H12",
+                "D12",
+                "C9",
+                "C8",
+                "H13",
+                "H7"
+              ],
+              "id" : "more-bury-4",
+              "isAlone" : false,
+              "reasoning" : "The four queens already control every trick they enter, so the bury banks points and empties a suit. Both hearts go for 4 points, and the two clubs stay so you can still name the club ace and play with a partner.",
+              "recommendedDiscard" : [
+                "H13",
+                "H7"
+              ],
+              "situation" : "The blind gives you the four queens plus two clubs and two hearts. Choose two cards to bury.",
+              "tip" : "Total trump control is a reason to keep a hold card, not to abandon the partnership."
+            }
+          ],
+          "kind" : "discard",
+          "subtitle" : "More picker hands with points, trump, and hold cards",
+          "title" : "Choose Your Bury: Extra Reps"
+        }
+      ],
+      "icon" : "arrow.down.to.line.circle.fill",
+      "id" : "bury-room",
+      "isFree" : true,
+      "name" : "The Bury Room",
+      "tagline" : "Take the blind and choose two cards to bury"
+    },
+    {
+      "drills" : [
+        {
+          "id" : "trick-judgment",
+          "isPlus" : false,
+          "items" : [
+            {
+              "backBody" : "A fail card was led and you have a card of that suit. You must follow clubs. The diamond 9 is trump, but it cannot be used while a club is available.",
+              "backTitle" : "Play the club ace",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Follow clubs",
+                  "Trump with diamond 9"
+                ]
+              },
+              "frontSubtitle" : "You hold the club ace",
+              "frontTiles" : [
+                "C14",
+                "D9",
+                "H10"
+              ],
+              "frontTitle" : "Clubs are led",
+              "id" : "trick-follow"
+            },
+            {
+              "backBody" : "Because you have no clubs, you may play any card. A diamond is trump and can win the trick, while the heart 10 and spade 7 are fail cards that cannot beat a club winner.",
+              "backTitle" : "Trump is available",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Any card",
+                  "Must play hearts"
+                ]
+              },
+              "frontSubtitle" : "You hold no clubs",
+              "frontTiles" : [
+                "H10",
+                "D9",
+                "S7"
+              ],
+              "frontTitle" : "Clubs are led",
+              "id" : "trick-no-follow"
+            },
+            {
+              "backBody" : "A queen is trump even when it is printed with a heart. You must follow trump if you have another trump, so the heart ace is not a legal response while the diamond 10 is available.",
+              "backTitle" : "The queen led trump",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Play diamond 10",
+                  "Play heart ace"
+                ]
+              },
+              "frontSubtitle" : "Printed suit is a trap",
+              "frontTiles" : [
+                "H12",
+                "H14",
+                "D10"
+              ],
+              "frontTitle" : "A queen is led",
+              "id" : "trick-queen-suit"
+            },
+            {
+              "backBody" : "The queen of spades is higher than the queen of diamonds. The jack of clubs is also trump, but every queen beats every jack.",
+              "backTitle" : "Queen of spades wins",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Queen of spades",
+                  "Queen of diamonds"
+                ]
+              },
+              "frontSubtitle" : "The permanent trump order",
+              "frontTiles" : [
+                "S12",
+                "D12",
+                "C11"
+              ],
+              "frontTitle" : "Two queens meet",
+              "id" : "trick-queen-high"
+            },
+            {
+              "backBody" : "Within a fail suit, the order is ace, 10, king, 9, 8, 7. The 10 beats the king, which surprises players who expect a king to outrank a number card.",
+              "backTitle" : "The heart 10 wins",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Heart 10",
+                  "Heart king"
+                ]
+              },
+              "frontSubtitle" : "No trump appears",
+              "frontTiles" : [
+                "H10",
+                "H13",
+                "H7"
+              ],
+              "frontTitle" : "Hearts are led",
+              "id" : "trick-fail-winner"
+            },
+            {
+              "backBody" : "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it before the ace is played.",
+              "backTitle" : "The ace holder is the partner",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "The ace holder",
+                  "The dealer"
+                ]
+              },
+              "frontSubtitle" : "The silent reveal",
+              "frontTiles" : [
+                "C14",
+                "D12",
+                "S9"
+              ],
+              "frontTitle" : "The called ace appears",
+              "id" : "trick-partner"
+            },
+            {
+              "backBody" : "A fail lead can ask for a suit, while a trump lead can draw opposing trump. The right lead depends on your side, the called suit, and what the table has shown.",
+              "backTitle" : "Lead with a reason",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Use the hand plan",
+                  "Always lead the lowest card"
+                ]
+              },
+              "frontSubtitle" : "The lead tells a story",
+              "frontTiles" : [
+                "C14",
+                "C7",
+                "D9"
+              ],
+              "frontTitle" : "Choose a lead",
+              "id" : "trick-lead"
+            },
+            {
+              "backBody" : "The winner takes every card in the trick, so the point value of the cards captured matters. A zero-point trick can still be useful if it protects a future lead.",
+              "backTitle" : "Track the cards inside it",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Count captured cards",
+                  "Count only tricks"
+                ]
+              },
+              "frontSubtitle" : "A trick is more than a winner",
+              "frontTiles" : [
+                "C14",
+                "H10",
+                "S9"
+              ],
+              "frontTitle" : "Capture points",
+              "id" : "trick-points"
+            }
+          ],
+          "kind" : "flashcards",
+          "subtitle" : "Make the call, then flip to see the table read",
+          "title" : "Trick Judgment"
+        },
+        {
+          "id" : "trick-quiz",
+          "isPlus" : false,
+          "items" : [
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Play a club",
+                "Play the diamond 9",
+                "Play any card"
+              ],
+              "explanation" : "You must follow the led fail suit when possible. Trump is not a free choice while you hold a club.",
+              "id" : "more-trick-1",
+              "prompt" : "A club is led and you hold a club. What must you do?",
+              "tiles" : [
+                "C7",
+                "D9",
+                "H10"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "You may play any card",
+                "You must play a heart",
+                "You must play a 7"
+              ],
+              "explanation" : "If you cannot follow the led fail suit, you may play any card, including trump.",
+              "id" : "more-trick-2",
+              "prompt" : "A club is led and you have no clubs. What is true?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Trump",
+                "Heart fail",
+                "A special no-suit lead"
+              ],
+              "explanation" : "Every queen is trump. Its printed heart suit no longer matters for following.",
+              "id" : "more-trick-3",
+              "prompt" : "A queen of hearts is led. What kind of lead is it?",
+              "tiles" : [
+                "H12"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Queen of diamonds",
+                "Jack of clubs",
+                "They tie"
+              ],
+              "explanation" : "Every queen beats every jack, even though both cards are permanent trump.",
+              "id" : "more-trick-4",
+              "prompt" : "Which card wins between the queen of diamonds and the jack of clubs?",
+              "tiles" : [
+                "D12",
+                "C11"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Ace of hearts",
+                "10 of hearts",
+                "King of hearts"
+              ],
+              "explanation" : "Fail-suit strength is ace, 10, king, 9, 8, 7.",
+              "id" : "more-trick-5",
+              "prompt" : "Which fail card wins a trick led in hearts?",
+              "tiles" : [
+                "H14",
+                "H10",
+                "H13"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Stay silent until the called ace appears",
+                "Announce the partnership immediately",
+                "Take the blind"
+              ],
+              "explanation" : "The ace holder is a silent partner. The table learns the partnership from the play of the called ace.",
+              "id" : "more-trick-6",
+              "prompt" : "What does the partner do in a call-an-ace hand?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 1,
+              "choices" : [
+                "Only the number of cards",
+                "The point value of every captured card",
+                "Only the highest card"
+              ],
+              "explanation" : "The trick winner takes all cards in the trick, and the captured point cards determine the score.",
+              "id" : "more-trick-7",
+              "prompt" : "What should you count when judging a captured trick?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "To draw opposing trump",
+                "To make every fail card follow",
+                "To change the called ace"
+              ],
+              "explanation" : "A trump lead can draw out opposing trump and clarify which side controls the remaining tricks.",
+              "id" : "more-trick-8",
+              "prompt" : "What is a common reason to lead trump?",
+              "tiles" : [
+
+              ]
+            }
+          ],
+          "kind" : "quiz",
+          "subtitle" : "Following suit, trump order, partners, and points",
+          "title" : "Trick Rules"
+        },
+        {
+          "id" : "plus-trick-extras",
+          "isPlus" : true,
+          "items" : [
+            {
+              "backBody" : "A diamond lead is a trump lead. Any queen, jack, or diamond follows trump, and the strongest trump wins the trick.",
+              "backTitle" : "Play trump if you have it",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Play a trump",
+                  "Play a heart"
+                ]
+              },
+              "frontSubtitle" : "Trump is led",
+              "frontTiles" : [
+                "D10",
+                "D7",
+                "C12"
+              ],
+              "frontTitle" : "A diamond is led",
+              "id" : "plus-trick-1"
+            },
+            {
+              "backBody" : "Without a club, you may play a diamond, a queen, a jack, or another fail card. A diamond can take the trick, but spending it may not be right.",
+              "backTitle" : "Choose freely",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Any card",
+                  "Only another ace"
+                ]
+              },
+              "frontSubtitle" : "You have no clubs",
+              "frontTiles" : [
+                "C14",
+                "D7",
+                "H10"
+              ],
+              "frontTitle" : "The club ace is led",
+              "id" : "plus-trick-2"
+            },
+            {
+              "backBody" : "Once the called ace is played, you know one teammate. Leads can now protect that player or send points toward the picking side.",
+              "backTitle" : "Use the known side",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Adjust the plan",
+                  "Ignore the reveal"
+                ]
+              },
+              "frontSubtitle" : "Information changes the lead",
+              "frontTiles" : [
+                "S14",
+                "C12",
+                "D9"
+              ],
+              "frontTitle" : "The partner is exposed",
+              "id" : "plus-trick-3"
+            },
+            {
+              "backBody" : "The next captured point makes 61. A zero-point trick can still change the lead, but do not lose sight of the immediate score line.",
+              "backTitle" : "Every point card matters",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Protect the point",
+                  "Chase only empty tricks"
+                ]
+              },
+              "frontSubtitle" : "One point from a basic win",
+              "frontTiles" : [
+
+              ],
+              "frontTitle" : "The picking team has 60",
+              "id" : "plus-trick-4"
+            },
+            {
+              "backBody" : "If a higher queen or jack is still unseen, a low diamond is not automatically safe. Card memory keeps a winning line honest.",
+              "backTitle" : "Remember what has not appeared",
+              "choice" : {
+                "answerIndex" : 0,
+                "options" : [
+                  "Track unseen trump",
+                  "Assume low trump wins"
+                ]
+              },
+              "frontSubtitle" : "Count live trump",
+              "frontTiles" : [
+                "C12",
+                "D8",
+                "H14"
+              ],
+              "frontTitle" : "A queen is still hidden",
+              "id" : "plus-trick-5"
+            },
+            {
+              "backBody" : "Do not announce that you are the partner. When the called fail suit is first led, the ace identifies you and your side.",
+              "backTitle" : "Keep the reveal quiet",
+              "frontSubtitle" : "The partnership is hidden",
+              "frontTiles" : [
+                "C14",
+                "C7",
+                "D10"
+              ],
+              "frontTitle" : "You hold the called ace",
+              "id" : "more-judgment-1"
+            },
+            {
+              "backBody" : "A trump lead can draw opposing trump, while a fail lead can search for a partner or ask for a specific suit. There is no automatic lead every time.",
+              "backTitle" : "Choose the lead that serves the team",
+              "frontSubtitle" : "Trump or fail?",
+              "frontTiles" : [
+                "C12",
+                "D9",
+                "H14"
+              ],
+              "frontTitle" : "The picker leads",
+              "id" : "more-judgment-2"
+            },
+            {
+              "backBody" : "A zero-point trick can still be valuable because the winner leads the next trick. Position and information are part of the score.",
+              "backTitle" : "Use it to control the next lead",
+              "frontSubtitle" : "Not every trick is a scoring trick",
+              "frontTiles" : [
+                "C7",
+                "H8",
+                "S9"
+              ],
+              "frontTitle" : "A zero-point trick",
+              "id" : "more-judgment-3"
+            },
+            {
+              "backBody" : "Every visible queen or jack narrows the live trump. Card memory is especially valuable when deciding whether a low diamond can win later.",
+              "backTitle" : "Remember what remains",
+              "frontSubtitle" : "Track the trump",
+              "frontTiles" : [
+                "C12",
+                "S12",
+                "D14"
+              ],
+              "frontTitle" : "The opponent shows a queen",
+              "id" : "more-judgment-4"
+            },
+            {
+              "backBody" : "The picking team needs three more points for a basic win. A small point card can matter more than an extra empty trick when the hand is close.",
+              "backTitle" : "61 is the basic line",
+              "frontSubtitle" : "The next point changes the hand",
+              "frontTiles" : [
+
+              ],
+              "frontTitle" : "The picking team has 58",
+              "id" : "more-judgment-5"
+            }
+          ],
+          "kind" : "flashcards",
+          "subtitle" : "More calls about leads, reveals, and score lines",
+          "title" : "Trick Judgment: Extra Reps"
+        }
+      ],
+      "icon" : "arrow.up.right.circle.fill",
+      "id" : "trick-room",
+      "isFree" : true,
+      "name" : "The Trick Room",
+      "tagline" : "Follow legally and spend trump with a plan"
+    },
+    {
+      "drills" : [
+        {
+          "id" : "master-bury",
+          "isPlus" : false,
+          "items" : [
+            {
+              "calledSuit" : "hearts",
+              "deal" : [
+                "C12",
+                "S12",
+                "D10",
+                "D9",
+                "H13",
+                "H7",
+                "C14",
+                "C13"
+              ],
+              "id" : "master-bury-1",
+              "isAlone" : false,
+              "reasoning" : "The club ace and king are 15 banked points and burying both empties clubs. Keeping both hearts means the called-ace hold survives even when you are forced to spend the heart king later, which the one-heart line cannot promise.",
+              "recommendedDiscard" : [
+                "C14",
+                "C13"
+              ],
+              "situation" : "You plan to call the heart ace. Two clubs and two hearts are competing for the bury.",
+              "tip" : "A single hold card is a liability. Keep two when the bury allows it."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S12",
+                "H12",
+                "D14",
+                "D8",
+                "C10",
+                "C13",
+                "S7"
+              ],
+              "id" : "master-bury-2",
+              "isAlone" : false,
+              "reasoning" : "Burying the club 10 and king banks 14 points and empties clubs, which beats burying the lone spade for 10. The spade 7 is worth more as the hand's only hold card, since without it there is no ace left to call.",
+              "recommendedDiscard" : [
+                "C10",
+                "C13"
+              ],
+              "situation" : "Three queens and the diamond ace give you real control. Choose two cards to bury.",
+              "tip" : "Count what the bury banks, then check that a legal call survives it."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C14",
+                "H14",
+                "S14",
+                "C10",
+                "H9",
+                "S8",
+                "D10",
+                "D7"
+              ],
+              "id" : "master-bury-3",
+              "isAlone" : true,
+              "reasoning" : "The club ace and 10 are 21 points that two low trumps will never protect, and burying both empties clubs. Holding every fail ace leaves no ace to name, so this is an alone hand.",
+              "recommendedDiscard" : [
+                "C14",
+                "C10"
+              ],
+              "situation" : "You were dealt all three fail aces and only two low trumps. Choose two cards to bury.",
+              "tip" : "A hand this thin in trump is often a pass. If you do pick, bank the points you cannot defend."
+            },
+            {
+              "calledSuit" : null,
+              "deal" : [
+                "C12",
+                "S12",
+                "H12",
+                "D12",
+                "D10",
+                "D9",
+                "H8",
+                "C7"
+              ],
+              "id" : "master-bury-4",
+              "isAlone" : true,
+              "reasoning" : "Burying both fail cards leaves a hand of pure trump that can never be forced to follow a fail lead. It also leaves no card of any fail suit, so there is no legal hold card and the hand is played alone.",
+              "recommendedDiscard" : [
+                "H8",
+                "C7"
+              ],
+              "situation" : "Six trumps including the four queens, plus one heart and one club. Choose two cards to bury.",
+              "tip" : "Agree the table's alone scoring before you take this line."
+            }
+          ],
+          "kind" : "discard",
+          "subtitle" : "Blind value, hold cards, and table position together",
+          "title" : "Advanced Bury"
+        },
+        {
+          "id" : "master-defense",
+          "isPlus" : false,
+          "items" : [
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "A heart fail card",
+                "Any queen",
+                "The ace of hearts"
+              ],
+              "explanation" : "The common call-an-ace rule requires the picker to hold a card from the called fail suit. The picker never holds the called ace itself, because you can only name an ace you were not dealt.",
+              "id" : "master-defense-1",
+              "prompt" : "The picker names the ace of hearts. Which card must the picker retain?",
+              "tiles" : [
+                "H8",
+                "D12"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "The diamond 7 is trump",
+                "The club ace must win",
+                "The cards have equal strength"
+              ],
+              "explanation" : "Every diamond is trump, so even the diamond 7 beats a fail ace when it is legal to play.",
+              "id" : "master-defense-2",
+              "prompt" : "A diamond 7 is played against a club ace. Which statement is true?",
+              "tiles" : [
+                "D7",
+                "C14"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "To estimate the trump still live",
+                "To change their point value",
+                "To identify the dealer"
+              ],
+              "explanation" : "Permanent trump is finite. Knowing what has appeared tells you whether a low diamond can realistically win.",
+              "id" : "master-defense-3",
+              "prompt" : "Why track the queens and jacks already played?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "A 2-point jack",
+                "A zero-point 7",
+                "A second trick with no points"
+              ],
+              "explanation" : "The picking team needs 61. Any captured point card worth at least 2 crosses the basic majority line.",
+              "id" : "master-defense-4",
+              "prompt" : "Your side has 59 points. Which capture changes the basic result?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "The partner may be hidden anywhere at the table",
+                "The dealer must hold it",
+                "The picker holds it"
+              ],
+              "explanation" : "The partner is silent until the called ace is played. Do not reveal or assume the partnership early.",
+              "id" : "master-defense-5",
+              "prompt" : "The called ace has not appeared. What should you assume about its holder?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Follow trump when required and track what is spent",
+                "Always throw a point card",
+                "Ignore the trick winner"
+              ],
+              "explanation" : "Trump management is an information problem. Follow legally, preserve useful winners, and update the live-trump count.",
+              "id" : "master-defense-6",
+              "prompt" : "What is the strongest general defense against a trump lead?",
+              "tiles" : [
+
+              ]
+            }
+          ],
+          "kind" : "quiz",
+          "subtitle" : "Track live trump, partners, and the 61-point line",
+          "title" : "Defense School"
+        },
+        {
+          "id" : "master-reading",
+          "isPlus" : false,
+          "items" : [
+            {
+              "answer" : "picking",
+              "choices" : [
+                "picking",
+                "failSuit",
+                "lowCards"
+              ],
+              "explanation" : "Three high trumps plus a diamond ace and club ace create a strong blind-taking shape with both control and points.",
+              "id" : "master-hand-1",
+              "tiles" : [
+                "C12",
+                "S12",
+                "D14",
+                "D10",
+                "C14"
+              ]
+            },
+            {
+              "answer" : "scoring",
+              "choices" : [
+                "trumpStack",
+                "failSuit",
+                "scoring"
+              ],
+              "explanation" : "The three fail aces and two additional point cards make this a scoring read. The hard part is turning fail points into captured tricks.",
+              "id" : "master-hand-2",
+              "tiles" : [
+                "C14",
+                "H14",
+                "S14",
+                "C10",
+                "H13"
+              ]
+            },
+            {
+              "answer" : "strategy",
+              "choices" : [
+                "trumpStack",
+                "strategy",
+                "lowCards"
+              ],
+              "explanation" : "Two strong trumps, a low diamond, and two low fail cards create a strategy question. The hand is about which suit to control and which card to keep as a hold.",
+              "id" : "master-hand-3",
+              "tiles" : [
+                "C12",
+                "S11",
+                "D9",
+                "H8",
+                "C7"
+              ]
+            },
+            {
+              "answer" : "failSuit",
+              "choices" : [
+                "failSuit",
+                "pointCards",
+                "trumpStack"
+              ],
+              "explanation" : "Every card is a heart fail card, missing only the heart 8. The heart queen and jack are absent because both are permanent trump.",
+              "id" : "master-hand-4",
+              "tiles" : [
+                "H14",
+                "H10",
+                "H13",
+                "H9",
+                "H7"
+              ]
+            },
+            {
+              "answer" : "trumpStack",
+              "choices" : [
+                "picking",
+                "trumpStack",
+                "lowCards"
+              ],
+              "explanation" : "All five cards are trump and four of them are the highest trumps in the deck. This is the purest possible control shape.",
+              "id" : "master-hand-5",
+              "tiles" : [
+                "C12",
+                "S12",
+                "H12",
+                "D12",
+                "D7"
+              ]
+            },
+            {
+              "answer" : "strategy",
+              "choices" : [
+                "strategy",
+                "lowCards",
+                "pointCards"
+              ],
+              "explanation" : "The holding has low fail cards, a low trump, and one club 10. It needs a plan for following, not a simple point count.",
+              "id" : "master-hand-6",
+              "tiles" : [
+                "C7",
+                "H8",
+                "S9",
+                "D8",
+                "C10"
+              ]
+            },
+            {
+              "answer" : "partnership",
+              "choices" : [
+                "partnership",
+                "picking",
+                "scoring"
+              ],
+              "explanation" : "You were dealt the club ace, so a club call makes you the silent partner rather than the picker. The queen of diamonds is the trump support you bring to that side.",
+              "id" : "master-hand-7",
+              "tiles" : [
+                "C14",
+                "C7",
+                "D12",
+                "H10",
+                "S9"
+              ]
+            },
+            {
+              "answer" : "trickTaking",
+              "choices" : [
+                "trickTaking",
+                "pointCards",
+                "failSuit"
+              ],
+              "explanation" : "The holding contains five trump cards with a mix of strength and point value. The advanced question is how to spend them across tricks.",
+              "id" : "master-hand-8",
+              "tiles" : [
+                "D14",
+                "D13",
+                "D9",
+                "D8",
+                "C12"
+              ]
+            }
+          ],
+          "kind" : "handMatch",
+          "subtitle" : "Read control, points, and partnership at once",
+          "title" : "Expert Holdings"
+        },
+        {
+          "id" : "master-rules",
+          "isPlus" : false,
+          "items" : [
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Queen of hearts",
+                "Ace of hearts",
+                "Both cards are fail"
+              ],
+              "explanation" : "The queen of hearts is permanent trump. The ace of hearts is the highest heart fail card.",
+              "id" : "more-rule-1",
+              "prompt" : "Which card is not a fail card in a heart hand?",
+              "tiles" : [
+                "H12",
+                "H14"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "The common call-an-ace rule requires a hold card",
+                "It adds a bonus point",
+                "It makes the card trump"
+              ],
+              "explanation" : "In the common call-an-ace game, the picker must retain at least one card from the called fail suit.",
+              "id" : "more-rule-2",
+              "prompt" : "Why does a picker keep a card from the called suit?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Can I follow that fail suit?",
+                "Do I have a queen?",
+                "Who dealt the cards?"
+              ],
+              "explanation" : "Following suit is the first legality check. Only if you cannot follow may you choose another suit or trump.",
+              "id" : "more-rule-3",
+              "prompt" : "What is the first question after a fail card is led?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "At least 61 of 120 points",
+                "At least four tricks",
+                "The most cards in hand"
+              ],
+              "explanation" : "The picking team wins the basic game by taking 61 or more of the deck's 120 points.",
+              "id" : "more-rule-4",
+              "prompt" : "What does the word majority mean in the basic score?",
+              "tiles" : [
+
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "It is trump but carries zero points",
+                "It is a fail card worth 7",
+                "It is removed from the deck"
+              ],
+              "explanation" : "Every diamond is trump. The 7 still carries zero points.",
+              "id" : "more-rule-5",
+              "prompt" : "Which statement about a diamond 7 is true?",
+              "tiles" : [
+                "D7",
+                "C14"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "State the table's version before the hand",
+                "Assume the app decides",
+                "Mix both versions during play"
+              ],
+              "explanation" : "Sheepshead has regional variations. Agree on partner selection and scoring before the first deal.",
+              "id" : "more-rule-6",
+              "prompt" : "What should a beginner do when house rules differ?",
+              "tiles" : [
+
+              ]
+            }
+          ],
+          "kind" : "quiz",
+          "subtitle" : "The details that separate a legal play from a guess",
+          "title" : "Master Rules"
+        }
+      ],
+      "icon" : "star.circle.fill",
+      "id" : "pro-tables",
+      "isFree" : false,
+      "name" : "The Master Tables",
+      "tagline" : "Advanced picker, partner, and table decisions"
+    }
+  ],
+  "whatsNew" : [
+    {
+      "headline" : "A smarter rhythm for card night",
+      "items" : [
+        {
+          "body" : "Take the same five-question challenge as every other member, share your score, and keep a forgiving five-day weekly rhythm.",
+          "icon" : "calendar.badge.clock",
+          "id" : "sheepshead-minute",
+          "isPlus" : true,
+          "title" : "Sheepshead Minute"
+        },
+        {
+          "body" : "Choose your usual card night and get a five-minute session built from your mistakes and weakest room when it matters.",
+          "icon" : "person.2.fill",
+          "id" : "game-night-prep",
+          "isPlus" : true,
+          "title" : "Game Night Prep"
+        }
+      ],
+      "version" : "1.2.2"
+    },
+    {
+      "headline" : "Learn the table, one rep at a time",
+      "items" : [
+        {
+          "body" : "Build confidence with focused drills for the deck, trump, buries, and tricks.",
+          "icon" : "rectangle.grid.2x2.fill",
+          "id" : "rooms",
+          "isPlus" : false,
+          "title" : "Four free practice rooms"
+        },
+        {
+          "body" : "Every answer shows the rule, the observation, and why the choice works at the table.",
+          "icon" : "lightbulb.fill",
+          "id" : "coaching",
+          "isPlus" : false,
+          "title" : "Explanations that stick"
+        },
+        {
+          "body" : "Streaks, missed items, and a daily mixed session help you keep the useful parts in reach.",
+          "icon" : "chart.bar.fill",
+          "id" : "progress",
+          "isPlus" : false,
+          "title" : "Practice that remembers"
+        }
+      ],
+      "version" : "1.0"
+    },
+    {
+      "headline" : "Practice that never runs out",
+      "items" : [
+        {
+          "body" : "Freshly dealt holdings, every time. Read the trump shape or classify a card before play, with a full explanation after every answer.",
+          "icon" : "infinity",
+          "id" : "endless",
+          "isPlus" : true,
+          "title" : "Endless Practice"
+        },
+        {
+          "body" : "The app now remembers what you get wrong and brings it back on a schedule, so the weak spots actually close instead of piling up.",
+          "icon" : "arrow.trianglehead.counterclockwise",
+          "id" : "review",
+          "isPlus" : true,
+          "title" : "Fix My Mistakes"
+        },
+        {
+          "body" : "Ninety seconds, as many correct reads as you can manage, and a personal best to chase.",
+          "icon" : "timer",
+          "id" : "challenge",
+          "isPlus" : true,
+          "title" : "Timed Challenge"
+        },
+        {
+          "body" : "Accuracy for every room, your weakest area, and how much you have practised overall.",
+          "icon" : "chart.bar.fill",
+          "id" : "stats",
+          "isPlus" : false,
+          "title" : "Your progress, in detail"
+        },
+        {
+          "body" : "New hand-written questions across the deck, trump, buries, tricks, and the Master Tables.",
+          "icon" : "plus.rectangle.on.folder.fill",
+          "id" : "content",
+          "isPlus" : false,
+          "title" : "More drills in every room"
+        }
+      ],
+      "version" : "1.1"
+    }
+  ]
+}

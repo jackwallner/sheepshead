@@ -104,3 +104,4 @@ These files load automatically when you read a file matching their `paths:`. Age
 | `.claude/rules/game-night.md` | Game-night rhythm (1.2): Sheepshead Minute, the daily bury question, deterministic dealing, game night prep | `SheepsheadMinute*`, `GameNightPrepView`, `HandGenerator`, `SessionBuilder` |
 | `.claude/rules/ipad-layout.md` | iPad (1.2): device family, `CenteringScrollView`, the pager eyebrow, the deck width cap | Drill layouts, Home columns |
 | `.claude/rules/screenshots.md` | Screenshots: the capture script, the throwaway iPad, test gotchas | Capture scripts, the `Screenshots` scheme |
+| `.claude/rules/android.md` | Android port: package, Play products, RevenueCat Play app, content export and parity, signing, Pro emulator, Play state | Anything in `android/`, the Android scripts or `docs/android-*.html` |
