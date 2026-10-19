@@ -181,3 +181,14 @@ Licensed Play purchase/restore requires a signed-in licensed tester. IARC terms
 approval remains pending. Quit Zyn production1(1.2.7) is in review, so no next
 production submission until it clears and fleet pacing permits. No production
 review sent or public availability claimed. Owned sol-sheepshead stopped/deleted.
+
+Final Console readback confirms managed publishing off, only Content ratings
+needs attention, and pre-launch still has no report after active internal1.
+Trial offers now target users who have never held any subscription in this app,
+matching the other fleet ports. Product readback verifies active5.49/23.99/55.99
+and free P1W phases in every trial region, with app-wide acquisition eligibility.
+Google conversion initially picked54.99 for the55.99 lifetime input; the script
+now preserves configured US prices and reconciles existing lifetime US price.
+Other localized prices keep Play conversion and the fleet PPP curve.
+Offer targeting reference:
+https://developers.google.com/android-publisher/api-ref/rest/v3/monetization.subscriptions.basePlans.offers#AcquisitionTargetingRule.

@@ -4,7 +4,8 @@
 Sheepshead+ monthly and yearly subscriptions (one base plan each, with a 7-day
 free trial offer for new customers) and the lifetime one-time product, at the
 Android US price ladder. Local prices come from Play's own conversion of the
-US price. Idempotent: existing products are left alone unless --update.
+US price. Idempotent: configured US prices and app-wide new-subscriber trials converge;
+localized prices keep Play conversion and the fleet PPP curve.
 
     PLAY_SERVICE_ACCOUNT_JSON=... python3 scripts/play-products.py [--dry-run]
 """
@@ -71,6 +72,8 @@ def converted(api: Any, price: tuple[str, int]) -> tuple[dict[str, Any], dict[st
     regions = result["convertedRegionPrices"]
     for code, value in regions.items():
         value["price"] = discounted(code, value["price"])
+    if "US" in regions:
+        regions["US"]["price"] = money(price)
     return regions, result.get("convertedOtherRegionsPrice", {})
 
 
@@ -159,7 +162,7 @@ def ensure_subscription(api: Any, spec: tuple[str, str, str, tuple[str, int], st
             "phases": [{"recurrenceCount": 1, "duration": "P1W",
                         "regionalConfigs": [{"regionCode": code, "free": {}} for code in regions],
                         "otherRegionsConfig": {"free": {}}}],
-            "targeting": {"acquisitionRule": {"scope": {"thisSubscription": {}}}},
+            "targeting": {"acquisitionRule": {"scope": {"anySubscriptionInApp": {}}}},
             "regionalConfigs": [{"regionCode": code, "newSubscriberAvailability": True} for code in regions],
             "otherRegionsConfig": {"otherRegionsNewSubscriberAvailability": True},
             "offerTags": [{"tag": "trial"}],
@@ -169,6 +172,16 @@ def ensure_subscription(api: Any, spec: tuple[str, str, str, tuple[str, int], st
                                   body=body, regionsVersion_version=REGIONS_VERSION).execute(),
             [body["phases"][0]["regionalConfigs"], body["regionalConfigs"]], price)
         print("  created offer trial-7d")
+    targeting = {"acquisitionRule": {"scope": {"anySubscriptionInApp": {}}}}
+    if offer.get("targeting") != targeting:
+        offer = offers.patch(
+            packageName=PACKAGE, productId=product_id, basePlanId=plan_id,
+            offerId="trial-7d", updateMask="targeting",
+            regionsVersion_version=REGIONS_VERSION,
+            body={"packageName": PACKAGE, "productId": product_id,
+                  "basePlanId": plan_id, "offerId": "trial-7d", "targeting": targeting},
+        ).execute()
+        print("  trial eligibility: new subscribers across the app")
     if offer.get("state") != "ACTIVE":
         offers.activate(packageName=PACKAGE, productId=product_id, basePlanId=plan_id, offerId="trial-7d", body={}).execute()
         print("  activated offer trial-7d")
@@ -206,6 +219,22 @@ def ensure_lifetime(api: Any, dry: bool) -> None:
             body["purchaseOptions"][0]["regionalPricingAndAvailabilityConfigs"], price)
     if dry:
         return
+    current = products.get(packageName=PACKAGE, productId=product_id).execute()
+    options = current["purchaseOptions"]
+    lifetime = next(option for option in options if option["purchaseOptionId"] == "lifetime")
+    us = next(config for config in lifetime["regionalPricingAndAvailabilityConfigs"] if config["regionCode"] == "US")
+    if us["price"] != money(price):
+        us["price"] = money(price)
+        writable = [{key: value for key, value in option.items() if key != "state"} for option in options]
+        create_with_currency_fixes(
+            lambda: products.patch(
+                packageName=PACKAGE, productId=product_id, updateMask="purchaseOptions",
+                regionsVersion_version=REGIONS_VERSION,
+                body={"packageName": PACKAGE, "productId": product_id, "purchaseOptions": writable},
+            ).execute(),
+            lifetime["regionalPricingAndAvailabilityConfigs"], price,
+        )
+        print("  restored configured US lifetime price")
     products.purchaseOptions().batchUpdateStates(packageName=PACKAGE, productId=product_id, body={"requests": [
         {"activatePurchaseOptionRequest": {"packageName": PACKAGE, "productId": product_id, "purchaseOptionId": "lifetime"}}
     ]}).execute()
