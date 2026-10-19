@@ -167,8 +167,8 @@ no advertising integration. No new credentials, grants or integrations were
 created. The privacy retention heading has a delete-data anchor, which must be
 checked on the public page after accepted main publication.
 
-Source passes acceptance and all four final captures are inspected. No AAB
-uploaded yet. Rebuild signed main, upload vc1, rerun the
+Source passes acceptance and all four final captures are inspected. Signed
+main vc1 uploaded through the Publisher API. Complete the
 idempotent products script to activate lifetime55.99, verify all3RC mappings,
 activate internal and stage production draft. Copy the actual internal opt-in
 link, never guess it. Pre-launch overview currently has no report and requests
