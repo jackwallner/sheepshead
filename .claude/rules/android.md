@@ -132,7 +132,9 @@ pass. Release has the correct SDK key/digest and no Test Store key/private code;
 QA has no SDK key. Optimized QA passes: debug extras ignored, free onboarding,
 locked paid content, masked reviewer input and wrong-code rejection. All four
 final captures inspected. Cold-boot System UI ANR recovered with its Wait action.
-Source is accepted; signed main rebuild and Play upload are next.
+Source is accepted. Signed main rebuild passes58s, including compilation of
+the import-sorted device test. Main APK/AAB signatures, target36 and all4ELF/ZIP
+16KB alignments pass. Play upload is next.
 AAB: android/app/build/outputs/bundle/release/app-release.aab.
 
 ## Store assets
