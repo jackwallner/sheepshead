@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -44,6 +45,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.jackwallner.sheepshead.BuildConfig
@@ -229,6 +232,8 @@ private fun ReviewerCodeDialog(onDismiss: () -> Unit) {
                     code,
                     { code = it; failed = false },
                     singleLine = true,
+                    visualTransformation = PasswordVisualTransformation(),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrectEnabled = false),
                     textStyle = SheepsheadType.body.copy(color = colors.ink),
                     colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = colors.jade, unfocusedBorderColor = colors.rule, cursorColor = colors.jade),
                     modifier = Modifier.testTag("reviewer-code"),

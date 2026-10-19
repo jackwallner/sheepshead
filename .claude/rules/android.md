@@ -40,8 +40,8 @@ paths:
   `$rc_annual` (`pkgef1feedeaf5`) and `$rc_lifetime` (`pkgea6efb64336`), each
   holding the Play product (`...monthly:monthly` `proda18de605b1`,
   `...yearly:yearly` `prodb9737dc777`, `...lifetime` `prodef65f0906e`) and the
-  Test Store twin. Play service-account credentials are not set on the Play app
-  yet (needs the Play Console app first).
+  Test Store twin. Existing Play service-account credentials are saved and
+  confirmed; no new service-account grant is needed.
 - rc-clean knows the Play app: `~/.rc-clean/apps.json` on the Air and the MBP
   has the `android` block for `com.jackwallner.sheepshead` (added 2026-10-18).
 - Play reviewers unlock Sheepshead+ with a code (long-press Settings > Version).
@@ -76,8 +76,9 @@ paths:
 
 ## Build
 
-- JDK 17, checked-in Gradle wrapper, AGP 9.4.1, Kotlin 2.4.20, minSdk 26,
-  target/compile 36.
+- Build directly on jmbp using installed JDK21, checked-in Gradle wrapper,
+  AGP 9.4.1, Kotlin 2.4.20, minSdk26, target/compile36, Java17 bytecode.
+  Never build or run Android on the Air. Do not dispatch from this fleet host.
 - `android/local.properties` (ignored, mode 600) holds `REVENUECAT_TEST_KEY`,
   `REVENUECAT_PLAY_KEY`, `PLAY_REVIEW_CODE_SHA256` and `PLAY_UPLOAD_*` (upload
   keystore `~/.android/keystores/sheepshead-upload.p12`, backup in
@@ -91,43 +92,48 @@ paths:
 - Increment `versionCode` on every Play upload. 1.2.4 is versionCode 1.
 - `scripts/play-upload.sh [validate|internal|internal-draft|production-draft]`
   and `scripts/play-products.py [--dry-run]` need `PLAY_SERVICE_ACCOUNT_JSON`.
-  Neither has been run yet.
+  Monthly/yearly and their trials are active. Lifetime creation must follow
+  the first accepted billing-enabled artifact upload.
 
-## Emulator (remote MacBook Pro only)
+## Pro runtime and verification
 
-Follow the `android-dev` skill's Remote MacBook Pro section. Host
-`jackwallner@192.168.4.25` (strict host keys), SDK
-`/Users/jackwallner/Library/Android/sdk`. The Pro has no JDK 17, so build the
-debug and androidTest APKs on the Air and copy them to a temp dir on the Pro
-(`~/tmp/claude-sheepshead` for the 2026-10-18 run). Create a temporary AVD by
-hand (`.ini` plus a `config.ini` cloned from `agent-emu-1`, `android-36`
-`google_apis_playstore` x86_64, 1080x2400), boot it headless on a free port:
+Run one memory-limited Gradle job and one owned emulator at a time. JDK21 is at
+`~/.jdk/jdk-21.0.12.1+1/Contents/Home`; SDK is `~/Library/Android/sdk`.
+Use `--no-daemon --max-workers=1`, Gradle heap3GB, ActiveProcessorCount4.
+Full checks: testDebugUnitTest, assembleDebug, assembleDebugAndroidTest,
+assembleRelease, bundleRelease, assembleQa and lintRelease.
 
-```sh
-ssh jackwallner@192.168.4.25 'nohup ~/Library/Android/sdk/emulator/emulator -avd claude-sheepshead -port 5590 -no-window -no-audio -no-boot-anim -no-metrics -no-snapshot-save -gpu swiftshader_indirect > ~/tmp/claude-sheepshead/emulator.log 2>&1 &'
-ssh jackwallner@192.168.4.25 '~/Library/Android/sdk/platform-tools/adb -s emulator-5590 shell getprop sys.boot_completed'
-```
+Only debug uses the Test Store SDK key. QA uses release source/R8, debug signing
+and an empty SDK key. Never install a production-key release on an emulator.
+Debug launch extras are resetAll, onboarded, skillLevel, seedProgress, forcePro,
+appearance and uiTest. QA/release ignore them. Test tags are resource IDs.
+The reviewer field is masked with Password keyboard and autocorrect disabled.
 
-Disable Digital Wellbeing (`pm disable-user --user 0
-com.google.android.apps.wellbeing`) and the three animation scales before
-testing. Install both APKs with `adb -s emulator-5590 install -r -t`. Run
-each `AppFlowTest` method on its own (`am instrument -w -e class
-com.jackwallner.sheepshead.AppFlowTest#<method>
-com.jackwallner.sheepshead.test/androidx.test.runner.AndroidJUnitRunner`)
-after `pm clear com.jackwallner.sheepshead`, and check each `OK (1 test)`.
-That stands in for Gradle's orchestrator `clearPackageData`: run as one plain
-`am instrument`, `forcePro` from the member tests leaks into the free paywall
-test, and the hand-run orchestrator could not reach its service on the API 36
-image. If the Pro is loaded, a system ANR dialog can sit over captures: set
-`settings put global hide_error_dialogs 1` and tap Wait before shooting. Afterwards `adb -s emulator-5590 emu kill`,
-then delete only `~/.android/avd/claude-sheepshead.{avd,ini}` and the temp
-dir. Never touch `small_phone`, `agent-emu-*`, `sol-*` or other agents' AVDs,
-and never run an unqualified `adb emu kill` or `adb kill-server`. The Pro is a
-2015 i7: a cold boot takes about 5 minutes.
+Create an owned sol-sheepshead Google Play AVD, headless, one serial at a time.
+Never touch another AVD or use adb kill-server/unqualified emu kill. Cold boot on
+this2015 dual-core Pro can leave a System UI ANR over an otherwise healthy app.
+Inspect the fresh hierarchy/capture and select Wait only on the identified
+System UI dialog. Keep real app failures visible. Let Android finish boot work,
+and use sys.user.0.ce_available for credential-unlock readiness. Keep the owned
+emulator alive while diagnosing a failed manual check instead of repeatedly
+cold-booting it. Stop/delete the owned AVD after acceptance, retain proof.
 
-Debug launch extras (`DebugLaunchOptions`, debug builds only): `resetAll`,
-`onboarded`, `skillLevel`, `seedProgress`, `forcePro`, `appearance`, `uiTest`.
-Test tags are exposed as resource ids.
+Run AppFlowTest methods separately after pm clear, or use the AndroidX test
+orchestrator with clearPackageData. A single plain instrumentation suite can
+leak forcePro from member tests into the free paid-boundary case. Pass the
+private reviewCode only through a local redacting harness, never in a committed
+script or capture. No private-code screenshot is needed.
+
+Current verification: full signed/QA/release-lint build18m31s,58JVM cases pass.
+Prior accepted6base device cases plus current first-run60.657s, masked reviewer
+74.42s and free locked-boundary43.467s cases pass. This is not a fresh full7-case
+run. Signed vc1/1.2.4, target36 APK/AAB signatures, ZIP and all4ELF16KB alignments
+pass. Release has the correct SDK key/digest and no Test Store key/private code;
+QA has no SDK key. Optimized QA passes: debug extras ignored, free onboarding,
+locked paid content, masked reviewer input and wrong-code rejection. All four
+final captures inspected. Cold-boot System UI ANR recovered with its Wait action.
+Source is accepted; signed main rebuild and Play upload are next.
+AAB: android/app/build/outputs/bundle/release/app-release.aab.
 
 ## Store assets
 
@@ -145,14 +151,25 @@ and `docs/android-terms.html` on GitHub Pages.
 
 ## Play state (2026-10-18)
 
-Not in Play Console yet. Signed AAB versionCode 1 (1.2.4) builds and verifies
-locally (package, targetSdk 36, upload cert, 16 KB ELF and zip alignment,
-`goog_` key in release only); nothing uploaded. Verified 2026-10-18: 58 JVM
-tests, 6 `AppFlowTest` device tests and the 6-shot `StoreScreenshotTest` pass
-on the Pro (`claude-sheepshead`, API 36 Play image, since deleted); dark mode
-Home and the Test Store paywall with live prices checked by screenshot. Left for the Console session: create the app
-(E3 Apps), run `scripts/play-products.py`, set the RevenueCat Play
-service-account credentials, App content forms (privacy policy, ads, App
-access with the review code, target audience, data safety, IARC, category
-Education), listing upload, internal then production release, Send for review
-in this app's pacing slot.
+E3 Apps app4973390987996289663. Listing,512RGB icon,1024x500RGB feature and
+six inspected real free1080x1920 store captures are saved. Contact/privacy,
+no ads/government/ad-ID/financial/health, Education category, adult18+ audience,
+reviewer Sign in details/hash, Data safety,178countries and existing internal
+tester list are saved. Managed publishing is off. Only Content ratings needs
+attention; IARC terms approval is pending, do not accept a new agreement.
+
+Data safety discloses collected purchase history, app interactions and anonymous
+IDs, encrypted transit, no accounts, support deletion. Practice records stay
+local. Two private RC transaction webhooks disable paywall-event forwarding;
+no advertising integration. No new credentials, grants or integrations were
+created. The privacy retention heading has a delete-data anchor, which must be
+checked on the public page after accepted main publication.
+
+Source passes acceptance and all four final captures are inspected. No AAB
+uploaded yet. Rebuild signed main, upload vc1, rerun the
+idempotent products script to activate lifetime55.99, verify all3RC mappings,
+activate internal and stage production draft. Copy the actual internal opt-in
+link, never guess it. Pre-launch overview currently has no report and requests
+an artifact. Licensed Play purchase/restore requires a signed-in licensed tester.
+Quit Zyn production1(1.2.7) is in review, so no next production submission until
+it clears and fleet pacing permits. Do not claim public availability.

@@ -1,17 +1,28 @@
 package com.jackwallner.sheepshead
 
 import android.content.Intent
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.assert
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
+import androidx.compose.ui.test.longClick
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTextClearance
+import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performTouchInput
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import kotlinx.coroutines.runBlocking
 import org.junit.After
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -54,6 +65,30 @@ class AppFlowTest {
         runCatching { compose.onNodeWithTag(tag).performScrollTo() }
         compose.onNodeWithTag(tag).performClick()
         compose.waitForIdle()
+    }
+
+    @Test
+    fun reviewerAccessIsMaskedRejectsWrongCodeAndPersists() = runBlocking {
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val code = checkNotNull(InstrumentationRegistry.getArguments().getString("reviewCode")) { "Supply the private reviewer code through the local redacting harness." }
+        launch(onboarded = true)
+        waitFor("Settings")
+        compose.onNode(hasContentDescription("Settings")).performClick()
+        compose.onNodeWithTag("version-row").performScrollTo().performTouchInput { longClick() }
+        val field = compose.onNodeWithTag("reviewer-code")
+        field.assert(SemanticsMatcher.keyIsDefined(SemanticsProperties.Password))
+        field.performTextInput("wrong")
+        tag("reviewer-unlock")
+        compose.onNode(hasText("That code isn't valid.")).assertIsDisplayed()
+        val app = instrumentation.targetContext.applicationContext as SheepsheadApplication
+        assertFalse(app.graph.subscriptions.isPro)
+        field.performTextClearance()
+        field.performTextInput(code)
+        tag("reviewer-unlock")
+        assertTrue(app.graph.subscriptions.isPro)
+        app.graph.subscriptions.refreshCustomerInfo(fetchCurrent = true)
+        assertTrue(app.graph.subscriptions.isPro)
+        assertTrue(AppGraph(app).subscriptions.isPro)
     }
 
     @Test
