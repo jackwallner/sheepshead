@@ -97,8 +97,9 @@ paths:
 
 Follow the `android-dev` skill's Remote MacBook Pro section. Host
 `jackwallner@192.168.4.25` (strict host keys), SDK
-`/Users/jackwallner/Library/Android/sdk`. The Pro has no JDK 17, so build the
-debug and androidTest APKs on the Air and copy them to a temp dir on the Pro
+`/Users/jackwallner/Library/Android/sdk`. Build the debug and androidTest APKs
+on jmbp with `fm-gradle assembleDebug assembleDebugAndroidTest` from `android/`
+(never `./gradlew` here) and copy them to a temp dir on the Pro
 (`~/tmp/claude-sheepshead` for the 2026-10-18 run). Create a temporary AVD by
 hand (`.ini` plus a `config.ini` cloned from `agent-emu-1`, `android-36`
 `google_apis_playstore` x86_64, 1080x2400), boot it headless on a free port:
