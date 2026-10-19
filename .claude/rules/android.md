@@ -167,11 +167,17 @@ no advertising integration. No new credentials, grants or integrations were
 created. The privacy retention heading has a delete-data anchor, which must be
 checked on the public page after accepted main publication.
 
-Source passes acceptance and all four final captures are inspected. Signed
-main vc1 uploaded through the Publisher API. Complete the
-idempotent products script to activate lifetime55.99, verify all3RC mappings,
-activate internal and stage production draft. Copy the actual internal opt-in
-link, never guess it. Pre-launch overview currently has no report and requests
-an artifact. Licensed Play purchase/restore requires a signed-in licensed tester.
-Quit Zyn production1(1.2.7) is in review, so no next production submission until
-it clears and fleet pacing permits. Do not claim public availability.
+Accepted main vc1 is uploaded, internal1 completed and production1 draft.
+Console confirms internal availability, unreviewed. Actual tester opt-in:
+https://play.google.com/apps/internaltest/4701148071273382598.
+All3products are active at5.49/23.99/55.99, with eligible7day subscription trials.
+Lifetime creation required an active BILLING artifact, not upload alone.
+RC final readback confirms saved service-account credentials, all3Play products
+on both entitlements,3mapped android-offering packages and preserved iOS default.
+Public privacy HTTP200 and delete-data anchor verified after accepted main push.
+
+Pre-launch overview had no report before upload; recheck its generation/results.
+Licensed Play purchase/restore requires a signed-in licensed tester. IARC terms
+approval remains pending. Quit Zyn production1(1.2.7) is in review, so no next
+production submission until it clears and fleet pacing permits. No production
+review sent or public availability claimed. Owned sol-sheepshead stopped/deleted.
