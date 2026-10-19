@@ -102,6 +102,9 @@ Run one memory-limited Gradle job and one owned emulator at a time. JDK21 is at
 Use `--no-daemon --max-workers=1`, Gradle heap3GB, ActiveProcessorCount4.
 Full checks: testDebugUnitTest, assembleDebug, assembleDebugAndroidTest,
 assembleRelease, bundleRelease, assembleQa and lintRelease.
+From the Air, run non-release tasks with `fm-gradle <tasks>` from `android/`
+(runs them on jmbp, copies outputs back); never `./gradlew` there except
+signed `bundleRelease`/`assembleRelease`.
 
 Only debug uses the Test Store SDK key. QA uses release source/R8, debug signing
 and an empty SDK key. Never install a production-key release on an emulator.
