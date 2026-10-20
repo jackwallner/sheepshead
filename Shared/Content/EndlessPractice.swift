@@ -6,6 +6,8 @@ import Foundation
 enum PracticeSkill: String, CaseIterable, Identifiable, Sendable {
     case handReading
     case trickPlay
+    case trickWinner
+    case pointCount
 
     var id: String { rawValue }
 
@@ -13,6 +15,8 @@ enum PracticeSkill: String, CaseIterable, Identifiable, Sendable {
         switch self {
         case .handReading: return "Read the Holding"
         case .trickPlay: return "Read the Trump"
+        case .trickWinner: return "Who Takes the Trick?"
+        case .pointCount: return "Count the Points"
         }
     }
 
@@ -20,6 +24,8 @@ enum PracticeSkill: String, CaseIterable, Identifiable, Sendable {
         switch self {
         case .handReading: return "Fresh five-card holdings, unlimited reps"
         case .trickPlay: return "Classify cards before you play them"
+        case .trickWinner: return "Five cards played, find the winner"
+        case .pointCount: return "Add up the points in a trick"
         }
     }
 
@@ -27,13 +33,16 @@ enum PracticeSkill: String, CaseIterable, Identifiable, Sendable {
         switch self {
         case .handReading: return "rectangle.portrait.on.rectangle.portrait.angled"
         case .trickPlay: return "crown.fill"
+        case .trickWinner: return "hand.point.up.left.fill"
+        case .pointCount: return "plus.forwardslash.minus"
         }
     }
 
     var roomID: String {
         switch self {
         case .handReading: return "trump-room"
-        case .trickPlay: return "trick-room"
+        case .trickPlay, .trickWinner: return "trick-room"
+        case .pointCount: return "card-room"
         }
     }
 
@@ -60,6 +69,8 @@ enum EndlessPractice {
         switch skill {
         case .handReading: return handItems(count: count)
         case .trickPlay: return trickItems(count: count)
+        case .trickWinner: return trickWinnerItems(count: count)
+        case .pointCount: return pointCountItems(count: count)
         }
     }
 
@@ -105,6 +116,53 @@ enum EndlessPractice {
                 explanation: explanation,
                 sourceLabel: "Endless Practice",
                 roomID: PracticeSkill.trickPlay.roomID
+            )
+        }
+    }
+
+    private static func trickWinnerItems(count: Int) -> [QuickItem] {
+        var generator = SystemRandomNumberGenerator()
+        return trickWinnerItems(count: count, using: &generator)
+    }
+
+    static func trickWinnerItems<R: RandomNumberGenerator>(count: Int, using generator: inout R) -> [QuickItem] {
+        (0..<max(0, count)).compactMap { number in
+            let shape = TrickGenerator.Shape.allCases[number % TrickGenerator.Shape.allCases.count]
+            guard let trick = TrickGenerator.deal(shape, using: &generator) else { return nil }
+            let options = TrickGenerator.choices(for: trick, using: &generator)
+            return QuickItem(
+                id: PracticeSkill.trickWinner.itemPrefix + UUID().uuidString,
+                prompt: "Played left to right, the first card led. Which card takes the trick?",
+                tiles: trick.cards,
+                choices: options.map(\.spokenName),
+                answerIndex: options.firstIndex(of: trick.winner) ?? 0,
+                explanation: TrickGenerator.explain(trick),
+                sourceLabel: "Endless Practice",
+                roomID: PracticeSkill.trickWinner.roomID
+            )
+        }.shuffled(using: &generator)
+    }
+
+    private static func pointCountItems(count: Int) -> [QuickItem] {
+        var generator = SystemRandomNumberGenerator()
+        return pointCountItems(count: count, using: &generator)
+    }
+
+    static func pointCountItems<R: RandomNumberGenerator>(count: Int, using generator: inout R) -> [QuickItem] {
+        let deck = PlayingCard.sheepsheadDeck
+        return (0..<max(0, count)).map { _ in
+            let cards = Array(deck.shuffled(using: &generator).prefix(5))
+            let options = TrickGenerator.pointChoices(for: cards).shuffled(using: &generator)
+            let total = cards.reduce(0) { $0 + $1.pointValue }
+            return QuickItem(
+                id: PracticeSkill.pointCount.itemPrefix + UUID().uuidString,
+                prompt: "How many points are in these five cards?",
+                tiles: cards,
+                choices: options.map { "\($0) points" },
+                answerIndex: options.firstIndex(of: total) ?? 0,
+                explanation: TrickGenerator.explainPoints(cards),
+                sourceLabel: "Endless Practice",
+                roomID: PracticeSkill.pointCount.roomID
             )
         }
     }

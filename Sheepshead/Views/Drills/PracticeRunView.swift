@@ -49,6 +49,7 @@ struct PracticeRunView: View {
     @State private var streak = 0
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     static let challengeSeconds = 90
     /// How many generated questions to mint at a time. Dealing is rejection
@@ -119,7 +120,7 @@ struct PracticeRunView: View {
                 footer
             }
             .id(item.id)
-            .transition(.asymmetric(
+            .transition(reduceMotion ? .opacity : .asymmetric(
                 insertion: .move(edge: .trailing).combined(with: .opacity),
                 removal: .move(edge: .leading).combined(with: .opacity)
             ))
@@ -263,6 +264,7 @@ struct PracticeRunView: View {
         confettiTrigger += 1
         Haptics.correctAnswer()
         SoundPlayer.play(.success)
+        guard !reduceMotion else { return }
         flashOpacity = 0.14
         withAnimation(.easeOut(duration: 0.5)) { flashOpacity = 0 }
     }
@@ -282,7 +284,7 @@ struct PracticeRunView: View {
             return
         }
         topUpIfNeeded()
-        withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+        withAnimation(reduceMotion ? .easeInOut(duration: 0.15) : .spring(response: 0.4, dampingFraction: 0.85)) {
             selection = nil
             index += 1
         }

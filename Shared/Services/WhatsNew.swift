@@ -40,6 +40,31 @@ enum WhatsNew {
     private static let lastSeenKey = "whatsnew.lastSeenVersion"
 
     static let releases: [WhatsNewRelease] = [
+        WhatsNewRelease(
+            version: "1.2.4",
+            headline: "Sharper practice, clearer progress",
+            items: [
+                WhatsNewItem(
+                    id: "trick-winner",
+                    icon: "hand.point.up.left.fill",
+                    title: "Who Takes the Trick?",
+                    body: "Endless Practice now deals five-card tricks and asks which card wins, with the rule behind every answer. A second new skill drills counting the points.",
+                    isPlus: true
+                ),
+                WhatsNewItem(
+                    id: "mastery",
+                    icon: "checkmark.seal.fill",
+                    title: "Room mastery",
+                    body: "Each room now shows how much you have truly locked in, not just opened, and Your Progress suggests the skill to coach next."
+                ),
+                WhatsNewItem(
+                    id: "reduce-motion",
+                    icon: "figure.walk.motion",
+                    title: "Reduce Motion support",
+                    body: "With Reduce Motion on, practice swaps slides and confetti for a quiet fade."
+                ),
+            ]
+        ),
         // The version here is the marketing version that actually reaches
         // players, not the one the work landed under. 1.2.0 and 1.2.1 never
         // went public, so `currentRelease` was nil for every build after the

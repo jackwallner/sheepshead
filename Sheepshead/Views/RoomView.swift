@@ -7,6 +7,7 @@ struct RoomView: View {
 
     @EnvironmentObject private var progress: ProgressStore
     @EnvironmentObject private var subscriptions: SubscriptionService
+    @StateObject private var records = PracticeRecordStore.shared
     @State private var showPaywall = false
 
     private var roomLocked: Bool { !room.isFree && !subscriptions.isPro }
@@ -56,6 +57,7 @@ struct RoomView: View {
                 .font(.subheadline)
                 .foregroundStyle(Theme.inkSecondary)
                 .multilineTextAlignment(.center)
+            masteryChip
             if roomLocked {
                 // A locked room still shows its drills below, so this is a
                 // preview, not a dead end. Say so, or the lock reads as a wall.
@@ -68,6 +70,25 @@ struct RoomView: View {
         .frame(maxWidth: .infinity)
         .padding(.top, 8)
         .padding(.bottom, 2)
+    }
+
+    /// Shows how much of the room is actually locked in, once the player has
+    /// started it. Hidden for a room never opened, which is new rather than weak.
+    @ViewBuilder
+    private var masteryChip: some View {
+        let mastery = records.mastery(for: room, isMember: subscriptions.isPro)
+        if mastery.level != .untouched {
+            HStack(spacing: 6) {
+                Image(systemName: mastery.level.icon)
+                Text("\(mastery.level.title), \(mastery.known) of \(mastery.total) locked in")
+            }
+            .font(.caption.weight(.semibold))
+            .foregroundStyle(room.accent)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(room.accent.opacity(0.12), in: Capsule())
+            .accessibilityElement(children: .combine)
+        }
     }
 
     @ViewBuilder

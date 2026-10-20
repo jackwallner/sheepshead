@@ -21,6 +21,7 @@ struct ConfettiBurst: View {
     /// The celebrated element, in the same coordinate space this view fills.
     var sourceRect: CGRect?
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var firedAt: Date?
     @State private var seed: Int = 0
     /// Snapshotted at fire time: the source can move (or vanish) mid-flight,
@@ -49,7 +50,9 @@ struct ConfettiBurst: View {
         }
         .allowsHitTesting(false)
         .onChange(of: trigger) { _, _ in
-            guard trigger > 0 else { return }
+            // Reduce Motion players still get the haptic, sound and green
+            // answer row; the particle burst is the part that moves.
+            guard trigger > 0, !reduceMotion else { return }
             seed = trigger
             launchRect = sourceRect
             firedAt = Date()
