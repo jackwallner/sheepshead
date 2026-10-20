@@ -110,6 +110,9 @@ struct ReviewPromptSheet: View {
                             Text(chips.isEmpty ? "Anything at all." : "Add a few words if you like.")
                                 .font(.body)
                                 .foregroundStyle(Theme.inkTertiary)
+                                // Wraps instead of cutting to "Anything at..."
+                                // at accessibility sizes.
+                                .fixedSize(horizontal: false, vertical: true)
                                 .padding(.horizontal, 15)
                                 .padding(.vertical, 18)
                                 .allowsHitTesting(false)
