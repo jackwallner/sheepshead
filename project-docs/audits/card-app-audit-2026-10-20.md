@@ -46,3 +46,17 @@ Legend: PRESENT, MISSING (built this shift), UNSUITABLE, GAP (known, not built).
 - Returning player: Fix My Mistakes and mastery lapse (known items stop counting
   one interval past due) bring them back to the right material.
 - Larger text and Reduce Motion: see above.
+
+## Run findings (UI inspected, HEAD 5d25add)
+
+- Unit tests: 100 passed, 0 failed via gh-sim at HEAD 5d25add.
+- Audit capture (`AuditTests`, standard and AX XXXL text) was inspected: Home,
+  Who Takes the Trick? question and answered (wrong pick red, right pick green,
+  rule explanation shown), Endless picker, Progress and Room Mastery.
+- Larger text: cards wrap and stay readable at XXXL after 896df88 and 5d25add.
+  Remaining nit: at XXXL the Endless picker icons sit close to the card edge
+  (crown nearly touches the left border). Not blocking.
+- Motion: the Actions simulator cannot record native 60 fps. The measured
+  recording is 44 frames over 7.79 s (5.5 fps average, 10 distinct frames), so
+  smoothness of transitions is not established by video. Reduce Motion fallbacks
+  are covered by source review only.
