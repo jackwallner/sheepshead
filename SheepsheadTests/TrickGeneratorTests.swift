@@ -98,7 +98,7 @@ final class TrickGeneratorTests: XCTestCase {
             let expected = oracleWinner(item.tiles).spokenName
             XCTAssertEqual(item.choices[item.answerIndex], expected)
             XCTAssertTrue(item.choices.allSatisfy { name in item.tiles.contains { $0.spokenName == name } })
-            XCTAssertFalse(item.explanation.contains("—"))
+            XCTAssertFalse(item.explanation.contains("\u{2014}"))
             XCTAssertTrue(item.explanation.contains(expected))
         }
     }
@@ -115,7 +115,7 @@ final class TrickGeneratorTests: XCTestCase {
             let total = item.tiles.reduce(0) { $0 + table[$1.rankValue]! }
             XCTAssertEqual(item.choices[item.answerIndex], "\(total) points")
             XCTAssertEqual(Set(item.choices).count, item.choices.count)
-            XCTAssertGreaterThanOrEqual(item.choices.count, 3)
+            XCTAssertEqual(item.choices.count, 4)
             XCTAssertEqual(Set(item.tiles).count, 5)
         }
     }

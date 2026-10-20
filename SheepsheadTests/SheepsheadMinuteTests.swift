@@ -92,4 +92,28 @@ final class SheepsheadMinuteContentTests: XCTestCase {
         XCTAssertEqual(store.record(challenge: challenge, answers: [true, true, true, true, true]).score, 3)
         store.resetAll()
     }
+    func testDefaultDayKeyIsGregorianWhateverTheSystemCalendar() {
+        let key = SheepsheadMinuteContent.key(for: date(2026, 8, 9))
+        XCTAssertEqual(key.prefix(4), "2026")
+        XCTAssertEqual(Calendar.gregorianLocal.identifier, .gregorian)
+    }
+
+    /// The bury question lists pairs from the deal. A pair that reads the same
+    /// as the answer (cards in a different order) would show the right answer
+    /// twice, so no choice may repeat across a few years of day keys. Authored
+    /// trick questions may be two-way; generated and bury ones offer four.
+    func testDailyChoicesAreDistinctAndGeneratedOnesHaveFour() {
+        var day = date(2026, 1, 1)
+        while day < date(2029, 1, 1) {
+            let challenge = SheepsheadMinuteContent.challenge(for: day, calendar: calendar)
+            for question in challenge.questions {
+                let item = question.item
+                if question.category != .trickPlay {
+                    XCTAssertGreaterThanOrEqual(item.choices.count, 4, "\(item.id) has too few choices")
+                }
+                XCTAssertEqual(Set(item.choices).count, item.choices.count, "\(item.id) repeats a choice")
+            }
+            day = calendar.date(byAdding: .day, value: 1, to: day)!
+        }
+    }
 }

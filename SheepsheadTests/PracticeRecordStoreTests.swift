@@ -161,8 +161,8 @@ final class WhatsNewTests: XCTestCase {
             for item in release.items {
                 XCTAssertFalse(item.title.isEmpty, release.version)
                 XCTAssertFalse(item.body.isEmpty, release.version)
-                XCTAssertFalse(item.body.contains("—"), "No em dashes in copy")
-                XCTAssertFalse(item.title.contains("—"), "No em dashes in copy")
+                XCTAssertFalse(item.body.contains("\u{2014}"), "No em dashes in copy")
+                XCTAssertFalse(item.title.contains("\u{2014}"), "No em dashes in copy")
             }
         }
     }

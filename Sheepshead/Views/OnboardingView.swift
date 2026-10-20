@@ -133,7 +133,7 @@ struct OnboardingView: View {
     /// On an iPhone SE the full page is one line taller than the space above
     /// the footer, and the first screen anyone sees ended in a half-cut line.
     /// There the icon goes, which is decoration; the words and cards stay.
-    /// Every larger phone and iPad still gets the full page, as in 1.3.2.
+    /// Every larger phone and iPad still gets the full page, as shipped before the fit work.
     private func infoPage(icon: String, title: String, body bodyText: String, tiles: [PlayingCard]) -> some View {
         let full = VStack(spacing: 26) {
             infoIcon(icon)
@@ -203,7 +203,7 @@ struct OnboardingView: View {
         SkillOption(id: "played", title: "Played real games", detail: "Comfortable, want sharper instincts"),
     ]
 
-    /// Full page as in 1.3.2. On an iPhone SE it overflowed by a card's last
+    /// Full page as shipped before the fit work. On an iPhone SE it overflowed by a card's last
     /// line, so there the subtitle goes and the gaps tighten before it falls
     /// back to scrolling.
     private var skillLevelPage: some View {
@@ -301,9 +301,9 @@ struct OnboardingView: View {
 
     // MARK: - Trial step (OT710: hero + bullets, zero plan cards)
 
-    /// Frozen at 1.3.2. Below the accessibility sizes this is 1.3.2's page
-    /// exactly: same stack, same spacers, benefit lines on one line each.
-    /// Only at accessibility sizes, where 1.3.2 pushed the heading off the
+    /// Frozen at Mahj 1.3.2's layout. Below the accessibility sizes this is that
+    /// page exactly: same stack, same spacers, benefit lines on one line each.
+    /// Only at accessibility sizes, where it pushed the heading off the
     /// screen and squeezed the CTA, does the page scroll and carry the price,
     /// the free exit and the legal links.
     @ViewBuilder
@@ -363,7 +363,7 @@ struct OnboardingView: View {
             Text(text)
                 .font(.subheadline)
                 .foregroundStyle(Theme.ink)
-                // Wraps only where the page scrolls; elsewhere one line, as in 1.3.2.
+                // Wraps only where the page scrolls; elsewhere one line, as shipped before.
                 .fixedSize(horizontal: false, vertical: dynamicTypeSize.isAccessibilitySize)
         }
     }
@@ -384,7 +384,7 @@ struct OnboardingView: View {
         subscriptions.isPro ? "" : PaywallPricing.priceText(subscriptions, onboardingPlan)
     }
 
-    /// One concise line, matching the approved fleet pattern (StatScout): trial
+    /// One concise line, matching the approved fleet pattern: trial
     /// length, price, that it renews, how to cancel. The EULA behind the Terms
     /// link carries the full legalese; this is the point-of-purchase micro copy.
     ///
@@ -433,7 +433,7 @@ struct OnboardingView: View {
                 // Pricing slot, reserved on every page. The billed amount is the
                 // most conspicuous pricing element (App Review 3.1.2(c) flagged
                 // the trial outshining it); the disclosure under it stays small.
-                // Mahj's approved fix, as Bridge Trainer ships it. minHeight so the
+                // This is the approved fleet fix. minHeight so the
                 // disclosure can wrap without moving the CTA on any page.
                 priceSlot
                     .opacity(onTrialPage ? 1 : 0)
@@ -462,7 +462,7 @@ struct OnboardingView: View {
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 10)
-        // Full width as in 1.3.2: the trial flow's layout is frozen, iPad too.
+        // Full width as shipped before: the trial flow's layout is frozen, iPad too.
     }
 
     private var onTrialPageNow: Bool { page == lastPage }
@@ -478,7 +478,7 @@ struct OnboardingView: View {
                 .foregroundStyle(Theme.inkSecondary)
                 .multilineTextAlignment(.center)
         }
-        // 30pt, as shipped in 1.3.2: the trial page's geometry is the proven
+        // 30pt, as shipped before: the trial page's geometry is the proven
         // one. Only the accessibility-size layout, where it scrolls, grows it.
         .frame(minHeight: dynamicTypeSize.isAccessibilitySize ? 44 : 30)
         .frame(height: dynamicTypeSize.isAccessibilitySize ? nil : 30)
@@ -630,9 +630,9 @@ struct OnboardingView: View {
     }
 }
 
-/// Draws its second view, the page exactly as 1.3.2 laid it out, but tells
+/// Draws its second view, the page exactly as Mahj 1.3.2 laid it out, but tells
 /// `ViewThatFits` that it needs only the first view's height (the content on
-/// its own) plus `margin`. The 1.3.2 page asks for room for its spacers and
+/// its own) plus `margin`. That page asks for room for its spacers and
 /// the gaps around them too, and on a 13 mini it only fit by squeezing those
 /// out, so a plain `ViewThatFits` swapped in the compact page there. With
 /// `margin` at one gap plus a spacer's minimum, the content can still never

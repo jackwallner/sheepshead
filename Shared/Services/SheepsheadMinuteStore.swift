@@ -45,7 +45,7 @@ final class SheepsheadMinuteStore: ObservableObject {
         }
     }
 
-    func result(for day: Date, calendar: Calendar = .current) -> SheepsheadMinuteResult? {
+    func result(for day: Date, calendar: Calendar = .gregorianLocal) -> SheepsheadMinuteResult? {
         results[SheepsheadMinuteContent.key(for: day, calendar: calendar)]
     }
 
@@ -76,7 +76,7 @@ final class SheepsheadMinuteStore: ObservableObject {
         return result
     }
 
-    func completedThisWeek(now: Date = Date(), calendar: Calendar = .current) -> Int {
+    func completedThisWeek(now: Date = Date(), calendar: Calendar = .gregorianLocal) -> Int {
         guard let interval = calendar.dateInterval(of: .weekOfYear, for: now) else { return 0 }
         return results.values.filter { interval.contains($0.completedAt) }.count
     }
@@ -84,7 +84,7 @@ final class SheepsheadMinuteStore: ObservableObject {
     func archiveDates(
         before day: Date = Date(),
         count: Int = 30,
-        calendar: Calendar = .current
+        calendar: Calendar = .gregorianLocal
     ) -> [Date] {
         (1...count).compactMap { offset in
             calendar.date(byAdding: .day, value: -offset, to: day)

@@ -141,4 +141,10 @@ final class FeedbackServiceTests: XCTestCase {
         }
         XCTAssertEqual(service.pendingCount, 20)
     }
+
+    func testEveryOutcomeHasASpokenAnnouncement() {
+        for outcome in [FeedbackService.Outcome.sent, .queued, .failed] {
+            XCTAssertFalse(ReviewPromptSheet.announcement(outcome).isEmpty)
+        }
+    }
 }
