@@ -53,6 +53,7 @@ struct EndlessPickerView: View {
             Image(systemName: skill.icon)
                 .font(.title3.weight(.semibold))
                 .foregroundStyle(Theme.jade)
+                .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 .frame(width: 48, height: 48)
                 .background(Theme.jade.opacity(0.12), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
             VStack(alignment: .leading, spacing: 3) {
