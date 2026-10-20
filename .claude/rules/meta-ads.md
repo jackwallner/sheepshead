@@ -9,8 +9,7 @@ paths:
 
 # Sheepshead Trainer: Meta SDK, ATT and remote switches (inert)
 
-Ported from Cribbage Trainer, which, like Bridge Trainer, took it from Mahj
-1.4.1. Mahj's
+Ported from Mahj, by way of the sibling card trainers. Mahj's
 `.claude/rules/meta-ads.md` and `project-docs/marketing/meta-ads.md` hold the
 full story.
 
@@ -38,8 +37,9 @@ full story.
   Free Trial" on the paywall; `my`: "Start my free trial"; `your`: "Start your
   free trial") and the switches `att_prompt`, `rating_prompt`, `challenge` (on
   unless exactly `off`; set the same on every offering). The `challenge` switch
-  is declared but nothing reads it: Sheepshead has no challenge yet, and one must
-  gate its Home card and deep link on it (`AppDestination.isFree` is ready for
-  a free challenge route). DEBUG builds pin any key with
+  is declared but nothing reads it: Sheepshead has no monthly challenge, and
+  Sheepshead Minute (a members-only daily set) is not behind it. A future
+  challenge must gate its Home card and deep link on it (`AppDestination.isFree`
+  is ready for a free challenge route). DEBUG builds pin any key with
   `-sheepshead.rc.<key> <value>`; `-sheepshead.previewMetaATT` shows the real ATT
   alert in captures.

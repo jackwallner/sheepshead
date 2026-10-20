@@ -2,7 +2,8 @@
 
 Reference: `jackwallner/mahj` (read only, cloned to /tmp/mahjref). Mahj terms
 and mechanics (Charleston, jokers, NMJL card sections, hand-play engine,
-monthly challenge, Supabase feedback) are unsuitable here and were not ported.
+monthly challenge) are unsuitable here and were not ported. Supabase feedback
+was ported later in 1.3.0.
 
 Legend: PRESENT, MISSING (built this shift), UNSUITABLE, GAP (known, not built).
 
@@ -21,7 +22,7 @@ Legend: PRESENT, MISSING (built this shift), UNSUITABLE, GAP (known, not built).
 | Practice-hand flow (play a hand) | UNSUITABLE | n/a | Mahj `HandPlayEngine` is a full game loop. A trick-play simulator would need a bot opponent engine; not built, would be invented gameplay at this size. |
 | Progression | PARTIAL | `ProgressStore`, `StatsView` | Streak and drill count present. Mastery levels (Not started, Learning, Solid, Sharp) now give a goal per room. |
 | Reminders | PRESENT | `AppSettings.swift`, `SettingsView.swift` | Daily reminder and weekly game-night reminder. |
-| Feedback and ratings | PRESENT | `FeedbackSheet.swift`, `ReviewRequest.swift` | No-gate policy kept. Backend feedback is UNSUITABLE (no backend, mail sheet). |
+| Feedback and ratings | PRESENT, replaced in 1.3.0 | `ReviewPromptSheet.swift`, `FeedbackService.swift`, `ReviewRequest.swift` | No-gate policy kept. The mail-draft `FeedbackSheet` was replaced by in-app feedback to the shared Supabase table with an offline queue (see `.claude/rules/feedback-and-retention.md`). |
 | What's New | INCORRECT, fixed | `Shared/Services/WhatsNew.swift` | Marketing version is 1.2.4 but the newest entry was 1.2.2, so no sheet showed after updating. Added 1.2.4. 1.2.3 shipped with no entry. |
 | Reduce Motion | MISSING, built | `ConfettiBurst.swift`, `PracticeRunView.swift` | No view honoured `accessibilityReduceMotion`. Confetti, screen flash and the slide transition now fall back to a fade. Other drill views keep their transitions (GAP). |
 | Larger text | GAP, verify | all views | Audit capture at AX XXXL in `SheepsheadScreenshots/AuditTests.swift`; see run findings in the checkpoint. |

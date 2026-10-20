@@ -15,9 +15,9 @@ paths:
 
 # Sheepshead Trainer: feedback, the churn question, and the weekly gain
 
-Ported from Cribbage Trainer (2026-10-20), which, like Bridge and Skat
-Trainer, took it from Mahj 1.4 to 1.4.2. Mahj's `.claude/rules/feedback-and-retention.md` has the
-reasoning; this file is what differs here.
+Ported from Mahj (2026-10-20), by way of the sibling card trainers. Mahj's
+`.claude/rules/feedback-and-retention.md` has the reasoning; this file is what
+differs here.
 
 ## Ratings (App Review 5.6.1)
 
@@ -39,7 +39,7 @@ flag under every answer casts doubt on the right one).
 `ucoveqbyfuxqvpysmixu`) with `appID = "sheepshead"`. The publishable key can only
 INSERT rows where `app` is one of the card trainers (migration
 `20261019120000_card_apps_feedback.sql` in the Mahj repo) and `kind` is
-`general`, `not_enjoying`, `question` (retired) or `churn`. 2xx is sent;
+`general`, `not_enjoying`, `question` (unused here) or `churn`. 2xx is sent;
 network error, 408, 429 and 5xx queue the row (cap 20, retried on launch and
 every return to the app); any other 4xx is dropped. Nothing personal is sent.
 The public privacy page (`docs/privacy-policy*.html`, "Feedback") describes the
@@ -79,5 +79,7 @@ number-free; `ReminderCopyTests` guards it).
 ## Not ported, on purpose
 
 Trial-end reminder screen (Mahj removed it from the frozen trial flow), the
-per-question report link, mastery rings on Home rooms, and the daily and monthly
-challenge (only its remote switch exists).
+per-question report link, mastery rings on Home rooms, and Mahj's free daily
+and monthly challenge. The nearest thing here is Sheepshead Minute (a daily
+five-question set, members only, no monthly one); the `challenge` remote switch
+exists but nothing reads it and Minute is not behind it.
