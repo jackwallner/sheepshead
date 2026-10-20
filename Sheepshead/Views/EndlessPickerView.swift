@@ -5,11 +5,14 @@ import SwiftUI
 /// tap between Home and the first dealt hand, not another lobby.
 struct EndlessPickerView: View {
     @StateObject private var records = PracticeRecordStore.shared
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     var body: some View {
         ScrollView {
             VStack(spacing: 12) {
-                intro
+                // At accessibility sizes the blurb fills the screen and pushes
+                // the skills off it, so the skills win.
+                if !typeSize.isAccessibilitySize { intro }
                 ForEach(PracticeSkill.allCases) { skill in
                     NavigationLink {
                         PracticeRunView(mode: .endless(skill))

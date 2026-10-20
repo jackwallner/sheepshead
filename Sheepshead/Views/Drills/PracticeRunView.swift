@@ -104,7 +104,7 @@ struct PracticeRunView: View {
 
     private var runBody: some View {
         VStack(spacing: 16) {
-            statusBar
+            statusBar.dynamicTypeSize(...DynamicTypeSize.xxxLarge)
             VStack(spacing: 12) {
                 QuestionPager(
                     prompt: item.prompt,

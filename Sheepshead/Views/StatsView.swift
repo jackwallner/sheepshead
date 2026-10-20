@@ -8,6 +8,7 @@ struct StatsView: View {
     @EnvironmentObject private var progress: ProgressStore
     @EnvironmentObject private var subscriptions: SubscriptionService
     @StateObject private var records = PracticeRecordStore.shared
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     private var roomStats: [PracticeRecordStore.RoomStat] { records.roomStats() }
 
@@ -64,11 +65,14 @@ struct StatsView: View {
     }
 
     private var summaryCard: some View {
-        HStack(spacing: 0) {
+        let layout = typeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(spacing: 14))
+            : AnyLayout(HStackLayout(spacing: 0))
+        return layout {
             metric(value: percent(records.overallAccuracy), caption: "accuracy", color: Theme.jade)
-            divider
+            if !typeSize.isAccessibilitySize { divider }
             metric(value: "\(records.totalAttempts)", caption: "answered", color: Theme.ink)
-            divider
+            if !typeSize.isAccessibilitySize { divider }
             metric(value: "\(records.bestChallengeScore)", caption: "best challenge", color: Theme.coral)
         }
         .padding(.vertical, 18)
@@ -102,6 +106,7 @@ struct StatsView: View {
             Image(systemName: "target")
                 .font(.body.weight(.semibold))
                 .foregroundStyle(Theme.coral)
+                .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 .frame(width: 38, height: 38)
                 .background(Theme.coral.opacity(0.13), in: Circle())
             VStack(alignment: .leading, spacing: 2) {
@@ -227,7 +232,8 @@ struct StatsView: View {
                 Image(systemName: stat.skill.icon)
                     .font(.body.weight(.semibold))
                     .foregroundStyle(Theme.plum)
-                    .frame(width: 38, height: 38)
+                    .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
+                .frame(width: 38, height: 38)
                     .background(Theme.plum.opacity(0.13), in: Circle())
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Coach: \(stat.skill.title)")
@@ -267,6 +273,7 @@ struct StatsView: View {
             Image(systemName: "flame.fill")
                 .font(.body.weight(.semibold))
                 .foregroundStyle(Theme.coral)
+                .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 .frame(width: 38, height: 38)
                 .background(Theme.coral.opacity(0.13), in: Circle())
             VStack(alignment: .leading, spacing: 2) {
