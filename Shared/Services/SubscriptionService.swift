@@ -109,6 +109,10 @@ final class SubscriptionService: NSObject, ObservableObject {
     /// A second caller (the trial button) waits for a sync already running
     /// instead of skipping it, so a slow sync cannot let a member be sold,
     /// but never holds the button more than a few seconds on a stalled one.
+    /// A reinstall's StoreKit sync is still running. A purchase button must not
+    /// sell until it knows what this Apple Account already owns.
+    var isRecoveringMembership: Bool { membershipRecovery != nil }
+
     func recoverReinstalledMembershipIfNeeded() async {
         if membershipRecovery != nil {
             // Poll rather than await the task: an await on it cannot be cut
