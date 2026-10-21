@@ -54,7 +54,7 @@ enum KeepDiscardContent {
             frontTiles: [.c(14), .d(12), .s(9)],
             frontSubtitle: "The silent reveal",
             backTitle: "The ace holder is the partner",
-            backBody: "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it before the ace is played.",
+            backBody: "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it, and must play the ace the first time that suit is led.",
             choice: CardChoice("The ace holder", "The dealer", answerIndex: 0)
         ),
         Flashcard(

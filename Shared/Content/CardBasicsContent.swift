@@ -17,7 +17,7 @@ enum CardBasicsContent {
             frontTiles: [.c(12), .s(11), .d(14)],
             frontSubtitle: "The first rule to make automatic",
             backTitle: "Every queen, every jack, and every diamond",
-            backBody: "The four queens, four jacks, and six diamonds are permanent trump. Their printed suits do not behave like fail suits once they are trump.",
+            backBody: "The four queens, four jacks, and the six other diamonds are permanent trump, 14 cards in all. Their printed suits do not behave like fail suits once they are trump.",
             choice: CardChoice("Queens, jacks, and diamonds", "Diamonds only", answerIndex: 0)
         ),
         Flashcard(
@@ -78,7 +78,7 @@ enum CardBasicsContent {
             frontTitle: "The picker",
             frontSubtitle: "One player takes responsibility",
             backTitle: "Pick, bury, and name a partner",
-            backBody: "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. Strong hands can choose to go alone under the table's agreed rules.",
+            backBody: "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. A picker holding all three fail aces cannot name one, so they call a fail ten or play alone, depending on the table. Strong hands can also choose to go alone.",
             choice: CardChoice("Calls the hand", "Sits out the hand", answerIndex: 0)
         ),
         Flashcard(
@@ -86,7 +86,7 @@ enum CardBasicsContent {
             frontTitle: "The target",
             frontSubtitle: "Win the point race",
             backTitle: "The picking team needs 61",
-            backBody: "There are 120 points in the deck. The picking team wins the basic game with 61 or more points in captured tricks. The other players win with 60 or fewer for the picker.",
+            backBody: "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from its captured tricks plus the two buried cards. The defenders win when the picking team has 60 or fewer.",
             choice: CardChoice("61 points", "31 points", answerIndex: 0)
         ),
     ]

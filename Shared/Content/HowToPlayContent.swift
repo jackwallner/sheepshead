@@ -26,7 +26,7 @@ enum HowToPlayContent {
             id: "sheep-goal",
             icon: "flag.checkered",
             title: "The goal",
-            body: "Sheepshead is a trick-taking game. In the common five-player hand, one picker and a silent partner try to capture at least 61 of the deck's 120 points.",
+            body: "Sheepshead is a trick-taking game. In the common five-player hand, one picker and a silent partner try to capture at least 61 of the deck's 120 points, counting the two buried cards.",
             tiles: [.c(14), .d(12)],
             tip: "The number of tricks matters less than the point cards inside them."
         ),
@@ -43,7 +43,7 @@ enum HowToPlayContent {
             title: "Deal and pick",
             body: "Five players receive six cards and two cards form the blind. The picker takes the blind, buries two cards, and usually names a fail ace they were not dealt. Whoever holds that ace becomes the silent partner.",
             tiles: [.c(14), .d(10), .h(9), .s(7), .c(8), .d(13)],
-            tip: "House rules differ on what happens when everyone passes, so agree before the deal."
+            tip: "When everyone passes, many tables play a leaster and some make the dealer pick, so agree before the deal."
         ),
         HowToPlayPage(
             id: "sheep-points",
@@ -57,7 +57,7 @@ enum HowToPlayContent {
             id: "sheep-tricks",
             icon: "arrow.up.right.circle.fill",
             title: "Take the trick",
-            body: "Follow the led fail suit when you can. If you cannot, you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
+            body: "Follow the suit that was led when you can, and if trump is led, play trump. If you cannot follow, you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
             tiles: [.c(14), .c(7), .d(8)],
             tip: "Queens and jacks are trump even when their printed suit looks like a fail suit."
         ),
