@@ -48,7 +48,8 @@ offering metadata (`TrialCTA`). The billed amount is the most prominent price
 (3.1.2(c)) and prices are always read live from StoreKit. Any other change needs
 Jack's go-ahead. The Meta SDK is inert while `META_APP_ID` and
 `META_CLIENT_TOKEN` are empty in `project.yml`, and never starts on a simulator.
-Never ask for ATT outside `HomeView.askForTrackingIfNeeded`.
+Never ask for ATT outside `HomeView.askForTrackingIfNeeded`, which waits for a
+trial or purchase (`MetaAds.askAfterPurchase`).
 
 ## Sheepshead+ products
 
