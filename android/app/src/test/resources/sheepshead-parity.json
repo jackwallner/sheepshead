@@ -963,7 +963,7 @@
         "Diamonds only",
         "Queens, jacks, and diamonds"
       ],
-      "explanation" : "The four queens, four jacks, and six diamonds are permanent trump. Their printed suits do not behave like fail suits once they are trump.",
+      "explanation" : "The four queens, four jacks, and the six other diamonds are permanent trump, 14 cards in all. Their printed suits do not behave like fail suits once they are trump.",
       "id" : "cards-trump",
       "isReviewable" : true,
       "prompt" : "What is trump?\nThe first rule to make automatic",
@@ -1101,7 +1101,7 @@
         "Calls the hand",
         "Sits out the hand"
       ],
-      "explanation" : "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. Strong hands can choose to go alone under the table's agreed rules.",
+      "explanation" : "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. A picker holding all three fail aces cannot name one, so they call a fail ten or play alone, depending on the table. Strong hands can also choose to go alone.",
       "id" : "cards-picker",
       "isReviewable" : true,
       "prompt" : "The picker\nOne player takes responsibility",
@@ -1118,7 +1118,7 @@
         "31 points",
         "61 points"
       ],
-      "explanation" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points in captured tricks. The other players win with 60 or fewer for the picker.",
+      "explanation" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from its captured tricks plus the two buried cards. The defenders win when the picking team has 60 or fewer.",
       "id" : "cards-goal",
       "isReviewable" : true,
       "prompt" : "The target\nWin the point race",
@@ -1580,7 +1580,7 @@
         "Yes, any fail ace",
         "No, only an ace they were not dealt"
       ],
-      "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name and plays alone.",
+      "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name, so they call a fail ten or play alone, depending on the table.",
       "id" : "more-card-9",
       "isReviewable" : true,
       "prompt" : "Can the picker name a fail ace that was dealt to them?",
@@ -1749,7 +1749,7 @@
         "Low Cards",
         "Scoring"
       ],
-      "explanation" : "The three fail aces and diamond carry a large share of the deck's points. Read the point cards before chasing empty tricks.",
+      "explanation" : "The three fail aces and the club 10 carry 43 of the deck's 120 points, and only the diamond 7 is empty. Read the point cards before chasing empty tricks.",
       "id" : "read-match-7",
       "isReviewable" : true,
       "prompt" : "Which Sheepshead rule should you spot first?",
@@ -1815,7 +1815,7 @@
         "Point Cards",
         "Trick Taking"
       ],
-      "explanation" : "Every card is a club fail card, running 7 up to the king. Only the club ace is missing, and the club queen and jack are trump rather than clubs.",
+      "explanation" : "Every card is a club fail card: the 7, 8, 9, 10, and king. Only the club ace is missing, and the club queen and jack are trump rather than clubs.",
       "id" : "plus-hand-2",
       "isReviewable" : true,
       "prompt" : "Which Sheepshead rule should you spot first?",
@@ -1881,7 +1881,7 @@
         "Trump Stack",
         "Point Cards"
       ],
-      "explanation" : "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker, and the heart 7 is the card that follows the reveal.",
+      "explanation" : "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker and must play that ace the first time hearts are led.",
       "id" : "plus-hand-5",
       "isReviewable" : true,
       "prompt" : "Which Sheepshead rule should you spot first?",
@@ -2056,7 +2056,7 @@
         "Name your own strongest ace",
         "Name an ace you were not dealt"
       ],
-      "explanation" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit. Burying the only hold card creates an illegal call.",
+      "explanation" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must keep at least one card from that fail suit, the hold card, until that suit is first led. Burying the only hold card creates an illegal call.",
       "id" : "bury-called-suit",
       "isReviewable" : true,
       "prompt" : "Hold the called suit\nA called-ace partnership rule",
@@ -2211,7 +2211,7 @@
         "The ace holder",
         "The dealer"
       ],
-      "explanation" : "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it before the ace is played.",
+      "explanation" : "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it, and must play the ace the first time that suit is led.",
       "id" : "trick-partner",
       "isReviewable" : true,
       "prompt" : "The called ace appears\nThe silent reveal",
@@ -2570,7 +2570,7 @@
       "explanation" : "The picking team needs 61. Any captured point card worth at least 2 crosses the basic majority line.",
       "id" : "master-defense-4",
       "isReviewable" : true,
-      "prompt" : "Your side has 59 points. Which capture changes the basic result?",
+      "prompt" : "The picking team has 59 points. Which capture gives it the basic win?",
       "roomID" : "pro-tables",
       "sourceLabel" : "The Master Tables",
       "tiles" : [
@@ -2816,7 +2816,7 @@
         "The common call-an-ace rule requires a hold card",
         "It adds a bonus point"
       ],
-      "explanation" : "In the common call-an-ace game, the picker must retain at least one card from the called fail suit.",
+      "explanation" : "In the common call-an-ace game, the picker must keep at least one card from the called fail suit until that suit is first led.",
       "id" : "more-rule-2",
       "isReviewable" : true,
       "prompt" : "Why does a picker keep a card from the called suit?",

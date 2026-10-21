@@ -38,13 +38,13 @@
     },
     {
       "displayName" : "Trick Taking",
-      "howToSpot" : "Follow the led fail suit when possible. A trump beats every fail card, and the strongest card in the winning suit takes the trick.",
+      "howToSpot" : "Follow the led suit when possible, and play trump if trump was led. A trump beats every fail card, and the strongest card in the winning suit takes the trick.",
       "id" : "trickTaking",
       "shortName" : "Trick Taking"
     },
     {
       "displayName" : "Scoring",
-      "howToSpot" : "The picking team needs at least 61 of the 120 points. Count the points in captured tricks, not the number of tricks alone.",
+      "howToSpot" : "The picking team needs at least 61 of the 120 points. Count the points in captured tricks and the buried cards, not the number of tricks alone.",
       "id" : "scoring",
       "shortName" : "Scoring"
     },
@@ -57,7 +57,7 @@
   ],
   "primer" : [
     {
-      "body" : "Sheepshead is a trick-taking game. In the common five-player hand, one picker and a silent partner try to capture at least 61 of the deck's 120 points.",
+      "body" : "Sheepshead is a trick-taking game. In the common five-player hand, one picker and a silent partner try to capture at least 61 of the deck's 120 points, counting the two buried cards.",
       "icon" : "flag.checkered",
       "id" : "sheep-goal",
       "tiles" : [
@@ -91,7 +91,7 @@
         "C8",
         "D13"
       ],
-      "tip" : "House rules differ on what happens when everyone passes, so agree before the deal.",
+      "tip" : "When everyone passes, many tables play a leaster and some make the dealer pick, so agree before the deal.",
       "title" : "Deal and pick"
     },
     {
@@ -109,7 +109,7 @@
       "title" : "Learn the points"
     },
     {
-      "body" : "Follow the led fail suit when you can. If you cannot, you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
+      "body" : "Follow the suit that was led when you can, and if trump is led, play trump. If you cannot follow, you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
       "icon" : "arrow.up.right.circle.fill",
       "id" : "sheep-tricks",
       "tiles" : [
@@ -157,7 +157,7 @@
               "id" : "cards-deck"
             },
             {
-              "backBody" : "The four queens, four jacks, and six diamonds are permanent trump. Their printed suits do not behave like fail suits once they are trump.",
+              "backBody" : "The four queens, four jacks, and the six other diamonds are permanent trump, 14 cards in all. Their printed suits do not behave like fail suits once they are trump.",
               "backTitle" : "Every queen, every jack, and every diamond",
               "choice" : {
                 "answerIndex" : 0,
@@ -295,7 +295,7 @@
               "id" : "cards-blind"
             },
             {
-              "backBody" : "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. Strong hands can choose to go alone under the table's agreed rules.",
+              "backBody" : "The picker takes the blind, buries two cards, and usually names a fail ace as a silent partner. The named ace is always one the picker was not dealt. A picker holding all three fail aces cannot name one, so they call a fail ten or play alone, depending on the table. Strong hands can also choose to go alone.",
               "backTitle" : "Pick, bury, and name a partner",
               "choice" : {
                 "answerIndex" : 0,
@@ -312,7 +312,7 @@
               "id" : "cards-picker"
             },
             {
-              "backBody" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points in captured tricks. The other players win with 60 or fewer for the picker.",
+              "backBody" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from its captured tricks plus the two buried cards. The defenders win when the picking team has 60 or fewer.",
               "backTitle" : "The picking team needs 61",
               "choice" : {
                 "answerIndex" : 0,
@@ -701,7 +701,7 @@
                 "Yes, any fail ace",
                 "Only if it is the club ace"
               ],
-              "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name and plays alone.",
+              "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name, so they call a fail ten or play alone, depending on the table.",
               "id" : "more-card-9",
               "prompt" : "Can the picker name a fail ace that was dealt to them?",
               "tiles" : [
@@ -976,7 +976,7 @@
                 "trickTaking",
                 "lowCards"
               ],
-              "explanation" : "The three fail aces and diamond carry a large share of the deck's points. Read the point cards before chasing empty tricks.",
+              "explanation" : "The three fail aces and the club 10 carry 43 of the deck's 120 points, and only the diamond 7 is empty. Read the point cards before chasing empty tricks.",
               "id" : "read-match-7",
               "tiles" : [
                 "C14",
@@ -1036,7 +1036,7 @@
                 "pointCards",
                 "trickTaking"
               ],
-              "explanation" : "Every card is a club fail card, running 7 up to the king. Only the club ace is missing, and the club queen and jack are trump rather than clubs.",
+              "explanation" : "Every card is a club fail card: the 7, 8, 9, 10, and king. Only the club ace is missing, and the club queen and jack are trump rather than clubs.",
               "id" : "plus-hand-2",
               "tiles" : [
                 "C7",
@@ -1087,7 +1087,7 @@
                 "trumpStack",
                 "pointCards"
               ],
-              "explanation" : "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker, and the heart 7 is the card that follows the reveal.",
+              "explanation" : "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker and must play that ace the first time hearts are led.",
               "id" : "plus-hand-5",
               "tiles" : [
                 "H14",
@@ -1258,7 +1258,7 @@
               "id" : "bury-trump-first"
             },
             {
-              "backBody" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit. Burying the only hold card creates an illegal call.",
+              "backBody" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must keep at least one card from that fail suit, the hold card, until that suit is first led. Burying the only hold card creates an illegal call.",
               "backTitle" : "The picker keeps a fail card from that suit",
               "choice" : {
                 "answerIndex" : 0,
@@ -1435,7 +1435,7 @@
               ],
               "id" : "bury-scenario-3",
               "isAlone" : true,
-              "reasoning" : "Burying both hearts banks 21 points where nobody can capture them and leaves hearts empty for a trump. A picker who holds every fail ace has no ace to name, so this hand is played alone under the table's rules.",
+              "reasoning" : "Burying both hearts banks 21 points where nobody can capture them and leaves hearts empty for a trump. A picker who holds every fail ace has no ace to name, so this hand is played alone or with a called fail ten, depending on the table's rules.",
               "recommendedDiscard" : [
                 "H14",
                 "H10"
@@ -1808,7 +1808,7 @@
               "id" : "trick-fail-winner"
             },
             {
-              "backBody" : "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it before the ace is played.",
+              "backBody" : "In the common call-an-ace game, the player holding the named fail ace becomes the picker's partner. The partner does not announce it, and must play the ace the first time that suit is led.",
               "backTitle" : "The ace holder is the partner",
               "choice" : {
                 "answerIndex" : 0,
@@ -2093,7 +2093,7 @@
               "id" : "plus-trick-5"
             },
             {
-              "backBody" : "Do not announce that you are the partner. When the called fail suit is first led, the ace identifies you and your side.",
+              "backBody" : "Do not announce that you are the partner. You must play the ace the first time the called suit is led, and that is what identifies you and your side.",
               "backTitle" : "Keep the reveal quiet",
               "frontSubtitle" : "The partnership is hidden",
               "frontTiles" : [
@@ -2182,13 +2182,13 @@
               ],
               "id" : "master-bury-1",
               "isAlone" : false,
-              "reasoning" : "The club ace and king are 15 banked points and burying both empties clubs. Keeping both hearts means the called-ace hold survives even when you are forced to spend the heart king later, which the one-heart line cannot promise.",
+              "reasoning" : "The club ace and king are 15 banked points and burying both empties clubs. Keeping both hearts leaves a low heart to play when hearts are first led, so the king does not have to be spent on that trick.",
               "recommendedDiscard" : [
                 "C14",
                 "C13"
               ],
               "situation" : "You plan to call the heart ace. Two clubs and two hearts are competing for the bury.",
-              "tip" : "A single hold card is a liability. Keep two when the bury allows it."
+              "tip" : "Keep a spare card in the called suit when the bury allows it."
             },
             {
               "calledSuit" : null,
@@ -2226,7 +2226,7 @@
               ],
               "id" : "master-bury-3",
               "isAlone" : true,
-              "reasoning" : "The club ace and 10 are 21 points that two low trumps will never protect, and burying both empties clubs. Holding every fail ace leaves no ace to name, so this is an alone hand.",
+              "reasoning" : "The club ace and 10 are 21 points that two low trumps will never protect, and burying both empties clubs. Holding every fail ace leaves no ace to name, so this is an alone hand (or a called ten, if the table allows it).",
               "recommendedDiscard" : [
                 "C14",
                 "C10"
@@ -2248,7 +2248,7 @@
               ],
               "id" : "master-bury-4",
               "isAlone" : true,
-              "reasoning" : "Burying both fail cards leaves a hand of pure trump that can never be forced to follow a fail lead. It also leaves no card of any fail suit, so there is no legal hold card and the hand is played alone.",
+              "reasoning" : "Burying both fail cards leaves a hand of pure trump that can never be forced to follow a fail lead. It also leaves no card of any fail suit, so there is no hold card to call with and, under the usual rules, the hand is played alone.",
               "recommendedDiscard" : [
                 "H8",
                 "C7"
@@ -2318,7 +2318,7 @@
               ],
               "explanation" : "The picking team needs 61. Any captured point card worth at least 2 crosses the basic majority line.",
               "id" : "master-defense-4",
-              "prompt" : "Your side has 59 points. Which capture changes the basic result?",
+              "prompt" : "The picking team has 59 points. Which capture gives it the basic win?",
               "tiles" : [
 
               ]
@@ -2527,7 +2527,7 @@
                 "It adds a bonus point",
                 "It makes the card trump"
               ],
-              "explanation" : "In the common call-an-ace game, the picker must retain at least one card from the called fail suit.",
+              "explanation" : "In the common call-an-ace game, the picker must keep at least one card from the called fail suit until that suit is first led.",
               "id" : "more-rule-2",
               "prompt" : "Why does a picker keep a card from the called suit?",
               "tiles" : [
@@ -2605,6 +2605,67 @@
     }
   ],
   "whatsNew" : [
+    {
+      "headline" : "Sharper practice, a clearer week",
+      "items" : [
+        {
+          "body" : "Home and Your Progress show how many questions you locked in this week, so you can tell the practice is working.",
+          "icon" : "arrow.up.right",
+          "id" : "weekly-gain",
+          "isPlus" : false,
+          "title" : "See your week"
+        },
+        {
+          "body" : "Endless Practice now deals five-card tricks and asks which card wins, with the rule behind every answer. A second new skill drills counting the points.",
+          "icon" : "hand.point.up.left.fill",
+          "id" : "trick-winner",
+          "isPlus" : true,
+          "title" : "Who Takes the Trick?"
+        },
+        {
+          "body" : "Each room now shows how much you have truly locked in, not just opened, and Your Progress suggests the skill to coach next.",
+          "icon" : "checkmark.seal.fill",
+          "id" : "mastery",
+          "isPlus" : false,
+          "title" : "Room mastery"
+        },
+        {
+          "body" : "With Reduce Motion on, practice swaps slides and confetti for a quiet fade.",
+          "icon" : "figure.walk.motion",
+          "id" : "reduce-motion",
+          "isPlus" : false,
+          "title" : "Reduce Motion support"
+        }
+      ],
+      "version" : "1.3.0"
+    },
+    {
+      "headline" : "Sharper practice, clearer progress",
+      "items" : [
+        {
+          "body" : "Endless Practice now deals five-card tricks and asks which card wins, with the rule behind every answer. A second new skill drills counting the points.",
+          "icon" : "hand.point.up.left.fill",
+          "id" : "trick-winner",
+          "isPlus" : true,
+          "title" : "Who Takes the Trick?"
+        },
+        {
+          "body" : "Each room now shows how much you have truly locked in, not just opened, and Your Progress suggests the skill to coach next.",
+          "icon" : "checkmark.seal.fill",
+          "id" : "mastery",
+          "isPlus" : false,
+          "title" : "Room mastery"
+        },
+        {
+          "body" : "With Reduce Motion on, practice swaps slides and confetti for a quiet fade.",
+          "icon" : "figure.walk.motion",
+          "id" : "reduce-motion",
+          "isPlus" : false,
+          "title" : "Reduce Motion support"
+        }
+      ],
+      "version" : "1.2.4"
+    },
     {
       "headline" : "A smarter rhythm for card night",
       "items" : [

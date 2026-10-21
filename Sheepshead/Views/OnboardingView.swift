@@ -69,7 +69,7 @@ struct OnboardingView: View {
                 infoPage(
                     icon: "figure.walk",
                     title: "Walk in confident",
-                    body: "Know which cards are trump, spot point cards fast, and stop dreading the blind. Practice at your own pace: no timers, no opponents.",
+                    body: "Know which cards are trump, spot point cards fast, and stop dreading the blind. Practice at your own pace, with no opponents.",
                     tiles: [.c(14), .d(12), .h(11)]
                 ).tag(2).accessibilityHidden(page != 2)
                 skillLevelPage.tag(3).accessibilityHidden(page != 3)

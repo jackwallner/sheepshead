@@ -69,7 +69,7 @@ enum MoreContent {
             tiles: [.c(14), .h(14)],
             choices: ["No, only an ace they were not dealt", "Yes, any fail ace", "Only if it is the club ace"],
             answerIndex: 0,
-            explanation: "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name and plays alone."
+            explanation: "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name, so they call a fail ten or play alone, depending on the table."
         ),
         QuizQuestion(
             id: "more-card-10",
@@ -231,7 +231,7 @@ enum MoreContent {
             frontTiles: [.c(14), .c(7), .d(10)],
             frontSubtitle: "The partnership is hidden",
             backTitle: "Keep the reveal quiet",
-            backBody: "Do not announce that you are the partner. When the called fail suit is first led, the ace identifies you and your side."
+            backBody: "Do not announce that you are the partner. You must play the ace the first time the called suit is led, and that is what identifies you and your side."
         ),
         Flashcard(
             id: "more-judgment-2",
@@ -280,7 +280,7 @@ enum MoreContent {
             prompt: "Why does a picker keep a card from the called suit?",
             choices: ["The common call-an-ace rule requires a hold card", "It adds a bonus point", "It makes the card trump"],
             answerIndex: 0,
-            explanation: "In the common call-an-ace game, the picker must retain at least one card from the called fail suit."
+            explanation: "In the common call-an-ace game, the picker must keep at least one card from the called fail suit until that suit is first led."
         ),
         QuizQuestion(
             id: "more-rule-3",

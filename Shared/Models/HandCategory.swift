@@ -58,9 +58,9 @@ enum HandCategory: String, Codable, CaseIterable, Identifiable, Sendable {
         case .partnership:
             return "In the common call-an-ace game, the picker names a fail ace they were not dealt, and whoever holds it is the silent partner."
         case .trickTaking:
-            return "Follow the led fail suit when possible. A trump beats every fail card, and the strongest card in the winning suit takes the trick."
+            return "Follow the led suit when possible, and play trump if trump was led. A trump beats every fail card, and the strongest card in the winning suit takes the trick."
         case .scoring:
-            return "The picking team needs at least 61 of the 120 points. Count the points in captured tricks, not the number of tricks alone."
+            return "The picking team needs at least 61 of the 120 points. Count the points in captured tricks and the buried cards, not the number of tricks alone."
         case .strategy:
             return "Good play weighs trump control, the called suit, point cards, position, and what the other players have shown."
         }

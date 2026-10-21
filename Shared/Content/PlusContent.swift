@@ -63,7 +63,7 @@ enum PlusContent {
             tiles: [.c(7), .c(8), .c(9), .c(10), .c(13)],
             choices: [.failSuit, .pointCards, .trickTaking],
             answer: .failSuit,
-            explanation: "Every card is a club fail card, running 7 up to the king. Only the club ace is missing, and the club queen and jack are trump rather than clubs."
+            explanation: "Every card is a club fail card: the 7, 8, 9, 10, and king. Only the club ace is missing, and the club queen and jack are trump rather than clubs."
         ),
         HandMatchQuestion(
             id: "plus-hand-3",
@@ -84,7 +84,7 @@ enum PlusContent {
             tiles: [.h(14), .h(7), .d(10), .c(9), .s(8)],
             choices: [.partnership, .trumpStack, .pointCards],
             answer: .partnership,
-            explanation: "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker, and the heart 7 is the card that follows the reveal."
+            explanation: "This is the partner's shape. If the picker names the heart ace, the player who was dealt it plays with the picker and must play that ace the first time hearts are led."
         ),
         HandMatchQuestion(
             id: "plus-hand-6",

@@ -125,7 +125,7 @@ enum CategoryContent {
             tiles: [.c(14), .c(10), .h(14), .s(14), .d(7)],
             choices: [.scoring, .trickTaking, .lowCards],
             answer: .scoring,
-            explanation: "The three fail aces and diamond carry a large share of the deck's points. Read the point cards before chasing empty tricks."
+            explanation: "The three fail aces and the club 10 carry 43 of the deck's 120 points, and only the diamond 7 is empty. Read the point cards before chasing empty tricks."
         ),
         HandMatchQuestion(
             id: "read-match-8",

@@ -24,7 +24,7 @@ enum DiscardContent {
             frontTiles: [.c(9), .c(7), .d(12), .h(9)],
             frontSubtitle: "A called-ace partnership rule",
             backTitle: "The picker keeps a fail card from that suit",
-            backBody: "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit. Burying the only hold card creates an illegal call.",
+            backBody: "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must keep at least one card from that fail suit, the hold card, until that suit is first led. Burying the only hold card creates an illegal call.",
             choice: CardChoice("Name an ace you were not dealt", "Name your own strongest ace", answerIndex: 0)
         ),
         Flashcard(
@@ -102,7 +102,7 @@ enum DiscardContent {
             situation: "You were dealt all three fail aces, so no ace is left to call. Choose two cards to bury.",
             deal: [.c(14), .h(14), .s(14), .d(13), .c(7), .s(9), .h(10), .d(8)],
             recommendedDiscard: [.h(14), .h(10)],
-            reasoning: "Burying both hearts banks 21 points where nobody can capture them and leaves hearts empty for a trump. A picker who holds every fail ace has no ace to name, so this hand is played alone under the table's rules.",
+            reasoning: "Burying both hearts banks 21 points where nobody can capture them and leaves hearts empty for a trump. A picker who holds every fail ace has no ace to name, so this hand is played alone or with a called fail ten, depending on the table's rules.",
             tip: "You can only call an ace you were not dealt.",
             isAlone: true
         ),

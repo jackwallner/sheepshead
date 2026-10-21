@@ -8,8 +8,8 @@ enum ProContent {
             situation: "You plan to call the heart ace. Two clubs and two hearts are competing for the bury.",
             deal: [.c(12), .s(12), .d(10), .d(9), .h(13), .h(7), .c(14), .c(13)],
             recommendedDiscard: [.c(14), .c(13)],
-            reasoning: "The club ace and king are 15 banked points and burying both empties clubs. Keeping both hearts means the called-ace hold survives even when you are forced to spend the heart king later, which the one-heart line cannot promise.",
-            tip: "A single hold card is a liability. Keep two when the bury allows it.",
+            reasoning: "The club ace and king are 15 banked points and burying both empties clubs. Keeping both hearts leaves a low heart to play when hearts are first led, so the king does not have to be spent on that trick.",
+            tip: "Keep a spare card in the called suit when the bury allows it.",
             calledSuit: .hearts
         ),
         DiscardScenario(
@@ -25,7 +25,7 @@ enum ProContent {
             situation: "You were dealt all three fail aces and only two low trumps. Choose two cards to bury.",
             deal: [.c(14), .h(14), .s(14), .c(10), .h(9), .s(8), .d(10), .d(7)],
             recommendedDiscard: [.c(14), .c(10)],
-            reasoning: "The club ace and 10 are 21 points that two low trumps will never protect, and burying both empties clubs. Holding every fail ace leaves no ace to name, so this is an alone hand.",
+            reasoning: "The club ace and 10 are 21 points that two low trumps will never protect, and burying both empties clubs. Holding every fail ace leaves no ace to name, so this is an alone hand (or a called ten, if the table allows it).",
             tip: "A hand this thin in trump is often a pass. If you do pick, bank the points you cannot defend.",
             isAlone: true
         ),
@@ -34,7 +34,7 @@ enum ProContent {
             situation: "Six trumps including the four queens, plus one heart and one club. Choose two cards to bury.",
             deal: [.c(12), .s(12), .h(12), .d(12), .d(10), .d(9), .h(8), .c(7)],
             recommendedDiscard: [.h(8), .c(7)],
-            reasoning: "Burying both fail cards leaves a hand of pure trump that can never be forced to follow a fail lead. It also leaves no card of any fail suit, so there is no legal hold card and the hand is played alone.",
+            reasoning: "Burying both fail cards leaves a hand of pure trump that can never be forced to follow a fail lead. It also leaves no card of any fail suit, so there is no hold card to call with and, under the usual rules, the hand is played alone.",
             tip: "Agree the table's alone scoring before you take this line.",
             isAlone: true
         ),
@@ -66,7 +66,7 @@ enum ProContent {
         ),
         QuizQuestion(
             id: "master-defense-4",
-            prompt: "Your side has 59 points. Which capture changes the basic result?",
+            prompt: "The picking team has 59 points. Which capture gives it the basic win?",
             choices: ["A 2-point jack", "A zero-point 7", "A second trick with no points"],
             answerIndex: 0,
             explanation: "The picking team needs 61. Any captured point card worth at least 2 crosses the basic majority line."
