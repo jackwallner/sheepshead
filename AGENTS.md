@@ -46,10 +46,7 @@ The trial flow (onboarding trial page, paywall, purchase to tour) is
 structurally Mahj 1.3.2; only the button wording varies, through RevenueCat
 offering metadata (`TrialCTA`). The billed amount is the most prominent price
 (3.1.2(c)) and prices are always read live from StoreKit. Any other change needs
-Jack's go-ahead. The Meta SDK is inert while `META_APP_ID` and
-`META_CLIENT_TOKEN` are empty in `project.yml`, and never starts on a simulator.
-Never ask for ATT outside `HomeView.askForTrackingIfNeeded`, which waits for a
-trial or purchase (`MetaAds.askAfterPurchase`).
+Jack's go-ahead. No Meta SDK and no tracking prompt (Jack 2026-10-21: Meta only in Mahj for now).
 
 ## Sheepshead+ products
 
@@ -82,7 +79,7 @@ facing membership name is `Sheepshead+`. The public RevenueCat key lives in
   primer, plus, and Master Tables content. `DrillLibrary.rooms` is the source
   of truth for the five rooms.
 - `Shared/Services` contains progress, settings, spaced review, mastery and the
-  weekly ledger, subscriptions, remote config, feedback, Meta ads (inert),
+  weekly ledger, subscriptions, remote config, feedback,
   notifications, and the rating-ask tracker.
 - `Sheepshead/Views` contains onboarding, the home lobby, room screens, the
   swipe deck, quick sessions, generated practice, settings, and the paywall.
@@ -118,6 +115,6 @@ These files load automatically when you read a file matching their `paths:`. Age
 | `.claude/rules/ipad-layout.md` | iPad (1.2): device family, `CenteringScrollView`, the pager eyebrow, the deck width cap | Drill layouts, Home columns |
 | `.claude/rules/screenshots.md` | Screenshots: the capture script, the throwaway iPad, test gotchas | Capture scripts, the `Screenshots` scheme |
 | `.claude/rules/feedback-and-retention.md` | Feedback sink, churn question, mastery and the weekly gain ledger, ratings policy, what was not ported | `FeedbackService`, `ReviewPromptSheet`, `Mastery`, `MasteryLedger`, `ReviewRequest` |
-| `.claude/rules/meta-ads.md` | Meta SDK + ATT (inert), remote switches and `TrialCTA`, the relay that lives in Mahj | `MetaAds`, `RemoteConfig`, ATT timing, `project.yml` Meta ids |
+| `.claude/rules/meta-ads.md` | No Meta SDK (removed), remote switches and `TrialCTA` | `RemoteConfig`, adding Meta or tracking |
 | `.claude/rules/membership-and-trial.md` | Trial flow, 3.1.2(c) price line, membership state, fit at every size, What's New mechanics | `SubscriptionService`, onboarding, paywall, primer, tour |
 | `.claude/rules/android.md` | Android port: package, Play products, RevenueCat Play app, content export and parity, signing, Pro emulator, Play state | Anything in `android/`, the Android scripts or `docs/android-*.html` |
