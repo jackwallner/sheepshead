@@ -1,0 +1,10 @@
+為五人Sheepshead牌局做好準備。認識32張牌、分辨王牌，取起兩張底牌後選擇兩張牌埋下。每個答案都有解說，幫助你理解選擇的原因。毋須對手或註冊帳戶，按自己的步伐獨自練習。
+
+應用程式本身只提供英文介面及內容。
+
+四個免費練習區涵蓋牌組、王牌、埋牌及食墩。本應用程式教授常見的叫A選拍檔玩法，取底牌一方的目標是取得合共120分中的61分。
+
+Sheepshead+提供更多練習、錯題重溫及限時挑戰。可選擇自動續訂的月費或年費訂閱，亦可一次購買終身使用權。價格會在購買前顯示。你可以在Google Play管理或取消訂閱。不同牌桌的規則可能有所不同。
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html

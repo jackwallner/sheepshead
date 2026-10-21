@@ -1,0 +1,10 @@
+Precvičujte Sheepshead pre päť hráčov v krátkych úlohách. Spoznajte balíček 32 kariet, rozpoznávajte tromfy a vyberte dve karty na odloženie po dobratí dvoch kariet z talónu. Každá odpoveď vysvetľuje dôvod rozhodnutia. Trénujte sami vlastným tempom, bez účtu.
+
+Samotná aplikácia je dostupná iba v angličtine.
+
+Štyri bezplatné miestnosti pokrývajú karty, tromfy, odkladanie a zdvihy. V bežnom variante s volaným esom sa tím hráča, ktorý berie talón, snaží získať 61 zo 120 bodov.
+
+Sheepshead+ pridáva cvičenia, opakovanie chýb a úlohy na čas. Mesačné alebo ročné predplatné sa automaticky obnovuje, prípadne si môžete jednorazovo kúpiť doživotný prístup. Cena sa zobrazí pred nákupom. Predplatné spravujte alebo zrušte v Google Play. Domáce pravidlá sa môžu líšiť.
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html

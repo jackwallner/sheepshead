@@ -1,0 +1,10 @@
+Harjoittele viiden pelaajan Sheepsheadia lyhyillä tehtävillä. Tutustu 32 kortin pakkaan, tunnista valtit ja valitse kaksi pois laitettavaa korttia nostettuasi kaksi pöytäkorttia. Jokaisen vastauksen perustelu auttaa ymmärtämään valinnan. Harjoittele omaan tahtiisi ilman vastustajia tai käyttäjätiliä.
+
+Sovellus on saatavilla vain englanniksi.
+
+Neljä maksutonta harjoitushuonetta käsittelee kortteja, valttia, pois laittamista ja tikkejä. Tavallisessa kutsutun ässän pelimuodossa nostajan joukkue tavoittelee 61 pistettä 120:stä.
+
+Sheepshead+ sisältää lisäharjoituksia, virheiden kertausta ja aikahaasteita. Valitse automaattisesti uusiutuva kuukausi- tai vuositilaus tai kertamaksullinen elinikäinen käyttöoikeus. Hinta näkyy ennen ostoa. Hallitse tai peru tilaus Google Playssa. Pöytäkohtaiset säännöt voivat vaihdella.
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html

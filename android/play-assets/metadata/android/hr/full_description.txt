@@ -1,0 +1,10 @@
+Vježbajte Sheepshead za pet igrača kroz kratke zadatke. Upoznajte špil od 32 karte, prepoznajte adute i odaberite dvije karte za odlaganje nakon uzimanja dviju karata iz talona. Svaki odgovor objašnjava razlog odluke. Vježbajte sami vlastitim tempom, bez računa.
+
+Sama aplikacija dostupna je samo na engleskom jeziku.
+
+Četiri besplatne vježbaonice pokrivaju karte, adute, odlaganje i štihove. U uobičajenoj inačici s pozvanim asom ekipa igrača koji uzima talon cilja na 61 od 120 bodova.
+
+Sheepshead+ dodaje vježbe, ponavljanje pogrešaka i vremenske izazove. Mjesečna ili godišnja pretplata automatski se obnavlja, a moguć je i jednokratni doživotni pristup. Cijena se prikazuje prije kupnje. Pretplatom upravljajte ili je otkažite u Google Playu. Kućna pravila mogu se razlikovati.
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html

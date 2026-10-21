@@ -1,0 +1,10 @@
+Vadite Sheepshead za pet igralcev s kratkimi nalogami. Spoznajte komplet 32 kart, prepoznajte adute in izberite dve karti za odlaganje, ko vzamete dve karti iz talona. Vsak odgovor pojasni razlog za odločitev. Vadite sami v svojem tempu, brez računa.
+
+Aplikacija je na voljo samo v angleščini.
+
+Štirje brezplačni vadbeni prostori obravnavajo karte, adute, odlaganje in vzetke. V običajni različici s klicanim asom ekipa igralca, ki vzame talon, cilja na 61 od 120 točk.
+
+Sheepshead+ doda vaje, ponavljanje napak in časovne izzive. Mesečna ali letna naročnina se samodejno podaljšuje, možen je tudi enkratni nakup doživljenjskega dostopa. Cena je prikazana pred nakupom. Naročnino upravljajte ali prekličite v Google Play. Hišna pravila se lahko razlikujejo.
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html

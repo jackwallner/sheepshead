@@ -1,0 +1,10 @@
+Gyakorold az ötszemélyes Sheepshead játékot rövid feladatokkal. Ismerd meg a 32 lapos paklit, ismerd fel az adukat, és válassz két lerakandó lapot a talon két lapjának felvétele után. Minden válaszhoz indoklás tartozik. Gyakorolj egyedül, saját tempódban, fiók nélkül.
+
+Az alkalmazás csak angol nyelven érhető el.
+
+Négy ingyenes gyakorlóterem foglalkozik a lapokkal, az adukkal, a laplerakással és az ütésekkel. A szokásos, hívott ászos változatban a talont felvevő játékos csapatának célja a 120 pontból 61 megszerzése.
+
+A Sheepshead+ további feladatokat, hibaismétlést és időre menő kihívásokat kínál. Automatikusan megújuló havi vagy éves előfizetés, illetve egyszeri vásárlással élethosszig tartó hozzáférés választható. Az ár vásárlás előtt látható. Az előfizetés a Google Play felületén kezelhető és mondható le. A házi szabályok eltérhetnek.
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html

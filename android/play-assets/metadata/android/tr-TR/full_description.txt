@@ -1,0 +1,10 @@
+Beş kişilik Sheepshead oyununa kısa alıştırmalarla hazırlanın. 32 kartlık desteyi tanıyın, kozları ayırt edin ve ortadaki iki kartı aldıktan sonra elinizden ayıracağınız iki kartı seçin. Her cevap kararın nedenini açıklar. Hesap açmadan, kendi hızınızda tek başınıza çalışın.
+
+Uygulamanın kendisi yalnızca İngilizce olarak sunulur.
+
+Dört ücretsiz çalışma bölümü kartları, kozları, kart ayırmayı ve el almayı kapsar. As çağırılan yaygın türde, ortadaki kartları alan oyuncunun takımı 120 puanın 61'ini hedefler.
+
+Sheepshead+ ek alıştırmalar, hata tekrarı ve süreli görevler sunar. Otomatik yenilenen aylık veya yıllık abonelik ya da ömür boyu erişim için tek seferlik satın alma seçilebilir. Fiyat satın almadan önce gösterilir. Aboneliği Google Play üzerinden yönetin veya iptal edin. Masa kuralları değişebilir.
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html

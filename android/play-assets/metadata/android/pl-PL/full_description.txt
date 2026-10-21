@@ -1,0 +1,10 @@
+Ćwicz Sheepshead dla pięciu graczy w krótkich sesjach. Poznaj talię 32 kart, rozpoznawaj atuty i wybieraj dwie karty do odłożenia po dobraniu dwóch kart ze stołu. Każda odpowiedź zawiera uzasadnienie. Ucz się samodzielnie, we własnym tempie, bez zakładania konta.
+
+Sama aplikacja jest dostępna wyłącznie w języku angielskim.
+
+Cztery bezpłatne działy obejmują karty, atuty, odkładanie i lewy. W typowym wariancie z wywołanym asem drużyna dobierającego dąży do zdobycia 61 ze 120 punktów.
+
+Sheepshead+ dodaje ćwiczenia, powtórki błędów i wyzwania na czas. Subskrypcja miesięczna lub roczna odnawia się automatycznie. Dostępny jest też jednorazowy zakup dostępu dożywotniego. Cena pojawia się przed zakupem. Zarządzaj subskrypcją lub anuluj ją w Google Play. Zasady przy poszczególnych stołach mogą się różnić.
+
+https://jackwallner.github.io/sheepshead/android-privacy.html
+https://jackwallner.github.io/sheepshead/android-terms.html
