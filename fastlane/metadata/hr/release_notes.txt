@@ -1,5 +1,1 @@
-Vježba koja nikad ne ponestaje.
-
-Endless Practice generira nova sredstva za čitanje aduta i karata. Fix My Mistakes pamti što ste propustili i vraća to prema rasporedu. Timed Challenge vam daje devedeset sekundi i osobni rekord za loviti.
-
-Također novo: analize točnosti soba i više originalnih pitanja u špilu, odluke o izboru, trikovi i glavne tablice.
+Nove beskrajne vještine: Who Takes the Trick? i brojanje bodova, s pravilom iza svakog odgovora. Svladavanje po sobi, tjedni broj, Send Feedback, podrška za Smanjenje pokreta i jasniji uvjeti članstva.

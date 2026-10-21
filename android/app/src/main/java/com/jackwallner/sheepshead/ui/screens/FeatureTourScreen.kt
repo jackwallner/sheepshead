@@ -223,7 +223,7 @@ private fun ProHero(locked: Boolean) {
             if (!locked) Icon(symbol("checkmark.seal.fill"), null, tint = colors.jade, modifier = Modifier.size(18.dp))
         }
         listOf(
-            "Endless Practice, never repeats",
+            "Endless Practice, freshly dealt holdings",
             "Fix My Mistakes replays your misses",
             "Timed Challenge, 90 seconds",
         ).forEach { line ->

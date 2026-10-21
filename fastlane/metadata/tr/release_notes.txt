@@ -1,5 +1,1 @@
-Asla bitmeyen pratik.
-
-Sonsuz Uygulama, koz ve kart okuma için yeni kaynaklar yaratır. Hatalarımı Düzelt, kaçırdığınız şeyleri hatırlar ve bunları bir programa göre geri getirir. Zamanlı Mücadele size doksan saniye ve takip edebileceğiniz kişisel bir rekor verir.
-
-Ayrıca yeni: Oda doğruluğu analizleri ve deste genelinde daha fazla orijinal sorular, seçici kararları, hileli oyun ve Ana Tablolar.
+Yeni sonsuz beceriler: Who Takes the Trick? ve puan sayma, her cevabın ardındaki kuralla. Oda bazında ustalık, haftalık sayaç, Send Feedback, Hareketi Azalt desteği ve daha net üyelik koşulları.

@@ -1,5 +1,1 @@
-Cvičenie, ktoré nikdy neminie.
-
-Endless Practice generuje nové držby na tromf a čítanie kariet. Fix My Mistakes si pamätá, čo ste zmeškali, a vráti to podľa plánu. Timed Challenge vám dáva deväťdesiat sekúnd a osobné maximum na stíhanie.
-
-Tiež nové: rozpisy presnosti miestností a viac originálnych otázok v balíčku, výberové rozhodnutia, triková hra a hlavné stoly.
+Nové nekonečné zručnosti: Who Takes the Trick? a počítanie bodov, s pravidlom za každou odpoveďou. Zvládnutie miestností, týždenný prehľad, Send Feedback, podpora Obmedziť pohyb a jasnejšie podmienky predplatného.

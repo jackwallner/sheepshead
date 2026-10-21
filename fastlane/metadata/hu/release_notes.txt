@@ -1,5 +1,1 @@
-Gyakorlat, ami soha nem fogy el.
-
-Az Endless Practice friss állományokat generál az adu- és kártyaolvasáshoz. A Fix My Mistakes megjegyzi, hogy mit hagyott ki, és visszaállítja az ütemterv szerint. A Timed Challenge kilencven másodpercet és egy egyéni csúcsot ad, amit üldözhet.
-
-Szintén újdonság: szobapontossági lebontások és eredetibb kérdések a pakliban, válogatói döntések, trükkös játék és a mesterasztalok.
+Új, végtelen készségek: Who Takes the Trick? és a pontok számolása, minden válasz mögött a szabállyal. Szobánkénti elsajátítás, heti számláló, Send Feedback, a Mozgás csökkentése támogatása és világosabb tagsági feltételek.
