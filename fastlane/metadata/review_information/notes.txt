@@ -14,6 +14,8 @@ No account, login, or device configuration is needed. The purchases are not rest
 
 The same screen carries Restore, Terms of Use, and Privacy Policy links.
 
+The free week is shown only when StoreKit reports that the Apple Account is eligible for it. An account that already used it sees "Join Sheepshead+" and the price billed today instead.
+
 GUIDELINE 3.1.2(c) IN THIS BUILD
 
 Build 28 was rejected because the free trial was promoted more clearly and conspicuously than the billed amount. Build 30 adds the localized billed amount as a large, high-contrast line directly above the purchase button on both purchase surfaces: the onboarding screen in your review screenshot (path 1 above) and the plan-picker screen (paths 2 to 4). On the onboarding screen it reads as the monthly price, for example "$6.99/month" in the US storefront, set in the app's display typeface at 22pt in the darkest ink color on the screen. The free trial and auto-renewal terms sit underneath it in 11pt tertiary grey, and on the plan-picker screen the same line tracks whichever plan is selected. The billed amount is now the largest and highest-contrast pricing element in both layouts.

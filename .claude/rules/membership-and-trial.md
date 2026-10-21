@@ -35,6 +35,19 @@ is an expiration date (not for lifetime). Only the button wording varies, via
 go-ahead. The paywall CTA stays disabled until StoreKit returns a price, which
 includes every simulator run (RevenueCat is never configured there).
 
+**Intro-offer eligibility (2026-10-20, Mahj fc6b7ed).** Apple gives one free
+week per subscription group, so a lapsed member is charged on day one.
+`SubscriptionService.isTrialEligible(for:)` asks StoreKit (no product reads as
+eligible, as before). The onboarding trial page and `PaywallView` load it in
+`.task` and, when it is false, drop every free-week line: onboarding title "Get
+Sheepshead+ today", the CTA "Join Sheepshead+", the plan cards "Billed yearly.
+Auto-renews." / "Billed monthly. Auto-renews.", and `PaywallPricing.terms(...,
+trial: false)` ("$X/month, billed today. Auto-renews until canceled."). The
+billed amount stays the largest price. A purchase tap re-checks eligibility
+after offerings load and, if it changed, redraws and returns without buying.
+`TrialEligibilityTests` runs against `Sheepshead.storekit`. The eligible copy is
+unchanged.
+
 **Membership state.** `membershipResolved` is false until a customer record
 was read (cache or network); nothing may treat "not a member" as a lapse or
 sell a trial before it. A reinstall is a new anonymous RevenueCat user:
