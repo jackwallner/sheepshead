@@ -116,6 +116,7 @@ These files load automatically when you read a file matching their `paths:`. Age
 |---|---|---|
 | `.claude/rules/game-night.md` | Game-night rhythm (1.2): Sheepshead Minute, the daily bury question, deterministic dealing, game night prep | `SheepsheadMinute*`, `GameNightPrepView`, `HandGenerator`, `SessionBuilder` |
 | `.claude/rules/ipad-layout.md` | iPad (1.2): device family, `CenteringScrollView`, the pager eyebrow, the deck width cap | Drill layouts, Home columns |
+| `.claude/rules/iphone-duo.md` | iPhone Duo: Home beside Your Progress across the fold, `UnfoldedSplit`, Settings in the pane, what still sits across the fold | `HomeView`, `UnfoldedSplit`, Duo captures |
 | `.claude/rules/screenshots.md` | Screenshots: the capture script, the throwaway iPad, test gotchas | Capture scripts, the `Screenshots` scheme |
 | `.claude/rules/feedback-and-retention.md` | Feedback sink, churn question, mastery and the weekly gain ledger, ratings policy, what was not ported | `FeedbackService`, `ReviewPromptSheet`, `Mastery`, `MasteryLedger`, `ReviewRequest` |
 | `.claude/rules/meta-ads.md` | Meta SDK + ATT (inert), remote switches and `TrialCTA`, the relay that lives in Mahj | `MetaAds`, `RemoteConfig`, ATT timing, `project.yml` Meta ids |
