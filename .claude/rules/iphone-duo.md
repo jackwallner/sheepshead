@@ -27,6 +27,13 @@ paths:
 - While split: the stats chips are inert (the breakdown is already open), and
   Settings opens in the trailing pane instead of a sheet (`settingsSheet`
   binding; opening the Duo with the sheet up moves it to the pane).
+- iOS 27.1 moves a `NavigationStack`'s toolbar (gear, back button) into a
+  vertical bar on the stack's trailing edge, which in the leading pane lands
+  beside the fold with the title still leading. Supervisor review rejected
+  that (2026-10-21), so both panes set `toolbarVerticalBehavior(.disabled)`
+  while split (`horizontalToolbarInPane`): back button at the pane's leading
+  edge, title centred, as on a phone and in Bridge's Auction Room. Folded
+  keeps `.automatic`.
 - Still system sheets, so centred across the fold: the paywall (trial flow is
   locked to Mahj 1.3.2, needs Jack's go-ahead), What's New, the churn and
   feedback sheets, and sheets raised from inside Settings. Onboarding is a
