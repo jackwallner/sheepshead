@@ -57,7 +57,7 @@
   ],
   "primer" : [
     {
-      "body" : "Sheepshead is a trick-taking game. In the common five-player hand, one picker and a silent partner try to capture at least 61 of the deck's 120 points, counting the two buried cards.",
+      "body" : "Sheepshead is a trick-taking game. The five-player picking team needs 61 of 120 points, including the bury. These bury drills use called ace with no under calls or called tens; tables may agree on those additional calls.",
       "icon" : "flag.checkered",
       "id" : "sheep-goal",
       "tiles" : [
@@ -109,7 +109,7 @@
       "title" : "Learn the points"
     },
     {
-      "body" : "Follow the suit that was led when you can, and if trump is led, play trump. If you cannot follow, you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
+      "body" : "Follow the led suit, including trump, when you can. On the first lead of the called suit, partner must play the called ace. Until then, partner reserves that ace and picker reserves a card of its suit. Otherwise, when void you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
       "icon" : "arrow.up.right.circle.fill",
       "id" : "sheep-tricks",
       "tiles" : [
@@ -312,7 +312,7 @@
               "id" : "cards-picker"
             },
             {
-              "backBody" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from its captured tricks plus the two buried cards. The defenders win when the picking team has 60 or fewer.",
+              "backBody" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from captured tricks plus the two buried cards. The other players win with 60 or fewer for the picker.",
               "backTitle" : "The picking team needs 61",
               "choice" : {
                 "answerIndex" : 0,
@@ -701,7 +701,7 @@
                 "Yes, any fail ace",
                 "Only if it is the club ace"
               ],
-              "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name, so they call a fail ten or play alone, depending on the table.",
+              "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name. Some tables allow calling a fail ten absent from hand and blind, while retaining that suit's ace until it is led. Going alone is another option.",
               "id" : "more-card-9",
               "prompt" : "Can the picker name a fail ace that was dealt to them?",
               "tiles" : [
@@ -1258,7 +1258,7 @@
               "id" : "bury-trump-first"
             },
             {
-              "backBody" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must keep at least one card from that fail suit, the hold card, until that suit is first led. Burying the only hold card creates an illegal call.",
+              "backBody" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit until it is first led (or the last trick). An ace from the blind cannot be called either. Burying the only hold card makes that call unavailable in these drills.",
               "backTitle" : "The picker keeps a fail card from that suit",
               "choice" : {
                 "answerIndex" : 0,
@@ -1278,8 +1278,8 @@
               "id" : "bury-called-suit"
             },
             {
-              "backBody" : "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
-              "backTitle" : "Bury fail cards, not trump",
+              "backBody" : "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. Burying trump is legal, but this exercise preserves both trumps. It teaches trump control rather than a universal bury rule.",
+              "backTitle" : "Preserve trump in this exercise",
               "choice" : {
                 "answerIndex" : 0,
                 "options" : [
@@ -1396,7 +1396,7 @@
                 "C13",
                 "S8"
               ],
-              "situation" : "You picked with four trumps and two singleton fail cards. Choose two cards to bury.",
+              "situation" : "You picked with four trumps and two singleton fail cards. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "A singleton fail card is the cheapest way to empty a suit."
             },
             {
@@ -1418,7 +1418,7 @@
                 "H13",
                 "S7"
               ],
-              "situation" : "You plan to call the ace of hearts, so a heart has to stay. Choose two cards to bury.",
+              "situation" : "You plan to call the ace of hearts, so a heart has to stay. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Keep the cheapest legal hold card and bank the expensive one."
             },
             {
@@ -1440,7 +1440,7 @@
                 "H14",
                 "H10"
               ],
-              "situation" : "You were dealt all three fail aces, so no ace is left to call. Choose two cards to bury.",
+              "situation" : "You were dealt all three fail aces, so no ace is left to call. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "You can only call an ace you were not dealt."
             },
             {
@@ -1462,7 +1462,7 @@
                 "H10",
                 "H13"
               ],
-              "situation" : "You hold the queen and jack of clubs plus two low diamonds. Choose two cards to bury.",
+              "situation" : "You hold the queen and jack of clubs plus two low diamonds. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Low trump is still trump. The bury comes out of the fail suits."
             },
             {
@@ -1479,12 +1479,12 @@
               ],
               "id" : "bury-scenario-5",
               "isAlone" : false,
-              "reasoning" : "With two trumps you cannot protect a fail ace once the opponents start drawing suits. Burying the heart ace and king banks 15 points safely and empties hearts, so the queen of diamonds can trump the first heart lead.",
+              "reasoning" : "Burying the heart ace and king banks 15 points and empties hearts. This is the best bury for the stated void-and-points objective. With trump still held, you can trump a later heart lead.",
               "recommendedDiscard" : [
                 "H14",
                 "H13"
               ],
-              "situation" : "Your only trump is the queen and 8 of diamonds. Choose two cards to bury.",
+              "situation" : "Your only trump is the queen and 8 of diamonds. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Points you cannot defend are worth more face down than in your hand."
             },
             {
@@ -1506,7 +1506,7 @@
                 "C14",
                 "S13"
               ],
-              "situation" : "You picked with the four queens and the diamond ace. Choose two cards to bury.",
+              "situation" : "You picked with the four queens and the diamond ace. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "With trump control secured, bury for points."
             }
           ],
@@ -1537,7 +1537,7 @@
                 "C14",
                 "C13"
               ],
-              "situation" : "You picked with four trumps, two clubs, and two hearts. Choose two cards to bury.",
+              "situation" : "You picked with four trumps, two clubs, and two hearts. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "The best bury usually banks points and empties a suit in the same move."
             },
             {
@@ -1559,7 +1559,7 @@
                 "H10",
                 "H7"
               ],
-              "situation" : "You plan to call the spade ace, so a spade has to stay. Choose two cards to bury.",
+              "situation" : "You plan to call the spade ace, so a spade has to stay. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "The hold card can be low. It only needs to belong to the called fail suit."
             },
             {
@@ -1581,7 +1581,7 @@
                 "H7",
                 "S13"
               ],
-              "situation" : "You picked with two queens, two diamonds, three spades, and a lone heart. Choose two cards to bury.",
+              "situation" : "You picked with two queens, two diamonds, three spades, and a lone heart. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Empty the suit you hold once, not the suit you hold three times."
             },
             {
@@ -1603,7 +1603,7 @@
                 "H10",
                 "S13"
               ],
-              "situation" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury.",
+              "situation" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Two singletons can empty two suits with one bury."
             },
             {
@@ -1625,7 +1625,7 @@
                 "H14",
                 "H7"
               ],
-              "situation" : "Four trumps, two hearts, and two clubs. Choose two cards to bury.",
+              "situation" : "Four trumps, two hearts, and two clubs. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "A fail ace is worth 11 points whether you win it or bury it."
             },
             {
@@ -1647,7 +1647,7 @@
                 "H14",
                 "H13"
               ],
-              "situation" : "You plan to call the club ace, so a club has to stay. Choose two cards to bury.",
+              "situation" : "You plan to call the club ace, so a club has to stay. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "A jack of clubs is trump, so it cannot serve as your club hold card."
             },
             {
@@ -1664,12 +1664,12 @@
               ],
               "id" : "more-bury-3",
               "isAlone" : false,
-              "reasoning" : "The club 10 and king are 14 points that two low trumps cannot protect once clubs are led. Burying both banks the points and empties clubs, and the spade king and 9 keep a legal hold card for calling the spade ace.",
+              "reasoning" : "Burying the club 10 and king banks 14 points and empties clubs, and the spade king and 9 keep a legal hold card for calling the spade ace.",
               "recommendedDiscard" : [
                 "C10",
                 "C13"
               ],
-              "situation" : "Your trump is the diamond 7 and 8. Choose two cards to bury.",
+              "situation" : "Your trump is the diamond 7 and 8. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Thin trump means the safest place for your points is face down."
             },
             {
@@ -1691,7 +1691,7 @@
                 "H13",
                 "H7"
               ],
-              "situation" : "The blind gives you the four queens plus two clubs and two hearts. Choose two cards to bury.",
+              "situation" : "The blind gives you the four queens plus two clubs and two hearts. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Total trump control is a reason to keep a hold card, not to abandon the partnership."
             }
           ],
@@ -2187,7 +2187,7 @@
                 "C14",
                 "C13"
               ],
-              "situation" : "You plan to call the heart ace. Two clubs and two hearts are competing for the bury.",
+              "situation" : "You plan to call the heart ace. Two clubs and two hearts are competing for the bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Keep a spare card in the called suit when the bury allows it."
             },
             {
@@ -2209,7 +2209,7 @@
                 "C10",
                 "C13"
               ],
-              "situation" : "Three queens and the diamond ace give you real control. Choose two cards to bury.",
+              "situation" : "Three queens and the diamond ace give you real control. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Count what the bury banks, then check that a legal call survives it."
             },
             {
@@ -2226,12 +2226,12 @@
               ],
               "id" : "master-bury-3",
               "isAlone" : true,
-              "reasoning" : "The club ace and 10 are 21 points that two low trumps will never protect, and burying both empties clubs. Holding every fail ace leaves no ace to name, so this is an alone hand (or a called ten, if the table allows it).",
+              "reasoning" : "The club ace and 10 bank 21 points and empty clubs when buried together. This meets the drill objective without depending on an unseen distribution. Holding every fail ace leaves no ace to name, so this is an alone hand.",
               "recommendedDiscard" : [
                 "C14",
                 "C10"
               ],
-              "situation" : "You were dealt all three fail aces and only two low trumps. Choose two cards to bury.",
+              "situation" : "You were dealt all three fail aces and only two low trumps. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "A hand this thin in trump is often a pass. If you do pick, bank the points you cannot defend."
             },
             {
@@ -2253,7 +2253,7 @@
                 "H8",
                 "C7"
               ],
-              "situation" : "Six trumps including the four queens, plus one heart and one club. Choose two cards to bury.",
+              "situation" : "Six trumps including the four queens, plus one heart and one club. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call.",
               "tip" : "Agree the table's alone scoring before you take this line."
             }
           ],
@@ -2367,7 +2367,7 @@
                 "failSuit",
                 "lowCards"
               ],
-              "explanation" : "Three high trumps plus a diamond ace and club ace create a strong blind-taking shape with both control and points.",
+              "explanation" : "Two top queens, the diamond ace and 10 make four trumps. The club ace adds a fail winner. This is a strong picking pattern, not a guarantee against every full deal.",
               "id" : "master-hand-1",
               "tiles" : [
                 "C12",
@@ -2505,6 +2505,36 @@
           "id" : "master-rules",
           "isPlus" : false,
           "items" : [
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "Heart ace",
+                "Heart 7",
+                "Either heart"
+              ],
+              "explanation" : "The called ace must appear on the first lead of its suit, even when partner holds another card of that suit. It cannot be discarded on an earlier off-suit trick.",
+              "id" : "rules-called-ace",
+              "prompt" : "Hearts are called and are led for the first time. You are the partner with the heart ace and heart 7. What must you play?",
+              "tiles" : [
+                "H14",
+                "H7"
+              ]
+            },
+            {
+              "answerIndex" : 0,
+              "choices" : [
+                "No, reserve the hold card",
+                "Yes, any discard is legal"
+              ],
+              "explanation" : "The picker reserves at least one card of the called fail suit until that suit is first led, except on the last trick. You may discard the spade or play trump here.",
+              "id" : "rules-hold-card",
+              "prompt" : "You are picker. Hearts are called but have not been led. Clubs are led; you are club-free with heart 7, spade 8, and diamond 9. May you discard the heart 7?",
+              "tiles" : [
+                "H7",
+                "S8",
+                "D9"
+              ]
+            },
             {
               "answerIndex" : 0,
               "choices" : [

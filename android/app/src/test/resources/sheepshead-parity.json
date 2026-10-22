@@ -393,7 +393,7 @@
     "master-bury" : 4,
     "master-defense" : 6,
     "master-reading" : 8,
-    "master-rules" : 6,
+    "master-rules" : 8,
     "meet-cards" : 10,
     "plus-bury-extras" : 8,
     "plus-card-extras" : 16,
@@ -1118,7 +1118,7 @@
         "31 points",
         "61 points"
       ],
-      "explanation" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from its captured tricks plus the two buried cards. The defenders win when the picking team has 60 or fewer.",
+      "explanation" : "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from captured tricks plus the two buried cards. The other players win with 60 or fewer for the picker.",
       "id" : "cards-goal",
       "isReviewable" : true,
       "prompt" : "The target\nWin the point race",
@@ -1580,7 +1580,7 @@
         "Yes, any fail ace",
         "No, only an ace they were not dealt"
       ],
-      "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name, so they call a fail ten or play alone, depending on the table.",
+      "explanation" : "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name. Some tables allow calling a fail ten absent from hand and blind, while retaining that suit's ace until it is led. Going alone is another option.",
       "id" : "more-card-9",
       "isReviewable" : true,
       "prompt" : "Can the picker name a fail ace that was dealt to them?",
@@ -2056,7 +2056,7 @@
         "Name your own strongest ace",
         "Name an ace you were not dealt"
       ],
-      "explanation" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must keep at least one card from that fail suit, the hold card, until that suit is first led. Burying the only hold card creates an illegal call.",
+      "explanation" : "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit until it is first led (or the last trick). An ace from the blind cannot be called either. Burying the only hold card makes that call unavailable in these drills.",
       "id" : "bury-called-suit",
       "isReviewable" : true,
       "prompt" : "Hold the called suit\nA called-ace partnership rule",
@@ -2076,7 +2076,7 @@
         "The spade and the heart",
         "The two low diamonds"
       ],
-      "explanation" : "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
+      "explanation" : "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. Burying trump is legal, but this exercise preserves both trumps. It teaches trump control rather than a universal bury rule.",
       "id" : "bury-no-trump",
       "isReviewable" : true,
       "prompt" : "Which two go?\nTwo low diamonds, a spade, and a heart",
@@ -2621,7 +2621,7 @@
         "Low Cards",
         "Picking"
       ],
-      "explanation" : "Three high trumps plus a diamond ace and club ace create a strong blind-taking shape with both control and points.",
+      "explanation" : "Two top queens, the diamond ace and 10 make four trumps. The club ace adds a fail winner. This is a strong picking pattern, not a guarantee against every full deal.",
       "id" : "master-hand-1",
       "isReviewable" : true,
       "prompt" : "Which Sheepshead rule should you spot first?",
@@ -2791,6 +2791,44 @@
       "trackingID" : "master-hand-8"
     },
     {
+      "answerIndex" : 0,
+      "choices" : [
+        "Heart ace",
+        "Heart 7",
+        "Either heart"
+      ],
+      "explanation" : "The called ace must appear on the first lead of its suit, even when partner holds another card of that suit. It cannot be discarded on an earlier off-suit trick.",
+      "id" : "rules-called-ace",
+      "isReviewable" : true,
+      "prompt" : "Hearts are called and are led for the first time. You are the partner with the heart ace and heart 7. What must you play?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "H14",
+        "H7"
+      ],
+      "trackingID" : "rules-called-ace"
+    },
+    {
+      "answerIndex" : 1,
+      "choices" : [
+        "Yes, any discard is legal",
+        "No, reserve the hold card"
+      ],
+      "explanation" : "The picker reserves at least one card of the called fail suit until that suit is first led, except on the last trick. You may discard the spade or play trump here.",
+      "id" : "rules-hold-card",
+      "isReviewable" : true,
+      "prompt" : "You are picker. Hearts are called but have not been led. Clubs are led; you are club-free with heart 7, spade 8, and diamond 9. May you discard the heart 7?",
+      "roomID" : "pro-tables",
+      "sourceLabel" : "The Master Tables",
+      "tiles" : [
+        "H7",
+        "S8",
+        "D9"
+      ],
+      "trackingID" : "rules-hold-card"
+    },
+    {
       "answerIndex" : 2,
       "choices" : [
         "Both cards are fail",
@@ -2943,7 +2981,7 @@
             "explanation" : "Burying the club 10 and king banks 14 points and empties clubs, which beats burying the lone spade for 10. The spade 7 is worth more as the hand's only hold card, since without it there is no ace left to call.",
             "id" : "sheepshead-minute-bury-2026-02-28",
             "isReviewable" : false,
-            "prompt" : "Three queens and the diamond ace give you real control. Choose two cards to bury. Which two cards do you bury?",
+            "prompt" : "Three queens and the diamond ace give you real control. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call. Which two cards do you bury?",
             "roomID" : "bury-room",
             "sourceLabel" : "Sheepshead Minute: The Bury",
             "tiles" : [
@@ -3073,7 +3111,7 @@
             "explanation" : "Burying both hearts banks the heart 10 and empties the suit. Both spades stay, so the called-ace hold is never in doubt, and the queen and 9 of diamonds keep your trump intact.",
             "id" : "sheepshead-minute-bury-2026-09-30",
             "isReviewable" : false,
-            "prompt" : "You plan to call the spade ace, so a spade has to stay. Choose two cards to bury. Which two cards do you bury?",
+            "prompt" : "You plan to call the spade ace, so a spade has to stay. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call. Which two cards do you bury?",
             "roomID" : "bury-room",
             "sourceLabel" : "Sheepshead Minute: The Bury",
             "tiles" : [
@@ -3204,7 +3242,7 @@
             "explanation" : "The club ace and king are 15 points that no opponent can ever capture once they are face down, and burying both empties clubs for a later trump. Every trump stays, and the two hearts leave a hold card for calling the heart ace.",
             "id" : "sheepshead-minute-bury-2026-10-01",
             "isReviewable" : false,
-            "prompt" : "You picked with four trumps, two clubs, and two hearts. Choose two cards to bury. Which two cards do you bury?",
+            "prompt" : "You picked with four trumps, two clubs, and two hearts. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call. Which two cards do you bury?",
             "roomID" : "bury-room",
             "sourceLabel" : "Sheepshead Minute: The Bury",
             "tiles" : [
@@ -3334,7 +3372,7 @@
             "explanation" : "Both singletons go. That banks 14 points and empties hearts and spades, so only clubs can still be led at you, and the two clubs keep a legal hold card for calling the club ace.",
             "id" : "sheepshead-minute-bury-2026-10-16",
             "isReviewable" : false,
-            "prompt" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury. Which two cards do you bury?",
+            "prompt" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call. Which two cards do you bury?",
             "roomID" : "bury-room",
             "sourceLabel" : "Sheepshead Minute: The Bury",
             "tiles" : [
@@ -3464,7 +3502,7 @@
             "explanation" : "Both singletons go. That banks 14 points and empties hearts and spades, so only clubs can still be led at you, and the two clubs keep a legal hold card for calling the club ace.",
             "id" : "sheepshead-minute-bury-2027-01-15",
             "isReviewable" : false,
-            "prompt" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury. Which two cards do you bury?",
+            "prompt" : "Two queens, two diamonds, and two singleton point cards. Choose two cards to bury. For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call. Which two cards do you bury?",
             "roomID" : "bury-room",
             "sourceLabel" : "Sheepshead Minute: The Bury",
             "tiles" : [

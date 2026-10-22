@@ -24,7 +24,7 @@ enum DiscardContent {
             frontTiles: [.c(9), .c(7), .d(12), .h(9)],
             frontSubtitle: "A called-ace partnership rule",
             backTitle: "The picker keeps a fail card from that suit",
-            backBody: "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must keep at least one card from that fail suit, the hold card, until that suit is first led. Burying the only hold card creates an illegal call.",
+            backBody: "In the common call-an-ace game, the picker names a fail ace they were not dealt, and must retain at least one card from that fail suit until it is first led (or the last trick). An ace from the blind cannot be called either. Burying the only hold card makes that call unavailable in these drills.",
             choice: CardChoice("Name an ace you were not dealt", "Name your own strongest ace", answerIndex: 0)
         ),
         Flashcard(
@@ -32,8 +32,8 @@ enum DiscardContent {
             frontTitle: "Which two go?",
             frontTiles: [.d(8), .d(7), .s(9), .h(8)],
             frontSubtitle: "Two low diamonds, a spade, and a heart",
-            backTitle: "Bury fail cards, not trump",
-            backBody: "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. When you have a choice, the bury comes out of the fail suits and every queen, jack, and diamond stays in the playing hand.",
+            backTitle: "Preserve trump in this exercise",
+            backBody: "A diamond 7 still beats every fail card in the deck, so the two diamonds stay. Burying trump is legal, but this exercise preserves both trumps. It teaches trump control rather than a universal bury rule.",
             choice: CardChoice("The spade and the heart", "The two low diamonds", answerIndex: 0)
         ),
         Flashcard(
@@ -119,7 +119,7 @@ enum DiscardContent {
             situation: "Your only trump is the queen and 8 of diamonds. Choose two cards to bury.",
             deal: [.d(12), .d(8), .h(14), .h(13), .c(9), .c(8), .c(7), .s(9)],
             recommendedDiscard: [.h(14), .h(13)],
-            reasoning: "With two trumps you cannot protect a fail ace once the opponents start drawing suits. Burying the heart ace and king banks 15 points safely and empties hearts, so the queen of diamonds can trump the first heart lead.",
+            reasoning: "Burying the heart ace and king banks 15 points and empties hearts. This is the best bury for the stated void-and-points objective. With trump still held, you can trump a later heart lead.",
             tip: "Points you cannot defend are worth more face down than in your hand."
         ),
         DiscardScenario(

@@ -25,7 +25,7 @@ enum ProContent {
             situation: "You were dealt all three fail aces and only two low trumps. Choose two cards to bury.",
             deal: [.c(14), .h(14), .s(14), .c(10), .h(9), .s(8), .d(10), .d(7)],
             recommendedDiscard: [.c(14), .c(10)],
-            reasoning: "The club ace and 10 are 21 points that two low trumps will never protect, and burying both empties clubs. Holding every fail ace leaves no ace to name, so this is an alone hand (or a called ten, if the table allows it).",
+            reasoning: "The club ace and 10 bank 21 points and empty clubs when buried together. This meets the drill objective without depending on an unseen distribution. Holding every fail ace leaves no ace to name, so this is an alone hand.",
             tip: "A hand this thin in trump is often a pass. If you do pick, bank the points you cannot defend.",
             isAlone: true
         ),
@@ -93,7 +93,7 @@ enum ProContent {
             tiles: [.c(12), .s(12), .d(14), .d(10), .c(14)],
             choices: [.picking, .failSuit, .lowCards],
             answer: .picking,
-            explanation: "Three high trumps plus a diamond ace and club ace create a strong blind-taking shape with both control and points."
+            explanation: "Two top queens, the diamond ace and 10 make four trumps. The club ace adds a fail winner. This is a strong picking pattern, not a guarantee against every full deal."
         ),
         HandMatchQuestion(
             id: "master-hand-2",

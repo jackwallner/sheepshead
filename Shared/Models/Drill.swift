@@ -78,7 +78,7 @@ struct DiscardScenario: Identifiable, Sendable {
     init(id: String, situation: String, deal: [PlayingCard], recommendedDiscard: [PlayingCard],
          reasoning: String, tip: String, calledSuit: Suit? = nil, isAlone: Bool = false) {
         self.id = id
-        self.situation = situation
+        self.situation = situation + " For this drill, keep every trump, empty the most fail suits, then bank the most points while preserving the planned call."
         self.deal = deal
         self.recommendedDiscard = recommendedDiscard
         self.reasoning = reasoning

@@ -69,7 +69,7 @@ enum MoreContent {
             tiles: [.c(14), .h(14)],
             choices: ["No, only an ace they were not dealt", "Yes, any fail ace", "Only if it is the club ace"],
             answerIndex: 0,
-            explanation: "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name, so they call a fail ten or play alone, depending on the table."
+            explanation: "The call is how the picker finds a partner, so the named ace has to be in someone else's hand. A picker holding every fail ace has no ace to name. Some tables allow calling a fail ten absent from hand and blind, while retaining that suit's ace until it is led. Going alone is another option."
         ),
         QuizQuestion(
             id: "more-card-10",
@@ -148,7 +148,7 @@ enum MoreContent {
             situation: "Your trump is the diamond 7 and 8. Choose two cards to bury.",
             deal: [.h(14), .s(13), .c(10), .c(13), .h(8), .s(9), .d(7), .d(8)],
             recommendedDiscard: [.c(10), .c(13)],
-            reasoning: "The club 10 and king are 14 points that two low trumps cannot protect once clubs are led. Burying both banks the points and empties clubs, and the spade king and 9 keep a legal hold card for calling the spade ace.",
+            reasoning: "Burying the club 10 and king banks 14 points and empties clubs, and the spade king and 9 keep a legal hold card for calling the spade ace.",
             tip: "Thin trump means the safest place for your points is face down."
         ),
         DiscardScenario(
@@ -267,6 +267,13 @@ enum MoreContent {
     ]
 
     static let advancedRules: [QuizQuestion] = [
+        QuizQuestion(id: "rules-called-ace", prompt: "Hearts are called and are led for the first time. You are the partner with the heart ace and heart 7. What must you play?",
+                     tiles: [.h(14), .h(7)], choices: ["Heart ace", "Heart 7", "Either heart"], answerIndex: 0,
+                     explanation: "The called ace must appear on the first lead of its suit, even when partner holds another card of that suit. It cannot be discarded on an earlier off-suit trick."),
+        QuizQuestion(id: "rules-hold-card", prompt: "You are picker. Hearts are called but have not been led. Clubs are led; you are club-free with heart 7, spade 8, and diamond 9. May you discard the heart 7?",
+                     tiles: [.h(7), .s(8), .d(9)], choices: ["No, reserve the hold card", "Yes, any discard is legal"], answerIndex: 0,
+                     explanation: "The picker reserves at least one card of the called fail suit until that suit is first led, except on the last trick. You may discard the spade or play trump here."),
+
         QuizQuestion(
             id: "more-rule-1",
             prompt: "Which card is not a fail card in a heart hand?",

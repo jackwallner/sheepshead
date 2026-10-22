@@ -86,7 +86,7 @@ enum CardBasicsContent {
             frontTitle: "The target",
             frontSubtitle: "Win the point race",
             backTitle: "The picking team needs 61",
-            backBody: "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from its captured tricks plus the two buried cards. The defenders win when the picking team has 60 or fewer.",
+            backBody: "There are 120 points in the deck. The picking team wins the basic game with 61 or more points from captured tricks plus the two buried cards. The other players win with 60 or fewer for the picker.",
             choice: CardChoice("61 points", "31 points", answerIndex: 0)
         ),
     ]

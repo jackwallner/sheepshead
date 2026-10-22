@@ -26,7 +26,7 @@ enum HowToPlayContent {
             id: "sheep-goal",
             icon: "flag.checkered",
             title: "The goal",
-            body: "Sheepshead is a trick-taking game. In the common five-player hand, one picker and a silent partner try to capture at least 61 of the deck's 120 points, counting the two buried cards.",
+            body: "Sheepshead is a trick-taking game. The five-player picking team needs 61 of 120 points, including the bury. These bury drills use called ace with no under calls or called tens; tables may agree on those additional calls.",
             tiles: [.c(14), .d(12)],
             tip: "The number of tricks matters less than the point cards inside them."
         ),
@@ -57,7 +57,7 @@ enum HowToPlayContent {
             id: "sheep-tricks",
             icon: "arrow.up.right.circle.fill",
             title: "Take the trick",
-            body: "Follow the suit that was led when you can, and if trump is led, play trump. If you cannot follow, you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
+            body: "Follow the led suit, including trump, when you can. On the first lead of the called suit, partner must play the called ace. Until then, partner reserves that ace and picker reserves a card of its suit. Otherwise, when void you may play any card. Trump beats every fail card, and the strongest card in the winning suit takes the trick.",
             tiles: [.c(14), .c(7), .d(8)],
             tip: "Queens and jacks are trump even when their printed suit looks like a fail suit."
         ),

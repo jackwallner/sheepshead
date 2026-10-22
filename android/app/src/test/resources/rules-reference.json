@@ -1,0 +1,428 @@
+{
+  "source": "Sheepshead.org Basic Rules; Pagat called-ace reservation; app variant excludes under/called ten",
+  "legal": [
+    {
+      "id": "follow fail",
+      "hand": [
+        "C7",
+        "D9",
+        "H10"
+      ],
+      "led": "C14",
+      "calledSuit": null,
+      "isPicker": false,
+      "opened": true,
+      "expected": [
+        "C7"
+      ]
+    },
+    {
+      "id": "void in fail",
+      "hand": [
+        "D9",
+        "H10",
+        "S7"
+      ],
+      "led": "C14",
+      "calledSuit": null,
+      "isPicker": false,
+      "opened": true,
+      "expected": [
+        "D9",
+        "H10",
+        "S7"
+      ]
+    },
+    {
+      "id": "queen leads trump",
+      "hand": [
+        "D10",
+        "H14"
+      ],
+      "led": "H12",
+      "calledSuit": null,
+      "isPicker": false,
+      "opened": true,
+      "expected": [
+        "D10"
+      ]
+    },
+    {
+      "id": "printed club queen not club",
+      "hand": [
+        "C12",
+        "H7"
+      ],
+      "led": "C14",
+      "calledSuit": null,
+      "isPicker": false,
+      "opened": true,
+      "expected": [
+        "C12",
+        "H7"
+      ]
+    },
+    {
+      "id": "trump must follow",
+      "hand": [
+        "C11",
+        "D7",
+        "S14"
+      ],
+      "led": "H12",
+      "calledSuit": null,
+      "isPicker": false,
+      "opened": true,
+      "expected": [
+        "C11",
+        "D7"
+      ]
+    },
+    {
+      "id": "rules-called-ace",
+      "hand": [
+        "H14",
+        "H7"
+      ],
+      "led": "H8",
+      "calledSuit": "hearts",
+      "isPicker": false,
+      "opened": false,
+      "expected": [
+        "H14"
+      ]
+    },
+    {
+      "id": "ace reserved",
+      "hand": [
+        "H14",
+        "S8",
+        "D9"
+      ],
+      "led": "C7",
+      "calledSuit": "hearts",
+      "isPicker": false,
+      "opened": false,
+      "expected": [
+        "S8",
+        "D9"
+      ]
+    },
+    {
+      "id": "rules-hold-card",
+      "hand": [
+        "H7",
+        "S8",
+        "D9"
+      ],
+      "led": "C7",
+      "calledSuit": "hearts",
+      "isPicker": true,
+      "opened": false,
+      "expected": [
+        "S8",
+        "D9"
+      ]
+    },
+    {
+      "id": "two hold cards",
+      "hand": [
+        "H7",
+        "H8",
+        "D9"
+      ],
+      "led": "C7",
+      "calledSuit": "hearts",
+      "isPicker": true,
+      "opened": false,
+      "expected": [
+        "H7",
+        "H8",
+        "D9"
+      ]
+    },
+    {
+      "id": "suit opened",
+      "hand": [
+        "H7",
+        "S8",
+        "D9"
+      ],
+      "led": "C7",
+      "calledSuit": "hearts",
+      "isPicker": true,
+      "opened": true,
+      "expected": [
+        "H7",
+        "S8",
+        "D9"
+      ]
+    },
+    {
+      "id": "last trick exception",
+      "hand": [
+        "H7"
+      ],
+      "led": "C7",
+      "calledSuit": "hearts",
+      "isPicker": true,
+      "opened": false,
+      "expected": [
+        "H7"
+      ]
+    },
+    {
+      "id": "may lead called ace",
+      "hand": [
+        "H14",
+        "H7"
+      ],
+      "led": null,
+      "calledSuit": "hearts",
+      "isPicker": false,
+      "opened": false,
+      "expected": [
+        "H14",
+        "H7"
+      ]
+    },
+    {
+      "id": "ten picker follows ace",
+      "hand": [
+        "C14",
+        "C7",
+        "D9"
+      ],
+      "led": "C8",
+      "calledSuit": "clubs",
+      "isPicker": true,
+      "opened": false,
+      "calledRank": 10,
+      "expected": [
+        "C14"
+      ]
+    },
+    {
+      "id": "ten partner plays ten",
+      "hand": [
+        "C10",
+        "C9",
+        "D9"
+      ],
+      "led": "C8",
+      "calledSuit": "clubs",
+      "isPicker": false,
+      "opened": false,
+      "calledRank": 10,
+      "expected": [
+        "C10"
+      ]
+    },
+    {
+      "id": "ten picker reserves ace",
+      "hand": [
+        "C14",
+        "C7",
+        "D9"
+      ],
+      "led": "H7",
+      "calledSuit": "clubs",
+      "isPicker": true,
+      "opened": false,
+      "calledRank": 10,
+      "expected": [
+        "C7",
+        "D9"
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "deal": [
+        "C14",
+        "H7",
+        "S9",
+        "D9",
+        "C12",
+        "C11",
+        "D7",
+        "H10"
+      ],
+      "bury": [
+        "C14",
+        "H10"
+      ],
+      "expected": [
+        "hearts",
+        "spades"
+      ]
+    },
+    {
+      "deal": [
+        "C14",
+        "H7",
+        "S9",
+        "D9",
+        "C12",
+        "C11",
+        "D7",
+        "H10"
+      ],
+      "bury": [
+        "H7",
+        "H10"
+      ],
+      "expected": [
+        "spades"
+      ]
+    },
+    {
+      "deal": [
+        "C14",
+        "H14",
+        "S14",
+        "D9",
+        "C12",
+        "C11",
+        "D7",
+        "H10"
+      ],
+      "bury": [
+        "H14",
+        "H10"
+      ],
+      "expected": []
+    },
+    {
+      "deal": [
+        "H14",
+        "H7",
+        "D9",
+        "C12",
+        "C11",
+        "D7",
+        "D8",
+        "D10"
+      ],
+      "bury": [
+        "H14",
+        "D8"
+      ],
+      "expected": []
+    }
+  ],
+  "order": [
+    "C12",
+    "S12",
+    "H12",
+    "D12",
+    "C11",
+    "S11",
+    "H11",
+    "D11",
+    "D14",
+    "D10",
+    "D13",
+    "D9",
+    "D8",
+    "D7"
+  ],
+  "tricks": [
+    {
+      "cards": [
+        "C14",
+        "C10",
+        "D7",
+        "H14",
+        "S14"
+      ],
+      "winner": 2
+    },
+    {
+      "cards": [
+        "H7",
+        "H13",
+        "S14",
+        "H10",
+        "H9"
+      ],
+      "winner": 3
+    },
+    {
+      "cards": [
+        "H12",
+        "C11",
+        "D14",
+        "S12",
+        "D12"
+      ],
+      "winner": 3
+    },
+    {
+      "cards": [
+        "C7",
+        "H14",
+        "S14",
+        "C8",
+        "H10"
+      ],
+      "winner": 3
+    }
+  ],
+  "tenCalls": [
+    {
+      "deal": [
+        "C14",
+        "H14",
+        "S14",
+        "D9",
+        "C12",
+        "C11",
+        "D7",
+        "H10"
+      ],
+      "bury": [
+        "H14",
+        "H10"
+      ],
+      "expected": [
+        "clubs",
+        "spades"
+      ]
+    },
+    {
+      "deal": [
+        "C14",
+        "H7",
+        "S14",
+        "D9",
+        "C12",
+        "C11",
+        "D7",
+        "H10"
+      ],
+      "bury": [
+        "H7",
+        "H10"
+      ],
+      "expected": []
+    },
+    {
+      "deal": [
+        "C14",
+        "H14",
+        "S14",
+        "C10",
+        "C12",
+        "C11",
+        "D7",
+        "D9"
+      ],
+      "bury": [
+        "H14",
+        "S14"
+      ],
+      "expected": []
+    }
+  ]
+}

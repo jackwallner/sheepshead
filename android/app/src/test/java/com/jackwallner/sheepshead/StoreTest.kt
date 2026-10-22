@@ -223,7 +223,7 @@ class StoreTest {
         assertTrue("An onboarded player without a marker updated from an old build", tracker.shouldPresent(hasOnboarded = true))
         tracker.markCurrentAsBaseline()
         assertFalse(tracker.shouldPresent(hasOnboarded = true))
-        assertFalse("No notes for a maintenance version", WhatsNewTracker(InMemoryStore(), BuildConfig.VERSION_NAME).shouldPresent(true))
+        assertFalse("No notes for an unknown version", WhatsNewTracker(InMemoryStore(), "0.0.0").shouldPresent(true))
     }
 
     @Test
