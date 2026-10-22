@@ -17,7 +17,7 @@ The bury drills use five-player called ace, with the option to go alone. They ex
 | Card points A/T/K/Q/J =11/10/4/3/2; 7/8/9=0; deck totals 120. | All ranks across four suits |
 | Follow trump or led fail suit. When void, discard or trump, subject to the called-suit reservation. Highest trump wins, otherwise highest led suit. No obligation to overtrump. | Legal-play and trick tables |
 | Call only a fail ace absent from hand and blind, keeping at least one fail card of that suit. Burying an ace does not make it callable. | `callingCannotUseAceFromHandBlindOrBury` |
-| Picker reserves one hold card until the called suit is first led (last-trick exception). Partner reserves the ace and must play it on that first lead, even with another card of the suit. Either may lead the called suit. | Twelve legal-play rows, linked to two actual graded questions |
+| Picker reserves one hold card until the called suit is first led (last-trick exception). Partner reserves the ace and must play it on that first lead, even with another card of the suit. Either may lead the called suit. | Legal-play rows, linked to two actual graded questions |
 | Called-ten alternative (when agreed): all three fail aces held, call an absent fail ten and retain its ace. Picker must save/play that ace; partner must save/play the ten on the called-suit lead. | Called-ten eligibility and reservation rows on both platforms |
 | Burying trump is legal. Bury points count for the picking side. The picking side needs 61; 60-60 loses. | `buryLegalityIsSeparateFromTheGradedStrategy`, `trickWinnersAndSixtySixtyLoss` |
 
