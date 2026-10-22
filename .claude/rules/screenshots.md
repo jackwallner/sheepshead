@@ -57,3 +57,10 @@ inner walk outran all eight inner shots), so for a must-have inner screen use
 2 routes with `-DuoTourStepRegular 45`; the last route holds to the end. `--record-seconds` eats the same
 budget. Never kill a watching `gh-sim`; reattach with `gh-sim get <id>`. Sizes:
 outer 1398x2034, inner 2853x2007, both in `APP_IPHONE_DUO`.
+
+Native video: `gh-sim all --record-seconds` records the test step and that
+recorder holds the simulator, so the launch videos come back empty ("A
+recording is already in progress"). Record in a separate `gh-sim launch` with
+`-DuoTourFirst 6 -DuoTourStep 4 -DuoTourStepRegular 4` and about 3 urls, so the
+pushes land after the inner recorder attaches; a long dwell records a still
+screen. Score with `fleet-record60.py verify`.
