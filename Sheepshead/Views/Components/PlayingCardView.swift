@@ -66,11 +66,19 @@ struct CardHandView: View {
     var highlightedIndices: Set<Int> = []
     var onTap: ((Int) -> Void)?
 
-    private let columns = 7
+    static let maxColumns = 7
+
+    /// Cards per row: as few rows as `maxColumns` allows, filled evenly, so an
+    /// eight-card picker hand reads 4 + 4 instead of leaving one card alone.
+    static func rowSizes(count: Int, maxColumns: Int = maxColumns) -> [Int] {
+        guard count > 0, maxColumns > 0 else { return [] }
+        let rows = (count + maxColumns - 1) / maxColumns
+        return (0..<rows).map { count / rows + ($0 < count % rows ? 1 : 0) }
+    }
 
     var body: some View {
         let rows = tiles.enumerated().map { (index: $0.offset, tile: $0.element) }
-            .chunked(into: columns)
+            .split(into: Self.rowSizes(count: tiles.count))
         VStack(spacing: 10) {
             ForEach(0..<rows.count, id: \.self) { rowIndex in
                 HStack(spacing: 6) {
@@ -99,9 +107,11 @@ struct CardHandView: View {
 }
 
 private extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        stride(from: 0, to: count, by: size).map {
-            Array(self[$0..<Swift.min($0 + size, count)])
+    func split(into sizes: [Int]) -> [[Element]] {
+        var start = 0
+        return sizes.map { size in
+            defer { start += size }
+            return Array(self[start..<Swift.min(start + size, count)])
         }
     }
 }

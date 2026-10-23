@@ -12,13 +12,18 @@ import SwiftUI
 /// overrides the dwell while split (the inner display). The tour restarts when
 /// the panes split or join, so folded and unfolded each get the full walk.
 ///
+/// `-DuoScreen <route>` opens one route and stays there, for
+/// `gh-sim all --screen "-DuoScreen <route>"`, which relaunches once per
+/// surface and captures it folded and unfolded.
+///
 /// Routes: home, quick, room-<id>, drill-<id>, stats, endless, minute, prep,
 /// timed, howto, settings, paywall.
 enum DuoScreenshotMode {
     private static let arguments = ProcessInfo.processInfo.arguments
 
     static var isSeeded: Bool { arguments.contains("-DuoSeed") }
-    static var wantsTour: Bool { arguments.contains("-DuoTour") }
+    static var wantsTour: Bool { arguments.contains("-DuoTour") || screen != nil }
+    static var screen: String? { value("-DuoScreen") }
 
     static func value(_ key: String) -> String? {
         guard let i = arguments.firstIndex(of: key), i + 1 < arguments.count else { return nil }
@@ -147,8 +152,8 @@ extension HomeView {
         let unfolded = split != nil
         let stepKey = unfolded ? "-DuoTourStepRegular" : "-DuoTourStep"
         let step = Double(DuoScreenshotMode.value(stepKey) ?? DuoScreenshotMode.value("-DuoTourStep") ?? "") ?? 10
-        let first = Double(DuoScreenshotMode.value("-DuoTourFirst") ?? "") ?? 2
-        let routes = (DuoScreenshotMode.value("-DuoRoutes") ?? Self.defaultDuoRoutes)
+        let first = Double(DuoScreenshotMode.value("-DuoTourFirst") ?? "") ?? (DuoScreenshotMode.screen == nil ? 2 : 0.5)
+        let routes = (DuoScreenshotMode.screen ?? DuoScreenshotMode.value("-DuoRoutes") ?? Self.defaultDuoRoutes)
             .split(separator: ",").map(String.init)
         try? await Task.sleep(nanoseconds: UInt64(first * 1_000_000_000))
         for route in routes {

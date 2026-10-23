@@ -15,7 +15,7 @@ SwiftUI gesture arbitration can prevent the flip from firing.
 
 The whole card rotates as one unit. `FlipRotation` swaps the face at 90
 degrees while the card is edge-on. Keep both faces inside `SheepsheadCardFace`
-so the border, watermark, and text never detach from the card during rotation.
+so the border and text never detach from the card during rotation.
 
 Keep the model and content domain-neutral where possible. Card rendering belongs
 in `PlayingCardView`; this screen owns gesture state, grading, and deck state.

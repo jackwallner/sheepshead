@@ -547,8 +547,8 @@ struct FlipCardFace: View {
 }
 
 /// The sheepshead-card chrome both faces share: ivory surface, double frame like
-/// the printed card, corner pips, and a faint suit watermark so the
-/// open space feels designed instead of empty.
+/// the printed card, and the eyebrow. No watermark: a large faint suit glyph
+/// read as stray circles over the answer buttons.
 private struct SheepsheadCardFace<Content: View>: View {
     let accent: Color
     let eyebrow: String
@@ -571,17 +571,6 @@ private struct SheepsheadCardFace<Content: View>: View {
         .background {
             RoundedRectangle(cornerRadius: Theme.deckCorner, style: .continuous)
                 .fill(Theme.card)
-        }
-        .overlay {
-            // Watermark sits above the surface but below the frame.
-            Text("♣")
-                .font(.system(size: 190, weight: .bold))
-                .foregroundStyle(accent.opacity(0.05))
-                .rotationEffect(.degrees(-10))
-                .offset(x: 60, y: 70)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-                .clipShape(RoundedRectangle(cornerRadius: Theme.deckCorner, style: .continuous))
-                .allowsHitTesting(false)
         }
         .overlay {
             RoundedRectangle(cornerRadius: Theme.deckCorner, style: .continuous)
