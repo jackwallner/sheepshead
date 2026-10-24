@@ -1,3 +1,5 @@
+import SwiftUI
+import UIKit
 import XCTest
 @testable import Sheepshead
 
@@ -33,24 +35,28 @@ final class PracticeRecordStoreTests: XCTestCase {
     /// the second condition an item would either nag forever or vanish on the
     /// first lucky guess.
     func testMissedItemEntersAndLeavesTheQueue() {
-        store.record(itemID: "q1", roomID: room, correct: false)
-        XCTAssertEqual(store.reviewQueue(), ["q1"])
+        let id = SessionBuilder.choiceItems(in: room, includePro: true)[0].id
+        store.record(itemID: id, roomID: room, correct: false)
+        XCTAssertEqual(store.reviewQueue(), [id])
 
-        store.record(itemID: "q1", roomID: room, correct: true)
+        store.record(itemID: id, roomID: room, correct: true)
         XCTAssertEqual(store.reviewQueue(), [], "One correct answer schedules it a day out")
 
-        store.record(itemID: "q1", roomID: room, correct: true)
-        XCTAssertFalse(store.records["q1"]!.needsReview, "Two in a row retires it")
+        store.record(itemID: id, roomID: room, correct: true)
+        XCTAssertFalse(store.records[id]!.needsReview, "Two in a row retires it")
     }
 
     func testQueueRanksWorstFirst() {
-        // q1: 1 of 3. q2: 2 of 3. Both due, q1 should lead.
+        let items = SessionBuilder.choiceItems(in: room, includePro: true)
+        let id = items[0].id
+        let otherID = items[1].id
+        // The first item has lower accuracy, so it should lead.
         for correct in [false, false, false] {
-            store.record(itemID: "q1", roomID: room, correct: correct)
+            store.record(itemID: id, roomID: room, correct: correct)
         }
-        store.record(itemID: "q2", roomID: room, correct: true)
-        store.record(itemID: "q2", roomID: room, correct: false)
-        XCTAssertEqual(store.reviewQueue().first, "q1")
+        store.record(itemID: otherID, roomID: room, correct: true)
+        store.record(itemID: otherID, roomID: room, correct: false)
+        XCTAssertEqual(store.reviewQueue().first, id)
     }
 
     /// Generated items mint a new id per question. They must roll up onto one
@@ -65,6 +71,90 @@ final class PracticeRecordStoreTests: XCTestCase {
         XCTAssertEqual(store.records[PracticeSkill.handReading.rawValue]?.attempts, 2)
         XCTAssertTrue(store.reviewQueue().isEmpty)
         XCTAssertEqual(store.dueCount, 0)
+    }
+
+    func testOnlyReplayableMistakesAreDueAfterReload() throws {
+        var supported: [String] = []
+        var unsupported: [String] = ["removed-item"]
+        for room in DrillLibrary.rooms {
+            for drill in room.drills {
+                switch drill.kind {
+                case .quiz(let questions): supported += questions.map(\.id)
+                case .handMatch(let questions): supported += questions.map(\.id)
+                case .flashcards(let cards):
+                    supported += cards.filter { $0.choice != nil }.map(\.id)
+                    unsupported += cards.filter { $0.choice == nil }.map(\.id)
+                case .discard(let scenarios): unsupported += scenarios.map(\.id)
+                }
+            }
+        }
+        XCTAssertFalse(supported.isEmpty)
+        XCTAssertGreaterThan(unsupported.count, 1)
+        // Legacy records have no reviewSuppressed flag. Filter them on read too.
+        let legacy = Dictionary(uniqueKeysWithValues: (supported + unsupported).map {
+            ($0, PracticeRecord(attempts: 1, roomID: room))
+        })
+        defaults.set(try JSONEncoder().encode(legacy), forKey: "practice.records")
+        let reloaded = PracticeRecordStore(defaults: defaults)
+        let queue = reloaded.reviewQueue(limit: legacy.count)
+        XCTAssertEqual(reloaded.dueCount, Set(supported).count)
+        XCTAssertEqual(Set(queue), Set(supported))
+        XCTAssertEqual(SessionBuilder.reviewSession(ids: queue, includePro: true).map(\.id), queue)
+        let limited = reloaded.reviewQueue(limit: 3)
+        XCTAssertEqual(limited.count, 3)
+        XCTAssertEqual(SessionBuilder.reviewSession(ids: limited, includePro: true).count, 3)
+        XCTAssertEqual(reloaded.totalAttempts, legacy.count, "Keep unsupported history for stats")
+    }
+
+    func testUnsupportedMissesNeverOfferReview() {
+        for room in DrillLibrary.rooms {
+            for drill in room.drills {
+                switch drill.kind {
+                case .discard(let scenarios):
+                    for scenario in scenarios {
+                        store.record(itemID: scenario.id, roomID: room.id, correct: false)
+                    }
+                case .flashcards(let cards):
+                    for card in cards where card.choice == nil {
+                        store.record(itemID: card.id, roomID: room.id, correct: false)
+                    }
+                default: break
+                }
+            }
+        }
+        XCTAssertGreaterThan(store.totalAttempts, 0)
+        XCTAssertEqual(store.dueCount, 0)
+        XCTAssertTrue(store.reviewQueue().isEmpty)
+    }
+
+    func testEmptyRunsDoNotCompleteSessions() async throws {
+        let progress = ProgressStore(defaults: defaults)
+        let drill = SessionBuilder.reviewDrill
+        let screens: [(AnyView, Int)] = [
+            (AnyView(PracticeRunView(mode: .review)), 0),
+            (AnyView(DrillCompleteView(drill: drill, score: 0, total: 0)), 0),
+            (AnyView(DrillCompleteView(drill: drill, score: 1, total: 1)), 1)
+        ]
+        for (screen, expectedSessions) in screens {
+            let view = screen
+                .environmentObject(progress)
+                .environmentObject(SubscriptionService.shared)
+            let controller = UIHostingController(rootView: view)
+            let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 390, height: 844))
+            window.rootViewController = controller
+            window.isHidden = false
+            controller.view.layoutIfNeeded()
+            controller.beginAppearanceTransition(true, animated: false)
+            controller.endAppearanceTransition()
+            defer {
+                window.isHidden = true
+                window.rootViewController = nil
+            }
+            try await Task.sleep(for: .milliseconds(300))
+            XCTAssertEqual(progress.totalSessions, expectedSessions)
+            XCTAssertEqual(progress.streakCount, expectedSessions)
+            XCTAssertEqual(progress.completions(for: drill.id), expectedSessions)
+        }
     }
 
     func testRoomStatsAggregate() {

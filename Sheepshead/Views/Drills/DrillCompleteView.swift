@@ -73,6 +73,7 @@ struct DrillCompleteView: View {
         .overlay { ConfettiBurst(trigger: confettiTrigger, origin: .init(x: 0.5, y: 0.3), particleCount: 44) }
         .navigationBarBackButtonHidden(true)
         .onAppear {
+            guard total > 0 else { return }
             celebrate = true
             confettiTrigger += 1
             guard !recorded else { return }

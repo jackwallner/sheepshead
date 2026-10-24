@@ -97,6 +97,9 @@ enum SessionBuilder {
         return picked.map(prepared)
     }
 
+    /// Fix My Mistakes is a member feature, so its scheduler uses the full pool.
+    static let reviewableItemIDs = Set(choicePool(includePro: true).map(\.id))
+
     /// The Fix My Mistakes session: exactly the items the scheduler says are
     /// due, in the order it ranked them. Unlike Quick Session this never pads
     /// with fresh material - the whole point is a short run of the questions a

@@ -71,7 +71,15 @@ struct PracticeRunView: View {
     }
 
     var body: some View {
-        if finished || items.isEmpty {
+        if items.isEmpty {
+            ContentUnavailableView {
+                Label(mode == .review ? "Nothing due" : "Nothing to practice", systemImage: "checkmark.circle")
+            } actions: {
+                Button("Done") { dismiss() }
+            }
+            .background(Theme.background)
+            .navigationTitle(title)
+        } else if finished {
             DrillCompleteView(drill: completedDrill, score: score, total: gradedTotal)
         } else {
             runBody
@@ -310,7 +318,7 @@ struct PracticeRunView: View {
         }
         // A run the player quit before answering anything is not an
         // achievement; sending it to the completion screen would fake one.
-        guard attempted > 0 || mode == .review else {
+        guard attempted > 0 else {
             dismiss()
             return
         }

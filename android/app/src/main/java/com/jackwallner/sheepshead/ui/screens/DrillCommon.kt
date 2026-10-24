@@ -75,6 +75,7 @@ fun DrillCompleteScreen(drill: Drill, score: Int?, total: Int, onDone: () -> Uni
     var celebrate by rememberSaveable { mutableStateOf(false) }
     var confetti by rememberSaveable { mutableIntStateOf(0) }
     LaunchedEffect(Unit) {
+        if (total <= 0) return@LaunchedEffect
         celebrate = true
         confetti += 1
         if (recorded) return@LaunchedEffect

@@ -3,21 +3,25 @@ package com.jackwallner.sheepshead
 import com.jackwallner.sheepshead.content.SheepsheadContent
 import com.jackwallner.sheepshead.content.SheepsheadMinuteContent
 import com.jackwallner.sheepshead.content.DrillLibrary
+import com.jackwallner.sheepshead.content.SessionBuilder
 import com.jackwallner.sheepshead.content.PracticeSkill
 import com.jackwallner.sheepshead.data.AppClock
 import com.jackwallner.sheepshead.data.ConversionDiagnostics
 import com.jackwallner.sheepshead.data.SheepsheadMinuteStore
 import com.jackwallner.sheepshead.data.InMemoryStore
+import com.jackwallner.sheepshead.data.PracticeRecord
 import com.jackwallner.sheepshead.data.PracticeRecordStore
 import com.jackwallner.sheepshead.data.ProgressStore
 import com.jackwallner.sheepshead.data.ReviewAccess
 import com.jackwallner.sheepshead.data.ReviewPromptTracker
 import com.jackwallner.sheepshead.data.WhatsNewTracker
+import com.jackwallner.sheepshead.model.DrillKind
 import java.security.MessageDigest
 import java.time.Clock
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneOffset
+import org.json.JSONObject
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -106,17 +110,21 @@ class StoreTest {
     @Test
     fun missedItemEntersAndLeavesTheQueueWorstFirst() {
         val store = PracticeRecordStore(defaults, clock)
-        store.record("q1", room, correct = false)
-        assertEquals(listOf("q1"), store.reviewQueue())
-        store.record("q1", room, correct = true)
+        val items = SessionBuilder.choiceItems(room, true)
+        val first = items[0].id
+        val second = items[1].id
+        val third = items[2].id
+        store.record(first, room, correct = false)
+        assertEquals(listOf(first), store.reviewQueue())
+        store.record(first, room, correct = true)
         assertEquals("One correct answer schedules it a day out", emptyList<String>(), store.reviewQueue())
-        store.record("q1", room, correct = true)
-        assertFalse("Two in a row retires it", store.records.getValue("q1").needsReview)
+        store.record(first, room, correct = true)
+        assertFalse("Two in a row retires it", store.records.getValue(first).needsReview)
 
-        repeat(3) { store.record("q2", room, correct = false) }
-        store.record("q3", room, correct = true)
-        store.record("q3", room, correct = false)
-        assertEquals("q2", store.reviewQueue().first())
+        repeat(3) { store.record(second, room, correct = false) }
+        store.record(third, room, correct = true)
+        store.record(third, room, correct = false)
+        assertEquals(second, store.reviewQueue().first())
     }
 
     @Test
@@ -130,6 +138,58 @@ class StoreTest {
         assertEquals(2, store.records.getValue(PracticeSkill.HAND_READING.raw).attempts)
         assertTrue(store.reviewQueue().isEmpty())
         assertEquals(0, store.dueCount)
+    }
+
+    @Test
+    fun onlyReplayableMistakesAreDueAfterReload() {
+        val supported = mutableListOf<String>()
+        val unsupported = mutableListOf("removed-item")
+        for (room in DrillLibrary.rooms) {
+            for (drill in room.drills) {
+                when (val kind = drill.kind) {
+                    is DrillKind.Quiz -> supported += kind.questions.map { it.id }
+                    is DrillKind.HandMatch -> supported += kind.questions.map { it.id }
+                    is DrillKind.Flashcards -> {
+                        supported += kind.cards.filter { it.choice != null }.map { it.id }
+                        unsupported += kind.cards.filter { it.choice == null }.map { it.id }
+                    }
+                    is DrillKind.Discard -> unsupported += kind.scenarios.map { it.id }
+                }
+            }
+        }
+        assertTrue(supported.isNotEmpty())
+        assertTrue(unsupported.size > 1)
+        val legacy = JSONObject()
+        (supported + unsupported).forEach { legacy.put(it, PracticeRecord(attempts = 1, roomID = room).toJson()) }
+        defaults.putString("practice.records", legacy.toString())
+        val reloaded = PracticeRecordStore(defaults, clock)
+        val queue = reloaded.reviewQueue(limit = legacy.length())
+        assertEquals(supported.toSet().size, reloaded.dueCount)
+        assertEquals(supported.toSet(), queue.toSet())
+        assertEquals(queue, SessionBuilder.reviewSession(queue, true).map { it.id })
+        val limited = reloaded.reviewQueue(limit = 3)
+        assertEquals(3, limited.size)
+        assertEquals(3, SessionBuilder.reviewSession(limited, true).size)
+        assertEquals("Keep unsupported history for stats", legacy.length(), reloaded.totalAttempts)
+    }
+
+    @Test
+    fun unsupportedMissesNeverOfferReview() {
+        val store = PracticeRecordStore(defaults, clock)
+        for (room in DrillLibrary.rooms) {
+            for (drill in room.drills) {
+                when (val kind = drill.kind) {
+                    is DrillKind.Discard -> kind.scenarios.forEach { store.record(it.id, room.id, correct = false) }
+                    is DrillKind.Flashcards -> kind.cards.filter { it.choice == null }.forEach {
+                        store.record(it.id, room.id, correct = false)
+                    }
+                    else -> Unit
+                }
+            }
+        }
+        assertTrue(store.totalAttempts > 0)
+        assertEquals(0, store.dueCount)
+        assertTrue(store.reviewQueue().isEmpty())
     }
 
     @Test

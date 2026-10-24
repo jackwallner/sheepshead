@@ -45,6 +45,9 @@ object SessionBuilder {
         return choicePool(includePro).shuffled().sortedBy(::tier).take(count).map(::prepared)
     }
 
+    /** Fix My Mistakes is a member feature, so its scheduler uses the full pool. */
+    val reviewableItemIDs: Set<String> by lazy { choicePool(true).map { it.id }.toSet() }
+
     /** Exactly the items the scheduler says are due, in its order. Never padded. */
     fun reviewSession(ids: List<String>, includePro: Boolean): List<QuickItem> {
         val pool = choicePool(includePro).associateBy { it.id }
