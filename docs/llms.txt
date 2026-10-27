@@ -1,0 +1,20 @@
+# Sheepshead Trainer: Trump Play
+
+> Sheepshead Trainer is a free Sheepshead card game practice app for iPhone and iPad. Five-minute drills on trump order, picking, the bury and trick play.
+
+## App
+
+- [Sheepshead Card Game Practice App | Sheepshead Trainer](https://jackwallner.com/ios/sheepshead/index.html.md): Sheepshead Trainer is a free Sheepshead card game practice app for iPhone and iPad. Five-minute drills on trump order, picking, the bury and trick play.
+
+## Guides
+
+- [Best Sheepshead App for iPhone (2026): 5 Compared](https://jackwallner.com/ios/sheepshead/best-sheepshead-app.html.md): The best Sheepshead apps for iPhone and iPad compared in October 2026: games against the computer, online tables with friends, and practice drills.
+- [How to Play Sheepshead for Beginners | Sheepshead Trainer](https://jackwallner.com/ios/sheepshead/how-to-play-sheepshead.html.md): How to play Sheepshead: the 14-card trump order, card points, picking the blind, burying, calling a partner, taking tricks and scoring, with worked examples.
+
+## Optional
+
+- [Sheepshead Trainer Android Privacy Policy](https://jackwallner.github.io/sheepshead/android-privacy.html.md): Sheepshead Trainer works without an account. Practice progress, streaks, review history, onboarding choices, and preferences are stored locally on your device.
+- [Sheepshead Trainer Android Terms of Use](https://jackwallner.github.io/sheepshead/android-terms.html.md): Terms of Use for Sheepshead Trainer on Android, including Sheepshead+ subscriptions and the lifetime purchase through Google Play.
+- [Sheepshead Trainer Privacy Policy](https://jackwallner.com/ios/sheepshead/privacy-policy.html.md): Sheepshead Trainer works without an account. Practice progress, streaks, preferences, review history, and onboarding choices are stored locally on your...
+- [Support | Sheepshead Trainer](https://jackwallner.com/ios/sheepshead/support.html.md): Email jackwallner+m@gmail.com and include your device model, iOS version, and the room or screen where the problem happened. Do not include payment details.
+- [Sheepshead Trainer Terms of Use](https://jackwallner.com/ios/sheepshead/terms.html.md): By using Sheepshead Trainer, you agree to these Terms of Use and Apple's Standard Licensed Application End User License Agreement.
