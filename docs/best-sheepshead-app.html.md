@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/sheepshead/best-sheepshead-app.html
 
 ## Best Sheepshead App
 
-By Jack Wallner · Last updated October 21, 2026
+By Jack Wallner · Last updated October 28, 2026
 
 **Best for games against the computer:** Sheepshead, the App, the most-rated option. **Best for being told why a play is right:** K9 Sheepshead: Schafkopf, whose listing says each strategic decision is explained. **Best for online tables with friends and every house rule:** Sheepshead: Card Game. **Best for adjustable rules and large-print cards:** Sheepshead by Derek Hoffmeister. **Best for short drills on trump, the blind and the bury:** Sheepshead Trainer, the app I make.
 

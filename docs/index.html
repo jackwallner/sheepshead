@@ -42,7 +42,7 @@
         "@graph": [
             {
                 "@type": "MobileApplication",
-                "dateModified": "2026-10-27",
+                "dateModified": "2026-10-28",
                 "@id": "https://jackwallner.com/ios/sheepshead/#app",
                 "name": "Sheepshead Trainer: Trump Play",
                 "description": "Sheepshead Trainer is a free practice app for the Sheepshead card game on iPhone and iPad. It teaches trump order, picker and partner roles, the bury and trick play in five-minute drills across four practice rooms, with the coach's reasoning behind every answer. It has no opponents, needs no account and works offline.",
@@ -564,7 +564,7 @@
         color: #6e6e73;
       }
 
-      footer a {
+      footer a { display: inline-block; padding: 6px 0;
         color: #6e6e73;
         text-decoration: none;
         margin: 0 10px;
@@ -625,8 +625,8 @@
   <body>
     <nav>
       <div class="container">
-        <a class="nav-brand" href="./">
-          <img src="icon_256.webp" alt="Sheepshead Trainer" loading="lazy" decoding="async">
+        <a class="nav-brand" href="./" aria-label="Sheepshead Trainer">
+          <img src="icon_64.webp" alt="" width="32" height="32">
           <span>Sheepshead Trainer</span>
         </a>
         <a
@@ -941,7 +941,7 @@
     </section>
 
     <footer>
-      <div class="divider">&copy; 2026 Jack Wallner · Last updated <time datetime="2026-10-27" data-updated>October 27, 2026</time></div>
+      <div class="divider">&copy; 2026 Jack Wallner · Last updated <time datetime="2026-10-28" data-updated>October 28, 2026</time></div>
       <div>
         <a href="how-to-play-sheepshead.html">How to play Sheepshead</a>
         <a href="best-sheepshead-app.html">Best Sheepshead app</a>

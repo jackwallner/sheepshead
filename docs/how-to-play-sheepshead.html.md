@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/sheepshead/how-to-play-sheepshead.html
 
 ## How to Play Sheepshead: Rules for Beginners
 
-By Jack Wallner · Last updated October 21, 2026
+By Jack Wallner · Last updated October 28, 2026
 
 Sheepshead is a trick-taking game for five players with a 32-card deck in which every queen, jack and diamond is trump. Each player gets six cards and two go face down as the blind. One player picks up the blind, buries two cards, and names a fail ace to find a secret partner. The picker and partner need 61 of the deck's 120 card points to win.
 
