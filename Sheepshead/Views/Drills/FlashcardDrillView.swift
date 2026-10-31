@@ -314,6 +314,9 @@ struct FlashcardDrillView: View {
     /// fades as it goes, so the verdict stamp leaves with it instead of being
     /// cut off the instant the queue drops the card.
     private func fling(direction: CGFloat, size: CGSize) {
+        // The Next button stays on the card while it flies off, so a second tap
+        // used to commit twice and swallow the following card as "knew it".
+        guard !isFlinging else { return }
         isFlinging = true
         hasSwipedDeck = true
         Haptics.impact(.rigid, intensity: 0.7)
