@@ -98,18 +98,29 @@ object SheepsheadMinuteContent {
         return SheepsheadMinuteQuestion(SheepsheadMinuteCategory.BURYING, SessionBuilder.prepared(item))
     }
 
-    /** Every other pair from the same deal, so a wrong answer is a real alternative. */
+    /**
+     * Every other pair from the same deal, so a wrong answer is a real alternative.
+     *
+     * A pair is two cards, not a string. The answer can be authored in a different
+     * order than the deal (`plus-bury-3` lists the 7 of Hearts ahead of the King of
+     * Spades, which is dealt first), so its text never matched the deal-ordered label
+     * and the right cards came back as a wrong choice. The same shuffle runs as before
+     * and those pairs are dropped afterwards by comparing cards, so every other day
+     * keeps the choices it always had (and matches iOS).
+     */
     private fun distractorLabels(scenario: DiscardScenario, dayKey: String, answer: String): List<String> {
-        val labels = mutableSetOf<String>()
+        val pairs = mutableMapOf<String, Set<PlayingCard>>()
         for (first in 0 until maxOf(0, scenario.deal.size - 1)) {
             for (second in first + 1 until scenario.deal.size) {
-                labels += label(listOf(scenario.deal[first], scenario.deal[second]))
+                val cards = listOf(scenario.deal[first], scenario.deal[second])
+                pairs[label(cards)] = cards.toSet()
             }
         }
-        labels -= answer
-        val sorted = labels.sorted()
+        pairs -= answer
+        val sorted = pairs.keys.sorted()
         val order = ChoiceShuffle.permutation(sorted.size, "sheepshead-minute-$dayKey-bury-choices")
-        return order.take(3).map { sorted[it] }
+        val answerCards = scenario.recommendedDiscard.toSet()
+        return order.map { sorted[it] }.filter { pairs[it] != answerCards }.take(3)
     }
 
     private fun label(cards: List<PlayingCard>): String = cards.joinToString(", ") { it.spokenName }
