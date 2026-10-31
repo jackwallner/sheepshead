@@ -9,6 +9,7 @@ import com.jackwallner.sheepshead.content.PracticeSkill
 import com.jackwallner.sheepshead.content.QuickItem
 import com.jackwallner.sheepshead.content.SessionBuilder
 import com.jackwallner.sheepshead.model.ChoiceShuffle
+import com.jackwallner.sheepshead.model.DrillKind
 import com.jackwallner.sheepshead.model.HandCategory.FAIL_SUIT
 import com.jackwallner.sheepshead.model.HandCategory.LOW_CARDS
 import com.jackwallner.sheepshead.model.HandCategory.POINT_CARDS
@@ -264,6 +265,38 @@ class GeneratorParityTest {
         while (day.isBefore(LocalDate.of(2031, 1, 1))) {
             val key = SheepsheadMinuteContent.key(day)
             assertEquals(key, 2, HandGenerator.batch(2, "sheepshead-minute-$key-hands").size)
+            checked += 1
+            day = day.plusDays(1)
+        }
+        assertTrue(checked > 1800)
+    }
+
+    /**
+     * A bury choice is two cards, so "7 of Hearts, K of Spades" and "K of Spades, 7 of Hearts" are
+     * one answer. plus-bury-3 is authored against its deal order, which put the right pair on screen
+     * twice with one copy graded wrong. Compare the cards, not the strings.
+     */
+    @Test
+    fun buryChoicesOfferTheRecommendedPairExactlyOnce() {
+        val scenarios = DrillLibrary.rooms.flatMap { room ->
+            room.drills.flatMap { (it.kind as? DrillKind.Discard)?.scenarios ?: emptyList() }
+        }
+        fun cards(label: String) = label.split(", ").toSet()
+        var day = LocalDate.of(2026, 1, 1)
+        var checked = 0
+        while (day.isBefore(LocalDate.of(2031, 1, 1))) {
+            val challenge = SheepsheadMinuteContent.challenge(day)
+            val item = challenge.questions.first { it.category == SheepsheadMinuteCategory.BURYING }.item
+            val scenario = scenarios.first { it.deal == item.tiles }
+            val answer = scenario.recommendedDiscard.map { it.spokenName }.toSet()
+            val copies = item.choices.count { cards(it) == answer }
+            assertEquals("${challenge.dayKey} (${scenario.id}) lists the recommended pair $copies times: ${item.choices}", 1, copies)
+            assertEquals(
+                "${challenge.dayKey} (${scenario.id}) offers the same two cards twice: ${item.choices}",
+                item.choices.size,
+                item.choices.map(::cards).toSet().size,
+            )
+            assertEquals(answer, cards(item.choices[item.answerIndex]))
             checked += 1
             day = day.plusDays(1)
         }
