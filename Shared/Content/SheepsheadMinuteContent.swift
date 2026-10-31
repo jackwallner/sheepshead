@@ -139,21 +139,30 @@ enum SheepsheadMinuteContent {
 
     /// Every other pair from the same deal, so a wrong answer is always a real
     /// alternative the player could have chosen rather than an obvious dud.
+    ///
+    /// A pair is two cards, not a string. The answer can be authored in a
+    /// different order than the deal (`plus-bury-3` lists the 7 of Hearts ahead
+    /// of the King of Spades, which is dealt first), so its text never matched
+    /// the deal-ordered label and the right cards came back as a wrong choice.
+    /// The same shuffle runs as before and those pairs are dropped afterwards by
+    /// comparing cards, so every other day keeps the choices it always had.
     private static func distractorLabels(
         for scenario: DiscardScenario,
         dayKey: String,
         answer: String
     ) -> [String] {
-        var labels: Set<String> = []
+        var pairs: [String: Set<PlayingCard>] = [:]
         for first in 0..<max(0, scenario.deal.count - 1) {
             for second in (first + 1)..<scenario.deal.count {
-                labels.insert(label([scenario.deal[first], scenario.deal[second]]))
+                let cards = [scenario.deal[first], scenario.deal[second]]
+                pairs[label(cards)] = Set(cards)
             }
         }
-        labels.remove(answer)
-        let sorted = labels.sorted()
+        pairs[answer] = nil
+        let sorted = pairs.keys.sorted()
         let order = ChoiceShuffle.permutation(count: sorted.count, seed: "sheepshead-minute-\(dayKey)-bury-choices")
-        return order.prefix(3).map { sorted[$0] }
+        let answerCards = Set(scenario.recommendedDiscard)
+        return order.map { sorted[$0] }.filter { pairs[$0] != answerCards }.prefix(3).map { $0 }
     }
 
     private static func label(_ cards: [PlayingCard]) -> String {
