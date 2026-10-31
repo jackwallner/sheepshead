@@ -98,6 +98,49 @@ final class SheepsheadMinuteContentTests: XCTestCase {
         XCTAssertEqual(Calendar.gregorianLocal.identifier, .gregorian)
     }
 
+    /// Choices are text, but a bury choice is two cards, so "7 of Hearts, K of
+    /// Spades" and "K of Spades, 7 of Hearts" are the same answer. `plus-bury-3`
+    /// is authored against its deal order, which put the right pair on screen
+    /// twice with one copy graded wrong. Compare the cards, not the strings.
+    func testBuryChoicesOfferTheRecommendedPairExactlyOnce() {
+        let scenarios = DrillLibrary.rooms.flatMap { room in
+            room.drills.flatMap { drill -> [DiscardScenario] in
+                if case .discard(let values) = drill.kind { return values }
+                return []
+            }
+        }
+        func cards(_ label: String) -> Set<String> { Set(label.components(separatedBy: ", ")) }
+
+        var day = date(2026, 1, 1)
+        var checked = 0
+        while day < date(2031, 1, 1) {
+            let challenge = SheepsheadMinuteContent.challenge(for: day, calendar: calendar)
+            guard let item = challenge.questions.first(where: { $0.category == .burying })?.item,
+                  let scenario = scenarios.first(where: { $0.deal == item.tiles }) else {
+                XCTFail("\(challenge.dayKey) has no bury question built from an authored scenario")
+                day = calendar.date(byAdding: .day, value: 1, to: day)!
+                continue
+            }
+            let answer = Set(scenario.recommendedDiscard.map(\.spokenName))
+            let copiesOfTheAnswer = item.choices.filter { cards($0) == answer }
+            XCTAssertEqual(
+                copiesOfTheAnswer.count, 1,
+                "\(challenge.dayKey) (\(scenario.id)) lists the recommended pair \(copiesOfTheAnswer.count) times: \(item.choices)"
+            )
+            XCTAssertEqual(
+                Set(item.choices.map(cards)).count, item.choices.count,
+                "\(challenge.dayKey) (\(scenario.id)) offers the same two cards twice: \(item.choices)"
+            )
+            XCTAssertTrue(
+                cards(item.choices[item.answerIndex]) == answer,
+                "\(challenge.dayKey) (\(scenario.id)) grades a pair other than the recommended bury"
+            )
+            checked += 1
+            day = calendar.date(byAdding: .day, value: 1, to: day)!
+        }
+        XCTAssertGreaterThan(checked, 1800)
+    }
+
     /// The bury question lists pairs from the deal. A pair that reads the same
     /// as the answer (cards in a different order) would show the right answer
     /// twice, so no choice may repeat across a few years of day keys. Authored
