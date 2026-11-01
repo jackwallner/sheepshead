@@ -1,1 +1,1 @@
-Habilitats noves sense fi: Who Takes the Trick? i comptar els punts, amb la regla darrere de cada resposta. Domini per sala, recompte setmanal, Send Feedback, compatibilitat amb Reduir el moviment i condicions de subscripció més clares.
+Millores internes i correccions d'errors perquè Sheepshead Trainer funcioni bé. Gràcies per ser aquí.
