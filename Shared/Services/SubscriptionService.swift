@@ -38,6 +38,11 @@ final class SubscriptionService: NSObject, ObservableObject {
     /// that for members too, so nothing may treat "not a member" as a lapse,
     /// or sell a member a trial, until this is true.
     @Published private(set) var membershipResolved = false
+    /// A fresh record (`confirmsNoMembership`) says no membership, or there is
+    /// no store to ask. The cached record launch applies first can be days old
+    /// and cannot tell an expiry from a renewal since, so it never sets this.
+    /// Only this may tear down a member feature.
+    @Published private(set) var lapseConfirmed = false
     /// The active entitlement is the free week (RevenueCat `periodType`), not a
     /// paid or lifetime membership.
     @Published private(set) var isTrialing = false
@@ -58,6 +63,9 @@ final class SubscriptionService: NSObject, ObservableObject {
     private let reinstallSyncKey = "membership.reinstallSyncDone"
     /// How old a customer record may be and still serve as the first baseline.
     static let freshBaselineAge: TimeInterval = 300
+    /// When RevenueCat answered the cached record launch applies first
+    /// (`distantPast` when there was none). A later record is a network answer.
+    private var launchCacheAnsweredAt = Date.distantFuture
     private var membershipRecovery: Task<Void, Never>?
     private var paywallImpressionsThisSession: Set<String> = []
 
@@ -86,11 +94,14 @@ final class SubscriptionService: NSObject, ObservableObject {
             // No store at all (simulator, screenshots): nothing will ever
             // load, so what we have is the answer.
             membershipResolved = true
+            lapseConfirmed = !isPro
             return
         }
         // The last record RevenueCat saw, from the first frame: a member is a
         // member before the network answers.
-        if let cached = Purchases.shared.cachedCustomerInfo { apply(cached) }
+        let cached = Purchases.shared.cachedCustomerInfo
+        launchCacheAnsweredAt = cached?.requestDate ?? .distantPast
+        if let cached { apply(cached) }
         Task {
             await refreshCustomerInfo()
             // In parallel with offerings: a reinstalled member should be
@@ -154,6 +165,11 @@ final class SubscriptionService: NSObject, ObservableObject {
         UserDefaults.standard.set(isPro, forKey: localOverrideKey)
         #endif
         self.isPro = isPro
+        if isPro {
+            lapseConfirmed = false
+        } else if !isConfigured {
+            lapseConfirmed = true
+        }
     }
 
     private func configureIfNeeded() {
@@ -372,6 +388,11 @@ final class SubscriptionService: NSObject, ObservableObject {
         #endif
         isPro = entitled || override
         membershipResolved = true
+        lapseConfirmed = !override && Self.confirmsNoMembership(
+            isActive: entitled,
+            answeredAt: info.requestDate,
+            launchCacheAnsweredAt: launchCacheAnsweredAt
+        )
         isTrialing = entitled && entitlement?.periodType == .trial
         expirationDate = entitled ? entitlement?.expirationDate : nil
         observe(MembershipSnapshot.observed(
@@ -382,6 +403,23 @@ final class SubscriptionService: NSObject, ObservableObject {
             willRenew: entitlement?.willRenew == true || entitlement?.billingIssueDetectedAt != nil,
             expirationDate: entitlement?.expirationDate
         ), answeredAt: info.requestDate)
+    }
+
+    /// Whether a record is a fresh "not a member": answered after the launch
+    /// cache (so by the network, whatever the device clock says), or within
+    /// `freshBaselineAge`. RevenueCat judges a cached record more than 3 days
+    /// old against today with the expiry it last read, so a member who
+    /// renewed while the app was closed reads inactive until the network
+    /// answers.
+    static func confirmsNoMembership(
+        isActive: Bool,
+        answeredAt: Date,
+        launchCacheAnsweredAt: Date,
+        now: Date = Date()
+    ) -> Bool {
+        guard !isActive else { return false }
+        return answeredAt > launchCacheAnsweredAt
+            || abs(now.timeIntervalSince(answeredAt)) <= freshBaselineAge
     }
 
     /// The active entitlement to read trial, renewal and expiry from. Every

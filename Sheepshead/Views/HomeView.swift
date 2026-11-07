@@ -112,10 +112,10 @@ struct HomeView: View {
             .onChange(of: records.records.count) { _, _ in recordMastery() }
             .onChange(of: router.pendingDestination) { _, _ in consumePendingDestination() }
             .onChange(of: subscriptions.membershipResolved) { _, _ in
-                dropGameNightReminderUnlessMember()
                 recordMastery()
                 consumePendingDestination()
             }
+            .onChange(of: subscriptions.lapseConfirmed) { _, _ in dropGameNightReminderUnlessMember() }
             .onChange(of: subscriptions.isPro) { _, _ in recordMastery() }
             .onChange(of: subscriptions.isPro) { _, isMember in
                 if isMember {
@@ -243,10 +243,7 @@ struct HomeView: View {
     }
 
     private func dropGameNightReminderUnlessMember() {
-        settings.dropGameNightReminderUnlessMember(
-            isMember: subscriptions.isPro,
-            membershipResolved: subscriptions.membershipResolved
-        )
+        settings.dropGameNightReminderUnlessMember(lapseConfirmed: subscriptions.lapseConfirmed)
     }
 
     private func consumePendingDestination() {

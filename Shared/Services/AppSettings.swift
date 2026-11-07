@@ -230,10 +230,11 @@ final class AppSettings: ObservableObject {
     /// Game night prep is Sheepshead+ only, and its one switch hides with the
     /// membership. A lapse Home never saw change (the app was closed when it
     /// ran out, so the first record read at launch is already inactive) left
-    /// the weekly reminder firing with no way to stop it in the app. Called
-    /// whenever membership is known; does nothing before it is.
-    func dropGameNightReminderUnlessMember(isMember: Bool, membershipResolved: Bool) {
-        guard membershipResolved, !isMember, gameNightReminderEnabled else { return }
+    /// the weekly reminder firing with no way to stop it in the app. Acts only
+    /// on `SubscriptionService.lapseConfirmed`, a fresh answer: the launch
+    /// cache reads a member who renewed while the app was closed as lapsed.
+    func dropGameNightReminderUnlessMember(lapseConfirmed: Bool) {
+        guard lapseConfirmed, gameNightReminderEnabled else { return }
         gameNightReminderEnabled = false
     }
 

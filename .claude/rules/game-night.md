@@ -46,5 +46,9 @@ The game night reminder must never outlive the membership. Home calls
 resolves, on a lapse and when a notification tap meets a non-member: a lapse
 that happened while the app was closed shows no `isPro` change, so an
 `onChange` alone left the weekly notification firing with its switch hidden.
-It does nothing before membership is resolved, since a member reads as free
-until RevenueCat answers.
+It acts only on `SubscriptionService.lapseConfirmed`, a fresh "not a member"
+(a record answered after the launch cache, or within `freshBaselineAge`).
+`membershipResolved` is not enough: it is set by RevenueCat's on-device cache,
+and a cache more than 3 days old is judged against today with the expiry it
+last read, so a member who renewed while the app was closed reads as lapsed
+until the network answers.
