@@ -68,6 +68,20 @@ final class StateMachineRegressionUITests: XCTestCase {
         XCTAssertFalse(app.staticTexts["50%"].exists)
     }
 
+    // MARK: - C2: a lapse Home never saw drops the game night reminder
+
+    /// A member set a game night reminder, then the membership ran out while
+    /// the app was closed: the first launch already reads as a non-member, so
+    /// no membership change is ever observed. The reminder must still go. The
+    /// Home tile names the reminder's day while one is set, "Weekly" when not.
+    func testLaunchAsLapsedMemberDropsGameNightReminder() {
+        let app = launch(member: false, extra: ["-settings.gameNightReminderEnabled", "YES"])
+        let tile = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Game Night'")).firstMatch
+        XCTAssertTrue(tile.waitForExistence(timeout: 30), "precondition: the Game Night Prep tile is on Home")
+        Thread.sleep(forTimeInterval: 2)
+        XCTAssertTrue(tile.label.contains("Weekly"), "the lapsed member's weekly reminder is still on: \(tile.label)")
+    }
+
     // MARK: - Helpers
 
     private func openSettings(_ app: XCUIApplication) {

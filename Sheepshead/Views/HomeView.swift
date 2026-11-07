@@ -53,6 +53,7 @@ struct HomeView: View {
                 .onAppear {
                     homeOnScreen = true
                     consumeRecommendedRoomHint(proxy: proxy)
+                    dropGameNightReminderUnlessMember()
                     consumePendingDestination()
                     recordMastery()
                     homeIsBareAgain()
@@ -111,6 +112,7 @@ struct HomeView: View {
             .onChange(of: records.records.count) { _, _ in recordMastery() }
             .onChange(of: router.pendingDestination) { _, _ in consumePendingDestination() }
             .onChange(of: subscriptions.membershipResolved) { _, _ in
+                dropGameNightReminderUnlessMember()
                 recordMastery()
                 consumePendingDestination()
             }
@@ -123,8 +125,8 @@ struct HomeView: View {
                     } else {
                         consumePendingDestination()
                     }
-                } else if settings.gameNightReminderEnabled {
-                    settings.gameNightReminderEnabled = false
+                } else {
+                    dropGameNightReminderUnlessMember()
                 }
             }
             .onChange(of: showPaywall) { _, isShowing in
@@ -240,6 +242,13 @@ struct HomeView: View {
         )
     }
 
+    private func dropGameNightReminderUnlessMember() {
+        settings.dropGameNightReminderUnlessMember(
+            isMember: subscriptions.isPro,
+            membershipResolved: subscriptions.membershipResolved
+        )
+    }
+
     private func consumePendingDestination() {
         // A member opening a notification cold has isPro false until the
         // customer record loads; wait for it rather than sell them a paywall.
@@ -256,6 +265,7 @@ struct HomeView: View {
         }
         guard let destination = router.consumePendingDestination() else { return }
         guard destination.isFree || subscriptions.isPro else {
+            dropGameNightReminderUnlessMember()
             pendingAfterUpgrade = destination
             showPaywall = true
             return

@@ -227,6 +227,16 @@ final class AppSettings: ObservableObject {
         center.add(UNNotificationRequest(identifier: Self.gameNightReminderID, content: content, trigger: trigger))
     }
 
+    /// Game night prep is Sheepshead+ only, and its one switch hides with the
+    /// membership. A lapse Home never saw change (the app was closed when it
+    /// ran out, so the first record read at launch is already inactive) left
+    /// the weekly reminder firing with no way to stop it in the app. Called
+    /// whenever membership is known; does nothing before it is.
+    func dropGameNightReminderUnlessMember(isMember: Bool, membershipResolved: Bool) {
+        guard membershipResolved, !isMember, gameNightReminderEnabled else { return }
+        gameNightReminderEnabled = false
+    }
+
     func cancelGameNightReminder() {
         UNUserNotificationCenter.current()
             .removePendingNotificationRequests(withIdentifiers: [Self.gameNightReminderID])
