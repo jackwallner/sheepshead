@@ -72,10 +72,11 @@ final class FlashcardDeckUITests: XCTestCase {
     /// Opens a Home or room card by part of its label. Cards are NavigationLinks,
     /// so the label is the whole card, not just the title.
     private func open(_ label: String, in app: XCUIApplication) {
-        let predicate = NSPredicate(format: "label CONTAINS %@", label)
-        var match = app.buttons.matching(predicate).firstMatch
+        // A fresh NSPredicate per query: Xcode 27.1 rejects sending one shared
+        // instance twice ("sending 'predicate' risks causing data races").
+        var match = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", label)).firstMatch
         if !match.waitForExistence(timeout: 30) {
-            match = app.staticTexts.matching(predicate).firstMatch
+            match = app.staticTexts.matching(NSPredicate(format: "label CONTAINS %@", label)).firstMatch
             XCTAssertTrue(match.waitForExistence(timeout: 10), "could not find \(label)")
         }
         // Both screens open scrolled to the top, so anything low is below the fold.
