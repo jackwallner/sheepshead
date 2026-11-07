@@ -22,6 +22,38 @@ final class PracticeRecordStoreTests: XCTestCase {
 
     private let room = "card-room"
 
+    /// Flashcard Undo (audit B1): a mistapped miss, undone and answered right,
+    /// is one correct answer, not a phantom miss plus a hit.
+    func testRestoreTakesBackAnUndoneMiss() {
+        let id = SessionBuilder.choiceItems(in: room, includePro: true)[0].id
+        let before = store.snapshot(itemID: id)
+        store.record(itemID: id, roomID: room, correct: false)
+        store.restore(itemID: id, to: before)
+        store.record(itemID: id, roomID: room, correct: true)
+        XCTAssertEqual(store.records[id]?.attempts, 1)
+        XCTAssertEqual(store.records[id]?.correct, 1)
+        XCTAssertEqual(store.overallAccuracy, 1)
+        XCTAssertTrue(store.reviewQueue().isEmpty, "an undone miss must not be due for review")
+        XCTAssertEqual(PracticeRecordStore(defaults: defaults).records[id]?.attempts, 1, "the restore is persisted")
+    }
+
+    /// Undo then the same answer again keeps the streak at one: two correct
+    /// answers in a row is what mastery counts as known.
+    func testRestoreKeepsAnUndoneHitFromDoublingTheStreak() {
+        store.record(itemID: "q1", roomID: room, correct: true)
+        let before = store.snapshot(itemID: "q1")
+        store.record(itemID: "q1", roomID: room, correct: true)
+        store.restore(itemID: "q1", to: before)
+        store.record(itemID: "q1", roomID: room, correct: true)
+        XCTAssertEqual(store.records["q1"]?.streak, 2)
+        XCTAssertEqual(store.records["q1"]?.attempts, 2)
+
+        let fresh = store.snapshot(itemID: "q2")
+        store.record(itemID: "q2", roomID: room, correct: true)
+        store.restore(itemID: "q2", to: fresh)
+        XCTAssertNil(store.records["q2"], "undoing a first answer leaves no row")
+    }
+
     func testRecordsAccuracy() {
         store.record(itemID: "q1", roomID: room, correct: true)
         store.record(itemID: "q1", roomID: room, correct: false)

@@ -119,6 +119,24 @@ final class ProgressStore: ObservableObject {
         defaults.set(Array(missedItems), forKey: Keys.missedItems)
     }
 
+    /// Whether `id` is in the seen and missed sets, taken before grading so
+    /// an Undo can put both back.
+    struct ItemMark: Equatable {
+        let seen: Bool
+        let missed: Bool
+    }
+
+    func itemMark(id: String) -> ItemMark {
+        ItemMark(seen: seenItems.contains(id), missed: missedItems.contains(id))
+    }
+
+    func restoreItem(id: String, to mark: ItemMark) {
+        if mark.seen { seenItems.insert(id) } else { seenItems.remove(id) }
+        if mark.missed { missedItems.insert(id) } else { missedItems.remove(id) }
+        defaults.set(Array(seenItems), forKey: Keys.seenItems)
+        defaults.set(Array(missedItems), forKey: Keys.missedItems)
+    }
+
     // MARK: - Daily Quick Session
 
     /// Get Started is a once-a-day ritual: a fresh mix each day, and once

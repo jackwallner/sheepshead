@@ -73,7 +73,7 @@ final class PracticeRecordStore: ObservableObject {
         isReviewable: Bool = true,
         now: Date = Date()
     ) {
-        let key = PracticeSkill.skill(forItemID: itemID).map(\.rawValue) ?? itemID
+        let key = Self.key(forItemID: itemID)
         let isGenerated = PracticeSkill.skill(forItemID: itemID) != nil
 
         var record = records[key] ?? PracticeRecord()
@@ -94,6 +94,23 @@ final class PracticeRecordStore: ObservableObject {
         }
         records[key] = record
         persist()
+    }
+
+    /// The stored row an answer to `itemID` would change, nil if none yet.
+    /// Taken before grading so an Undo can put it back.
+    func snapshot(itemID: String) -> PracticeRecord? {
+        records[Self.key(forItemID: itemID)]
+    }
+
+    /// Puts back a row taken by `snapshot`: Undo takes the answer back, so
+    /// the stats, the streak and the review date must not keep it.
+    func restore(itemID: String, to previous: PracticeRecord?) {
+        records[Self.key(forItemID: itemID)] = previous
+        persist()
+    }
+
+    private static func key(forItemID itemID: String) -> String {
+        PracticeSkill.skill(forItemID: itemID).map(\.rawValue) ?? itemID
     }
 
     /// SM-2, trimmed to what a drill app needs: a miss resets the interval and

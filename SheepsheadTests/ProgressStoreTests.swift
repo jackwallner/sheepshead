@@ -128,5 +128,25 @@ final class ProgressStoreTests: XCTestCase {
         XCTAssertTrue(store.hasOnboarded, "Reset must not re-trigger onboarding")
     }
 
+    /// Flashcard Undo (audit B1): restoring the mark taken before an answer
+    /// puts both sets back, in memory and on disk.
+    func testRestoreItemPutsSeenAndMissedBack() {
+        let unseen = store.itemMark(id: "c1")
+        store.recordItem(id: "c1", correct: false)
+        store.restoreItem(id: "c1", to: unseen)
+        XCTAssertFalse(store.seenItems.contains("c1"))
+        XCTAssertFalse(store.missedItems.contains("c1"))
+
+        store.recordItem(id: "c2", correct: false)
+        let missed = store.itemMark(id: "c2")
+        store.recordItem(id: "c2", correct: true)
+        store.restoreItem(id: "c2", to: missed)
+        XCTAssertTrue(store.missedItems.contains("c2"))
+
+        let reloaded = ProgressStore(defaults: defaults)
+        XCTAssertFalse(reloaded.seenItems.contains("c1"))
+        XCTAssertTrue(reloaded.missedItems.contains("c2"))
+    }
+
     // Rating-ask rules live in ReviewPromptTracker; see ReviewPromptTrackerTests.
 }
