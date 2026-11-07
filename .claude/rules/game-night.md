@@ -40,3 +40,11 @@ different devices, and the stability test is what catches it.
 local notification, and opens directly into `SessionBuilder.gameNightPrep`,
 which prioritizes due mistakes, misses, the weakest room, and unseen member
 content in that order. Both features are entirely Sheepshead+ gated.
+
+The game night reminder must never outlive the membership. Home calls
+`AppSettings.dropGameNightReminderUnlessMember` on appear, when membership
+resolves, on a lapse and when a notification tap meets a non-member: a lapse
+that happened while the app was closed shows no `isPro` change, so an
+`onChange` alone left the weekly notification firing with its switch hidden.
+It does nothing before membership is resolved, since a member reads as free
+until RevenueCat answers.
