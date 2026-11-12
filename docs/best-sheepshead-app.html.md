@@ -6,13 +6,13 @@ Web page: https://jackwallner.com/ios/sheepshead/best-sheepshead-app.html
 
 ## Best Sheepshead App
 
-By Jack Wallner · Last updated November 11, 2026
+By Jack Wallner · Last updated November 12, 2026
 
 **Best for games against the computer:** Sheepshead, the App, the most-rated option. **Best for being told why a play is right:** K9 Sheepshead: Schafkopf, whose listing says each strategic decision is explained. **Best for online tables with friends and every house rule:** Sheepshead: Card Game. **Best for adjustable rules and large-print cards:** Sheepshead by Derek Hoffmeister. **Best for short drills on trump, the blind and the bury:** Sheepshead Trainer, the app I make.
 
 Sheepshead is a trick-taking card game that is the American descendant of Schafkopf. Most Sheepshead apps are games. Four of the five here are, and one is a practice app with no opponents, so the question is whether you want to play hands or sharpen decisions between games.
 
-**How we compared (November 2026):** I did not run these apps for this page. I read each App Store listing, checked ratings, update dates, devices and purchase types from Apple's lookup data, and read a sample of recent reviews on October 11 and 12. Where I describe a weakness, it comes from what reviewers wrote and I say so. Prices are left out on purpose, because they vary by region and change.
+**How we compared (November 2026):** I did not run these apps for this page. I read each App Store listing, checked ratings, update dates, devices and purchase types from Apple's lookup data, and read the most recent US reviews of each app on November 12, 2026. Where I describe a weakness, it comes from what reviewers wrote and I say so. Prices are left out on purpose, because they vary by region and change.
 
 **Disclosure:** Jack Wallner makes Sheepshead Trainer, one of the apps below. I tried to start every description with what the app does well.
 
@@ -36,7 +36,7 @@ Sheepshead, the App is the most-rated Sheepshead app on the iPhone. You play aga
 
 ## K9 Sheepshead: Schafkopf
 
-K9 Sheepshead is the closest game to a teacher. The listing describes a five-player game with any mix of friends and AI bots, multiplayer, and an AI that explains each strategic decision, plus a puppy-training progression that advances as you learn. It is also updated often. The trade-offs: the puppy theme is a matter of taste, and the listing does not say which partner variants it supports.
+K9 Sheepshead is the closest game to a teacher. The listing describes a five-player game with any mix of friends and AI bots, multiplayer, and an AI that explains each strategic decision, plus a puppy-training progression that advances as you learn. The trade-offs: the puppy theme is a matter of taste, and the listing does not say which partner variants it supports.
 
 ## Sheepshead: Card Game
 
@@ -44,7 +44,7 @@ This newer app focuses on playing with people: private tables you share by link,
 
 ## Sheepshead (Derek Hoffmeister)
 
-This long-running single-player app supports three-, four- and five-handed play, called ace or Jack of Diamonds partners, optional leasters, knocking, a ten-hand tournament mode, statistics, Game Center and large-print cards. Reviewers praise rules that match home games and a developer who answers. Its rating is the lowest of the five: reviewers cite deals that feel lopsided, bots that go alone on weak hands, and freezes after updates. Check the latest reviews before relying on it.
+This long-running single-player app supports three-, four- and five-handed play, called ace or Jack of Diamonds partners, optional leasters, knocking, a ten-hand tournament mode, statistics, Game Center and large-print cards. Reviewers praise rules that match home games and a developer who answers. Its rating is the lowest of the five: reviewers, mostly from 2019 to 2023, cite deals that feel lopsided, bots that go alone on weak hands, and freezes after updates. Check the latest reviews before relying on it.
 
 ## Sheepshead Trainer (my app)
 
@@ -55,7 +55,7 @@ Sheepshead Trainer has four free practice rooms: Card, Trump, Bury and Trick. Yo
 To play hands, pick Sheepshead, the App or K9 Sheepshead. To learn what to pick and bury, pick Sheepshead Trainer.
 
 - **You want to play hands on the train:** Sheepshead, the App, or K9 Sheepshead if you want explanations.
-- **You want a game night online with your regular group:** Sheepshead: Card Game, then check its latest reviews.
+- **You want a game night online with your regular group:** Sheepshead: Card Game.
 - **You want your home rules and big cards:** Sheepshead by Derek Hoffmeister, if its current version works well for you.
 - **You are learning and want to know what makes a hand worth picking, what to bury and how to follow suit:** Sheepshead Trainer for the drills, with a game app for practice hands. The [how to play Sheepshead guide](https://jackwallner.com/ios/sheepshead/how-to-play-sheepshead.html) covers the rules first.
 - **You want no bot at the table:** Sheepshead Trainer has no opponents.
