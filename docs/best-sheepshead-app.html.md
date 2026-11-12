@@ -1,18 +1,18 @@
 # Best Sheepshead App for iPhone (2026): 5 Compared
 
-> The best Sheepshead apps for iPhone and iPad compared in October 2026: games against the computer, online tables with friends, and practice drills.
+> The best Sheepshead apps for iPhone and iPad compared in November 2026: games against the computer, online tables with friends, and practice drills.
 
 Web page: https://jackwallner.com/ios/sheepshead/best-sheepshead-app.html
 
 ## Best Sheepshead App
 
-By Jack Wallner · Last updated October 28, 2026
+By Jack Wallner · Last updated November 11, 2026
 
 **Best for games against the computer:** Sheepshead, the App, the most-rated option. **Best for being told why a play is right:** K9 Sheepshead: Schafkopf, whose listing says each strategic decision is explained. **Best for online tables with friends and every house rule:** Sheepshead: Card Game. **Best for adjustable rules and large-print cards:** Sheepshead by Derek Hoffmeister. **Best for short drills on trump, the blind and the bury:** Sheepshead Trainer, the app I make.
 
 Sheepshead is a trick-taking card game that is the American descendant of Schafkopf. Most Sheepshead apps are games. Four of the five here are, and one is a practice app with no opponents, so the question is whether you want to play hands or sharpen decisions between games.
 
-**How we compared (October 2026):** I did not run these apps for this page. I read each App Store listing, checked ratings, update dates, devices and purchase types from Apple's lookup data, and read a sample of recent reviews on October 11 and 12. Where I describe a weakness, it comes from what reviewers wrote and I say so. Prices are left out on purpose, because they vary by region and change.
+**How we compared (November 2026):** I did not run these apps for this page. I read each App Store listing, checked ratings, update dates, devices and purchase types from Apple's lookup data, and read a sample of recent reviews on October 11 and 12. Where I describe a weakness, it comes from what reviewers wrote and I say so. Prices are left out on purpose, because they vary by region and change.
 
 **Disclosure:** Jack Wallner makes Sheepshead Trainer, one of the apps below. I tried to start every description with what the app does well.
 
@@ -20,15 +20,15 @@ Sheepshead is a trick-taking card game that is the American descendant of Schafk
 
 Four of the five are games against the computer or online tables, and Sheepshead Trainer is a practice app with no opponents.
 
-Ratings and counts are the US App Store figures as of October 2026. Last updated is the date of the current version.
+Ratings and counts are the US App Store figures as of November 2026. Last updated is the date of the current version.
 
 | App | Best for | Price model | Apple Watch | iPad | Account | Rating (count) | Last updated |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Sheepshead, the App** | Quick games vs the computer | Free, no purchases | No | Yes | Not stated | 4.48 (2,490) | 2024-02-17 |
-| **K9 Sheepshead: Schafkopf** | Learning from an AI that explains its choices | Free + one-time ad removal | No | Yes | Not stated | 4.66 (156) | 2026-06-12 |
-| **Sheepshead: Card Game** | Online tables with friends and every variant | Free, no purchases | No | Yes | Not stated | 4.62 (26) | 2026-09-25 |
+| **Sheepshead, the App** | Quick games vs the computer | Free, no purchases | No | Yes | Not stated | 4.48 (2,498) | 2024-02-17 |
+| **K9 Sheepshead: Schafkopf** | Learning from an AI that explains its choices | Free + one-time ad removal | No | Yes | Not stated | 4.66 (158) | 2026-06-12 |
+| **Sheepshead: Card Game** | Online tables with friends and every variant | Free, no purchases | No | Yes | Not stated | 4.61 (28) | 2026-09-25 |
 | **Sheepshead (Derek Hoffmeister)** | Adjustable rules and large-print cards | Free (ads reported in reviews) | No | Yes | Not stated | 3.27 (82) | 2026-04-24 |
-| **Sheepshead Trainer** | Short drills with the why on every answer | Free + subscription or lifetime purchase | No | Yes | None | No ratings yet | 2026-10-09 |
+| **Sheepshead Trainer** | Short drills with the why on every answer | Free + subscription or lifetime purchase | No | Yes | None | 5.00 (1) | 2026-11-10 |
 
 ## Sheepshead, the App
 
@@ -48,7 +48,7 @@ This long-running single-player app supports three-, four- and five-handed play,
 
 ## Sheepshead Trainer (my app)
 
-Sheepshead Trainer has four free practice rooms: Card, Trump, Bury and Trick. You learn the 32-card deck and point values, identify trump and fail cards in a holding, choose two cards to bury from an eight-card holding and compare with the coach's reasoning, then practice following suit, ordering trump and finding the partner. There are no opponents and no account. Its limits are real. It is not a game, so you never play a hand. It focuses on the five-player called-ace game, and it is new with no ratings yet. Endless practice, Fix My Mistakes and the timed challenge need Sheepshead+.
+Sheepshead Trainer has four free practice rooms: Card, Trump, Bury and Trick. You learn the 32-card deck and point values, identify trump and fail cards in a holding, choose two cards to bury from an eight-card holding and compare with the coach's reasoning, then practice following suit, ordering trump and finding the partner. There are no opponents and no account. Its limits are real. It is not a game, so you never play a hand. It focuses on the five-player called-ace game, and it is new, with a single rating so far. Endless practice, Fix My Mistakes and the timed challenge need Sheepshead+.
 
 ## Which should you pick?
 
@@ -98,4 +98,4 @@ Not exactly. They are related card games. Sheepshead is the American descendant 
 - [Sheepshead (card game), Wikipedia](https://en.wikipedia.org/wiki/Sheepshead_(card_game))
 - [Sheepshead rules, Card-Games.ca](https://card-games.ca/traditional-card-games/sheepshead/)
 
-Sheepshead rules vary by region and group. Sheepshead Trainer is an independent app and is not affiliated with any app compared here. App details were checked in October 2026 and may change.
+Sheepshead rules vary by region and group. Sheepshead Trainer is an independent app and is not affiliated with any app compared here. App details were checked in November 2026 and may change.
