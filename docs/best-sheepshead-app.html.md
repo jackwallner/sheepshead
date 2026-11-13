@@ -1,6 +1,6 @@
 # Best Sheepshead App for iPhone (2026): 5 Compared
 
-> The best Sheepshead apps for iPhone and iPad compared in November 2026: games against the computer, online tables with friends, and practice drills.
+> Five Sheepshead apps for iPhone and iPad compared on 3, 4 or 5 handed play, partner rules, leasters and doublers, online play, teaching and price.
 
 Web page: https://jackwallner.com/ios/sheepshead/best-sheepshead-app.html
 
@@ -18,17 +18,17 @@ Sheepshead is a trick-taking card game that is the American descendant of Schafk
 
 ## How do the Sheepshead apps compare?
 
-Four of the five are games against the computer or online tables, and Sheepshead Trainer is a practice app with no opponents.
+Three of the five play 3, 4 or 5 handed with your choice of partner rule, two play real people online (K9 Sheepshead and Sheepshead: Card Game), and Sheepshead Trainer is a practice app with no opponents.
 
-Ratings and counts are the US App Store figures as of November 2026. Last updated is the date of the current version.
+Ratings and counts are US App Store figures as of November 12, 2026. Last updated is the date of the current version. All five run on iPhone and iPad, and none has an Apple Watch app. "Not in listing" means the listing does not say.
 
-| App | Best for | Price model | Apple Watch | iPad | Account | Rating (count) | Last updated |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **Sheepshead, the App** | Quick games vs the computer | Free, no purchases | No | Yes | Not stated | 4.48 (2,498) | 2024-02-17 |
-| **K9 Sheepshead: Schafkopf** | Learning from an AI that explains its choices | Free + one-time ad removal | No | Yes | Not stated | 4.66 (158) | 2026-06-12 |
-| **Sheepshead: Card Game** | Online tables with friends and every variant | Free, no purchases | No | Yes | Not stated | 4.61 (28) | 2026-09-25 |
-| **Sheepshead (Derek Hoffmeister)** | Adjustable rules and large-print cards | Free (ads reported in reviews) | No | Yes | Not stated | 3.27 (82) | 2026-04-24 |
-| **Sheepshead Trainer** | Short drills with the why on every answer | Free + subscription or lifetime purchase | No | Yes | None | 5.00 (1) | 2026-11-10 |
+| App | Hands | Partner rules | When everyone passes | Play people online | Teaching | How it charges | Rating (count) | Last updated |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Sheepshead, the App** | 3, 4 or 5 | Jack or ace partner | Leasters or doublers | No, computer players only | None listed | Free, no purchases | 4.48 (2,498) | 2024-02-17 |
+| **K9 Sheepshead: Schafkopf** | 5 | Not in listing | Not in listing | Yes, friends and AI bots in any mix | Every AI decision explained, puppy progression | Free; one-time ad removal | 4.66 (158) | 2026-06-12 |
+| **Sheepshead: Card Game** | 3, 4 or 5 | Called Ace or Jack of Diamonds | Leaster, Doubler or Choose-on-End; cracking, Blitz, Schneider | Yes, private tables by link or quick match, plus four AI players | Tutorial, rules, strategy from beginner to expert | Free, no purchases | 4.61 (28) | 2026-09-25 |
+| **Sheepshead (Derek Hoffmeister)** | 3, 4 or 5 | Called Ace (unknown, 10s or alone) or Jack of Diamonds | Optional leasters, otherwise the dealer picks; knocking | No, computer players only | None listed | Free (ads reported in reviews) | 3.27 (82) | 2026-04-24 |
+| **Sheepshead Trainer (my app)** | Drills, not full hands | Called-ace partnership | Not covered | No | Four practice rooms, reason on every answer | Free rooms; Sheepshead+ subscription or lifetime | 5.00 (1) | 2026-11-10 |
 
 ## Sheepshead, the App
 
