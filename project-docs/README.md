@@ -12,3 +12,4 @@ Developer notes and historical audits for this repository. The published site re
 - [state-machines-2026-11-06-fixes.md](audits/state-machines-2026-11-06-fixes.md): fixes for that review: 2 fixed (lapsed game night reminder, reworked after the verify check to act only on a fresh lapse; flashcard Undo), C4 settled not a bug, C1 restore held for Jack
 - [state-machines-2026-11-06-verify.md](audits/state-machines-2026-11-06-verify.md): regression check of those fixes, second pass: PASS (C2 rework acts only on a fresh network lapse, Undo fix clean, 179 unit tests green)
 - [presubmit-review-2026-11-07.md](audits/presubmit-review-2026-11-07.md): pre-submit review of 1.3.3 against live 1.3.2: no P0 or P1, 3 P2 left open, unit run not started (GitHub queue)
+- [2026-11-20-bug-ux.html](audits/2026-11-20-bug-ux.html): Bug and UX catalog, 2026-11-20: 7 bugs (3 medium, 4 low; 4 confirmed), 18 UX items, October audit items rechecked. Catalog only, nothing fixed.
