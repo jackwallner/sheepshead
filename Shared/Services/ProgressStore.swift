@@ -61,10 +61,10 @@ final class ProgressStore: ObservableObject {
         return Double(done) / Double(room.drills.count)
     }
 
-    func recordSession(drillID: String, now: Date = Date()) {
+    func recordSession(drillID: String, now: Date = Date(), calendar: Calendar = .gregorianLocal) {
         completions[drillID, default: 0] += 1
         totalSessions += 1
-        bumpStreak(now: now)
+        bumpStreak(now: now, calendar: calendar)
         defaults.set(completions, forKey: Keys.completions)
         defaults.set(totalSessions, forKey: Keys.totalSessions)
     }
@@ -72,24 +72,18 @@ final class ProgressStore: ObservableObject {
     /// The streak as it stands right now. `streakCount` only changes when a
     /// drill is finished, so after a missed day it still held the old number
     /// and Home showed a streak the player had already lost.
-    func currentStreak(now: Date = Date()) -> Int {
-        guard let last = defaults.object(forKey: Keys.lastActiveDay) as? Date else { return streakCount }
-        let calendar = Calendar.current
-        let gap = calendar.dateComponents(
-            [.day], from: calendar.startOfDay(for: last), to: calendar.startOfDay(for: now)
-        ).day ?? 0
+    func currentStreak(now: Date = Date(), calendar: Calendar = .gregorianLocal) -> Int {
+        guard let last = storedDay(forKey: Keys.lastActiveDay, calendar: calendar) else { return streakCount }
+        let gap = Self.days(from: last, to: Self.dayKey(now, calendar: calendar)) ?? 0
         return gap > 1 ? 0 : streakCount
     }
 
     /// Streak counts consecutive calendar days with at least one finished drill.
-    private func bumpStreak(now: Date) {
-        let calendar = Calendar.current
-        let today = calendar.startOfDay(for: now)
-        let last = defaults.object(forKey: Keys.lastActiveDay) as? Date
+    private func bumpStreak(now: Date, calendar: Calendar) {
+        let today = Self.dayKey(now, calendar: calendar)
 
-        if let last {
-            let lastDay = calendar.startOfDay(for: last)
-            let gap = calendar.dateComponents([.day], from: lastDay, to: today).day ?? 0
+        if let last = storedDay(forKey: Keys.lastActiveDay, calendar: calendar) {
+            let gap = Self.days(from: last, to: today) ?? 0
             if gap == 1 {
                 streakCount += 1
             } else if gap > 1 {
@@ -104,6 +98,39 @@ final class ProgressStore: ObservableObject {
         }
         defaults.set(today, forKey: Keys.lastActiveDay)
         defaults.set(streakCount, forKey: Keys.streakCount)
+    }
+
+    // MARK: - Stored days
+
+    /// A calendar day as "yyyy-MM-dd", the date the phone showed then. The
+    /// days used to be stored as that day's midnight, an instant: read back
+    /// in a zone further west it fell on the evening before, so a westward
+    /// trip broke the streak, counted one day twice, and reopened Get Started.
+    nonisolated static func dayKey(_ date: Date, calendar: Calendar) -> String {
+        let parts = calendar.dateComponents([.year, .month, .day], from: date)
+        return String(format: "%04d-%02d-%02d", parts.year ?? 0, parts.month ?? 0, parts.day ?? 0)
+    }
+
+    /// Whole days from one day key to another, whatever the zone.
+    nonisolated static func days(from start: String, to end: String) -> Int? {
+        var utc = Calendar(identifier: .gregorian)
+        utc.timeZone = TimeZone(identifier: "UTC") ?? .gmt
+        func date(_ key: String) -> Date? {
+            let parts = key.split(separator: "-").compactMap { Int($0) }
+            guard parts.count == 3 else { return nil }
+            return utc.date(from: DateComponents(year: parts[0], month: parts[1], day: parts[2]))
+        }
+        guard let from = date(start), let to = date(end) else { return nil }
+        return utc.dateComponents([.day], from: from, to: to).day
+    }
+
+    /// The stored day key. Builds before this stored a local midnight
+    /// instead; the nearest midnight to that instant in today's zone is the
+    /// day it meant, for any trip of less than twelve hours either way.
+    private func storedDay(forKey key: String, calendar: Calendar) -> String? {
+        if let day = defaults.string(forKey: key) { return day }
+        guard let midnight = defaults.object(forKey: key) as? Date else { return nil }
+        return Self.dayKey(midnight.addingTimeInterval(12 * 3600), calendar: calendar)
     }
 
     /// Item-level memory that feeds the Get Started mix: anything answered wrong
@@ -143,13 +170,12 @@ final class ProgressStore: ObservableObject {
     /// today's is done the Home card rests until tomorrow rather than handing
     /// back the same questions (repeating a question you just answered teaches
     /// nothing). Missed items still return on later days as spaced repetition.
-    func quickSessionCompletedToday(now: Date = Date()) -> Bool {
-        guard let last = defaults.object(forKey: Keys.lastQuickSessionDay) as? Date else { return false }
-        return Calendar.current.isDate(last, inSameDayAs: now)
+    func quickSessionCompletedToday(now: Date = Date(), calendar: Calendar = .gregorianLocal) -> Bool {
+        storedDay(forKey: Keys.lastQuickSessionDay, calendar: calendar) == Self.dayKey(now, calendar: calendar)
     }
 
-    func markQuickSessionCompleted(now: Date = Date()) {
-        defaults.set(Calendar.current.startOfDay(for: now), forKey: Keys.lastQuickSessionDay)
+    func markQuickSessionCompleted(now: Date = Date(), calendar: Calendar = .gregorianLocal) {
+        defaults.set(Self.dayKey(now, calendar: calendar), forKey: Keys.lastQuickSessionDay)
     }
 
     /// Clears every practice stat. Leaves onboarding and purchases alone.

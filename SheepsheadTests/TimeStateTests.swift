@@ -79,6 +79,40 @@ final class TimeStateTests: XCTestCase {
         XCTAssertFalse(store.quickSessionCompletedToday(now: date(reader, day: 11, hour: 8)))
     }
 
+    /// Days stored by current builds are day keys, so a zone change does not
+    /// move them, even for a trip longer than twelve hours.
+    func testStoredDayKeysSurviveAZoneChange() {
+        for hours in [9, 13] {
+            defaults.removePersistentDomain(forName: suite)
+            var east = Calendar(identifier: .gregorian)
+            let offset = TimeZone.current.secondsFromGMT(for: Date(timeIntervalSince1970: 1_773_100_000))
+            east.timeZone = TimeZone(secondsFromGMT: offset + hours * 3600)!
+            let store = ProgressStore(defaults: defaults)
+            let march10East = date(east, day: 10, hour: 20)
+            store.recordSession(drillID: "a", now: march10East, calendar: east)
+            store.markQuickSessionCompleted(now: march10East, calendar: east)
+
+            let march10West = date(reader, day: 10, hour: 18)
+            XCTAssertTrue(store.quickSessionCompletedToday(now: march10West, calendar: reader), "\(hours)h west")
+            store.recordSession(drillID: "a", now: march10West, calendar: reader)
+            XCTAssertEqual(store.streakCount, 1, "\(hours)h west: March 10 counted twice")
+
+            let march11West = date(reader, day: 11, hour: 10)
+            XCTAssertFalse(store.quickSessionCompletedToday(now: march11West, calendar: reader))
+            XCTAssertEqual(store.currentStreak(now: march11West, calendar: reader), 1, "\(hours)h west")
+            store.recordSession(drillID: "a", now: march11West, calendar: reader)
+            XCTAssertEqual(store.streakCount, 2, "\(hours)h west")
+            XCTAssertEqual(store.currentStreak(now: date(reader, day: 13, hour: 10), calendar: reader), 0)
+        }
+    }
+
+    func testDayGapsCrossMonthsAndYears() {
+        XCTAssertEqual(ProgressStore.days(from: "2026-02-28", to: "2026-03-01"), 1)
+        XCTAssertEqual(ProgressStore.days(from: "2026-12-31", to: "2027-01-01"), 1)
+        XCTAssertEqual(ProgressStore.days(from: "2026-03-11", to: "2026-03-10"), -1)
+        XCTAssertNil(ProgressStore.days(from: "garbage", to: "2026-03-10"))
+    }
+
     // MARK: - Stale membership cache (B2)
 
     /// A free week started and the app was opened once, then not again until
