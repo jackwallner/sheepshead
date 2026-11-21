@@ -229,3 +229,18 @@ final class ReminderPermissionTests: XCTestCase {
         XCTAssertFalse(settings.reminderPermissionDenied, "no alert when nothing was on")
     }
 }
+
+/// B7: the Timed Challenge clock follows the wall clock.
+@MainActor
+final class ChallengeClockTests: XCTestCase {
+    func testClockCountsWallTime() {
+        let start = Date(timeIntervalSince1970: 1_800_000_000)
+        let end = start.addingTimeInterval(90)
+        XCTAssertEqual(PracticeRunView.secondsLeft(until: end, now: start.addingTimeInterval(1.0004)), 89,
+                       "a slightly late tick still reads one second gone")
+        XCTAssertEqual(PracticeRunView.secondsLeft(until: end, now: start.addingTimeInterval(40)), 50,
+                       "time in another app counts")
+        XCTAssertEqual(PracticeRunView.secondsLeft(until: end, now: start.addingTimeInterval(300)), 0,
+                       "coming back after the end finishes the run")
+    }
+}

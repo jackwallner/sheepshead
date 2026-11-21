@@ -230,16 +230,24 @@ struct PracticeRunView: View {
 
     // MARK: - Clock
 
+    /// Counts down against the wall clock. Counting one-second sleeps froze
+    /// the clock while the app was in the background (a suspended app runs
+    /// no ticks), so a call or a lookup mid-run was free time.
     private func runClock() async {
         guard mode == .timed else { return }
+        let end = Date().addingTimeInterval(TimeInterval(secondsRemaining))
         while secondsRemaining > 0 && !finished {
             try? await Task.sleep(nanoseconds: 1_000_000_000)
             guard !Task.isCancelled else { return }
-            secondsRemaining -= 1
+            secondsRemaining = Self.secondsLeft(until: end, now: Date())
         }
         guard !finished else { return }
         Haptics.impact(.rigid)
         finish()
+    }
+
+    static func secondsLeft(until end: Date, now: Date) -> Int {
+        max(0, Int(end.timeIntervalSince(now).rounded()))
     }
 
     // MARK: - Grading
