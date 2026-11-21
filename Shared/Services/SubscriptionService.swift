@@ -439,6 +439,12 @@ final class SubscriptionService: NSObject, ObservableObject {
     /// can be months old: a member who lapsed on an older build read as
     /// active there, then lapsed a second later, and was asked why they were
     /// leaving about a departure the app never watched.
+    ///
+    /// A "not active" record counts only when it is fresh (`confirmsNoMembership`).
+    /// A launch cache more than 3 days old reads a member whose trial
+    /// converted or who renewed while the app was closed as lapsed, and they
+    /// were asked why they left. Skipped, it leaves the last baseline in
+    /// place, so the network answer still catches a real lapse.
     func observe(
         _ current: MembershipSnapshot,
         answeredAt: Date = Date(),
@@ -448,6 +454,12 @@ final class SubscriptionService: NSObject, ObservableObject {
         let previous = (defaults.data(forKey: snapshotKey))
             .flatMap { try? JSONDecoder().decode(MembershipSnapshot.self, from: $0) }
         if previous == nil, now.timeIntervalSince(answeredAt) > Self.freshBaselineAge { return }
+        if !current.isActive, !Self.confirmsNoMembership(
+            isActive: false,
+            answeredAt: answeredAt,
+            launchCacheAnsweredAt: launchCacheAnsweredAt,
+            now: now
+        ) { return }
         defer {
             if let data = try? JSONEncoder().encode(current) {
                 defaults.set(data, forKey: snapshotKey)
