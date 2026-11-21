@@ -57,10 +57,10 @@ final class TimeRolloverUITests: XCTestCase {
         let done = app.staticTexts["Today's session is done"]
         XCTAssertTrue(done.waitForExistence(timeout: 30), "precondition: Home shows today's session as done")
 
-        XCUIDevice.shared.press(.home)
-        let wait = nextMidnight.timeIntervalSinceNow + 5
-        if wait > 0 { Thread.sleep(forTimeInterval: wait) }
+        sendToBackground(app)
+        waitInBackground(app, until: nextMidnight.addingTimeInterval(5))
         app.activate()
+        note("back: done card showing \(done.exists)")
 
         XCTAssertTrue(app.staticTexts["Get Started"].waitForExistence(timeout: 10),
                       "after midnight Home still says today's session is done")
@@ -84,13 +84,36 @@ final class TimeRolloverUITests: XCTestCase {
         let before = secondsLeft(app)
         XCTAssertGreaterThan(before, 60, "precondition: a fresh run, got \(before)s")
 
-        XCUIDevice.shared.press(.home)
-        Thread.sleep(forTimeInterval: 35)
+        sendToBackground(app)
+        waitInBackground(app, until: Date().addingTimeInterval(35))
         app.activate()
         Thread.sleep(forTimeInterval: 2)
 
         let after = secondsLeft(app)
+        note("clock \(before)s before, \(after)s after 35s away")
         XCTAssertLessThanOrEqual(after, before - 30, "35 seconds away cost the clock \(before - after)s")
+    }
+
+    /// Opens the Settings app over ours. `press(.home)` left the app in the
+    /// foreground on the headless iOS 27 simulator.
+    private func sendToBackground(_ app: XCUIApplication) {
+        XCUIApplication(bundleIdentifier: "com.apple.Preferences").activate()
+        XCTAssertTrue(app.wait(for: .runningBackgroundSuspended, timeout: 20) || app.state == .runningBackground,
+                      "precondition: the app left the foreground, state \(app.state.rawValue)")
+        note("sent to background: app state \(app.state.rawValue)")
+    }
+
+    /// Sleeps, logging the app's process state every ten seconds: whether
+    /// iOS suspended it is what decides both bugs.
+    private func waitInBackground(_ app: XCUIApplication, until end: Date) {
+        while end.timeIntervalSinceNow > 0 {
+            Thread.sleep(forTimeInterval: min(10, max(0, end.timeIntervalSinceNow)))
+            note("background: app state \(app.state.rawValue)")
+        }
+    }
+
+    private func note(_ text: String) {
+        XCTContext.runActivity(named: text) { _ in }
     }
 
     private func secondsLeft(_ app: XCUIApplication) -> Int {
