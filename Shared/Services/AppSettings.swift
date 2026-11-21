@@ -238,6 +238,25 @@ final class AppSettings: ObservableObject {
         gameNightReminderEnabled = false
     }
 
+    /// iOS can switch the app's notifications off after a reminder was set,
+    /// and the switch went on reading On while nothing ever arrived. Settings
+    /// and Game Night Prep check on appear: a denied app turns its reminders
+    /// off and says why.
+    func syncRemindersWithNotificationPermission() async {
+        applyNotificationPermission(await Self.notificationAuthorizationStatus())
+    }
+
+    nonisolated private static func notificationAuthorizationStatus() async -> UNAuthorizationStatus {
+        await UNUserNotificationCenter.current().notificationSettings().authorizationStatus
+    }
+
+    func applyNotificationPermission(_ status: UNAuthorizationStatus) {
+        guard status == .denied, reminderEnabled || gameNightReminderEnabled else { return }
+        reminderEnabled = false
+        gameNightReminderEnabled = false
+        reminderPermissionDenied = true
+    }
+
     func cancelGameNightReminder() {
         UNUserNotificationCenter.current()
             .removePendingNotificationRequests(withIdentifiers: [Self.gameNightReminderID])

@@ -34,6 +34,7 @@ struct GameNightPrepView: View {
         .background(Theme.background)
         .navigationTitle("Game Night Prep")
         .navigationBarTitleDisplayMode(.inline)
+        .task { await settings.syncRemindersWithNotificationPermission() }
         .alert("Notifications are off", isPresented: $settings.reminderPermissionDenied) {
             Button("Open Settings") {
                 if let url = URL(string: UIApplication.openSettingsURLString) {

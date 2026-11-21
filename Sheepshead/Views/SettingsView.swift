@@ -60,6 +60,7 @@ struct SettingsView: View {
             } message: {
                 Text(restoreMessage ?? "")
             }
+            .task { await settings.syncRemindersWithNotificationPermission() }
             .alert("Notifications are off", isPresented: $settings.reminderPermissionDenied) {
                 Button("Open Settings") {
                     if let url = URL(string: UIApplication.openSettingsURLString) {

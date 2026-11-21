@@ -1,3 +1,4 @@
+import UserNotifications
 import XCTest
 @testable import Sheepshead
 
@@ -177,3 +178,54 @@ final class TimeStateTests: XCTestCase {
     }
 }
 
+/// B4: iOS notifications switched off for the app after a reminder was set.
+@MainActor
+final class ReminderPermissionTests: XCTestCase {
+    private let suite = "ReminderPermissionTests"
+    private var defaults: UserDefaults!
+
+    override func setUp() {
+        super.setUp()
+        defaults = UserDefaults(suiteName: suite)
+        defaults.removePersistentDomain(forName: suite)
+        defaults.set(true, forKey: "settings.reminderEnabled")
+        defaults.set(true, forKey: "settings.gameNightReminderEnabled")
+    }
+
+    override func tearDown() {
+        defaults.removePersistentDomain(forName: suite)
+        super.tearDown()
+    }
+
+    func testDeniedNotificationsTurnTheRemindersOffAndSayWhy() {
+        let settings = AppSettings(defaults: defaults)
+        XCTAssertTrue(settings.reminderEnabled, "precondition: the stored reminder loads on")
+
+        settings.applyNotificationPermission(.denied)
+
+        XCTAssertFalse(settings.reminderEnabled)
+        XCTAssertFalse(settings.gameNightReminderEnabled)
+        XCTAssertTrue(settings.reminderPermissionDenied, "the Notifications are off alert explains it")
+        let reloaded = AppSettings(defaults: defaults)
+        XCTAssertFalse(reloaded.reminderEnabled, "the off is stored")
+        XCTAssertFalse(reloaded.gameNightReminderEnabled)
+    }
+
+    func testAllowedOrUndecidedNotificationsLeaveTheRemindersAlone() {
+        for status in [UNAuthorizationStatus.authorized, .provisional, .notDetermined] {
+            let settings = AppSettings(defaults: defaults)
+            settings.applyNotificationPermission(status)
+            XCTAssertTrue(settings.reminderEnabled, "\(status.rawValue)")
+            XCTAssertTrue(settings.gameNightReminderEnabled)
+            XCTAssertFalse(settings.reminderPermissionDenied)
+        }
+    }
+
+    func testDeniedWithNoReminderSetStaysQuiet() {
+        defaults.set(false, forKey: "settings.reminderEnabled")
+        defaults.set(false, forKey: "settings.gameNightReminderEnabled")
+        let settings = AppSettings(defaults: defaults)
+        settings.applyNotificationPermission(.denied)
+        XCTAssertFalse(settings.reminderPermissionDenied, "no alert when nothing was on")
+    }
+}
