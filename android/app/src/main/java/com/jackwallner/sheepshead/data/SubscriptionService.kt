@@ -25,6 +25,7 @@ import com.revenuecat.purchases.interfaces.UpdatedCustomerInfoListener
 import com.revenuecat.purchases.paywalls.events.CustomPaywallImpressionParams
 import java.math.BigDecimal
 import java.security.MessageDigest
+import java.time.Instant
 import java.math.RoundingMode
 import java.text.NumberFormat
 import java.util.Currency
@@ -101,12 +102,24 @@ class SubscriptionService(
     var membershipResolved by mutableStateOf(false)
         private set
 
+    /**
+     * A fresh record says "not a member", or there is no store to ask. The
+     * cached record read at launch can be days old and cannot tell an expiry
+     * from a renewal since, so it never sets this. Only this may tear down a
+     * member feature (`MembershipFreshness`).
+     */
+    var lapseConfirmed by mutableStateOf(false)
+        private set
+
     /** The active entitlement is the free week, not a paid or lifetime membership. */
     var isTrialing by mutableStateOf(false)
         private set
 
     private var isConfigured = false
     private var forcePro = false
+
+    /** When RevenueCat answered the cached record launch applies first (`Instant.MIN` when there was none). */
+    private var launchCacheAnsweredAt: Instant = Instant.MAX
     private val impressionsThisSession = mutableSetOf<String>()
 
     /** Reviewer access from Settings: unlocks Sheepshead+ on this device only. */
@@ -121,6 +134,7 @@ class SubscriptionService(
         if (!BuildConfig.DEBUG) return
         forcePro = value
         isPro = value
+        if (value) lapseConfirmed = false
         membershipResolved = true
     }
 
@@ -129,6 +143,7 @@ class SubscriptionService(
         if (!BuildConfig.DEBUG) return
         defaults.putBoolean(LOCAL_OVERRIDE, value)
         isPro = value
+        if (value) lapseConfirmed = false
     }
 
     suspend fun start() {
@@ -136,8 +151,17 @@ class SubscriptionService(
             // No store at all (debug without a key, screenshots): nothing
             // will ever load, so what we have is the answer.
             membershipResolved = true
+            lapseConfirmed = !isPro
             return
         }
+        // The last record RevenueCat saw, from the first frame: a member is a
+        // member before the network answers. It is remembered as the launch
+        // cache, so a later record can be told apart from it.
+        val cached = runCatching { Purchases.sharedInstance.awaitCustomerInfo(CacheFetchPolicy.CACHE_ONLY) }
+            .onFailure { if (it is CancellationException) throw it }
+            .getOrNull()
+        launchCacheAnsweredAt = cached?.requestDate?.toInstant() ?: Instant.MIN
+        cached?.let { apply(it) }
         refreshCustomerInfo()
         loadOfferings()
     }
@@ -275,6 +299,11 @@ class SubscriptionService(
         val override = BuildConfig.DEBUG && defaults.getBoolean(LOCAL_OVERRIDE)
         isPro = active.isNotEmpty() || override || reviewAccess.isGranted
         isTrialing = active.isNotEmpty() && active.all { it.periodType == PeriodType.TRIAL }
+        lapseConfirmed = !override && !reviewAccess.isGranted && MembershipFreshness.confirmsNoMembership(
+            isActive = active.isNotEmpty(),
+            answeredAt = info.requestDate.toInstant(),
+            launchCacheAnsweredAt = launchCacheAnsweredAt,
+        )
     }
 
     private fun configureIfNeeded(): Boolean {

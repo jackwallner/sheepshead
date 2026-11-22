@@ -110,6 +110,19 @@ class AppSettings(private val defaults: KeyValueStore, private val scheduler: Re
         if (gameNightReminderEnabled) scheduleGameNight()
     }
 
+    /**
+     * Game night prep is Sheepshead+ only, and its one switch hides with the
+     * membership. A lapse the app never saw change (it ran out while the app was
+     * closed, so the first record read at launch is already inactive) would
+     * leave the weekly reminder firing with no way to stop it. Acts only on
+     * `SubscriptionService.lapseConfirmed`, a fresh answer: the launch cache
+     * reads a member who renewed while the app was closed as lapsed.
+     */
+    fun dropGameNightReminderUnlessMember(lapseConfirmed: Boolean) {
+        if (!lapseConfirmed || !gameNightReminderEnabled) return
+        updateGameNightReminderEnabled(false)
+    }
+
     /** After a reboot the alarms are gone; put back whatever is switched on. */
     fun rescheduleAll() {
         if (reminderEnabled) scheduler?.scheduleDaily(reminderHour, reminderMinute)

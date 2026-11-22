@@ -127,21 +127,22 @@ fun RootScreen(graph: AppGraph, pendingRoute: String?, onRouteConsumed: () -> Un
             navigator.popToRoot()
             navigator.push(Route.Session(gameNightPrepItems(graph), SessionPurpose.GameNightPrep))
         } else {
+            graph.settings.dropGameNightReminderUnlessMember(graph.subscriptions.lapseConfirmed)
             prepAfterUpgrade = true
             paywallSource = "sheepshead_home_sheet"
         }
     }
-    LaunchedEffect(isPro, membershipResolved) {
+    LaunchedEffect(isPro) {
         if (isPro && prepAfterUpgrade) {
             prepAfterUpgrade = false
             navigator.push(Route.Session(gameNightPrepItems(graph), SessionPurpose.GameNightPrep))
-        } else if (!isPro && membershipResolved && graph.settings.gameNightReminderEnabled) {
-            // Only on a customer record that says "not a member". Every launch
-            // starts with isPro false, and switching the reminder off then
-            // cancelled a paid member's alarm on a slow or offline start.
-            graph.settings.updateGameNightReminderEnabled(false)
         }
     }
+    // The weekly reminder must not outlive the membership, but only a fresh "not a member" may
+    // drop it. Every launch starts with isPro false, and RevenueCat's cached record reads a member
+    // who renewed while the app was closed as lapsed until the network answers (`lapseConfirmed`).
+    val lapseConfirmed = graph.subscriptions.lapseConfirmed
+    LaunchedEffect(lapseConfirmed) { graph.settings.dropGameNightReminderUnlessMember(lapseConfirmed) }
     LaunchedEffect(graph.progress.hasOnboarded) {
         if (!graph.whatsNew.shouldPresent(graph.progress.hasOnboarded)) return@LaunchedEffect
         delay(500)
