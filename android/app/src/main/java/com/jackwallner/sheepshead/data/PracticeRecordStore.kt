@@ -65,7 +65,7 @@ class PracticeRecordStore(private val defaults: KeyValueStore, private val clock
     fun record(itemID: String, roomID: String, correct: Boolean, isReviewable: Boolean = true) {
         val now = clock.millis()
         val skill = PracticeSkill.skill(itemID)
-        val key = skill?.raw ?: itemID
+        val key = key(itemID)
         val isGenerated = skill != null
         val old = records[key] ?: PracticeRecord()
         var record = old.copy(
@@ -80,6 +80,17 @@ class PracticeRecordStore(private val defaults: KeyValueStore, private val clock
         records = records + (key to record)
         persist()
     }
+
+    /** The stored row an answer to `itemID` would change, null if none yet. Taken before grading so Undo can put it back. */
+    fun snapshot(itemID: String): PracticeRecord? = records[key(itemID)]
+
+    /** Puts back a row taken by `snapshot`: Undo takes the answer back, so the stats and the review date must not keep it. */
+    fun restore(itemID: String, previous: PracticeRecord?) {
+        records = if (previous == null) records - key(itemID) else records + (key(itemID) to previous)
+        persist()
+    }
+
+    private fun key(itemID: String): String = PracticeSkill.skill(itemID)?.raw ?: itemID
 
     /** SM-2, trimmed: a miss resets the interval and costs ease, a hit multiplies it. */
     private fun schedule(record: PracticeRecord, correct: Boolean, now: Long): PracticeRecord {

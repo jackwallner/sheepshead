@@ -56,6 +56,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.jackwallner.sheepshead.content.DrillLibrary
+import com.jackwallner.sheepshead.data.AnswerSnapshot
 import com.jackwallner.sheepshead.model.ChoiceShuffle
 import com.jackwallner.sheepshead.model.Drill
 import com.jackwallner.sheepshead.model.Flashcard
@@ -84,7 +85,8 @@ import kotlinx.coroutines.launch
 
 private const val HAS_SWIPED_DECK = "sheepshead.hasSwipedDeck"
 
-private data class SwipeRecord(val card: Flashcard, val gotIt: Boolean)
+/** `grade` is what the stores held before the card was graded, so Undo can put it back. */
+private data class SwipeRecord(val card: Flashcard, val gotIt: Boolean, val grade: AnswerSnapshot?)
 
 /**
  * Flashcards as a swipeable deck. Tap flips the card; only a flipped card can
@@ -107,6 +109,10 @@ fun FlashcardDrillScreen(drill: Drill, cards: List<Flashcard>, accent: Color) {
     var finished by rememberSaveable { mutableStateOf(false) }
     var flinging by remember { mutableStateOf(false) }
     var lastSwipe by remember { mutableStateOf<SwipeRecord?>(null) }
+
+    // The current card's choice answer, graded at pick time and not yet swiped away.
+    // Undo takes it back along with the swipe it undoes.
+    var pendingGrade by remember { mutableStateOf<AnswerSnapshot?>(null) }
     var confetti by remember { mutableIntStateOf(0) }
     var didHint by remember { mutableStateOf(false) }
     val drag = remember { Animatable(Offset.Zero, Offset.VectorConverter) }
@@ -135,11 +141,17 @@ fun FlashcardDrillScreen(drill: Drill, cards: List<Flashcard>, accent: Color) {
         val card = queue.firstOrNull() ?: return
         val choice = card.choice
         val pick = choicePick
-        val knewIt = if (choice != null && pick != null) pick == choice.answerIndex else {
+        val grade: AnswerSnapshot?
+        val knewIt = if (choice != null && pick != null) {
+            grade = pendingGrade
+            pick == choice.answerIndex
+        } else {
+            grade = AnswerSnapshot.take(graph.progress, graph.records, card.id)
             graph.recordAnswer(card.id, roomID, gotIt)
             gotIt
         }
-        lastSwipe = SwipeRecord(card, knewIt)
+        lastSwipe = SwipeRecord(card, knewIt, grade)
+        pendingGrade = null
         choicePick = null
         val rest = queueIds.drop(1)
         queueIds = if (knewIt) rest else rest + card.id
@@ -179,6 +191,7 @@ fun FlashcardDrillScreen(drill: Drill, cards: List<Flashcard>, accent: Color) {
         if (choicePick != null || flipped || flinging) return
         choicePick = index
         val correct = index == choice.answerIndex
+        pendingGrade = AnswerSnapshot.take(graph.progress, graph.records, card.id)
         graph.recordAnswer(card.id, roomID, correct)
         if (correct) {
             confetti += 1
@@ -194,6 +207,10 @@ fun FlashcardDrillScreen(drill: Drill, cards: List<Flashcard>, accent: Color) {
         val record = lastSwipe ?: return
         if (flinging) return
         Haptics.light()
+        // Newest first: a pick on the card now showing, then the swipe.
+        pendingGrade?.restore(graph.progress, graph.records)
+        record.grade?.restore(graph.progress, graph.records)
+        pendingGrade = null
         lastSwipe = null
         choicePick = null
         var ids = queueIds
