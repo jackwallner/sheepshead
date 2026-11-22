@@ -1,0 +1,19 @@
+{
+  "project": "Sheepshead.xcodeproj",
+  "scheme": "SheepsheadUITests",
+  "uitests_dir": "SheepsheadUITests",
+  "journeys": [
+    "SheepsheadUITests/ReleaseJourneysUITests"
+  ],
+  "personas": [
+    "newcomer",
+    "accessibility",
+    "reduce-motion",
+    "german",
+    "duo",
+    "ipad-portrait",
+    "ipad-landscape"
+  ],
+  "persona_overrides": {},
+  "slot": null
+}
