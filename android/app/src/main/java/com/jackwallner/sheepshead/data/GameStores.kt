@@ -84,8 +84,9 @@ class SheepsheadMinuteStore(private val defaults: KeyValueStore, private val clo
         return result
     }
 
-    fun completedThisWeek(): Int {
-        val fields = WeekFields.of(Locale.getDefault())
+    /** The week starts on the device locale's first weekday (Sunday in the US, Monday in much of Europe). */
+    fun completedThisWeek(locale: Locale = Locale.getDefault()): Int {
+        val fields = WeekFields.of(locale)
         val today = clock.today()
         val start = today.with(fields.dayOfWeek(), 1)
         val end = start.plusDays(7)

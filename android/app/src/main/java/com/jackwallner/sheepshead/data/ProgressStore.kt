@@ -21,6 +21,10 @@ class ProgressStore(private val defaults: KeyValueStore, private val clock: AppC
     var missedItems by mutableStateOf(defaults.getStringSet(Keys.MISSED_ITEMS))
         private set
 
+    /** The last day a drill was finished, as a `yyyy-MM-dd` key. State, so a streak shown on screen follows it. */
+    var lastActiveDay by mutableStateOf(defaults.getString(Keys.LAST_ACTIVE_DAY))
+        private set
+
     /** Root branches onboarding vs Home on this, so it is observable. */
     var hasOnboarded by mutableStateOf(defaults.getBoolean(Keys.HAS_ONBOARDED))
         private set
@@ -49,17 +53,39 @@ class ProgressStore(private val defaults: KeyValueStore, private val clock: AppC
         defaults.putInt(Keys.TOTAL_SESSIONS, totalSessions)
     }
 
-    /** Consecutive calendar days with at least one finished drill. */
+    /**
+     * The streak as it stands on `today`. `streakCount` only changes when a
+     * drill is finished, so after a missed day it still holds the old number
+     * and Home would show a streak the player has already lost.
+     */
+    fun currentStreak(today: LocalDate = clock.today()): Int {
+        val last = lastActiveDay ?: return streakCount
+        val gap = days(last, today.toString()) ?: 0
+        return if (gap > 1) 0 else streakCount
+    }
+
+    /**
+     * Consecutive calendar days with at least one finished drill. Days are
+     * stored as `yyyy-MM-dd` keys, the date the phone showed then, so a
+     * time-zone change never moves them.
+     */
     private fun bumpStreak() {
-        val today = clock.today()
-        val last = defaults.getString(Keys.LAST_ACTIVE_DAY)?.let(LocalDate::parse)
-        streakCount = when {
-            last == null -> 1
-            ChronoUnit.DAYS.between(last, today) == 1L -> streakCount + 1
-            ChronoUnit.DAYS.between(last, today) > 1L -> 1
-            else -> streakCount
+        val today = clock.today().toString()
+        val last = lastActiveDay
+        if (last != null) {
+            val gap = days(last, today) ?: 0
+            when {
+                gap == 1L -> streakCount += 1
+                gap > 1L -> streakCount = 1
+                // The clock went backwards (travel, a manual change). Keep the
+                // later day so the streak is not counted twice on the way back.
+                gap < 0L -> return
+            }
+        } else {
+            streakCount = 1
         }
-        defaults.putString(Keys.LAST_ACTIVE_DAY, today.toString())
+        lastActiveDay = today
+        defaults.putString(Keys.LAST_ACTIVE_DAY, today)
         defaults.putInt(Keys.STREAK_COUNT, streakCount)
     }
 
@@ -86,7 +112,7 @@ class ProgressStore(private val defaults: KeyValueStore, private val clock: AppC
     }
 
     /** Get Started is once a day: a fresh mix each day, resting once today's is done. */
-    fun quickSessionCompletedToday(): Boolean = quickSessionDay == clock.today().toString()
+    fun quickSessionCompletedToday(today: LocalDate = clock.today()): Boolean = quickSessionDay == today.toString()
 
     fun markQuickSessionCompleted() {
         quickSessionDay = clock.today().toString()
@@ -96,6 +122,7 @@ class ProgressStore(private val defaults: KeyValueStore, private val clock: AppC
     /** Clears every practice stat. Leaves onboarding and purchases alone. */
     fun resetAll() {
         streakCount = 0
+        lastActiveDay = null
         totalSessions = 0
         completions = emptyMap()
         seenItems = emptySet()
@@ -111,6 +138,15 @@ class ProgressStore(private val defaults: KeyValueStore, private val clock: AppC
         val raw = defaults.getString(Keys.COMPLETIONS) ?: return emptyMap()
         val json = runCatching { JSONObject(raw) }.getOrNull() ?: return emptyMap()
         return json.keys().asSequence().associateWith { json.getInt(it) }
+    }
+
+    companion object {
+        /** Whole days from one stored day key to another, whatever the zone; null if either is unreadable. */
+        fun days(start: String, end: String): Long? {
+            val from = runCatching { LocalDate.parse(start) }.getOrNull() ?: return null
+            val to = runCatching { LocalDate.parse(end) }.getOrNull() ?: return null
+            return ChronoUnit.DAYS.between(from, to)
+        }
     }
 
     private object Keys {

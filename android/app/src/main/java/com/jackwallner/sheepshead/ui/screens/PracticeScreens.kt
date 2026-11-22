@@ -147,7 +147,7 @@ fun StatsScreen() {
                     AccuracyBreakdown(roomStats)
                 }
                 val sessions = progress.totalSessions
-                IconCard("flame.fill", colors.coral, "${progress.streakCount}-day streak", "$sessions drill${if (sessions == 1) "" else "s"} finished")
+                IconCard("flame.fill", colors.coral, "${progress.currentStreak()}-day streak", "$sessions drill${if (sessions == 1) "" else "s"} finished")
             }
         }
     }
