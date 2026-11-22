@@ -55,7 +55,10 @@ most one `ChurnMoment` per departure. Every product carries both the
 `activeEntitlement(in:)` (`Sheepshead+` first, then `pro`, then any active one)
 rather than a single key. A first record only becomes the baseline if
 RevenueCat answered within 5 minutes (`freshBaselineAge`): launch applies the
-cached record first, which can be months old. Home shows the question once 0.9s
+cached record first, which can be months old. A "not active" record is
+skipped unless it is fresh (`confirmsNoMembership`, the same test as
+`lapseConfirmed`): a cache over 3 days old reads a member who renewed while the
+app was closed as lapsed. Home shows the question once 0.9s
 after it is bare (`HomeView.homeIsBare`) and spends it only when shown.
 
 ## Weekly gain
