@@ -195,3 +195,18 @@ now preserves configured US prices and reconciles existing lifetime US price.
 Other localized prices keep Play conversion and the fleet PPP curve.
 Offer targeting reference:
 https://developers.google.com/android-publisher/api-ref/rest/v3/monetization.subscriptions.basePlans.offers#AcquisitionTargetingRule.
+
+## Time and membership state (2026-11-22 port of the iOS fixes)
+
+- Days are `yyyy-MM-dd` keys compared as `LocalDate`s (`ProgressStore.days`), so a
+  zone change never moves the streak or Get Started. Home, Your Progress and the
+  drill summary read `currentStreak(today)`, and Home draws for `rememberToday`,
+  which refreshes on resume and on date, time and zone changes.
+- Only `SubscriptionService.lapseConfirmed` (`MembershipFreshness`) may drop the
+  game night reminder: RevenueCat's launch cache can be days old and reads a
+  renewed member as lapsed.
+- Settings and Game Night Prep call `applyNotificationPermission` on resume.
+- Flashcard Undo restores an `AnswerSnapshot` of both stores.
+- The Timed Challenge already counts down to an `elapsedRealtime` deadline.
+- JVM tests that need no Android run with plain kotlinc and JUnit; the Compose
+  screens above were not compiled outside Gradle in this port.
