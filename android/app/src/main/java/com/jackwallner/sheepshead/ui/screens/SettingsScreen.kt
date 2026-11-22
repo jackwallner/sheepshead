@@ -50,12 +50,14 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.jackwallner.sheepshead.BuildConfig
+import com.jackwallner.sheepshead.data.AlarmReminderScheduler
 import com.jackwallner.sheepshead.data.Appearance
 import com.jackwallner.sheepshead.data.Membership
 import com.jackwallner.sheepshead.data.PurchaseException
 import com.jackwallner.sheepshead.data.StoreLinks
 import com.jackwallner.sheepshead.ui.LocalAppActions
 import com.jackwallner.sheepshead.ui.LocalGraph
+import com.jackwallner.sheepshead.ui.OnResume
 import com.jackwallner.sheepshead.ui.components.symbol
 import com.jackwallner.sheepshead.ui.nav.LocalNavigator
 import com.jackwallner.sheepshead.ui.nav.Route
@@ -98,6 +100,8 @@ fun SettingsScreen(requestNotifications: (onGranted: () -> Unit) -> Unit) {
     var restoreMessage by remember { mutableStateOf<String?>(null) }
     var confirmReset by remember { mutableStateOf(false) }
     var showReviewerCode by remember { mutableStateOf(false) }
+    // Notifications can be switched off in system settings after a reminder was set.
+    OnResume { settings.applyNotificationPermission(AlarmReminderScheduler.notificationsAllowed(context)) }
 
     SheepsheadScreen("Settings", onBack = { navigator.pop() }) {
         Readable(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {

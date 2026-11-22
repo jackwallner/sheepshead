@@ -81,6 +81,14 @@ class AlarmReminderScheduler(private val context: Context) : ReminderScheduler {
             context.getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
         }
 
+        /**
+         * Whether the system will show this app's notifications at all: the
+         * Android 13 permission and the per-app switch in system settings.
+         * Checked on Settings and Game Night Prep so a later denial turns the
+         * reminder switches off instead of leaving them On.
+         */
+        fun notificationsAllowed(context: Context): Boolean = NotificationManagerCompat.from(context).areNotificationsEnabled()
+
         fun canNotify(context: Context): Boolean =
             Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU ||
                 ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED

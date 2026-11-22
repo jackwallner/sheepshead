@@ -95,4 +95,39 @@ class ReminderStateTest {
             confirms(false, now.plusSeconds(4 * day), now.plusSeconds(4 * day)),
         )
     }
+
+    // MARK: - Notifications switched off for the app
+
+    @Test
+    fun deniedNotificationsTurnTheRemindersOffAndSayWhy() {
+        val scheduler = FakeScheduler()
+        val settings = settingsWithReminders(scheduler)
+        assertTrue("the stored reminder loads on", settings.reminderEnabled)
+
+        settings.applyNotificationPermission(allowed = false)
+
+        assertFalse(settings.reminderEnabled)
+        assertFalse(settings.gameNightReminderEnabled)
+        assertTrue("the Notifications are off alert explains it", settings.reminderPermissionDenied)
+        val reloaded = AppSettings(defaults, null)
+        assertFalse("the off is stored", reloaded.reminderEnabled)
+        assertFalse(reloaded.gameNightReminderEnabled)
+        assertTrue("both alarms are cancelled", scheduler.log.containsAll(listOf("cancelDaily", "cancelGameNight")))
+    }
+
+    @Test
+    fun allowedNotificationsLeaveTheRemindersAlone() {
+        val settings = settingsWithReminders()
+        settings.applyNotificationPermission(allowed = true)
+        assertTrue(settings.reminderEnabled)
+        assertTrue(settings.gameNightReminderEnabled)
+        assertFalse(settings.reminderPermissionDenied)
+    }
+
+    @Test
+    fun deniedWithNoReminderSetStaysQuiet() {
+        val settings = AppSettings(InMemoryStore(), null)
+        settings.applyNotificationPermission(allowed = false)
+        assertFalse("no alert when nothing was on", settings.reminderPermissionDenied)
+    }
 }

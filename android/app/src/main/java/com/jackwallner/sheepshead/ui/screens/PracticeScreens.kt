@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -28,8 +29,10 @@ import androidx.compose.ui.unit.sp
 import com.jackwallner.sheepshead.content.DrillLibrary
 import com.jackwallner.sheepshead.content.PracticeSkill
 import com.jackwallner.sheepshead.content.SessionBuilder
+import com.jackwallner.sheepshead.data.AlarmReminderScheduler
 import com.jackwallner.sheepshead.data.PracticeRecordStore
 import com.jackwallner.sheepshead.ui.LocalGraph
+import com.jackwallner.sheepshead.ui.OnResume
 import com.jackwallner.sheepshead.ui.components.symbol
 import com.jackwallner.sheepshead.ui.nav.LocalNavigator
 import com.jackwallner.sheepshead.ui.nav.PracticeMode
@@ -218,6 +221,9 @@ fun GameNightPrepScreen(requestNotifications: (onGranted: () -> Unit) -> Unit) {
     val colors = Felt.colors
     val settings = graph.settings
     val records = graph.records
+    val context = LocalContext.current
+    // Notifications can be switched off in system settings after a reminder was set.
+    OnResume { settings.applyNotificationPermission(AlarmReminderScheduler.notificationsAllowed(context)) }
     SheepsheadScreen("Game Night Prep", onBack = { navigator.pop() }) {
         Readable(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
             Column(Modifier.padding(16.dp).padding(navBarPadding()), verticalArrangement = Arrangement.spacedBy(16.dp)) {

@@ -123,6 +123,19 @@ class AppSettings(private val defaults: KeyValueStore, private val scheduler: Re
         updateGameNightReminderEnabled(false)
     }
 
+    /**
+     * Notifications can be switched off for the app after a reminder was set,
+     * and the switch kept reading On while nothing ever arrived. Settings and
+     * Game Night Prep check on appear: when they are off and a reminder is on,
+     * the reminders turn off and the "Notifications are off" alert says why.
+     */
+    fun applyNotificationPermission(allowed: Boolean) {
+        if (allowed || !(reminderEnabled || gameNightReminderEnabled)) return
+        if (reminderEnabled) updateReminderEnabled(false)
+        if (gameNightReminderEnabled) updateGameNightReminderEnabled(false)
+        reminderPermissionDenied = true
+    }
+
     /** After a reboot the alarms are gone; put back whatever is switched on. */
     fun rescheduleAll() {
         if (reminderEnabled) scheduler?.scheduleDaily(reminderHour, reminderMinute)
