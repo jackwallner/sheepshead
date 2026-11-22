@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Home is the lobby: Get Started, then the rooms as doors. The drills
 /// themselves live one level down in `RoomView`. (Home used to list every
@@ -15,6 +16,12 @@ struct HomeView: View {
     @EnvironmentObject private var router: AppRouter
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(\.scenePhase) private var scenePhase
+    /// The moment Home's day-bound parts (Get Started, the streak, the
+    /// Minute badge) are drawn for. Refreshed when the app comes back and
+    /// when the day turns: nothing else redraws Home, so a player returning
+    /// the next morning was told today's session was already done.
+    @State private var now = Date()
     @State private var membershipWaitOver = false
     @StateObject private var records = PracticeRecordStore.shared
     @StateObject private var minuteStore = SheepsheadMinuteStore.shared
@@ -52,6 +59,7 @@ struct HomeView: View {
                 }
                 .onAppear {
                     homeOnScreen = true
+                    now = Date()
                     consumeRecommendedRoomHint(proxy: proxy)
                     dropGameNightReminderUnlessMember()
                     consumePendingDestination()
@@ -111,6 +119,12 @@ struct HomeView: View {
             .onChange(of: subscriptions.pendingChurnMoment) { _, _ in presentChurnPromptIfNeeded() }
             .onChange(of: records.records.count) { _, _ in recordMastery() }
             .onChange(of: router.pendingDestination) { _, _ in consumePendingDestination() }
+            .onChange(of: scenePhase) { _, phase in
+                if phase == .active { now = Date() }
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification)) { _ in
+                now = Date()
+            }
             .onChange(of: subscriptions.membershipResolved) { _, _ in
                 recordMastery()
                 consumePendingDestination()
@@ -192,7 +206,7 @@ struct HomeView: View {
 
     @ViewBuilder
     private var todaySession: some View {
-        if progress.quickSessionCompletedToday() {
+        if progress.quickSessionCompletedToday(now: now) {
             getStartedDoneCard
         } else {
             getStartedCard
@@ -355,8 +369,8 @@ struct HomeView: View {
             StatsView()
         } label: {
             HStack(spacing: 8) {
-                statChip(value: progress.currentStreak(), icon: "flame.fill", color: Theme.coral,
-                         label: "\(progress.currentStreak()) day streak")
+                statChip(value: progress.currentStreak(now: now), icon: "flame.fill", color: Theme.coral,
+                         label: "\(progress.currentStreak(now: now)) day streak")
                 statChip(value: progress.totalSessions, icon: "checkmark.seal.fill", color: Theme.jade,
                          label: "\(progress.totalSessions) drills done")
                 // Only ever positive. A week that went backwards is not news
@@ -551,7 +565,7 @@ struct HomeView: View {
             title: "Sheepshead\nMinute",
             icon: "calendar.badge.clock",
             color: Theme.coral,
-            badge: minuteStore.result(for: Date()).map { "\($0.score)/\($0.total) today" } ?? "Daily"
+            badge: minuteStore.result(for: now).map { "\($0.score)/\($0.total) today" } ?? "Daily"
         ) {
             SheepsheadMinuteView()
         }
