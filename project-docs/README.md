@@ -14,3 +14,4 @@ Developer notes and historical audits for this repository. The published site re
 - [presubmit-review-2026-11-07.md](audits/presubmit-review-2026-11-07.md): pre-submit review of 1.3.3 against live 1.3.2: no P0 or P1, 3 P2 left open, unit run not started (GitHub queue)
 - [2026-11-20-bug-ux.html](audits/2026-11-20-bug-ux.html): Bug and UX catalog, 2026-11-20: 7 bugs (3 medium, 4 low; 4 confirmed), 18 UX items, October audit items rechecked. Catalog only, nothing fixed.
 - [2026-11-20-bug-fixes.md](audits/2026-11-20-bug-fixes.md): fix status for that catalog after independent review: 6 verified, B3 fix restored by the reviewer, unit 191/191 and UI 8/8 green at 893df0a
+- [2026-11-21-android-bug-port.md](audits/2026-11-21-android-bug-port.md): Android port of the 2026-11-20 fixes: 2 ported, 4 already fine, 1 not applicable
