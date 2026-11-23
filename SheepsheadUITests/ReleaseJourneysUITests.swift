@@ -53,6 +53,8 @@ final class ReleaseJourneysUITests: XCTestCase {
         // (gh-sim run sheepshead-mbairbc70-1122-125708-20969), so press it
         // where it is drawn, as a finger would.
         let getStarted = app.buttons["Get Started"]
+        // At accessibility sizes it sits inside the scrolling page, below the fold.
+        _ = QA.reveal(getStarted, in: app)
         if getStarted.isHittable {
             getStarted.tap()
         } else {

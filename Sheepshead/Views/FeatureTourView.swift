@@ -60,7 +60,11 @@ struct FeatureTourView: View {
             }
             buttons(isLast: isLast, pageCount: pages.count)
         }
-        .padding()
+        // Same side and bottom insets as the trial page's footer, so the main
+        // button lands where the trial CTA was instead of jumping.
+        .padding(.horizontal, 24)
+        .padding(.top, 16)
+        .padding(.bottom, 10)
         .frame(maxWidth: Theme.readableContentWidth)
         .frame(maxWidth: .infinity)
         .background(Theme.background)
