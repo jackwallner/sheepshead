@@ -177,10 +177,18 @@ struct ChoiceList: View {
             }
             .padding(16)
             .frame(maxWidth: .infinity)
-            .background(background(index), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+            // Animate only the paint, never the frame: a row-wide animation
+            // sprang the row's position while the explanation card below
+            // snapped in, so the two drew on top of each other mid-reveal.
+            .background {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(background(index))
+                    .animation(.spring(response: 0.3, dampingFraction: 0.8), value: answered)
+            }
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
                     .strokeBorder(border(index), lineWidth: answered && isAnswer ? 2.5 : 1)
+                    .animation(.spring(response: 0.3, dampingFraction: 0.8), value: answered)
             )
             .background {
                 // Publish the winning row's position for the host's confetti.
@@ -202,7 +210,6 @@ struct ChoiceList: View {
             }
             .modifier(ShakeEffect(travels: isMiss ? shakes : 0))
             .opacity(recedes ? 0.72 : 1)
-            .animation(.spring(response: 0.3, dampingFraction: 0.8), value: answered)
         }
         .buttonStyle(.plain)
         .allowsHitTesting(!answered)
