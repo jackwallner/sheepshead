@@ -160,6 +160,9 @@ struct ChoiceList: View {
                     .font(.body.weight(answered && isAnswer ? .semibold : .medium))
                     .foregroundStyle(Theme.ink)
                     .multilineTextAlignment(.leading)
+                    // Wrap, never truncate: a long answer on an iPhone SE was
+                    // cut to "The player who played the last..."
+                    .fixedSize(horizontal: false, vertical: true)
                 Spacer()
                 if answered {
                     if isAnswer {
