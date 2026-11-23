@@ -377,10 +377,15 @@ struct PaywallView: View {
             // largest pricing element here, above the trial fine print.
             // The line keeps its height before the price arrives, so the
             // terms and button below do not jump when it lands.
-            Text(priceReady ? PaywallPricing.priceText(subscriptions, selectedPlan) : " ")
-                .font(Theme.display(22))
-                .foregroundStyle(Theme.ink)
-                .accessibilityHidden(!priceReady)
+            ZStack {
+                // Sized for a full amount so the line does not grow (and push
+                // the terms and button) when the price lands at large text sizes.
+                Text("$999.99/year").hidden().accessibilityHidden(true)
+                Text(priceReady ? PaywallPricing.priceText(subscriptions, selectedPlan) : " ")
+            }
+            .font(Theme.display(22))
+            .foregroundStyle(Theme.ink)
+            .accessibilityHidden(!priceReady)
             Text(PaywallPricing.terms(subscriptions, selectedPlan, trial: trialEligible))
                 .font(.caption)
                 .foregroundStyle(Theme.inkSecondary)
@@ -389,11 +394,15 @@ struct PaywallView: View {
             Button {
                 purchase()
             } label: {
-                Group {
-                    if purchasing || loadingPrices || (!priceLoadAttempted && !priceReady) {
+                let title = selectedPlan.ctaTitle(trialTitle: subscriptions.trialCTA(.paywall), trialEligible: trialEligible)
+                let busy = purchasing || loadingPrices || (!priceLoadAttempted && !priceReady)
+                ZStack {
+                    // Keeps the button's height while the spinner shows.
+                    Text(title).hidden().accessibilityHidden(true)
+                    if busy {
                         ProgressView().tint(Theme.onFill)
                     } else {
-                        Text(selectedPlan.ctaTitle(trialTitle: subscriptions.trialCTA(.paywall), trialEligible: trialEligible))
+                        Text(title)
                     }
                 }
                 .primaryCTA()
