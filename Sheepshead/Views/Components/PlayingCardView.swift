@@ -67,15 +67,32 @@ struct CardHandView: View {
     var onTap: ((Int) -> Void)?
 
     private let columns = 7
+    private let minimumTileWidth: CGFloat = 30
+
+    /// The requested width first, then narrower steps. Seven 48pt cards are
+    /// 372pt, and with Display Zoom a 6.1" iPhone is 320pt wide (an SE or
+    /// mini 375pt, Slide Over 320pt): a fixed row ran past the screen and
+    /// lost cards off both edges.
+    private var candidateWidths: [CGFloat] {
+        Array(stride(from: tileWidth, through: min(tileWidth, minimumTileWidth), by: -2))
+    }
 
     var body: some View {
+        ViewThatFits(in: .horizontal) {
+            ForEach(candidateWidths, id: \.self) { width in
+                rows(tileWidth: width)
+            }
+        }
+    }
+
+    private func rows(tileWidth: CGFloat) -> some View {
         let rows = tiles.enumerated().map { (index: $0.offset, tile: $0.element) }
             .chunked(into: columns)
-        VStack(spacing: 10) {
+        return VStack(spacing: 10) {
             ForEach(0..<rows.count, id: \.self) { rowIndex in
                 HStack(spacing: 6) {
                     ForEach(rows[rowIndex], id: \.index) { item in
-                        tileCell(item.index, item.tile)
+                        tileCell(item.index, item.tile, tileWidth: tileWidth)
                     }
                 }
             }
@@ -83,7 +100,7 @@ struct CardHandView: View {
     }
 
     @ViewBuilder
-    private func tileCell(_ index: Int, _ tile: PlayingCard) -> some View {
+    private func tileCell(_ index: Int, _ tile: PlayingCard, tileWidth: CGFloat) -> some View {
         let selected = highlightedIndices.contains(index)
         PlayingCardView(tile: tile, width: tileWidth)
             .overlay {
