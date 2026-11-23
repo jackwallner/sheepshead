@@ -111,15 +111,25 @@ struct FeatureTourView: View {
             Button {
                 advance(pageCount: pageCount)
             } label: {
-                Text(isLast ? "Start my first session" : "Show me").primaryCTA()
+                // Every page reserves the longest label's height, so the main
+                // button keeps one size and one place from page to page.
+                ZStack {
+                    Text("Start my first session").hidden()
+                    Text(isLast ? "Start my first session" : "Show me")
+                }
+                .primaryCTA()
             }
             Button {
                 Haptics.impact(.light, intensity: 0.6)
                 onDone()
             } label: {
-                Text(isLast ? "Skip it, take me to the app" : "Skip the tour")
-                    .font(.subheadline.weight(.medium))
-                    .foregroundStyle(Theme.inkSecondary)
+                ZStack {
+                    Text("Skip it, take me to the app").hidden()
+                    Text(isLast ? "Skip it, take me to the app" : "Skip the tour")
+                }
+                .font(.subheadline.weight(.medium))
+                .foregroundStyle(Theme.inkSecondary)
+                .multilineTextAlignment(.center)
             }
         }
     }
@@ -252,9 +262,12 @@ struct FeatureTourView: View {
                     .foregroundStyle(Theme.gold)
                 Text(Membership.name.uppercased())
                     .font(.caption.weight(.heavy))
-                    .kerning(1.6)
+                    .kerning(dynamicTypeSize.isAccessibilitySize ? 0 : 1.6)
                     .foregroundStyle(Theme.goldText)
-                Spacer()
+                    // A word never breaks mid-letter: it takes the row's room.
+                    .fixedSize(horizontal: false, vertical: true)
+                    .layoutPriority(1)
+                Spacer(minLength: 0)
                 if !locked {
                     Image(systemName: "checkmark.seal.fill")
                         .foregroundStyle(Theme.jade)

@@ -23,6 +23,11 @@ final class ReleaseJourneysUITests: XCTestCase {
         "-subscription.localProOverride", "NO",
     ]
 
+    /// The paywalls need plans to show a price. RevenueCat is never configured
+    /// on a simulator, so the Debug probe flag points it at the Test Store, a
+    /// separate RevenueCat app that no App Store customer or chart can see.
+    private let priced = ["-rcfunnelprobe"]
+
     override func setUp() {
         continueAfterFailure = false
         // By bundle id: the target name differs from PRODUCT_NAME.
@@ -32,7 +37,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     // MARK: - Journeys
 
     func testFirstRunToFirstQuestion() {
-        QA.launch(app, arguments: ["-sheepshead.suppressWhatsNew", "-sheepshead.rc.rating_prompt", "off"])
+        QA.launch(app, arguments: ["-sheepshead.suppressWhatsNew", "-sheepshead.rc.rating_prompt", "off"] + priced)
         XCTAssertTrue(app.buttons["Continue"].waitForExistence(timeout: 20), "onboarding did not appear")
         QA.checkpoint(app, "onboarding-welcome")
 
@@ -77,7 +82,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     }
 
     func testPaywallShownAndDismissed() {
-        QA.launch(app, arguments: onboarded)
+        QA.launch(app, arguments: onboarded + priced)
         XCTAssertTrue(app.staticTexts["THE ROOMS"].waitForExistence(timeout: 20))
         QA.checkpoint(app, "home")
 
