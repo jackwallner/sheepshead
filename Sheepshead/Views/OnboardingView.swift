@@ -315,9 +315,11 @@ struct OnboardingView: View {
         if dynamicTypeSize.isAccessibilitySize {
             fittedPage(spacing: 22) {
                 trialHeader
+                // Price right under the title so the billed amount is on the
+                // first screen at accessibility sizes, not below the fold.
+                if !subscriptions.isPro { priceSlot }
                 trialBenefits
                 if !subscriptions.isPro {
-                    priceSlot
                     softExit
                     legalRow
                 }
@@ -523,6 +525,7 @@ struct OnboardingView: View {
             Text(trialPrice)
                 .font(Theme.display(22))
                 .foregroundStyle(Theme.ink)
+                .accessibilityLabel(PaywallPricing.spoken(trialPrice))
             Text(trialDisclosure)
                 .font(.caption2)
                 .foregroundStyle(Theme.inkTertiary)

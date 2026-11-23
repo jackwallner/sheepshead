@@ -43,8 +43,15 @@ struct FeatureTourView: View {
                 // Show me and Skip below it with no way to reach them. The
                 // page scrolls there, from the top on every page; the
                 // buttons stay put.
-                ScrollView { card(page) }
-                    .id(index)
+                // Skip sits at the end of the scrolling page there, so Show me
+                // keeps the trial CTA's bottom slot instead of jumping up.
+                ScrollView {
+                    VStack(spacing: 18) {
+                        card(page)
+                        skipButton(isLast: isLast)
+                    }
+                }
+                .id(index)
             } else {
                 // Centred where it fits; scrolls on a small phone rather than
                 // pushing the buttons off the screen.
@@ -119,18 +126,22 @@ struct FeatureTourView: View {
                 }
                 .primaryCTA()
             }
-            Button {
-                Haptics.impact(.light, intensity: 0.6)
-                onDone()
-            } label: {
-                ZStack {
-                    Text("Skip it, take me to the app").hidden()
-                    Text(isLast ? "Skip it, take me to the app" : "Skip the tour")
-                }
-                .font(.subheadline.weight(.medium))
-                .foregroundStyle(Theme.inkSecondary)
-                .multilineTextAlignment(.center)
+            if !dynamicTypeSize.isAccessibilitySize { skipButton(isLast: isLast) }
+        }
+    }
+
+    private func skipButton(isLast: Bool) -> some View {
+        Button {
+            Haptics.impact(.light, intensity: 0.6)
+            onDone()
+        } label: {
+            ZStack {
+                Text("Skip it, take me to the app").hidden()
+                Text(isLast ? "Skip it, take me to the app" : "Skip the tour")
             }
+            .font(.subheadline.weight(.medium))
+            .foregroundStyle(Theme.inkSecondary)
+            .multilineTextAlignment(.center)
         }
     }
 
