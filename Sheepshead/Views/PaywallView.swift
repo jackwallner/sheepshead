@@ -375,11 +375,12 @@ struct PaywallView: View {
             // (App Review 3.1.2(c)): the reviewer flagged that it wasn't
             // clearly and conspicuously displayed. It has to stay the
             // largest pricing element here, above the trial fine print.
-            if priceReady {
-                Text(PaywallPricing.priceText(subscriptions, selectedPlan))
-                    .font(Theme.display(22))
-                    .foregroundStyle(Theme.ink)
-            }
+            // The line keeps its height before the price arrives, so the
+            // terms and button below do not jump when it lands.
+            Text(priceReady ? PaywallPricing.priceText(subscriptions, selectedPlan) : " ")
+                .font(Theme.display(22))
+                .foregroundStyle(Theme.ink)
+                .accessibilityHidden(!priceReady)
             Text(PaywallPricing.terms(subscriptions, selectedPlan, trial: trialEligible))
                 .font(.caption)
                 .foregroundStyle(Theme.inkSecondary)

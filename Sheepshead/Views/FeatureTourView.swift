@@ -45,13 +45,20 @@ struct FeatureTourView: View {
                 // buttons stay put.
                 // Skip sits at the end of the scrolling page there, so Show me
                 // keeps the trial CTA's bottom slot instead of jumping up.
-                ScrollView {
-                    VStack(spacing: 18) {
-                        card(page)
-                        skipButton(isLast: isLast)
+                // One scroll view for every page, so the card slides like the
+                // non-scrolling layout instead of the whole view hard-cutting.
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack(spacing: 18) {
+                            card(page)
+                            skipButton(isLast: isLast)
+                        }
+                        .id("tourTop")
+                    }
+                    .onChange(of: index) {
+                        proxy.scrollTo("tourTop", anchor: .top)
                     }
                 }
-                .id(index)
             } else {
                 // Centred where it fits; scrolls on a small phone rather than
                 // pushing the buttons off the screen.
@@ -218,6 +225,7 @@ struct FeatureTourView: View {
                     Text("A five-minute mix of what you need next")
                         .font(.caption)
                         .foregroundStyle(Theme.onFill.opacity(0.9))
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer(minLength: 4)
                 Image(systemName: "play.circle.fill")
@@ -248,7 +256,7 @@ struct FeatureTourView: View {
         Image(systemName: icon)
             .font(.body.weight(.semibold))
             .foregroundStyle(color)
-            .frame(width: 54, height: 54)
+            .frame(maxWidth: 54, minHeight: 54, maxHeight: 54)
             .background(color.opacity(0.12), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
     }
 
