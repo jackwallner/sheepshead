@@ -101,6 +101,8 @@ you buy and vary by region.
 hands, deals, and calls in every room, using drills you already
 know.
 
+**Practice modes.** Endless Practice deals new legal holdings every time, Fix My Mistakes brings your misses back on a spaced schedule, and Timed Challenge gives you ninety seconds and a personal best to chase.
+
 **The Master Tables.** Advanced bury strategy,
 partner defense, live-trump tracking, and expert trick play for
 players moving past the basics.
