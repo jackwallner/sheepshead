@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/sheepshead/best-sheepshead-app.html
 
 ## Best Sheepshead App
 
-By Jack Wallner · Last updated November 12, 2026
+By Jack Wallner · Last updated November 24, 2026
 
 **Best for games against the computer:** Sheepshead, the App, the most-rated option. **Best for being told why a play is right:** K9 Sheepshead: Schafkopf, whose listing says each strategic decision is explained. **Best for online tables with friends and every house rule:** Sheepshead: Card Game. **Best for adjustable rules and large-print cards:** Sheepshead by Derek Hoffmeister. **Best for short drills on trump, the blind and the bury:** Sheepshead Trainer, the app I make.
 
@@ -28,7 +28,7 @@ Ratings and counts are US App Store figures as of November 12, 2026. Last update
 | **K9 Sheepshead: Schafkopf** | 5 | Not in listing | Not in listing | Yes, friends and AI bots in any mix | Every AI decision explained, puppy progression | Free; one-time ad removal | 4.66 (158) | 2026-06-12 |
 | **Sheepshead: Card Game** | 3, 4 or 5 | Called Ace or Jack of Diamonds | Leaster, Doubler or Choose-on-End; cracking, Blitz, Schneider | Yes, private tables by link or quick match, plus four AI players | Tutorial, rules, strategy from beginner to expert | Free, no purchases | 4.61 (28) | 2026-09-25 |
 | **Sheepshead (Derek Hoffmeister)** | 3, 4 or 5 | Called Ace (unknown, 10s or alone) or Jack of Diamonds | Optional leasters, otherwise the dealer picks; knocking | No, computer players only | None listed | Free (ads reported in reviews) | 3.27 (82) | 2026-04-24 |
-| **Sheepshead Trainer (my app)** | Drills, not full hands | Called-ace partnership | Not covered | No | Four practice rooms, reason on every answer | Free rooms; Sheepshead+ subscription or lifetime | 5.00 (1) | 2026-11-10 |
+| **Sheepshead Trainer (my app)** | Drills, not full hands | Called-ace partnership | Not covered | No | Four practice rooms, reason on every answer | Free rooms; Sheepshead+ subscription or lifetime | 5.00 (1) | 2026-11-24 |
 
 ## Sheepshead, the App
 
@@ -48,7 +48,7 @@ This long-running single-player app supports three-, four- and five-handed play,
 
 ## Sheepshead Trainer (my app)
 
-Sheepshead Trainer has four free practice rooms: Card, Trump, Bury and Trick. You learn the 32-card deck and point values, identify trump and fail cards in a holding, choose two cards to bury from an eight-card holding and compare with the coach's reasoning, then practice following suit, ordering trump and finding the partner. There are no opponents and no account. Its limits are real. It is not a game, so you never play a hand. It focuses on the five-player called-ace game, and it is new, with a single rating so far. Endless practice, Fix My Mistakes and the timed challenge need Sheepshead+.
+Sheepshead Trainer has four free practice rooms: Card, Trump, Bury and Trick. You learn the 32-card deck and point values, identify trump and fail cards in a holding, choose two cards to bury from an eight-card holding and compare with the coach's reasoning, then practice following suit, ordering trump and finding the partner. There are no opponents and no account. Its limits are real. It is not a game, so you never play a hand. It focuses on the five-player called-ace game, and it had one rating in the November 12 review snapshot. Version 1.3.4 keeps streaks after time-zone changes and makes card hands and long answer choices fit smaller iPhones. Endless practice, Fix My Mistakes and the timed challenge need Sheepshead+.
 
 ## Which should you pick?
 

@@ -63,8 +63,8 @@ Included with Sheepshead+
 
 ### Practice between games
 
-Streaks, missed-item review, and per-room progress keep the useful
-skills warm.
+Streaks survive time-zone changes. Missed-item review and per-room
+progress keep your practice on track.
 
 ## Does Sheepshead Trainer need an account?
 
@@ -162,6 +162,14 @@ The download is free, with four practice rooms, flashcards and streaks included,
 ## Does it work offline?
 
 Yes. Every drill works with no network connection, and your progress stays on your device.
+
+## Do streaks survive a time-zone change?
+
+Yes. A time-zone change no longer resets your streak.
+
+## Does Sheepshead Trainer fit smaller iPhones?
+
+Yes. Card hands shrink to fit the available width, and long answer choices wrap instead of being cut off.
 
 Sheepshead Trainer is an independent sheepshead practice app. House
 rules vary, so use the rules agreed at your table.
