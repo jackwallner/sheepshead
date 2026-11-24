@@ -52,6 +52,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         tap("Know the basics", prefix: true)
         tap("Continue")
         XCTAssertTrue(app.buttons["Get Started"].waitForExistence(timeout: 10), "trial page did not appear")
+        // The button buys yearly unless `onboarding_plan` says monthly.
+        let yearlyPrice = app.staticTexts.containing(NSPredicate(format: "label CONTAINS %@", "per year")).firstMatch
+        XCTAssertTrue(yearlyPrice.waitForExistence(timeout: 20), "the trial page does not bill the yearly plan")
         QA.checkpoint(app, "onboarding-trial-pitch")
 
         // The free exit is drawn on screen but XCTest reports it unhittable
