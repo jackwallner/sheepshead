@@ -20,18 +20,22 @@ disclosure drops the amount.
 
 **Trial flow, structurally Mahj 1.3.2.** Onboarding trial page: soft "Get
 Started" exit above the primary, primary CTA in the exact Continue slot, one
-tap buys the MONTHLY trial, Apple confirms. The page title stays "Try Sheepshead+
+tap buys the YEARLY trial, Apple confirms. `onboarding_plan` offering metadata
+(`OnboardingPlanArm`, `yearly` when missing) switches the button to monthly
+without a release; the arm rides to RevenueCat as the `onboarding_plan`
+attribute. Monthly lost $0.26 per new customer at 3 months (Aug 11 to Nov,
+2026-11-24 change-impact read). The page title stays "Try Sheepshead+
 free" (as shipped). The billed amount is the most prominent price (22pt
 display, 3.1.2(c)) with the small disclosure under it; the paywall footer keeps
 the same 22pt line. `trialDisclosure` uses `PaywallPricing.terms` ("7 days
-free, then $X/month. Auto-renews until canceled.") and must always name the
+free, then $X/year. Auto-renews until canceled.") and must always name the
 plan the CTA buys (`onboardingPlan`). Backing out of Apple's sheet is
 `PurchaseOutcome.cancelled`, never an error and never another paywall. A member
 reaching the trial page (reinstall, second device) sees Continue and goes
 straight to the tour; Restore sits in the trial page's legal row. The trial end
 date is not shown anywhere; Settings shows Manage Subscription only when there
-is an expiration date (not for lifetime). Only the button wording varies, via
-`TrialCTA` offering metadata; any other change to this flow needs Jack's
+is an expiration date (not for lifetime). Only the button wording (`TrialCTA`) and its
+plan (`OnboardingPlanArm`) vary via offering metadata; any other change to this flow needs Jack's
 go-ahead.
 
 The five benefit rows follow Mahj 1.3.2 (Jack, 2026-10-21): free beginner

@@ -41,6 +41,25 @@ enum TrialCTA: String, CaseIterable, Sendable {
     }
 }
 
+/// The plan the onboarding trial button buys, both with the 7-day free trial.
+/// Yearly is the control: Aug 11 (1.2.0) moved the button to monthly and at
+/// 3 months that lost $0.26 per new customer against the apps that kept their
+/// plan (2026-11-24 change-impact read), so it went back to yearly. `monthly`
+/// in the offering metadata brings the monthly button back without a release.
+/// The paywall leads with yearly either way.
+enum OnboardingPlanArm: String, CaseIterable, Sendable {
+    static let metadataKey = "onboarding_plan"
+
+    case yearly
+    case monthly
+
+    static func from(metadata: [String: Any]?) -> OnboardingPlanArm {
+        RemoteConfig.value(metadataKey, in: metadata, default: .yearly)
+    }
+
+    var plan: PaywallPlan { self == .monthly ? .monthly : .yearly }
+}
+
 /// Remote off switches, for what is worth pausing without a release. On
 /// unless the metadata says "off".
 enum RemoteSwitch: String, CaseIterable, Sendable {
@@ -85,12 +104,18 @@ extension SubscriptionService {
 
     var trialCTAArm: TrialCTA { TrialCTA.from(metadata: remoteMetadata) }
 
+    var onboardingPlanArm: OnboardingPlanArm { OnboardingPlanArm.from(metadata: remoteMetadata) }
+
+    /// The plan the onboarding trial button buys (`onboarding_plan`, yearly unless set).
+    var onboardingPlan: PaywallPlan { onboardingPlanArm.plan }
+
     func trialCTA(_ surface: TrialCTA.Surface) -> String { trialCTAArm.title(surface) }
 
     func isOn(_ remoteSwitch: RemoteSwitch) -> Bool { RemoteConfig.isOn(remoteSwitch, in: remoteMetadata) }
 
     /// Every variant this customer saw, for reading tests by attribute too.
     var remoteVariantAttributes: [String: String] {
-        [TrialCTA.metadataKey: trialCTAArm.rawValue]
+        [TrialCTA.metadataKey: trialCTAArm.rawValue,
+         OnboardingPlanArm.metadataKey: onboardingPlanArm.rawValue]
     }
 }

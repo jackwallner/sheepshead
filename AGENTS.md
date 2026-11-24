@@ -43,8 +43,9 @@ stops them. The same sheet hosts the one churn question. Details:
 `.claude/rules/feedback-and-retention.md`.
 
 The trial flow (onboarding trial page, paywall, purchase to tour) is
-structurally Mahj 1.3.2; only the button wording varies, through RevenueCat
-offering metadata (`TrialCTA`). The billed amount is the most prominent price
+structurally Mahj 1.3.2; only the button wording (`TrialCTA`) and its plan
+(`OnboardingPlanArm`, yearly unless set) vary, through RevenueCat offering
+metadata. The billed amount is the most prominent price
 (3.1.2(c)) and prices are always read live from StoreKit. Any other change needs
 Jack's go-ahead. No Meta SDK and no tracking prompt (Jack 2026-10-21: Meta only in Mahj for now).
 

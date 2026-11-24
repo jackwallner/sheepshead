@@ -86,7 +86,18 @@ final class TrialCopyTests: XCTestCase {
     }
 
     /// The onboarding trial page must always name the plan its button buys.
-    func testOnboardingTrialDisclosureNamesTheMonthlyPlan() {
+    func testOnboardingTrialDisclosureNamesThePlanItBuys() {
+        XCTAssertTrue(PaywallPricing.terms(amount: "$29.99/year", plan: .yearly).contains("$29.99/year"))
         XCTAssertTrue(PaywallPricing.terms(amount: "$6.99/month", plan: .monthly).contains("$6.99/month"))
+    }
+
+    /// The onboarding button buys yearly unless `onboarding_plan` says monthly.
+    func testOnboardingPlanDefaultsToYearly() {
+        XCTAssertEqual(OnboardingPlanArm.from(metadata: nil).plan, .yearly)
+        XCTAssertEqual(OnboardingPlanArm.from(metadata: [:]).plan, .yearly)
+        XCTAssertEqual(OnboardingPlanArm.from(metadata: ["onboarding_plan": "weekly"]).plan, .yearly)
+        XCTAssertEqual(OnboardingPlanArm.from(metadata: ["onboarding_plan": 1]).plan, .yearly)
+        XCTAssertEqual(OnboardingPlanArm.from(metadata: ["onboarding_plan": "yearly"]).plan, .yearly)
+        XCTAssertEqual(OnboardingPlanArm.from(metadata: ["onboarding_plan": "monthly"]).plan, .monthly)
     }
 }
