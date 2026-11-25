@@ -56,7 +56,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         // monthly (it does since 2026-11-25), so accept either billed period.
         let billed = NSPredicate(format: "label CONTAINS[c] %@ OR label CONTAINS[c] %@ OR label CONTAINS[c] %@ OR label CONTAINS[c] %@",
                                  "year", "Jahr", "month", "Monat")
-        let price = app.staticTexts.containing(billed).firstMatch
+        let price = app.staticTexts.matching(billed).firstMatch
         XCTAssertTrue(price.waitForExistence(timeout: 20), "the trial page names no billed plan")
         QA.checkpoint(app, "onboarding-trial-pitch")
 
