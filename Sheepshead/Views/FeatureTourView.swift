@@ -47,18 +47,16 @@ struct FeatureTourView: View {
                 // keeps the trial CTA's bottom slot instead of jumping up.
                 // One scroll view for every page, so the card slides like the
                 // non-scrolling layout instead of the whole view hard-cutting.
-                ScrollViewReader { proxy in
-                    ScrollView {
-                        VStack(spacing: 18) {
-                            card(page)
-                            skipButton(isLast: isLast)
-                        }
-                        .id("tourTop")
-                    }
-                    .onChange(of: index) {
-                        proxy.scrollTo("tourTop", anchor: .top)
+                // Each page is its own scroll view, so it starts at the top and
+                // slides in whole; no scrollTo fighting the page change.
+                ScrollView {
+                    VStack(spacing: 18) {
+                        card(page, slides: false)
+                        skipButton(isLast: isLast)
                     }
                 }
+                .id(index)
+                .transition(pageTransition)
             } else {
                 // Centred where it fits; scrolls on a small phone rather than
                 // pushing the buttons off the screen.
@@ -89,7 +87,7 @@ struct FeatureTourView: View {
         .onAppear { fireShine() }
     }
 
-    private func card(_ page: TourPage) -> some View {
+    private func card(_ page: TourPage, slides: Bool = true) -> some View {
         VStack(spacing: 16) {
             Text(page.eyebrow)
                 .font(.caption.weight(.heavy))
@@ -111,10 +109,14 @@ struct FeatureTourView: View {
         .themedCard(corner: 22)
         .shine(trigger: shineTrigger, corner: 22)
         .id(index)
-        .transition(.asymmetric(
+        .transition(slides ? pageTransition : .identity)
+    }
+
+    private var pageTransition: AnyTransition {
+        .asymmetric(
             insertion: .move(edge: .trailing).combined(with: .opacity),
             removal: .move(edge: .leading).combined(with: .opacity)
-        ))
+        )
     }
 
     // The escape hatch is offered on EVERY page, not just at the session
